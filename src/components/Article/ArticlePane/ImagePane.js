@@ -6,20 +6,29 @@ import '../../../Article.css';
 import ImageDetailsPane from './ImagePane/ImageDetailsPane.js';
 
 
-class ImagePane extends Component {
+
+class TodoList extends Component {
 
     render() {
+
+        const { viewState } = this.props;
+        const src = "http://localhost:58282/featuredArticle1"
+
         return (
             <div class="article-image-pane">
+                <div visibility={viewState}>
                 <div class="image-details-pane  navbar-light bg-light">
                     <ImageDetailsPane />
                 </div>
 
-                <img class="article-image-pane-img" src="http://localhost:58282/featuredArticle1" />
+                    <img class="article-image-pane-img" src={src} />
+                    </div>
             </div>
 
         );
     }
 }
 
-export default ImagePane;
+
+
+export default TodoList;

@@ -1,6 +1,5 @@
 import { Location, Locations } from 'react-router-component';
 import React, { Component } from 'react';
-import { NavHead } from '../Persistent Components/NavHead';
 import logo from '../logo.svg';
 import '../App.css';
 

@@ -4,7 +4,7 @@ import  InDepth from '../InDepth.js'
 import App from '../App.js';
 import  Home from '../Home.js'
 import NavHead from './NavHead.js';
-import Article from '../Components/Article.js';
+import Article from '../Article.js';
 
 
 const HomePage = () => (

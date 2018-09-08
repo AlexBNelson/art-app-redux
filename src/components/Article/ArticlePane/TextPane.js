@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../../bootstrap.css';
 import '../../../Article.css';
-import TextIntroPane from './TextPane/TextIntroPane.js';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { setVisibilityFilter } from '../../../actions'
+import { VisibilityFilters } from '../../../actions'
+
 
 class TextPane extends Component {
 
@@ -12,10 +16,14 @@ class TextPane extends Component {
     current = Date.now();
 
     componentDidMount() {
+        const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
         scrollNode.addEventListener('scroll', function () {
-            if (scrollNode.scrollTop > 300) {
-                //make imagePane visible
+            if (scrollNode.scrollTop <= 300) {
+                dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL));
+            }
+            else if (scrollNode.scrollTop > 300) {
+                dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
             }
         })
     }
@@ -25,6 +33,7 @@ class TextPane extends Component {
     }
 
     render() {
+        
         return (
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                 <div class="row text-intro-pane">
@@ -46,4 +55,8 @@ class TextPane extends Component {
     }
 }
 
-export default TextPane;
+TextPane.propTypes = {
+    hideImage: PropTypes.func.isRequired
+}
+
+export default connect()(TextPane)

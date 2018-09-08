@@ -1,8 +1,8 @@
 import { VisibilityFilters } from '../actions'
 
-const visibilityFilter = (state = VisibilityFilters.SHOW_COMPLETED, action) => {
+const articleReducer = (state = {}, action) => {
     switch (action.type) {
-        case 'SET_VISIBILITY_FILTER':
+        case 'CHANGE_IMAGE_STATE':
             return action.filter
         default:
             return state

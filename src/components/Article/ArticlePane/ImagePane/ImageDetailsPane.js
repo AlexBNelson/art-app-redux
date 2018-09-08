@@ -1,18 +1,19 @@
 import { Location, Locations } from 'react-router-component';
 import React, { Component } from 'react';
+import '../../../../App.css';
 import Bootstrap from 'bootstrap';
 import '../../../../bootstrap.css';
 import '../../../../Article.css';
 
 
-class TextIntroPane extends Component {
+class ImageDetailsPane extends Component {
 
     render() {
         return (
-            "Exekias 500BC"
+                "Exekias 500BC"
 
         );
     }
 }
 
-export default TextIntroPane;
+export default ImageDetailsPane;

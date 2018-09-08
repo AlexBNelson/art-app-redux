@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import Bootstrap from 'bootstrap';
 import '../bootstrap.css';
+import '../Article.css'
 
 
 class InDepth extends Component {

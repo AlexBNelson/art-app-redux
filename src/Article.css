@@ -7,7 +7,13 @@
     height: auto;
 }
 
+.hidden {
+    visibility: hidden;
+}
 
+.visible{
+    visibility: visible;
+}
 
 .article-body-pane {
     padding-top: 90vh;

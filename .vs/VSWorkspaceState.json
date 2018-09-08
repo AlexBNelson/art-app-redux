@@ -4,9 +4,13 @@
     "\\src",
     "\\src\\actions",
     "\\src\\components",
+    "\\src\\components\\Article",
+    "\\src\\components\\Article\\ArticlePane",
+    "\\src\\components\\Article\\ArticlePane\\ImagePane",
     "\\src\\components\\Persistent Components",
     "\\src\\containers",
     "\\src\\reducers"
   ],
+  "SelectedNode": "\\src\\components\\TodoList.js",
   "PreviewInSolutionExplorer": false
 }
