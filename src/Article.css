@@ -1,3 +1,8 @@
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
 
 .article-background-pane {
     position: absolute;
@@ -8,11 +13,11 @@
 }
 
 .hidden {
-    visibility: hidden;
+    opacity: 1;
 }
 
 .visible{
-    visibility: visible;
+    opacity: 0;
 }
 
 .article-body-pane {

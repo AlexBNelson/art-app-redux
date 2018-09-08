@@ -17,8 +17,9 @@ const TodoList = ({ todos, viewState, toggleTodo }) => (
             <div class="image-details-pane  navbar-light bg-light">
                <ImageDetailsPane/>
             </div>
-
-        <img className={viewState ? 'hidden' : 'visible'} class="article-image-pane-img" src="http://localhost:58282/featuredArticle1" />
+            <div className={viewState ? 'visible' : 'hidden'}>
+                <img class="article-image-pane-img" src="http://localhost:58282/featuredArticle1" />
+                </div>
         </div>
     </ul>
     
