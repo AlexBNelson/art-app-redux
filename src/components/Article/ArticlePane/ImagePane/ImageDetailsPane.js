@@ -11,7 +11,6 @@ class ImageDetailsPane extends Component {
     render() {
         return (
                 "Exekias 500BC"
-
         );
     }
 }

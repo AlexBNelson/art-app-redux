@@ -3,11 +3,8 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../bootstrap.css';
 import '../../Article.css'
-import ImagePane from './ArticlePane/ImagePane';
 import TextPane from './ArticlePane/TextPane';
-import TextPaneDetails from '../../containers/TextPaneDetails';
-import TodoListDetails from '../../containers/ImagePaneDetails';
-import VisibleTodoList from '../../containers/VisibleTodoList';
+import ImagePaneContainer from './ArticlePane/ImagePane/ImagePaneContainer'
 
 
 class ArticlePane extends Component {
@@ -18,7 +15,7 @@ class ArticlePane extends Component {
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-6">
-                        <VisibleTodoList />
+                        <ImagePaneContainer/>
                     </div>
                     <div class="col-6">
                         <TextPane/>
