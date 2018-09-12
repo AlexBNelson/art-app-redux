@@ -29,9 +29,14 @@ class TextPane extends Component {
             }
         })
 
-        axios.get('http://localhost:58282/articleContent/Chapters/0')
-            .then(response => window.alert(response.data))
 
+        axios({
+            method: 'get',
+            url: 'http://localhost:58282/articleContent/Chapters/0',
+            responseType: 'text'
+        })
+            .then(
+                response => window.alert(response.data));
        
     }
     
