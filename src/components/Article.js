@@ -12,7 +12,6 @@ class Article extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { articleState: props.articleState };
     }
 
     render() {
