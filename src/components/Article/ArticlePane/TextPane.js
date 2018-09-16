@@ -33,10 +33,13 @@ class TextPane extends Component {
         axios({
             method: 'get',
             url: 'http://localhost:58282/articleContent/Chapters/0',
-            responseType: 'text'
+            responseType: 'text/plain; charset=utf-8'
         })
             .then(
-                response => window.alert(response.data));
+            response => window.alert(response.data))
+            .catch(function (error) {
+                window.alert(error);
+            });
        
     }
     
