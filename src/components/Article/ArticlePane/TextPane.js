@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../../bootstrap.css';
 import '../../../Article.css';
+import {articles} from '../../../ArticleText.js';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { setVisibilityFilter } from '../../../actions'
 import { VisibilityFilters } from '../../../actions'
 import axios from 'axios'
+
 
 
 class TextPane extends Component {
@@ -30,16 +32,16 @@ class TextPane extends Component {
         })
 
 
-        axios({
-            method: 'get',
-            url: 'http://localhost:58282/articleContent/Chapters/0',
-            responseType: 'text/plain; charset=utf-8'
-        })
-            .then(
-            response => window.alert(response.data))
-            .catch(function (error) {
-                window.alert(error);
-            });
+        //axios({
+        //    method: 'get',
+        //    url: 'http://localhost:58282/articleContent/Chapters/0',
+        //    responseType: 'text/plain; charset=utf-8'
+        //})
+        //    .then(
+        //    response => window.alert(response.data))
+        //    .catch(function (error) {
+        //        window.alert(error);
+        //    });
        
     }
     
@@ -52,7 +54,7 @@ class TextPane extends Component {
         return (
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                 <div class="row text-intro-pane">
-                    asdfdsfdsfsadfasd
+                    {articles.data[0].Text}
                     </div>
                 <div class="row article-body-pane">
                     {this.chapters}
