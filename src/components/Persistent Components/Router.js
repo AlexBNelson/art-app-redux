@@ -22,10 +22,10 @@ const InDepthPage = () => (
 
 );
 
-const ArticlePage = () => (
+const ArticlePage = (articleId) => (
     <div>
         <NavHead />
-        <Article />
+        <Article id={articleId}/>
     </div>
 
 );
@@ -39,7 +39,7 @@ class Router extends Component {
             <Locations>
                 <Location path="/" handler={HomePage} />
                 <Location path="/InDepth" handler={InDepthPage} />
-                <Location path="/Exekias" handler={ArticlePage} />
+                <Location path="/Article/:articleId" handler={ArticlePage} />
             </Locations>
 
         );

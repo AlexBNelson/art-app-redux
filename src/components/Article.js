@@ -12,6 +12,12 @@ class Article extends Component {
 
     constructor(props) {
         super(props);
+        if (props.id == "hello") {
+            console.log("hello success" + props.id)
+        }
+        else {
+            console.log("not hello" + props.id)
+        }
     }
 
     render() {
