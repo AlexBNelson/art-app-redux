@@ -10,7 +10,7 @@ const ImagePaneComponent = ({ viewState }) => (
                <ImageDetailsPane/>
             </div>
             <div className={viewState ? 'visible' : 'hidden'}>
-                <img class="article-image-pane-img" src="http://localhost:58282/featuredArticle1" />
+                <img class="article-image-pane-img" src="http://localhost:58282/featuredArticle2" />
                 </div>
         </div>
     </ul>
