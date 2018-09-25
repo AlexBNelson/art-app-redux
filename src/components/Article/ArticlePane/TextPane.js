@@ -36,8 +36,7 @@ class TextPane extends Component {
 
         axios({
             method: 'get',
-            url: 'http://localhost:58282/articleContent/Chapters/0',
-            responseType: 'text/plain; charset=utf-8'
+            url: 'http://localhost:58282/articleContent/Chapters/0'
         })
            .then(
            response => window.alert(response.data))
