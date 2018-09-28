@@ -7,9 +7,8 @@
     "\\src\\components\\Article",
     "\\src\\components\\Article\\ArticlePane",
     "\\src\\components\\Article\\ArticlePane\\ImagePane",
-    "\\src\\components\\Persistent Components",
-    "\\src\\reducers"
+    "\\src\\components\\Persistent Components"
   ],
-  "SelectedNode": "\\src\\ArticleText.js",
+  "SelectedNode": "\\src\\components\\Article.js",
   "PreviewInSolutionExplorer": false
 }

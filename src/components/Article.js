@@ -12,13 +12,10 @@ class Article extends Component {
 
     constructor(props) {
         super(props);
-        if (props.id == "hello") {
-            console.log("hello success" + props.id)
+        const id = props.id.articleId
+        console.log(id);
         }
-        else {
-            console.log("not hello" + props.id)
-        }
-    }
+    
 
     render() {
             return (
