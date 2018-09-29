@@ -18,6 +18,14 @@ class TextPane extends Component {
     start = Date.now();
     current = Date.now();
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            introText: ''
+        };
+    }
+
+
     componentDidMount() {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
@@ -33,15 +41,20 @@ class TextPane extends Component {
             }
         })
 
+        const introUrl = 'http://localhost:58282/articleContent/Chapters/' + this.props.id;
 
         axios({
             method: 'get',
-            url: 'http://localhost:58282/articleContent/Chapters/0'
+            url: introUrl
         })
-           .then(
-           response => window.alert(response.data))
+            .then(response => this.setState({ intro: response.data })
+                //function (response) {
+                //window.alert(response.data)
+                //this.setState({ intro: response.data })}
+            )
             .catch(function (error) {
-               window.alert(error);
+                window.alert(error);
+                
             });
        
     }
@@ -52,10 +65,12 @@ class TextPane extends Component {
     }
 
     render() {
+        const introText = this.state.intro ;
         return (
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                 <div class="article-intro-pane">
                     {articles.data[0].Text}
+                    {introText}
                     </div>
                 <div class=" article-body-pane">
                     {this.chapters}

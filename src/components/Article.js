@@ -12,16 +12,16 @@ class Article extends Component {
 
     constructor(props) {
         super(props);
-        const id = props.id.articleId
-        console.log(id);
+        this.setState({articleId: props.id.articleId})
         }
     
 
     render() {
+         const articleId = this.props.id.articleId;
             return (
                 <div>
-                    <BackgroundPane />
-                    <ArticlePane />
+                    <BackgroundPane id={articleId}/>
+                    <ArticlePane id={articleId}/>
                 </div>)
         }
     }
