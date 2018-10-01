@@ -21,7 +21,8 @@ class TextPane extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            introText: ''
+            intro: '',
+            scrollPoints: []
         };
     }
 
@@ -29,8 +30,28 @@ class TextPane extends Component {
     componentDidMount() {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
+        
+        const scrollPointUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImagePositions';
 
+        var scrollPointsJson = '';
 
+        var scrollPoints;
+        
+        axios({
+            method: 'get',
+            url: scrollPointUrl
+        })
+            .then(function (response) { console.log(response.data) }
+                //function (response) {
+                //window.alert(response.data)
+                //this.setState({ intro: response.data })}
+            )
+            .catch(function (error) {
+                window.alert(error);
+
+            });
+
+        
 
         scrollNode.addEventListener('scroll', function () {
             if (scrollNode.scrollTop <= 300) {
@@ -41,7 +62,8 @@ class TextPane extends Component {
             }
         })
 
-        const introUrl = 'http://localhost:58282/articleContent/Chapters/' + this.props.id;
+        const introUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/Chapters/0';
+        
 
         axios({
             method: 'get',
@@ -56,6 +78,8 @@ class TextPane extends Component {
                 window.alert(error);
                 
             });
+
+        
        
     }
     
