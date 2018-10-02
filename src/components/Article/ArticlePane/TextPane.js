@@ -7,7 +7,7 @@ import {articles} from '../../../ArticleText.js';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { setVisibilityFilter } from '../../../actions'
+import { setVisibilityFilter, setImageSource } from '../../../actions'
 import { VisibilityFilters } from '../../../actions'
 import axios from 'axios'
 

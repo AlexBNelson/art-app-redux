@@ -13,8 +13,14 @@ const getViewState = ( filter) => {
     }
 }
 
+const getImageSource = (source) => {
+    return source;
+}
+
+
 const mapStateToProps = state => ({
-    viewState: getViewState(state.visibilityFilter)
+    viewState: getViewState(state.visibilityFilter),
+    imageSource: getImageSource(state.imagePaneSource)
 })
 
 export default connect(
