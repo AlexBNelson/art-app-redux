@@ -32,28 +32,63 @@ class TextPane extends Component {
         const scrollNode = this.myScroll;
         
         const scrollPointUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImagePositions';
-
-        var scrollPointsJson = '';
-
-        var scrollPoints;
+        
+        var scrollPoints = [];
         
         axios({
             method: 'get',
             url: scrollPointUrl
         })
-            .then(function (response) { console.log(response.data) }
-                //function (response) {
-                //window.alert(response.data)
-                //this.setState({ intro: response.data })}
+            .then(function (response) {
+                var i;
+
+                for (i = 0; i < response.data.length; i++) {
+                    scrollPoints.push(response.data[i])
+                }
+                console.log(scrollPoints.toString())
+            }
             )
             .catch(function (error) {
                 window.alert(error);
 
             });
 
+        var imageLinks = [];
+
+        const imageLinksUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImageLinks';
+
+        axios({
+            method: 'get',
+            url: imageLinksUrl
+        })
+            .then(function (response) {
+                var i;
+
+                for (i = 0; i < response.data.length; i++) {
+                    imageLinks.push(response.data[i])
+                }
+            }
+            )
+            .catch(function (error) {
+                window.alert(error);
+
+            });
         
 
         scrollNode.addEventListener('scroll', function () {
+            //var i;
+            //for (i = 0; i < scrollPoints.length; i++) {
+            //    if (i == 0) {
+            //        if (scrollNode.scrollTop <= scrollPoints[0]) {
+            //            dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL));
+            //        }
+            //    }
+            //    else {
+            //        if (scrollNode.scrollTop > scrollPoints[i - 1] && scrollNode.scrollTop <= scrollPoints[i]) {
+
+            //        }
+            //    }
+            //}
             if (scrollNode.scrollTop <= 300) {
                 dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL));
             }
@@ -70,9 +105,6 @@ class TextPane extends Component {
             url: introUrl
         })
             .then(response => this.setState({ intro: response.data })
-                //function (response) {
-                //window.alert(response.data)
-                //this.setState({ intro: response.data })}
             )
             .catch(function (error) {
                 window.alert(error);
