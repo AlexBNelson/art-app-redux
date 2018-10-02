@@ -94,6 +94,7 @@ class TextPane extends Component {
             }
             else if (scrollNode.scrollTop > 300) {
                 dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
+                dispatch(setImageSource("http://localhost:58282/featuredArticle2"))
             }
         })
 

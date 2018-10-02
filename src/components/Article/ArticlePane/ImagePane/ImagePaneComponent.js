@@ -10,7 +10,7 @@ const ImagePaneComponent = ({ viewState, imageSource }) => (
                <ImageDetailsPane/>
             </div>
             <div className={viewState ? 'visible' : 'hidden'}>
-                <img class="article-image-pane-img" src="http://localhost:58282/featuredArticle2" />
+                <img class="article-image-pane-img" src={imageSource} />
                 </div>
         </div>
     </ul>
@@ -18,7 +18,8 @@ const ImagePaneComponent = ({ viewState, imageSource }) => (
 )
 
 ImagePaneComponent.propTypes = {
-    viewState: PropTypes.bool.isRequired
+    viewState: PropTypes.bool.isRequired,
+    imageSource: PropTypes.string.isRequired
 }
 
 export default ImagePaneComponent
