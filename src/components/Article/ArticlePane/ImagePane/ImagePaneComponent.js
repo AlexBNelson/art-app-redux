@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ImageDetailsPane from './ImageDetailsPane';
 import '../../../../Article.css'
 
-const ImagePaneComponent = ({ viewState }) => (
+const ImagePaneComponent = ({ viewState, imageSource }) => (
     <ul>
         <div class="article-image-pane">
             <div class="image-details-pane  navbar-light bg-light">
