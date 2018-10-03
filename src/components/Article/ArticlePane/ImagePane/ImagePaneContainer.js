@@ -4,9 +4,9 @@ import { VisibilityFilters } from '../../../../actions'
 
 const getViewState = ( filter) => {
     switch (filter) {
-        case VisibilityFilters.SHOW_ALL:
+        case VisibilityFilters.INVISIBLE:
             return true
-        case VisibilityFilters.SHOW_COMPLETED:
+        case VisibilityFilters.VISIBLE:
             return false
         default:
             throw new Error('Unknown filter: ' + filter)

@@ -45,7 +45,7 @@ class TextPane extends Component {
                 for (i = 0; i < response.data.length; i++) {
                     scrollPoints.push(response.data[i])
                 }
-                console.log(scrollPoints.toString())
+                
             }
             )
             .catch(function (error) {
@@ -66,37 +66,48 @@ class TextPane extends Component {
 
                 for (i = 0; i < response.data.length; i++) {
                     imageLinks.push(response.data[i])
+                    
                 }
+                console.log(scrollPoints)
+                console.log(imageLinks)
             }
             )
             .catch(function (error) {
                 window.alert(error);
 
             });
+
+
+        
         
 
         scrollNode.addEventListener('scroll', function () {
-            //var i;
-            //for (i = 0; i < scrollPoints.length; i++) {
-            //    if (i == 0) {
-            //        if (scrollNode.scrollTop <= scrollPoints[0]) {
-            //            dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL));
-            //        }
-            //    }
-            //    else {
-            //        if (scrollNode.scrollTop > scrollPoints[i - 1] && scrollNode.scrollTop <= scrollPoints[i]) {
-
-            //        }
-            //    }
+            var i;
+            if (scrollNode.scrollTop <= scrollPoints[0]) {
+                dispatch(setVisibilityFilter(VisibilityFilters.INVISIBLE));
+            }
+            else {
+                dispatch(setVisibilityFilter(VisibilityFilters.VISIBLE))
+            }
+            for (i = 0; i < scrollPoints.length; i++) {
+                if (i == 0) {
+                    if (scrollNode.scrollTop > scrollPoints[i]) {
+                        dispatch(setImageSource(imageLinks[0]))
+                    }
+                }
+                else if (scrollNode.scrollTop < scrollPoints[i] && scrollNode.scrollTop > scrollPoints[i-1]) {
+                            dispatch(setImageSource(imageLinks[i]))
+                    }
+                }
+            }
+            //if (scrollNode.scrollTop <= 300) {
+            //    dispatch(setVisibilityFilter(VisibilityFilters.INVISIBLE));
             //}
-            if (scrollNode.scrollTop <= 300) {
-                dispatch(setVisibilityFilter(VisibilityFilters.SHOW_ALL));
-            }
-            else if (scrollNode.scrollTop > 300) {
-                dispatch(setVisibilityFilter(VisibilityFilters.SHOW_COMPLETED));
-                dispatch(setImageSource("http://localhost:58282/featuredArticle2"))
-            }
-        })
+            //else if (scrollNode.scrollTop > 300) {
+            //    dispatch(setVisibilityFilter(VisibilityFilters.VISIBLE));
+            //    dispatch(setImageSource("http://localhost:58282/featuredArticle2"))
+            //}
+        )
 
         const introUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/Chapters/0';
         
