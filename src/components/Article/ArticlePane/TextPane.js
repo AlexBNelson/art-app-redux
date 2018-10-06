@@ -91,12 +91,12 @@ class TextPane extends Component {
             }
             for (i = 0; i < scrollPoints.length; i++) {
                 if (i == 0) {
-                    if (scrollNode.scrollTop > scrollPoints[i]) {
-                        dispatch(setImageSource(imageLinks[0]))
+                    if (scrollNode.scrollTop > scrollPoints[i] || scrollNode.scrollTop < scrollPoints[i+1]) {
+                        dispatch(setImageSource(0))
                     }
                 }
                 else if (scrollNode.scrollTop < scrollPoints[i] && scrollNode.scrollTop > scrollPoints[i-1]) {
-                            dispatch(setImageSource(imageLinks[i]))
+                            dispatch(setImageSource(i))
                     }
                 }
             }
