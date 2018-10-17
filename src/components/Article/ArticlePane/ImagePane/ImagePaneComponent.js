@@ -49,7 +49,14 @@ class ImagePaneComponent extends Component {
         var i;
 
         for (i = 0; i < this.state.imageUrls.length; i++) {
-            var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} />
+
+            if (this.props.imageSource != i) {
+
+                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} style={{ display: 'none' }} />
+            }
+            else {
+                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]}/>
+            }
             images.push(a)
         }
 
@@ -61,7 +68,11 @@ class ImagePaneComponent extends Component {
                         <ImageDetailsPane />
                     </div>
                     <div className={this.props.viewState ? 'visible' : 'hidden'}>
-                        {images[parseInt(this.props.imageSource, 10)]}
+                        {images[0]}
+                        {images[1]}
+                        {images[2]}
+                        {images[3]}
+                        {images[4]}
                     </div>
                 </div>
             </ul>
