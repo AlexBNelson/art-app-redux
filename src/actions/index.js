@@ -9,6 +9,11 @@ export const setImageSource = source => ({
     source
 })
 
+export const setScrollValue = value => ({
+    type: 'SET_SCROLL_VALUE',
+    value
+})
+
 export const VisibilityFilters = {
     VISIBLE: 'VISIBLE',
     INVISIBLE: 'INVISIBLE'

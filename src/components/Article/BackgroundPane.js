@@ -8,7 +8,7 @@ class BackgroundPane extends Component {
 
     render() {
         return (
-            <div>
+            <div class="background-container">
                 <img class="article-background-pane" src="http://localhost:58282/articleBackground"/>
             </div>
         );

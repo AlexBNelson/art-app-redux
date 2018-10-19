@@ -8,11 +8,16 @@ article-intro-gap {
     margin-left: -15vh;
 }
 .article-background-pane {
+    transform: translate(-0%, -20%);
     position: absolute;
     z-index: 0;
-    opacity: 0.3;
+    opacity: 0.6;
     width: 100%;
     height: auto;
+}
+
+.background-container{
+
 }
 
 .hidden {
