@@ -67,7 +67,7 @@ class ImagePaneComponent extends Component {
                     <div class="image-details-pane  navbar-light bg-light">
                         <ImageDetailsPane />
                     </div>
-                    <div className={this.props.viewState ? 'visible' : 'hidden'}>
+                    <div class="article-image-container" className={this.props.viewState ? 'visible' : 'hidden'}>
                         {images[0]}
                         {images[1]}
                         {images[2]}

@@ -46,9 +46,14 @@ article-intro-gap {
     margin-left: 1vh;
 }
 
+.article-image-container {
+}
+
 .article-image-pane-img {
-    transform: translate(-30%, -50%);
+    transform: translate(-20%, -30%);
     z-index: 10000;
+    width: 160vh; /* you can use % */
+    height: auto;
 }
 
 
