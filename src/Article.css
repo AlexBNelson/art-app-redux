@@ -69,6 +69,15 @@ article-intro-gap {
     height: 90vh;
 }
 
+.info-pane {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    height: 10vh;
+    width: 40vh;
+    z-index:2000;
+}
+
 .image-details-pane {
     vertical-align: text-bottom;
     background-color: #e2e2e2;
