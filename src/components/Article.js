@@ -4,7 +4,7 @@ import '../App.css';
 import Bootstrap from 'bootstrap';
 import '../bootstrap.css';
 import ArticlePane from './Article/ArticlePane.js';
-import BackgroundPane from './Article/BackgroundPane';
+import BackgroundPaneContainer from './Article/BackgroundPane/BackgroundPaneContainer.js';
 import '../Article.css';
 import InfoPaneContainer from './Article/InfoPane/InfoPaneContainer.js';
 
@@ -22,7 +22,7 @@ class Article extends Component {
             return (
                 <div>
                     <InfoPaneContainer id={articleId}/>
-                    <BackgroundPane id={articleId}/>
+                    <BackgroundPaneContainer id={articleId}/>
                     <ArticlePane id={articleId}/>
                 </div>)
         }

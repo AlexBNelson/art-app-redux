@@ -7,7 +7,7 @@ import {articles} from '../../../ArticleText.js';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { setVisibilityFilter, setImageSource } from '../../../actions'
+import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../actions'
 import { VisibilityFilters } from '../../../actions'
 import axios from 'axios'
 
@@ -82,7 +82,12 @@ class TextPane extends Component {
         
 
         scrollNode.addEventListener('scroll', function () {
+
             var i;
+
+            dispatch(setScrollValue(scrollNode.scrollTop))
+
+
             if (scrollNode.scrollTop <= scrollPoints[0]) {
                 dispatch(setVisibilityFilter(VisibilityFilters.INVISIBLE));
             }
