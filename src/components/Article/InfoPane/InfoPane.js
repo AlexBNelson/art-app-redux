@@ -35,9 +35,21 @@ class InfoPane extends Component {
     
 
     render() {
+        var displayedInfo
+
+        //the reason for this inital if statement is because of the strange behaviour of the image display logic
+        if (this.props.viewState == false && this.props.imageSource == 0) {
+            displayedInfo = this.state.info[this.state.info.length - 1]
+        }
+        else {
+            displayedInfo = this.state.info[this.props.imageSource]
+        }
+        
         return (
+
+           
             <div class="info-pane">
-                {this.state.info[this.props.imageSource-1]}
+                {displayedInfo}
                 </div>
         );
     }
