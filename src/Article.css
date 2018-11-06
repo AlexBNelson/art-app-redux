@@ -44,13 +44,16 @@ article-intro-gap {
 
 .article-image-pane {
     height: 90vh;
+    width: 105vh;
     overflow: hidden;
     position: relative;
     margin-top: 1vh;
-    margin-left: 1vh;
+    margin-left: -5vh;
+    border-radius: 5px;
 }
 
 .article-image-container {
+    
 }
 
 .article-image-pane-img {
