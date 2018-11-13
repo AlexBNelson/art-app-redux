@@ -15,7 +15,3 @@ render(
   document.getElementById('root')
 )
 
-var app = <Provider store={store}><App/></Provider>
-
-const domContainer = document.querySelector('#like_button_container');
-ReactDOM.render(e(App), domContainer);
