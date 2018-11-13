@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ImageDetailsPane from './ImageDetailsPane';
 import '../../../../Article.css'
 import { Component } from 'react'
 import axios from 'axios'
@@ -48,6 +47,7 @@ class ImagePaneComponent extends Component {
 
         var i;
 
+        //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
 
             if (this.props.imageSource != i) {
@@ -64,10 +64,7 @@ class ImagePaneComponent extends Component {
 
             <ul>
                 <div class="article-image-pane">
-                    <div class="image-details-pane  navbar-light bg-light">
-                        <ImageDetailsPane />
-                    </div>
-                    <div className={this.props.viewState ? 'visible' : 'hidden'}>
+                    <div class="article-image-container" className={this.props.viewState ? 'visible' : 'hidden'}>
                         {images[0]}
                         {images[1]}
                         {images[2]}

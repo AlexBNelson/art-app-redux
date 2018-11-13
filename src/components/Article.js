@@ -4,8 +4,9 @@ import '../App.css';
 import Bootstrap from 'bootstrap';
 import '../bootstrap.css';
 import ArticlePane from './Article/ArticlePane.js';
-import BackgroundPane from './Article/BackgroundPane';
+import BackgroundPaneContainer from './Article/BackgroundPane/BackgroundPaneContainer.js';
 import '../Article.css';
+import InfoPaneContainer from './Article/InfoPane/InfoPaneContainer.js';
 
 
 class Article extends Component {
@@ -20,7 +21,8 @@ class Article extends Component {
          const articleId = this.props.id.articleId;
             return (
                 <div>
-                    <BackgroundPane id={articleId}/>
+                    <InfoPaneContainer id={articleId}/>
+                    <BackgroundPaneContainer id={articleId}/>
                     <ArticlePane id={articleId}/>
                 </div>)
         }

@@ -29,7 +29,7 @@ class InDepth extends Component {
                 </div>
                 <div class="row">
                     <div class="col-4 featured-article-title-box feature-article-div">
-                        <a class="dropdown-item" href="/Exekias">Exploring Exekias</a>
+                        <a class="dropdown-item" href="/Article/0">Exploring Exekias</a>
 
                     </div>
                     <div class="col-8 featured-article-container feature-article-div">

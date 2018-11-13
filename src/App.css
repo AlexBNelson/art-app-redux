@@ -28,6 +28,7 @@
 
 .nav-head {
     margin-bottom: 10px;
+    z-index: 1100;
 }
 
 

@@ -10,9 +10,13 @@ article-intro-gap {
 .article-background-pane {
     position: absolute;
     z-index: 0;
-    opacity: 0.3;
+    opacity: 0.6;
     width: 100%;
     height: auto;
+}
+
+.background-container{
+
 }
 
 .hidden {
@@ -40,15 +44,23 @@ article-intro-gap {
 
 .article-image-pane {
     height: 90vh;
+    width: 105vh;
     overflow: hidden;
     position: relative;
     margin-top: 1vh;
-    margin-left: 1vh;
+    margin-left: -5vh;
+    border-radius: 5px;
+}
+
+.article-image-container {
+    
 }
 
 .article-image-pane-img {
-    transform: translate(-30%, -50%);
+    transform: translate(-20%, -30%);
     z-index: 10000;
+    width: 160vh; /* you can use % */
+    height: auto;
 }
 
 
@@ -57,6 +69,15 @@ article-intro-gap {
 .image-pane {
     overflow: hidden;
     height: 90vh;
+}
+
+.info-pane {
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    height: 10vh;
+    width: 40vh;
+    z-index:2000;
 }
 
 .image-details-pane {
