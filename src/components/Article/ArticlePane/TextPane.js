@@ -32,7 +32,7 @@ class TextPane extends Component {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
         
-        const scrollPointUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImagePositions';
+        const scrollPointUrl = 'http://dyptych.net/articleContent/' + this.props.id + '/ImagePositions';
         
         var scrollPoints = [];
         
@@ -56,7 +56,7 @@ class TextPane extends Component {
 
         var imageLinks = [];
 
-        const imageLinksUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'http://dyptych.net/articleContent/' + this.props.id + '/ImageLinks';
 
         axios({
             method: 'get',
@@ -115,7 +115,7 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/Intro';
+        const introUrl = 'http://dyptych.net/articleContent/' + this.props.id + '/Intro';
         
 
         axios({
@@ -129,7 +129,7 @@ class TextPane extends Component {
                 
             });
 
-        const chaptersUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/Chapters';
+        const chaptersUrl = 'http://dyptych.net/articleContent/' + this.props.id + '/Chapters';
 
         axios({
             method: 'get',
