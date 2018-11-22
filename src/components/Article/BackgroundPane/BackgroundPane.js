@@ -22,7 +22,7 @@ class BackgroundPane extends Component {
 
         return (
             <div class="background-container">
-                <img class="article-background-pane" style={imgStyle} src="http://localhost:58282/articleBackground" />
+                <img class="article-background-pane" style={imgStyle} src="http://dyptych.net/articleBackground" />
             </div>
         );
     }

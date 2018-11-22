@@ -17,7 +17,7 @@ class ImagePaneComponent extends Component {
     componentDidMount() {
         var imageLinks = [];
 
-        const imageLinksUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'http://dyptych.net/articleContent/' + this.props.id + '/ImageLinks';
 
         axios({
             method: 'get',
