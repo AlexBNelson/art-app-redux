@@ -25,6 +25,10 @@
   to { transform: rotate(360deg); }
 }
 
+.dyptych-logo{
+    width: 13vh
+}
+
 
 .nav-head {
     margin-bottom: 10px;

@@ -11,7 +11,7 @@ class NavHead extends Component {
             <div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
                     <div class="container-fluid">
-    <a class="navbar-brand" href="#">Diptych</a>
+                        <a class="navbar-brand" href="#"><img class="dyptych-logo" src="http://localhost:58282/logo/" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
