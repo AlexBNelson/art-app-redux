@@ -7,8 +7,9 @@
     "\\src\\components\\Article",
     "\\src\\components\\Article\\ArticlePane",
     "\\src\\components\\Article\\ArticlePane\\ImagePane",
+    "\\src\\components\\Article\\BackgroundPane",
     "\\src\\components\\Persistent Components"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\src\\components\\Article\\ArticlePane\\ImagePane\\ImagePaneComponent.js",
   "PreviewInSolutionExplorer": false
 }
