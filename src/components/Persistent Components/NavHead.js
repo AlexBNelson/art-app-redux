@@ -11,7 +11,7 @@ class NavHead extends Component {
             <div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="https://ucarecdn.com/0c14bc32-2232-47f9-9e48-ad9fa7fa5b26/dyptychLogo.png" class="dyptych-logo"/></a>
+                        <a class="navbar-brand" href="#"><img src="https://ucarecdn.com/613fad05-c601-4c02-9341-f82680cae7a9/dyptychFinalLogo.png" class="dyptych-logo"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
