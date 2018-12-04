@@ -115,7 +115,7 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'http://dyptych-host.appspot.com/api/Values';
+        const introUrl = 'http://dyptych-host.appspot.com/api/Values/Chapters/0/0';
         
 
         axios({
@@ -125,7 +125,7 @@ class TextPane extends Component {
                 'key': 'AIzaSyCltxbuI0_3EA_ZoZC9oJatH2FQ6nPyJ-0'
             }
         })
-            .then(response => this.setState({ intro: response.data[0] })
+            .then(response => this.setState({ intro: response.data })
             )
             .catch(function (error) {
                 window.alert("no intro");
