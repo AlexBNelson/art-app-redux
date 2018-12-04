@@ -123,12 +123,12 @@ class TextPane extends Component {
             url: introUrl,
             headers: {
                 'key': 'AIzaSyCltxbuI0_3EA_ZoZC9oJatH2FQ6nPyJ-0'
-            },
+            }
         })
             .then(response => this.setState({ intro: response.data[0] })
             )
             .catch(function (error) {
-                window.alert(error);
+                window.alert("no intro");
                 
             });
 
