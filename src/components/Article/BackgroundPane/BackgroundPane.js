@@ -22,7 +22,7 @@ class BackgroundPane extends Component {
 
         return (
             <div class="background-container">
-                <img class="article-background-pane" style={imgStyle} src="http://dyptych-host.appspot.com/api/" + {this.props.id} + "backgroundImage"/>
+                <img class="article-background-pane" style={imgStyle} src="https://ucarecdn.com/6c135c97-56f6-4068-973e-cc455b7021f9/WhistlerNocturne.jpg" />
             </div>
         );
     }
