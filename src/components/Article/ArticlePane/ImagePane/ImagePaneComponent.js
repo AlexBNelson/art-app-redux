@@ -17,11 +17,14 @@ class ImagePaneComponent extends Component {
     componentDidMount() {
         var imageLinks = [];
 
-        const imageLinksUrl = 'http://dyptych-host.appspot.com/api/articleContent/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImageLinks';
 
         axios({
             method: 'get',
-            url: imageLinksUrl
+            url: imageLinksUrl,
+            headers: {
+                'Ocp-Apim-Subscription-Key': '5d0954edf5514da2afae3b13d49c86db'
+            }
         })
             .then(function (response) {
                 var i;

@@ -32,13 +32,16 @@ class TextPane extends Component {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
         
-        const scrollPointUrl = 'http://dyptych-host.appspot.com/api/articleContent/' + this.props.id + '/ImagePositions';
+        const scrollPointUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImagePositions';
         
         var scrollPoints = [];
         
         axios({
             method: 'get',
-            url: scrollPointUrl
+            url: scrollPointUrl,
+            headers: {
+                'Ocp-Apim-Subscription-Key': '5d0954edf5514da2afae3b13d49c86db'
+            }
         })
             .then(function (response) {
                 var i;
@@ -56,11 +59,15 @@ class TextPane extends Component {
 
         var imageLinks = [];
 
-        const imageLinksUrl = 'http://dyptych-host.appspot.com/api/articleContent/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImageLinks';
 
         axios({
             method: 'get',
-            url: imageLinksUrl
+            url: imageLinksUrl,
+            headers: {
+                'Ocp-Apim-Subscription-Key': '5d0954edf5514da2afae3b13d49c86db'
+            }
+
         })
             .then(function (response) {
                 var i;
@@ -115,7 +122,7 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/0/Chapters/0';
+        const introUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id +'/Intro';
         
 
         axios({
@@ -132,11 +139,14 @@ class TextPane extends Component {
                 
             });
 
-        const chaptersUrl = 'http://dyptych-host.appspot.com/api/articleContent/' + this.props.id + '/Chapters';
+        const chaptersUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/Chapters';
 
         axios({
             method: 'get',
-            url: chaptersUrl
+            url: chaptersUrl,
+            headers: {
+                'Ocp-Apim-Subscription-Key': '5d0954edf5514da2afae3b13d49c86db'
+            }
         })
             .then(response => this.setState({ chapters: response.data })
             )
