@@ -32,7 +32,7 @@ class TextPane extends Component {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
         
-        const scrollPointUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImagePositions';
+        const scrollPointUrl = 'https://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImagePositions';
         
         var scrollPoints = [];
         
@@ -59,7 +59,7 @@ class TextPane extends Component {
 
         var imageLinks = [];
 
-        const imageLinksUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'https://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImageLinks';
 
         axios({
             method: 'get',
@@ -122,7 +122,7 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id +'/Intro';
+        const introUrl = 'https://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id +'/Intro';
         
 
         axios({
@@ -139,7 +139,7 @@ class TextPane extends Component {
                 
             });
 
-        const chaptersUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/Chapters';
+        const chaptersUrl = 'https://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/Chapters';
 
         axios({
             method: 'get',
