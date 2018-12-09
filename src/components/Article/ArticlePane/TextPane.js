@@ -115,14 +115,14 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'http://dyptych-host.appspot.com/api/Values/Chapters/0/0';
+        const introUrl = 'http://dyptych-api.azure-api.net/api/Values/articleContent/0/Chapters/0';
         
 
         axios({
             method: 'get',
             url: introUrl,
             headers: {
-                'key': 'AIzaSyCltxbuI0_3EA_ZoZC9oJatH2FQ6nPyJ-0'
+                'Ocp-Apim-Subscription-Key': '5d0954edf5514da2afae3b13d49c86db'
             }
         })
             .then(response => this.setState({ intro: response.data })
