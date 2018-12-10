@@ -122,7 +122,7 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'https://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id +'/Intro';
+        const introUrl = 'https://dyptych-fa.azurewebsites.net/api/0/Chapters/0';
         
 
         axios({
