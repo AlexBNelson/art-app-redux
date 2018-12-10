@@ -85,7 +85,7 @@ class ImagePaneComponent extends Component {
 
 ImagePaneComponent.propTypes = {
     viewState: PropTypes.bool.isRequired,
-    imageSource: PropTypes.string.isRequired
+    imageSource: PropTypes.number.isRequired
 }
 
 export default ImagePaneComponent
