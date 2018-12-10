@@ -32,7 +32,7 @@ class TextPane extends Component {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
         
-        const scrollPointUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImagePositions';
+        const scrollPointUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImagePosition/0';
         
         var scrollPoints = [];
         
@@ -59,7 +59,7 @@ class TextPane extends Component {
 
         var imageLinks = [];
 
-        const imageLinksUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImageLinks/0';
 
         axios({
             method: 'get',
@@ -139,7 +139,7 @@ class TextPane extends Component {
                 
             });
 
-        const chaptersUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/Chapters';
+        const chaptersUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
 
         axios({
             method: 'get',
