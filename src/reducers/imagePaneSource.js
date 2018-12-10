@@ -1,4 +1,4 @@
-const imagePaneSource = (state = '', action) => {
+const imagePaneSource = (state = 0, action) => {
     switch (action.type) {
         case 'SET_IMAGE_SOURCE':
             return action.source
