@@ -17,7 +17,7 @@ class ImagePaneComponent extends Component {
     componentDidMount() {
         var imageLinks = [];
 
-        const imageLinksUrl = 'https://dyptych-api.azure-api.net/api/Values/articleContent/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImageLinks/0';
 
         axios({
             method: 'get',
@@ -85,7 +85,7 @@ class ImagePaneComponent extends Component {
 
 ImagePaneComponent.propTypes = {
     viewState: PropTypes.bool.isRequired,
-    imageSource: PropTypes.string.isRequired
+    imageSource: PropTypes.number.isRequired
 }
 
 export default ImagePaneComponent
