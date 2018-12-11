@@ -21,7 +21,6 @@ class Article extends Component {
          const articleId = this.props.id.articleId;
             return (
                 <div>
-                    <InfoPaneContainer id={articleId}/>
                     <BackgroundPaneContainer id={articleId}/>
                     <ArticlePane id={articleId}/>
                 </div>)
