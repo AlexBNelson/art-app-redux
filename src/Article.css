@@ -43,17 +43,18 @@ article-intro-gap {
 
 
 .article-image-pane {
-    height: 90vh;
-    width: 105vh;
+    height: 89vh;
+    width: 53vw;
     overflow: hidden;
-    position: relative;
+    position: absolute;
     margin-top: 1vh;
     margin-left: -5vh;
+    margin-bottom: 2vh;
     border-radius: 5px;
 }
 
 .article-image-container {
-    
+    margin-bottom: 2vh;
 }
 
 .article-image-pane-img {

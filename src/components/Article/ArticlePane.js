@@ -14,10 +14,10 @@ class ArticlePane extends Component {
            
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 article-image-div">
                         <ImagePaneContainer id={this.props.id}/>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 article-text-div">
                         <TextPane id={this.props.id}/>
                     </div>
 

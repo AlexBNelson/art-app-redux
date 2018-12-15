@@ -64,7 +64,7 @@ class ImagePaneComponent extends Component {
 
             <ul>
                 <div class="article-image-pane">
-                    <div class="article-image-container" className={this.props.viewState ? 'visible' : 'hidden'}>
+                    <div class="article-image-container" className={this.props.viewState ? 'visible article-image-container' : 'hidden article-image-container'}>
                         {images[0]}
                         {images[1]}
                         {images[2]}
