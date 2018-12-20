@@ -32,7 +32,7 @@ class TextPane extends Component {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
         
-        const scrollPointUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImagePositions';
+        const scrollPointUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImagePositions/0';
         
         var scrollPoints = [];
         
@@ -56,7 +56,7 @@ class TextPane extends Component {
 
         var imageLinks = [];
 
-        const imageLinksUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ImageLinks';
+        const imageLinksUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImageLinks/0';
 
         axios({
             method: 'get',
@@ -115,12 +115,15 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/Intro';
+        const introUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/Chapters/0';;
         
 
         axios({
             method: 'get',
-            url: introUrl
+            url: introUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
         })
             .then(response => this.setState({ intro: response.data })
             )
@@ -129,7 +132,7 @@ class TextPane extends Component {
                 
             });
 
-        const chaptersUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/Chapters';
+        const chaptersUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
 
         axios({
             method: 'get',
