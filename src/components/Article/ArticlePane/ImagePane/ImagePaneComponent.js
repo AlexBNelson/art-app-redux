@@ -33,7 +33,7 @@ class ImagePaneComponent extends Component {
 
                 for (i = 0; i < array.length; i++) {
 
-                    var element = array[i].substring(2, yourString.length - 2);
+                    var element = array[i].substring(1, array[i].length - 1);
                     imageLinks.push(element)
 
                 }
