@@ -47,9 +47,8 @@ class TextPane extends Component {
                 var i;
 
                 for (i = 0; i < array.length; i++) {
-
-                    var element = array[i].substring(1, array[i].length - 1);
-                    scrollPoints.push(element)
+                    
+                    scrollPoints.push(array[i])
 
                 }
                 
