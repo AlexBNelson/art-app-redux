@@ -27,7 +27,7 @@ class ImagePaneComponent extends Component {
                 var i;
 
                 for (i = 0; i < response.data.length; i++) {
-                    imageLinks.push(response.data[i])
+                    imageLinks.push(JSON.parse(response.data)[i])
 
                 }
                 console.log(imageLinks)
