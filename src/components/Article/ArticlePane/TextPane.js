@@ -41,10 +41,15 @@ class TextPane extends Component {
             url: scrollPointUrl
         })
             .then(function (response) {
+                var str1 = response.data.replace("]", "")
+                var str2 = str1.replace("[", "")
+                var array = str2.split(",")
                 var i;
 
-                for (i = 0; i < response.data.length; i++) {
-                    scrollPoints.push(response.data[i])
+                for (i = 0; i < array.length; i++) {
+                    
+                    scrollPoints.push(array[i])
+
                 }
                 
             }

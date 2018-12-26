@@ -18,16 +18,23 @@ class ImagePaneComponent extends Component {
         var imageLinks = [];
 
         const imageLinksUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImageLinks/0';
-
+        
         axios({
             method: 'get',
             url: imageLinksUrl
         })
             .then(function (response) {
+                var str1 = response.data.replace("]", "")
+                var str2 = str1.replace("[", "")
+                var array = str2.split(",")
+                
+
                 var i;
 
-                for (i = 0; i < response.data.length; i++) {
-                    imageLinks.push(response.data[i])
+                for (i = 0; i < array.length; i++) {
+
+                    var element = array[i].substring(1, array[i].length - 1);
+                    imageLinks.push(element)
 
                 }
                 console.log(imageLinks)
