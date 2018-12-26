@@ -120,7 +120,7 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/Chapters/0';;
+        const introUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';;
         
 
         axios({
@@ -137,7 +137,7 @@ class TextPane extends Component {
                 
             });
 
-        const chaptersUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
+        const chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
 
         axios({
             method: 'get',
