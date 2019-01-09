@@ -20,9 +20,11 @@ class BackgroundPane extends Component {
             opacity: opacityValue
         };
 
+        var backgroundImageUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/BackgroundImage';
+
         return (
             <div class="background-container">
-                <img class="article-background-pane" style={imgStyle} src="http://localhost:58282/articleBackground" />
+                <img class="article-background-pane" style={imgStyle} src={backgroundImageUrl} />
             </div>
         );
     }
