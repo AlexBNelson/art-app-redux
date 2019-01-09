@@ -7,6 +7,35 @@ import axios from 'axios'
 
 class BackgroundPane extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            backgroundImageUrl: ""
+        };
+    }
+
+    componentDidMount() {
+        var backgroundImageLinkUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/BackgroundImage/0';
+        
+
+        axios({
+            method: 'get',
+            url: backgroundImageLinkUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
+        })
+            .then(function (response) {
+                this.state.backgroundImageUrl = response.data;
+            }
+            )
+            .catch(function (error) {
+                window.alert(error);
+
+            });
+
+
+    }
     
 
     render() {
@@ -21,29 +50,11 @@ class BackgroundPane extends Component {
             opacity: opacityValue
         };
 
-        var backgroundImageLinkUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/BackgroundImage/0';
-
-        var backgroundImageUrl;
-
-        axios({
-            method: 'get',
-            url: backgroundImageLinkUrl,
-            headers: {
-                "Authorization": "09627a2d93144d10828042019f504b06"
-            }
-        })
-            .then(function (response) {
-                backgroundImageUrl = response.data;
-            }
-            )
-            .catch(function (error) {
-                window.alert(error);
-
-            });
+        
 
         return (
             <div class="background-container">
-                <img class="article-background-pane" style={imgStyle} src={backgroundImageUrl} />
+                <img class="article-background-pane" style={imgStyle} src={this.state.backgroundImageUrl} />
             </div>
         );
     }
