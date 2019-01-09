@@ -25,9 +25,7 @@ class BackgroundPane extends Component {
                 "Authorization": "09627a2d93144d10828042019f504b06"
             }
         })
-            .then(function (response) {
-                this.state.backgroundImageUrl = response.data;
-            }
+            .then(response => this.setState({ backgroundImageUrl: response.data })
             )
             .catch(function (error) {
                 window.alert(error);
