@@ -20,7 +20,22 @@ class BackgroundPane extends Component {
             opacity: opacityValue
         };
 
-        var backgroundImageUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/BackgroundImage';
+        var backgroundImageLinkUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/BackgroundImage';
+
+        var backgroundImageUrl;
+
+        axios({
+            method: 'get',
+            url: backgroundImageLinkUrl
+        })
+            .then(function (response) {
+                backgroundImageUrl = response.data;
+            }
+            )
+            .catch(function (error) {
+                window.alert(error);
+
+            });
 
         return (
             <div class="background-container">
