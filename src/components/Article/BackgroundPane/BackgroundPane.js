@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../../bootstrap.css';
 import '../../../Article.css'
+import axios from 'axios'
 
 class BackgroundPane extends Component {
 
