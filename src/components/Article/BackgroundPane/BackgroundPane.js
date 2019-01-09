@@ -27,7 +27,10 @@ class BackgroundPane extends Component {
 
         axios({
             method: 'get',
-            url: backgroundImageLinkUrl
+            url: backgroundImageLinkUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
         })
             .then(function (response) {
                 backgroundImageUrl = response.data;

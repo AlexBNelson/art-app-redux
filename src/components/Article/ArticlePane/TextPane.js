@@ -38,7 +38,10 @@ class TextPane extends Component {
         
         axios({
             method: 'get',
-            url: scrollPointUrl
+            url: scrollPointUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
         })
             .then(function (response) {
                 var str1 = response.data.replace("]", "")
@@ -65,7 +68,10 @@ class TextPane extends Component {
 
         axios({
             method: 'get',
-            url: imageLinksUrl
+            url: imageLinksUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
         })
             .then(function (response) {
                 var i;
@@ -141,7 +147,10 @@ class TextPane extends Component {
 
         axios({
             method: 'get',
-            url: chaptersUrl
+            url: chaptersUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
         })
             .then(response => this.setState({ chapters: response.data })
             )
