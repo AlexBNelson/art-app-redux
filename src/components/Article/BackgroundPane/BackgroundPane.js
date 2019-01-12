@@ -15,7 +15,7 @@ class BackgroundPane extends Component {
     }
 
     componentDidMount() {
-        var backgroundImageLinkUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/BackgroundImage/0';
+        var backgroundImageLinkUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/BackgroundImage/0';
         
 
         axios({
