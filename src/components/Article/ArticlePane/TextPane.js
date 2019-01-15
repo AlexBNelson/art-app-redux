@@ -164,7 +164,7 @@ class TextPane extends Component {
         
 
        
-    }
+    
     
 
     handleScroll() {
