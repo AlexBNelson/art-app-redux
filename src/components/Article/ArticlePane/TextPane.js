@@ -31,11 +31,11 @@ class TextPane extends Component {
     componentDidMount() {
         const { hideImage, dispatch } = this.props;
         const scrollNode = this.myScroll;
-        
+
         const scrollPointUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ImagePositions/0';
-        
+
         var scrollPoints = [];
-        
+
         axios({
             method: 'get',
             url: scrollPointUrl,
@@ -50,11 +50,11 @@ class TextPane extends Component {
                 var i;
 
                 for (i = 0; i < array.length; i++) {
-                    
+
                     scrollPoints.push(array[i])
 
                 }
-                
+
             }
             )
             .catch(function (error) {
@@ -78,10 +78,8 @@ class TextPane extends Component {
 
                 for (i = 0; i < response.data.length; i++) {
                     imageLinks.push(response.data[i])
-                    
+
                 }
-                console.log(scrollPoints)
-                console.log(imageLinks)
             }
             )
             .catch(function (error) {
@@ -90,8 +88,8 @@ class TextPane extends Component {
             });
 
 
-        
-        
+
+
 
         scrollNode.addEventListener('scroll', function () {
 
@@ -108,15 +106,15 @@ class TextPane extends Component {
             }
             for (i = 0; i < scrollPoints.length; i++) {
                 if (i == 0) {
-                    if (scrollNode.scrollTop > scrollPoints[i] || scrollNode.scrollTop < scrollPoints[i+1]) {
+                    if (scrollNode.scrollTop > scrollPoints[i] || scrollNode.scrollTop < scrollPoints[i + 1]) {
                         dispatch(setImageSource(0))
                     }
                 }
-                else if (scrollNode.scrollTop < scrollPoints[i] && scrollNode.scrollTop > scrollPoints[i-1]) {
-                            dispatch(setImageSource(i))
-                    }
+                else if (scrollNode.scrollTop < scrollPoints[i] && scrollNode.scrollTop > scrollPoints[i - 1]) {
+                    dispatch(setImageSource(i))
                 }
             }
+        }
             //if (scrollNode.scrollTop <= 300) {
             //    dispatch(setVisibilityFilter(VisibilityFilters.INVISIBLE));
             //}
@@ -127,7 +125,7 @@ class TextPane extends Component {
         )
 
         const introUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';;
-        
+
 
         axios({
             method: 'get',
@@ -140,25 +138,27 @@ class TextPane extends Component {
             )
             .catch(function (error) {
                 window.alert(error);
-                
-            });
-
-        const chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
-
-        axios({
-            method: 'get',
-            url: chaptersUrl,
-            headers: {
-                "Authorization": "09627a2d93144d10828042019f504b06"
-            }
-        })
-            .then(response => this.setState({ chapters: response.data })
-            )
-            .catch(function (error) {
-                window.alert(error);
 
             });
 
+        
+        for (int i = 0; i < imageLinks.length; i++) {
+            chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/' + i;
+            axios({
+                method: 'get',
+                url: chaptersUrl,
+                headers: {
+                    "Authorization": "09627a2d93144d10828042019f504b06"
+                }
+            })
+                .then(response => this.setState({ chapters: this.state.chapters.push(response.data) })
+                )
+                .catch(function (error) {
+                    window.alert(error);
+
+                });
+        }
+    }
 
         
 
@@ -167,13 +167,12 @@ class TextPane extends Component {
     
 
     handleScroll() {
-        console.log(this);
     }
 
     render() {
         const introText = this.state.intro;
 
-
+        console.log(this.state.chapters);
 
         return (
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
