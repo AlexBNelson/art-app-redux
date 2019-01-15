@@ -144,7 +144,7 @@ class TextPane extends Component {
         var i;
 
         for (i = 0; i < imageLinks.length; i++) {
-            chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/' + i;
+            var chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/' + i;
             axios({
                 method: 'get',
                 url: chaptersUrl,
