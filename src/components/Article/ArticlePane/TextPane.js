@@ -140,11 +140,8 @@ class TextPane extends Component {
                 window.alert(error);
 
             });
-
-        var i;
-
-        for (i = 0; i < imageLinks.length; i++) {
-            var chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/' + i;
+        
+            var chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
             axios({
                 method: 'get',
                 url: chaptersUrl,
@@ -152,14 +149,14 @@ class TextPane extends Component {
                     "Authorization": "09627a2d93144d10828042019f504b06"
                 }
             })
-                .then(response => this.setState({ chapters: this.state.chapters.push(response.data) })
+                .then(response => this.setState({ chapters: response.data  })
                 )
                 .catch(function (error) {
                     window.alert(error);
 
                 });
         }
-    }
+    
 
         
 
