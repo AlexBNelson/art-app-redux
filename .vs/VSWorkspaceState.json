@@ -8,6 +8,7 @@
     "\\src\\components\\Article\\ArticlePane",
     "\\src\\components\\Article\\ArticlePane\\ImagePane",
     "\\src\\components\\Article\\BackgroundPane",
+    "\\src\\components\\Persistent Components",
     "\\src\\reducers"
   ],
   "SelectedNode": "\\src\\components\\InDepth.js",
