@@ -56,7 +56,7 @@ class ImagePaneComponent extends Component {
         var images = [];
 
         var i;
-        
+        console.log(this.state.imageUrls)
         console.log("imageSource = " + this.props.imageSource)
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
