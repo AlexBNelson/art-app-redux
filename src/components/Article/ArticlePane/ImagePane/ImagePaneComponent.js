@@ -61,7 +61,7 @@ class ImagePaneComponent extends Component {
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
             
-            if (this.props.imageSource != i) {
+            if (this.props.imageSource != i-1) {
 
                 var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} style={{ display: 'none' }} />
             }
