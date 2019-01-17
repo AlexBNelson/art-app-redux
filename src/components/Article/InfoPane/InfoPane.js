@@ -35,7 +35,8 @@ class InfoPane extends Component {
     
 
     render() {
-        var displayedInfo
+
+        var displayedInfo;
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
@@ -44,6 +45,8 @@ class InfoPane extends Component {
         else {
             displayedInfo = this.state.info[this.props.imageSource]
         }
+        
+        console.log("displayedInfo = " + displayedInfo);
         
         return (
 
