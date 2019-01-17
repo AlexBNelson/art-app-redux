@@ -47,6 +47,10 @@ class InfoPane extends Component {
         else {
             displayedInfo = this.state.info[this.props.imageSource]
 
+        }
+
+        if (displayedInfo != null) {
+
             var displayedInfo2 = displayedInfo.replace("//r//", "/n")
 
             var displayedInfo3 = displayedInfo2.replace("\"[", "")
