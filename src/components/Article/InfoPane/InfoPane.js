@@ -37,8 +37,7 @@ class InfoPane extends Component {
     render() {
 
         var displayedInfo;
-
-        var infoHtml
+        
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
@@ -56,15 +55,8 @@ class InfoPane extends Component {
 
             var finalDisplayedInfo = displayedInfo2.replace("\"", "")
 
-            var displayInfo = finalDisplayedInfo.split(",")
+            displayedInfo = finalDisplayedInfo.split(",")
 
-            var i
-
-            
-
-            for (i = 0; i < displayInfo.length; i++) {
-                infoHtml += (displayInfo[i] + <br></br>)
-            }
         }
 
        
@@ -77,7 +69,10 @@ class InfoPane extends Component {
 
            
             <div class="info-pane">
-                {infoHtml}
+                ImageTitle: {displayedInfo[0]}
+                Artist: {displayedInfo[1]}
+                Date of Image Creation:  {displayedInfo[2]}
+                Chapter Title: {displayedInfo[3]}
                 </div>
         );
     }
