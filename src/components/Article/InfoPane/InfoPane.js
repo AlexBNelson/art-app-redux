@@ -25,7 +25,7 @@ class InfoPane extends Component {
             method: 'get',
             url: infoUrl
         })
-            .then(response => this.setState({ info: response.data.split("//r//").replace("/n").replace("[","") })
+            .then(response => this.setState({ info: response.data.split("//r//")})
             )
             .catch(function (error) {
                 window.alert(error);
@@ -45,6 +45,12 @@ class InfoPane extends Component {
         else {
             displayedInfo = this.state.info[this.props.imageSource]
         }
+
+        var displayedInfo2 = displayedInfo.replace("//r//", "/n")
+
+        var displayedInfo3 = displayedInfo2.replace("\"[", "")
+
+        var displayedInfo4 = displayedInfo3.replace("\"", "")
         
         console.log("displayedInfo = " + displayedInfo);
         
@@ -52,7 +58,7 @@ class InfoPane extends Component {
 
            
             <div class="info-pane">
-                {displayedInfo}
+                {displayedInfo4}
                 </div>
         );
     }
