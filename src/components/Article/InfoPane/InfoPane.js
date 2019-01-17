@@ -54,12 +54,13 @@ class InfoPane extends Component {
 
             var displayedInfo2 = displayedInfo.replace("\"[", ",")
 
-            console.log("displayedInfo = " + displayedInfo2);
+            
 
             var finalDisplayedInfo = displayedInfo2.replace("\"", "")
 
             actualInfo = finalDisplayedInfo.split(",")
 
+            console.log("displayedInfo = " + actualInfo);
         }
 
        
