@@ -38,27 +38,33 @@ class InfoPane extends Component {
 
         var displayedInfo;
 
+        var finalDisplayedInfo
+
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
             displayedInfo = this.state.info[this.state.info.length - 1]
         }
         else {
             displayedInfo = this.state.info[this.props.imageSource]
+
+            var displayedInfo2 = displayedInfo.replace("//r//", "/n")
+
+            var displayedInfo3 = displayedInfo2.replace("\"[", "")
+
+            finalDisplayedInfo = displayedInfo3.replace("\"", "")
         }
 
-        var displayedInfo2 = displayedInfo.replace("//r//", "/n")
-
-        var displayedInfo3 = displayedInfo2.replace("\"[", "")
-
-        var displayedInfo4 = displayedInfo3.replace("\"", "")
         
-        console.log("displayedInfo = " + displayedInfo);
+
+        
+
+        console.log("displayedInfo = " + finalDisplayedInfo);
         
         return (
 
            
             <div class="info-pane">
-                {displayedInfo4}
+                {finalDisplayedInfo}
                 </div>
         );
     }
