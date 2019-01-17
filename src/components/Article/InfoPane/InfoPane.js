@@ -52,11 +52,11 @@ class InfoPane extends Component {
         if (displayedInfo != null) {
 
 
-            var displayedInfo2 = displayedInfo.replace("\"[", ",")
+            var displayedInfo2 = displayedInfo.replace("\"[", "")
 
-            
+            var displayedInfo3 = displayedInfo2.replace("\\r\\", ",")
 
-            var finalDisplayedInfo = displayedInfo2.replace("\"", "")
+            var finalDisplayedInfo = displayedInfo3.replace("\"", "")
 
             actualInfo = finalDisplayedInfo.split(",")
 
