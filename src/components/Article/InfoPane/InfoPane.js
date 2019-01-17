@@ -14,25 +14,25 @@ class InfoPane extends Component {
         this.state = {
             info: []
         }
-        
+
     }
 
     componentDidMount() {
-         
-        var infoUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ArticleInfo/0' 
+
+        var infoUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ArticleInfo/0'
 
         axios({
             method: 'get',
             url: infoUrl
         })
-            .then(response => this.setState({ info: response.data.split("//r//")})
+            .then(response => this.setState({ info: response.data.split(",") })
             )
             .catch(function (error) {
                 window.alert(error);
 
             });
     }
-    
+
 
     render() {
 
@@ -51,14 +51,19 @@ class InfoPane extends Component {
 
         if (displayedInfo != null) {
 
-            var displayedInfo2 = displayedInfo.replace("//r//", "")
 
-            var displayedInfo3 = displayedInfo2.replace("\"[", "")
+            var displayedInfo3 = displayedInfo2.replace("\"[", ",")
 
             finalDisplayedInfo = displayedInfo3.replace("\"", "")
         }
 
-        
+        var i
+
+        var infoHtml
+        var displayInfo = finalDisplayedInfo.split(",")
+        for (i = 0; i < displayInfo.length; i++) {
+            infoHtml += (displayInfo[i] + <br></br>)
+        }
 
         
 
@@ -68,7 +73,7 @@ class InfoPane extends Component {
 
            
             <div class="info-pane">
-                {finalDisplayedInfo}
+                {infoHtml}
                 </div>
         );
     }
