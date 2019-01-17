@@ -51,7 +51,7 @@ class InfoPane extends Component {
 
         if (displayedInfo != null) {
 
-            var displayedInfo2 = displayedInfo.replace("//r//", "/n")
+            var displayedInfo2 = displayedInfo.replace("//r//", "")
 
             var displayedInfo3 = displayedInfo2.replace("\"[", "")
 
@@ -62,7 +62,7 @@ class InfoPane extends Component {
 
         
 
-        console.log("displayedInfo = " + finalDisplayedInfo);
+        console.log("displayedInfo = " + this.state.info);
         
         return (
 
