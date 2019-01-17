@@ -36,8 +36,9 @@ class InfoPane extends Component {
 
     render() {
 
-        var displayedInfo = [1,2,3,4];
-        
+        var displayedInfo
+
+        var actualInfo =[]
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
@@ -55,7 +56,7 @@ class InfoPane extends Component {
 
             var finalDisplayedInfo = displayedInfo2.replace("\"", "")
 
-            displayedInfo = finalDisplayedInfo.split(",")
+            actualInfo = finalDisplayedInfo.split(",")
 
         }
 
@@ -63,16 +64,16 @@ class InfoPane extends Component {
 
         
 
-        console.log("displayedInfo = " + displayedInfo);
+        console.log("displayedInfo = " + actualInfo);
         
         return (
 
            
             <div class="info-pane">
-                ImageTitle: {displayedInfo[0]}
-                Artist: {displayedInfo[1]}
-                Date of Image Creation:  {displayedInfo[2]}
-                Chapter Title: {displayedInfo[3]}
+                ImageTitle: {actualInfo[0]}
+                Artist: {actualInfo[1]}
+                Date of Image Creation:  {actualInfo[2]}
+                Chapter Title: {actualInfo[3]}
                 </div>
         );
     }
