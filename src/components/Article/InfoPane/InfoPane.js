@@ -36,7 +36,7 @@ class InfoPane extends Component {
 
     render() {
 
-        var displayedInfo;
+        var displayedInfo = [1,2,3,4];
         
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
@@ -63,7 +63,7 @@ class InfoPane extends Component {
 
         
 
-        console.log("displayedInfo = " + this.state.info);
+        console.log("displayedInfo = " + displayedInfo);
         
         return (
 
