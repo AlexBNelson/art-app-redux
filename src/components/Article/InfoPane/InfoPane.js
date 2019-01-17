@@ -54,7 +54,7 @@ class InfoPane extends Component {
 
             var displayedInfo2 = displayedInfo.replace("\"[", "")
 
-            var displayedInfo3 = displayedInfo2.replace("\\r\\", ",")
+            var displayedInfo3 = displayedInfo2.replace("\/\/r\/\/", ",")
 
             var finalDisplayedInfo = displayedInfo3.replace("\"", "")
 
