@@ -38,7 +38,7 @@ class InfoPane extends Component {
 
         var displayedInfo;
 
-        var finalDisplayedInfo
+        var infoHtml
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
@@ -54,16 +54,20 @@ class InfoPane extends Component {
 
             var displayedInfo2 = displayedInfo.replace("\"[", ",")
 
-            finalDisplayedInfo = displayedInfo2.replace("\"", "")
+            var finalDisplayedInfo = displayedInfo2.replace("\"", "")
+
+            var displayInfo = finalDisplayedInfo.split(",")
+
+            var i
+
+            
+
+            for (i = 0; i < displayInfo.length; i++) {
+                infoHtml += (displayInfo[i] + <br></br>)
+            }
         }
 
-        var i
-
-        var infoHtml
-        var displayInfo = finalDisplayedInfo.split(",")
-        for (i = 0; i < displayInfo.length; i++) {
-            infoHtml += (displayInfo[i] + <br></br>)
-        }
+       
 
         
 
