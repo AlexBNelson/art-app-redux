@@ -25,7 +25,7 @@ class InfoPane extends Component {
             method: 'get',
             url: infoUrl
         })
-            .then(response => this.setState({ info: response.data.split(",") })
+            .then(response => this.setState({ info: response.data.split("//r//").replace("/n").replace("[","") })
             )
             .catch(function (error) {
                 window.alert(error);
