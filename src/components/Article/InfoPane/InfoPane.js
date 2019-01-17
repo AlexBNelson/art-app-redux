@@ -19,7 +19,7 @@ class InfoPane extends Component {
 
     componentDidMount() {
          
-        var infoUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ArticleInfo' 
+        var infoUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ArticleInfo/0' 
 
         axios({
             method: 'get',
