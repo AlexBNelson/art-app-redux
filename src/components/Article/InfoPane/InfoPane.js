@@ -25,7 +25,7 @@ class InfoPane extends Component {
             method: 'get',
             url: infoUrl
         })
-            .then(response => this.setState({ info: response.data })
+            .then(response => this.setState({ info: response.data.split(",") })
             )
             .catch(function (error) {
                 window.alert(error);
