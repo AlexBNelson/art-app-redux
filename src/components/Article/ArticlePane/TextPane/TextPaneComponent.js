@@ -165,15 +165,18 @@ class TextPane extends Component {
     
 
     handleScroll() {
+        const {dispatch } = this.props;
         dispatch(setImageSource(0))
     }
 
     nextPage() {
+        const { dispatch } = this.props;
         dispatch(setImageSource(this.props.imageSource + 1))
 
     }
 
     previousPage() {
+        const { dispatch } = this.props;
         dispatch(setImageSource(this.props.imageSource - 1))
     }
 
