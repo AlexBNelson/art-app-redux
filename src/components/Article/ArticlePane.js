@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../bootstrap.css';
 import '../../Article.css'
-import TextPane from './ArticlePane/TextPane';
+import TextPaneContainer from './ArticlePane/TextPane/TextPaneContainer';
 import ImagePaneContainer from './ArticlePane/ImagePane/ImagePaneContainer'
 
 
