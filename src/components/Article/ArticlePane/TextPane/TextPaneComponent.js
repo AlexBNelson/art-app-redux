@@ -186,18 +186,20 @@ class TextPane extends Component {
         console.log(this.state.chapters);
 
         return (
-            <div class="row" id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
-                <div class="col-lg-5 article-intro-pane">
-                    <div>
+            <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
+                <div class="text-pane">
+                    <div class="article-intro-pane">
                     {articles.data[0].Text}
                     {introText}
                     </div>
-                <div class="col-lg-1 article-body-pane">
+                <div class="article-body-pane">
                     {this.state.chapters}
+                    </div>
                 </div>
 
+
             </div>
-            <div class="col-lg-1">
+            <div class="col-lg-1 page-butons">
                     <button onClick={this.nextPage.bind(this)}>Forwards</button>
                     <button onClick={this.previousPage.bind(this)}>Backwards</button>
             </div>

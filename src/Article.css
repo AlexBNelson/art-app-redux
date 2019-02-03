@@ -104,3 +104,8 @@ article-intro-gap {
     font-weight: bold;
     z-index: 1000;
 }
+
+.text-column {
+    width: 600px;
+    float: left;
+}
