@@ -192,7 +192,7 @@ class TextPane extends Component {
                     {articles.data[0].Text}
                     {introText}
                     </div>
-                <div class=" article-body-pane">
+                <div class="col-lg-1 article-body-pane">
                     {this.state.chapters}
                 </div>
 
