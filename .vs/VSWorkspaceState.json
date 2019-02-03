@@ -8,9 +8,9 @@
     "\\src\\components\\Article\\ArticlePane",
     "\\src\\components\\Article\\ArticlePane\\ImagePane",
     "\\src\\components\\Article\\BackgroundPane",
-    "\\src\\components\\Persistent Components",
-    "\\src\\reducers"
+    "\\src\\components\\Article\\InfoPane",
+    "\\src\\components\\Persistent Components"
   ],
-  "SelectedNode": "\\src\\components\\InDepth.js",
+  "SelectedNode": "\\src\\components\\Article\\ArticlePane\\ImagePane\\ImagePaneComponent.js",
   "PreviewInSolutionExplorer": false
 }

@@ -18,7 +18,7 @@ class ArticlePane extends Component {
                         <ImagePaneContainer id={this.props.id}/>
                     </div>
                     <div class="col-6 article-text-div">
-                        <TextPane id={this.props.id}/>
+                        <TextPaneContainer id={this.props.id}/>
                     </div>
 
                 </div>
