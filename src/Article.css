@@ -79,6 +79,7 @@ article-intro-gap {
     height: 10vh;
     width: 40vh;
     z-index:2000;
+    font-size: 1vh;
 }
 
 .image-details-pane {
@@ -106,11 +107,11 @@ article-intro-gap {
 }
 
 .text-column {
-    width: 35vh;
+    width: 45vh;
     float: left;
 }
 
 .page-buttons {
-    width: 8vh;
+    width: 5vh;
     float: right;
 }
