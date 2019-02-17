@@ -28,9 +28,7 @@ class ImagePaneComponent extends Component {
         })
             .then(function (response) {
                 console.log(response.data)
-                var str1 = response.data.replace("]", "")
-                var str2 = str1.replace("[", "")
-                var array = str2.split(",")
+                var array = response.data.split("~")
                 
 
                 var i;
