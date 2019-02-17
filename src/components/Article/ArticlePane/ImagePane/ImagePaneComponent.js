@@ -35,12 +35,12 @@ class ImagePaneComponent extends Component {
 
                 var i;
 
-                for (var i = 0; i < array.length; i+2){
+                for (i = 0; i < array.length; i+2){
                     array2.push(array[i] + array[i+1])
                 }
                 
 
-                var i;
+
 
                 for (i = 0; i < array2.length; i++) {
 
