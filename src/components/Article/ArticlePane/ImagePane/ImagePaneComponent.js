@@ -27,6 +27,7 @@ class ImagePaneComponent extends Component {
             }
         })
             .then(function (response) {
+                console.log("image links response strings: "  + response.data)
                 var str1 = response.data.replace("]", "")
                 var str2 = str1.replace("[", "")
                 var array = str2.split(",")

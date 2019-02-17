@@ -55,6 +55,7 @@ article-intro-gap {
 
 .article-image-container {
     margin-bottom: 2vh;
+    object-fit: contain;
 }
 
 .article-image-pane-img {
