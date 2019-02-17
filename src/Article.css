@@ -55,7 +55,6 @@ article-intro-gap {
 
 .article-image-container {
     margin-bottom: 2vh;
-    object-fit: contain;
 }
 
 .article-image-pane-img {
@@ -63,6 +62,7 @@ article-intro-gap {
     z-index: 10000;
     width: 160vh; /* you can use % */
     height: auto;
+    object-fit: contain;
 }
 
 

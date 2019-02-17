@@ -182,8 +182,7 @@ class TextPane extends Component {
 
     render() {
         const introText = this.state.intro;
-
-        console.log(this.state.chapters);
+        
 
         return (
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
