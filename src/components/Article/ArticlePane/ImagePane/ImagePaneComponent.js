@@ -27,7 +27,7 @@ class ImagePaneComponent extends Component {
             }
         })
             .then(function (response) {
-                console.log("image links response strings: "  + response.data)
+                console.log(response.data)
                 var str1 = response.data.replace("]", "")
                 var str2 = str1.replace("[", "")
                 var array = str2.split(",")
@@ -41,7 +41,6 @@ class ImagePaneComponent extends Component {
                     imageLinks.push(element)
 
                 }
-                console.log(imageLinks)
             }
             )
             .catch(function (error) {
