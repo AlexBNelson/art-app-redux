@@ -37,7 +37,7 @@ class ImagePaneComponent extends Component {
 
                 for (i = 0; i < array.length; i++) {
                     if (array[i].substring(1, array[i].length - 1).includes("https")) {
-                        var element = array[i].substring(1, array[i].length - 1) + array[i + 1].substring(1, array[i + 1].length - 1);
+                        var element = array[i].substring(1, array[i].length - 1) + "," + array[i + 1].substring(1, array[i + 1].length - 1);
                         imageLinks.push(element)
                     }
                 }
