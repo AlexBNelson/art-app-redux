@@ -27,17 +27,17 @@ class ImagePaneComponent extends Component {
             }
         })
             .then(function (response) {
-                console.log(response.data)
+                
                 var str1 = response.data.replace("]", "")
                 var str2 = str1.replace("[", "")
                 var array = str2.split(",")
-                
+                console.log(response.data)
 
                 var i;
 
-                for (i = 0; i < array.length; i++) {
+                for (i = 0; i < array.length; i+2) {
 
-                    var element = array[i].substring(1, array[i].length - 1);
+                    var element = array[i].substring(1, array[i].length - 1) + array[i+1].substring(1, array[i+1].length - 1);
                     imageLinks.push(element)
 
                 }
