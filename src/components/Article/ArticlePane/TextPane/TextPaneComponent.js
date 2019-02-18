@@ -193,12 +193,12 @@ class TextPane extends Component {
                     {articles.data[0].Text}
                     {introText}
                     </div>
-                            <div class="article-body-pane col-lg-2">
+                            <div class="article-body-pane">
                     {this.state.chapters}
                     </div>
                 </div>
                 
-            <div class="page-buttons">
+            <div class="page-buttons col-lg-2">
                     <button class="page-button" onClick={this.nextPage.bind(this)}>Forwards</button>
                     <button class="page-button" onClick={this.previousPage.bind(this)}>Backwards</button>
             </div>
