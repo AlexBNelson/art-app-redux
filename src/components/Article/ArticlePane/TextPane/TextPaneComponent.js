@@ -10,8 +10,8 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
 import { VisibilityFilters } from '../../../../actions'
 import axios from 'axios'
-import { rightarrow } from '../../../../right-arrow.png';
-import { leftarrow } from '../../../../left-arrow.png';
+import rightarrow from '../../../../rightarrow.png';
+import leftarrow from '../../../../leftarrow.png';
 
 
 
