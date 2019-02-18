@@ -123,4 +123,5 @@ article-intro-gap {
     float: right;
     height: 90vh;
     position: fixed;
+    right: 5vw;
 }
