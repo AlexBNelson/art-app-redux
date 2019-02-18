@@ -113,9 +113,11 @@ article-intro-gap {
     float: left;
 }
 
-.page-button{
+.page-button {
     width: 5vw;
     height: 45vh;
+    background: none;
+    border: none;
 }
 
 .page-buttons {
@@ -124,9 +126,8 @@ article-intro-gap {
     height: 90vh;
     position: fixed;
     right: 5vw;
-    background:none;
 }
 
-.button-img{
-    width:2vw;
+.button-img {
+    width: 2vw;
 }
