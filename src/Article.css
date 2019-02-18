@@ -36,8 +36,7 @@ article-intro-gap {
     margin-left: 5vh;
 }
 .article-text-pane {
-    overflow-y: scroll;
-    flex: 1;
+    
     height: 90vh;
     width: 45vw;
 }
@@ -111,6 +110,8 @@ article-intro-gap {
 .text-column {
     width: 40vw;
     float: left;
+    overflow-y: scroll;
+    flex: 1;
 }
 
 .page-button{
