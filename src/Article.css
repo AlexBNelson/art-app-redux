@@ -124,4 +124,5 @@ article-intro-gap {
     height: 90vh;
     position: fixed;
     right: 5vw;
+    background:none;
 }
