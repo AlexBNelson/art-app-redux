@@ -112,7 +112,13 @@ article-intro-gap {
     float: left;
 }
 
+.page-button{
+    width: 5vw;
+    height: 45vh;
+}
+
 .page-buttons {
-    width: 5vh;
+    width: 5vw;
     float: right;
+    height: 90vh;
 }

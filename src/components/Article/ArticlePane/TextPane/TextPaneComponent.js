@@ -185,7 +185,9 @@ class TextPane extends Component {
         
 
         return (
+            <div>
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
+                
                 <div class="text-column">
                     <div class="article-intro-pane">
                     {articles.data[0].Text}
@@ -195,11 +197,12 @@ class TextPane extends Component {
                     {this.state.chapters}
                     </div>
                 </div>
-                
+                </div>
             <div class="page-buttons">
-                    <button onClick={this.nextPage.bind(this)}>Forwards</button>
-                    <button onClick={this.previousPage.bind(this)}>Backwards</button>
+                    <button class="page-button" onClick={this.nextPage.bind(this)}>Forwards</button>
+                    <button class="page-button" onClick={this.previousPage.bind(this)}>Backwards</button>
             </div>
+                
             </div>
 
 
