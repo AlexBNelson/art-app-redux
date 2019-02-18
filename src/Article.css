@@ -39,6 +39,7 @@ article-intro-gap {
     overflow-y: scroll;
     flex: 1;
     height: 90vh;
+    width: 45vw;
 }
 
 
