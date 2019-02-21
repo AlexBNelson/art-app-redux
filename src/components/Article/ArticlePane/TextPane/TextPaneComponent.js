@@ -78,8 +78,8 @@ class TextPane extends Component {
             .then(function (response) {
                 var i;
 
-                for (i = 0; i < response.content.length; i++) {
-                    imageLinks.push(response.content[i])
+                for (i = 0; i < response.data.length; i++) {
+                    imageLinks.push(response.data[i])
 
                 }
             }
@@ -152,7 +152,8 @@ class TextPane extends Component {
                     "Accept": "text/html" 
                 }
             })
-                .then(response => this.setState({ chapters: response.content  })
+                .then(response => this.setState({ chapters: response.data
+                })
                 )
                 .catch(function (error) {
                     window.alert(error);
