@@ -3,9 +3,37 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../../bootstrap.css';
 import '../../../Article.css'
+import axios from 'axios'
 
 class BackgroundPane extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            backgroundImageUrl: ""
+        };
+    }
+
+    componentDidMount() {
+        var backgroundImageLinkUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/BackgroundImage/0';
+        
+
+        axios({
+            method: 'get',
+            url: backgroundImageLinkUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
+        })
+            .then(response => this.setState({ backgroundImageUrl: response.data })
+            )
+            .catch(function (error) {
+                window.alert(error);
+
+            });
+
+
+    }
     
 
     render() {
@@ -20,9 +48,11 @@ class BackgroundPane extends Component {
             opacity: opacityValue
         };
 
+        
+
         return (
             <div class="background-container">
-                <img class="article-background-pane" style={imgStyle} src="http://localhost:58282/articleBackground" />
+                <img class="article-background-pane" style={imgStyle} src={this.state.backgroundImageUrl} />
             </div>
         );
     }

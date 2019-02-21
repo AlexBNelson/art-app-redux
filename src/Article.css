@@ -39,6 +39,7 @@ article-intro-gap {
     overflow-y: scroll;
     flex: 1;
     height: 90vh;
+    width:45vw;
 }
 
 
@@ -62,6 +63,7 @@ article-intro-gap {
     z-index: 10000;
     width: 160vh; /* you can use % */
     height: auto;
+    object-fit: contain;
 }
 
 
@@ -79,6 +81,7 @@ article-intro-gap {
     height: 10vh;
     width: 40vh;
     z-index:2000;
+    font-size: 1.5vh;
 }
 
 .image-details-pane {
@@ -103,4 +106,28 @@ article-intro-gap {
     font-style: italic;
     font-weight: bold;
     z-index: 1000;
+}
+
+.text-column {
+    width: 40vw;
+    float: left;
+}
+
+.page-button {
+    width: 5vw;
+    height: 45vh;
+    background: none;
+    border: none;
+}
+
+.page-buttons {
+    width: 5vw;
+    float: right;
+    height: 90vh;
+    position: fixed;
+    right: 5vw;
+}
+
+.button-img {
+    width: 2vw;
 }

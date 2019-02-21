@@ -17,31 +17,34 @@ class ImagePaneComponent extends Component {
     componentDidMount() {
         var imageLinks = [];
 
-        const imageLinksUrl = 'https://dyptych-fa.azurewebsites.net/api/' + this.props.id + '/ImageLinks/0';
+        const imageLinksUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ImageLinks/0';
         
         axios({
             method: 'get',
-            url: imageLinksUrl
+            url: imageLinksUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06"
+            }
         })
             .then(function (response) {
+                
                 var str1 = response.data.replace("]", "")
                 var str2 = str1.replace("[", "")
                 var array = str2.split(",")
-                
+                console.log(response.data)
 
                 var i;
 
                 for (i = 0; i < array.length; i++) {
-
-                    var element = array[i].substring(1, array[i].length - 1);
-                    imageLinks.push(element)
-
+                    if (array[i].substring(1, array[i].length - 1).includes("https")) {
+                        var element = array[i].substring(1, array[i].length) + "," + array[i+1].substring(0, array[i + 1].length - 1);
+                        imageLinks.push(element)
+                    }
                 }
-                console.log(imageLinks)
             }
             )
             .catch(function (error) {
-                window.alert(error);
+                console.log(error);
 
             });
 
@@ -53,15 +56,18 @@ class ImagePaneComponent extends Component {
         var images = [];
 
         var i;
-
+        
+        console.log(this.state.imageUrls)
+        console.log("imageSource = " + this.props.imageSource)
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
-
-            if (this.props.imageSource != i) {
+            
+            if (this.props.imageSource-1 != i) {
 
                 var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} style={{ display: 'none' }} />
             }
             else {
+                console.log("viewstate =" + this.props.viewState)
                 var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]}/>
             }
             images.push(a)

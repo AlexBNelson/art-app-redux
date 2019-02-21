@@ -14,28 +14,31 @@ class InfoPane extends Component {
         this.state = {
             info: []
         }
-        
+
     }
 
     componentDidMount() {
 
-        var infoUrl = 'http://localhost:58282/articleContent/' + this.props.id + '/ArticleInfo' 
+        var infoUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ArticleInfo/0'
 
         axios({
             method: 'get',
             url: infoUrl
         })
-            .then(response => this.setState({ info: response.data })
+            .then(response => this.setState({ info: response.data.split(",") })
             )
             .catch(function (error) {
                 window.alert(error);
 
             });
     }
-    
+
 
     render() {
+
         var displayedInfo
+
+        var actualInfo =[]
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
@@ -43,13 +46,45 @@ class InfoPane extends Component {
         }
         else {
             displayedInfo = this.state.info[this.props.imageSource]
+
         }
+
+        if (displayedInfo != null) {
+
+
+            var displayedInfo2 = displayedInfo.replace("\"[", "")
+
+            var displayedInfo3 = displayedInfo2.replace("Title:", ",")
+
+            var displayedInfo4 = displayedInfo3.replace("Artist:", ",")
+
+            var displayedInfo5 = displayedInfo4.replace("Date of Creation:", ",")
+
+            var displayedInfo6 = displayedInfo5.replace("Link:", ",")
+
+            var displayedInfo7 = displayedInfo6.replace("Chapter Title:", ",")
+            
+            var finalDisplayedInfo = displayedInfo7.replace("\"", "")
+
+            actualInfo = finalDisplayedInfo.split(",")
+
+            console.log("displayedInfo = " + actualInfo);
+        }
+
+       
+
+        
+
+       
         
         return (
 
            
             <div class="info-pane">
-                {displayedInfo}
+                ImageTitle: {actualInfo[0]}
+                Artist: {actualInfo[1]}
+                Date of Image Creation:  {actualInfo[2]}
+                Chapter Title: {actualInfo[3]}
                 </div>
         );
     }

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../bootstrap.css';
 import '../../Article.css'
-import TextPane from './ArticlePane/TextPane';
+import TextPaneContainer from './ArticlePane/TextPane/TextPaneContainer';
 import ImagePaneContainer from './ArticlePane/ImagePane/ImagePaneContainer'
 
 
@@ -18,7 +18,7 @@ class ArticlePane extends Component {
                         <ImagePaneContainer id={this.props.id}/>
                     </div>
                     <div class="col-6 article-text-div">
-                        <TextPane id={this.props.id}/>
+                        <TextPaneContainer id={this.props.id}/>
                     </div>
 
                 </div>
