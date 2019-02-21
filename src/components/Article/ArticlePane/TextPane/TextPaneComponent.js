@@ -136,7 +136,7 @@ class TextPane extends Component {
                 "Authorization": "09627a2d93144d10828042019f504b06"
             }
         })
-            .then(response => this.setState({ intro: response.data })
+            .then(response => this.setState({ intro: response.content })
             )
             .catch(function (error) {
                 window.alert(error);
