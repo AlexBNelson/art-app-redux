@@ -44,7 +44,7 @@ class ImagePaneComponent extends Component {
             }
             )
             .catch(function (error) {
-                window.alert(error);
+                console.log(error);
 
             });
 
