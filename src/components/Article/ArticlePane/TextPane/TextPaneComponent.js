@@ -149,7 +149,7 @@ class TextPane extends Component {
                 url: chaptersUrl,
                 headers: {
                     "Authorization": "09627a2d93144d10828042019f504b06",
-                    "Accept: text/html" 
+                    "Accept": "text/html" 
                 }
             })
                 .then(response => this.setState({ chapters: response.data  })
