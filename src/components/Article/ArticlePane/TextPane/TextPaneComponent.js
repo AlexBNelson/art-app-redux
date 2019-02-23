@@ -24,7 +24,7 @@ class TextPane extends Component {
         super(props)
         this.state = {
             intro: '',
-            chapters: [],
+            chapters: '',
             scrollPoints: []
         };
     }
