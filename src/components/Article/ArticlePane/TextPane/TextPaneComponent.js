@@ -152,9 +152,24 @@ class TextPane extends Component {
                     "Accept": "text/html" 
                 }
             })
-                .then(response => this.setState({ chapters: response.data
+                .then(function (response) {
+                    var array = response.data.split('%');
+                    var i = 0;
+                    var textArray = [];
+
+                    for (i = 0; i < array.length; i++) {
+                        var paraList = array[i].split('|');
+                        var htmlElement;
+                        var j = 0;
+                        for (j = 0; j < paraList.length; i++) {
+                            htmlElement += <p>{paraList[i]}</p>
+                        }
+                        textArray.push(htmlElement)
+
+                        this.setState({ chapters: textArray })
+                    }
+
                 })
-                )
                 .catch(function (error) {
                     window.alert(error);
 
