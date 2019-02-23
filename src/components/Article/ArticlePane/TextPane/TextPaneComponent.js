@@ -195,9 +195,10 @@ class TextPane extends Component {
                 <div class="text-column col-lg-10">
                     <div class="article-intro-pane">
                     {articles.data[0].Text}
+                    {introText}
                     </div>
                             <div class="article-body-pane">
-                                {this.state.chapters[this.props.imageSource]}
+                                {this.state.chapters}
                     </div>
                 </div>
                 
