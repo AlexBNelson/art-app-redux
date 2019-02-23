@@ -95,7 +95,7 @@ class TextPane extends Component {
 
         scrollNode.addEventListener('scroll', function () {
 
-            var i;
+           /*var i;
 
             dispatch(setScrollValue(scrollNode.scrollTop))
 
@@ -115,7 +115,7 @@ class TextPane extends Component {
                 else if (scrollNode.scrollTop < scrollPoints[i] && scrollNode.scrollTop > scrollPoints[i - 1]) {
                     dispatch(setImageSource(i))
                 }
-            }
+            }*/
         }
             //if (scrollNode.scrollTop <= 300) {
             //    dispatch(setVisibilityFilter(VisibilityFilters.INVISIBLE));
@@ -168,7 +168,6 @@ class TextPane extends Component {
 
     handleScroll() {
         const {dispatch } = this.props;
-        dispatch(setImageSource(0))
     }
 
     nextPage() {
@@ -183,7 +182,12 @@ class TextPane extends Component {
     }
 
     render() {
-        const introText = this.state.intro;
+        var introText
+
+        if (this.props.imageSource>0) {
+            introText = this.state.intro;
+        }
+
 
         var array = this.state.chapters.split('%');
         var i = 0;
