@@ -198,7 +198,7 @@ class TextPane extends Component {
                     {introText}
                     </div>
                             <div class="article-body-pane">
-                                {this.state.chapters}
+                                {this.state.chapters[this.props.imageSource}
                     </div>
                 </div>
                 
