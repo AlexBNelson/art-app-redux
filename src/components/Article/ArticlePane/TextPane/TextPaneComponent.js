@@ -152,22 +152,7 @@ class TextPane extends Component {
                     "Accept": "text/html" 
                 }
             })
-                .then(function (response) {
-                    var array = response.data.split('%');
-                    var i = 0;
-                    var textArray = [];
-
-                    for (i = 0; i < array.length; i++) {
-                        var paraList = array[i].split('|');
-                        var htmlElement = [];
-                        var j = 0;
-                        for (j = 0; j < paraList.length; j++) {
-                            htmlElement.push(<p>{paraList[j]}</p>)
-                        }
-                        textArray.push(htmlElement)
-                    }
-                    this.setState({ chapters: textArray })
-                })
+                .then(response => this.setState({ chapters: response.data }))
                 .catch(function (error) {
                     window.alert(error);
 
@@ -199,7 +184,20 @@ class TextPane extends Component {
 
     render() {
         const introText = this.state.intro;
-        
+
+        var array = this.state.chapters.split('%');
+        var i = 0;
+        var textArray = [];
+
+        for (i = 0; i < array.length; i++) {
+            var paraList = array[i].split('|');
+            var htmlElement = [];
+            var j = 0;
+            for (j = 0; j < paraList.length; j++) {
+                htmlElement.push(<p>{paraList[j]}</p>)
+            }
+            textArray.push(htmlElement)
+        }
 
         return (
             <div>
@@ -211,7 +209,7 @@ class TextPane extends Component {
                     {introText}
                     </div>
                             <div class="article-body-pane">
-                                {this.state.chapters[this.props.imageSource]}
+                                {textArray[this.props.imageSource]}
                     </div>
                 </div>
                 
