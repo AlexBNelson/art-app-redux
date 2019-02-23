@@ -126,7 +126,7 @@ class TextPane extends Component {
             //}
         )
 
-        const introUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';;
+        const introUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Intro/0';;
 
 
         axios({
@@ -205,7 +205,7 @@ class TextPane extends Component {
                 <div class="row">
                 <div class="text-column col-lg-10">
                             <div class="article-intro-pane">
-                            
+                                {introText}
                     </div>
                             <div class="article-body-pane">
                                 {textArray[this.props.imageSource]}
