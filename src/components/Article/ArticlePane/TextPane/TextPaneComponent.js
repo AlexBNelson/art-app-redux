@@ -161,14 +161,12 @@ class TextPane extends Component {
                         var paraList = array[i].split('|');
                         var htmlElement = [];
                         var j = 0;
-                        for (j = 0; j < paraList.length; i++) {
-                            htmlElement.push(<p>{paraList[i]}</p>)
+                        for (j = 0; j < paraList.length; j++) {
+                            htmlElement.push(<p>{paraList[j]}</p>)
                         }
                         textArray.push(htmlElement)
-
-                        this.setState({ chapters: textArray })
                     }
-
+                    this.setState({ chapters: textArray })
                 })
                 .catch(function (error) {
                     window.alert(error);
