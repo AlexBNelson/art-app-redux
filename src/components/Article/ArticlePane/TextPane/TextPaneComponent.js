@@ -204,9 +204,8 @@ class TextPane extends Component {
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                 <div class="row">
                 <div class="text-column col-lg-10">
-                    <div class="article-intro-pane">
-                    {articles.data[0].Text}
-                    {introText}
+                            <div class="article-intro-pane">
+                            
                     </div>
                             <div class="article-body-pane">
                                 {textArray[this.props.imageSource]}
