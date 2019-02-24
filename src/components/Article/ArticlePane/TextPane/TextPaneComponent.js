@@ -212,7 +212,7 @@ class TextPane extends Component {
                                 {introText}
                     </div>
                             <div class="article-body-pane">
-                                {textArray[this.props.imageSource]}
+                                {textArray[this.props.imageSource-1]}
                     </div>
                 </div>
                 
