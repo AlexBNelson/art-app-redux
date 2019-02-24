@@ -50,7 +50,7 @@ class InfoPane extends Component {
         }
 
         if (displayedInfo != null) {
-
+            displayedInfo.replace("[\"", "")
             var formattedArray = displayedInfo.split('|');
             var i = 0;
             htmlArray = [];
