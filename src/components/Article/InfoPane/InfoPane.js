@@ -49,26 +49,19 @@ class InfoPane extends Component {
 
         }
 
-        var displayedInfo2 = displayedInfo.replace("\\\\r\\\\n", "|");
-
-        var formattedArray = displayedInfo2.split('|');
-        var i = 0;
-        var htmlArray = [];
-        
-
-        for (i = 0; i < formattedArray.length; i++) {
-            htmlArray.push(<p>{formattedArray[i]}</p>)
-        }
-
         if (displayedInfo != null) {
+            var displayedInfo2 = displayedInfo.replace("\\\\r\\\\n", "|");
 
-            var displayedInfo2 = displayedInfo.replace("\"[", "")
-            
-            actualInfo = displayedInfo2.split(",")
-            
-            console.log("displayedInfo = " + actualInfo);
+            var formattedArray = displayedInfo2.split('|');
+            var i = 0;
+            var htmlArray = [];
+
+
+            for (i = 0; i < formattedArray.length; i++) {
+                htmlArray.push(<p>{formattedArray[i]}</p>)
+            }
         }
-
+        
        
 
         
