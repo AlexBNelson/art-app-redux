@@ -11,7 +11,7 @@ article-intro-gap {
     position: absolute;
     z-index: 0;
     opacity: 0.6;
-    width: 100%;
+    width: 60%;
     height: auto;
 }
 
@@ -28,7 +28,7 @@ article-intro-gap {
 }
 
 .article-body-pane {
-    padding-top: 75vh;
+    padding-top: 5vh;
     margin-left: 5vh;
 }
 .article-intro-pane {
