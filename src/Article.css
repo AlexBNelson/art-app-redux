@@ -76,7 +76,7 @@ article-intro-gap {
 
 .info-pane {
     position: absolute;
-    top: 2vh;
+    top: 0.5vh;
     right: 2vh;
     height: 10vh;
     width: 40vh;
@@ -85,9 +85,9 @@ article-intro-gap {
 }
 
 .info-text {
-    font-size: 9px;
+    font-size: 11px;
     text-overflow: ellipsis;
-    height: 10px;
+    height: 13px;
     overflow: hidden;
     white-space: nowrap;
 }
