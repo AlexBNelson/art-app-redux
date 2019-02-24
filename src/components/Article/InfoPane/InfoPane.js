@@ -38,7 +38,7 @@ class InfoPane extends Component {
 
         var displayedInfo
 
-        var actualInfo =[]
+        var htmlArray
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
@@ -54,28 +54,19 @@ class InfoPane extends Component {
 
             var formattedArray = displayedInfo2.split('|');
             var i = 0;
-            var htmlArray = [];
+            htmlArray = [];
 
 
             for (i = 0; i < formattedArray.length; i++) {
                 htmlArray.push(<p>{formattedArray[i]}</p>)
             }
         }
-        
-       
 
-        
-
-       
-        
         return (
 
            
             <div class="info-pane">
-                ImageTitle: {actualInfo[0]}
-                Artist: {actualInfo[1]}
-                Date of Image Creation:  {actualInfo[2]}
-                Chapter Title: {actualInfo[3]}
+                htmlArray
                 </div>
         );
     }
