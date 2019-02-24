@@ -88,6 +88,8 @@ article-intro-gap {
     font-size: 9px;
     text-overflow: ellipsis;
     height: 10px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .image-details-pane {
