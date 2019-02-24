@@ -51,7 +51,7 @@ class InfoPane extends Component {
 
         if (displayedInfo != null) {
 
-            var formattedArray = displayedInfo2.split('|');
+            var formattedArray = displayedInfo.split('|');
             var i = 0;
             htmlArray = [];
 
