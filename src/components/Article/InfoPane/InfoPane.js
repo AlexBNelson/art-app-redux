@@ -25,7 +25,7 @@ class InfoPane extends Component {
             method: 'get',
             url: infoUrl
         })
-            .then(response => this.setState({ info: response.data.split(",") })
+            .then(response => this.setState({ info: response.data.split("\",\"") })
             )
             .catch(function (error) {
                 window.alert(error);
@@ -49,14 +49,23 @@ class InfoPane extends Component {
 
         }
 
-        if (displayedInfo != null) {
+        var displayedInfo2 = displayedInfo.replace("\\\\r\\\\n", "|");
 
+        var formattedArray = displayedInfo2.split('|');
+        var i = 0;
+        var htmlArray = [];
+        
+
+        for (i = 0; i < formattedArray.length; i++) {
+            htmlArray.push(<p>{formattedArray[i]}</p>)
+        }
+
+        if (displayedInfo != null) {
 
             var displayedInfo2 = displayedInfo.replace("\"[", "")
             
-
             actualInfo = displayedInfo2.split(",")
-
+            
             console.log("displayedInfo = " + actualInfo);
         }
 
