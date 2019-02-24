@@ -184,7 +184,7 @@ class TextPane extends Component {
     render() {
         var introText
 
-        if (this.props.imageSource==1) {
+        if (this.props.imageSource==0) {
             introText = this.state.intro;
         }
 
