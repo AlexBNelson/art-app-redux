@@ -24,7 +24,7 @@ article-intro-gap {
 }
 
 .visible{
-    opacity: 0;
+    opacity: 1;
 }
 
 .article-body-pane {
