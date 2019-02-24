@@ -53,20 +53,9 @@ class InfoPane extends Component {
 
 
             var displayedInfo2 = displayedInfo.replace("\"[", "")
-
-            var displayedInfo3 = displayedInfo2.replace("Title:", ",")
-
-            var displayedInfo4 = displayedInfo3.replace("Artist:", ",")
-
-            var displayedInfo5 = displayedInfo4.replace("Date of Creation:", ",")
-
-            var displayedInfo6 = displayedInfo5.replace("Link:", ",")
-
-            var displayedInfo7 = displayedInfo6.replace("Chapter Title:", ",")
             
-            var finalDisplayedInfo = displayedInfo7.replace("\"", "")
 
-            actualInfo = finalDisplayedInfo.split(",")
+            actualInfo = displayedInfo2.split(",")
 
             console.log("displayedInfo = " + actualInfo);
         }
