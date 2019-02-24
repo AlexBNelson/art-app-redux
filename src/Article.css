@@ -84,8 +84,10 @@ article-intro-gap {
     font-size: 1.5vh;
 }
 
-.info-text{
+.info-text {
     font-size: 9px;
+    text-overflow: ellipsis;
+    height: 10px;
 }
 
 .image-details-pane {
