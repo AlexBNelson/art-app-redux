@@ -57,7 +57,7 @@ class InfoPane extends Component {
 
 
             for (i = 0; i < formattedArray.length; i++) {
-                htmlArray.push(<p>{formattedArray[i]}</p>)
+                htmlArray.push(<div>{formattedArray[i]}</div>)
             }
         }
 
