@@ -66,7 +66,7 @@ class InfoPane extends Component {
 
            
             <div class="info-pane">
-                htmlArray
+                {htmlArray}
                 </div>
         );
     }
