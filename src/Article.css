@@ -59,9 +59,7 @@ article-intro-gap {
 }
 
 .article-image-pane-img {
-    transform: translate(-20%, -30%);
     z-index: 10000;
-    width: 160vh; /* you can use % */
     height: auto;
     object-fit: contain;
     max-width: 100%;
