@@ -12,15 +12,15 @@ class Home extends Component {
         return (
             <div class="container">
             <div class="row home-row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 home-cell">
                 </div>
-                <div class="col-lg-6">
+                    <div class="col-lg-6 home-cell">
                 </div>
                 </div>
                 <div class="row home-row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 home-cell">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 home-cell">
                     </div>
                 </div>
             </div>
