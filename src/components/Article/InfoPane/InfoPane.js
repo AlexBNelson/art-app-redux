@@ -60,7 +60,7 @@ class InfoPane extends Component {
                 if (formattedArray[i][0] == 'L') {
 
                     var link = formattedArray[i].replace('Link: ', '')
-                    htmlArray.push(<div>Link: <a href={link} class="info-text">{link}</a></div>)
+                    htmlArray.push(<div class="info-text">Link: <a href={link}>{link}</a></div>)
                 }
                 else {
                     htmlArray.push(<div class="info-text">{formattedArray[i]}</div>)
