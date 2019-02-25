@@ -13,7 +13,7 @@ class Home extends Component {
             <div class="container">
             <div class="row home-row">
                     <div class="col-lg-6 home-cell container">
-                        <div class="row">
+                        <div class="row home-inner-row">
                             <div class="col-lg-6 home-article-col">
                                 </div>
                             <div class="col-lg-6 home-article-col">
@@ -35,7 +35,7 @@ class Home extends Component {
                     </div>
                 </div>
                 <div class="col-lg-6 home-cell container">
-                    <div class="row">
+                        <div class="row home-inner-row">
                     <div class="col-lg-6 home-article-col">
                         </div>
                     <div class="col-lg-6 home-article-col">
