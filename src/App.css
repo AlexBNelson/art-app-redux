@@ -76,10 +76,20 @@
     margin-left: 2vw;
 }
 
-.home-article {
+.home-article-row {
     border-style: solid;
     border-width: 1px;
     margin: 1px 1px 1px 1px;
+    width: 43vw;
+    height: 18vh;
+}
+
+.home-article-col {
+    border-style: solid;
+    border-width: 1px;
+    margin: 1px 1px 1px 1px;
+    width:  21vw;
+    height: 36vh;
 }
 
 
