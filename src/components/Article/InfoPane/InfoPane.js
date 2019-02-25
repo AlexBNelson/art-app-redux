@@ -45,7 +45,7 @@ class InfoPane extends Component {
             displayedInfo = this.state.info[this.state.info.length - 1]
         }
         else {
-            displayedInfo = this.state.info[this.props.imageSource]
+            displayedInfo = this.state.info[this.props.imageSource-1]
 
         }
 
