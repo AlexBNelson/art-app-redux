@@ -12,15 +12,35 @@ class Home extends Component {
         return (
             <div class="container">
             <div class="row home-row">
-                <div class="col-lg-6 home-cell">
+                    <div class="col-lg-6 home-cell container">
+                        <div class="row">
+                            <div class="col-lg-6 home-article">
+                                </div>
+                            <div class="col-lg-6 home-article">
+                                        </div>
+                            </div>
                 </div>
-                    <div class="col-lg-6 home-cell">
-                </div>
+                    <div class="col-lg-6 home-cell container">
+                        <div class="row home-article">
+                            </div>
+                        <div class="row home-article">
+                            </div>
+                        </div>
                 </div>
                 <div class="row home-row">
-                    <div class="col-lg-6 home-cell">
+                <div class="col-lg-6 home-cell container">
+                    <div class="row home-article">
                     </div>
-                    <div class="col-lg-6 home-cell">
+                    <div class="row home-article">
+                    </div>
+                </div>
+                <div class="col-lg-6 home-cell container">
+                    <div class="row">
+                    <div class="col-lg-6 home-article">
+                        </div>
+                    <div class="col-lg-6 home-article">
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

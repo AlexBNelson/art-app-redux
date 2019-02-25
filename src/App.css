@@ -72,6 +72,14 @@
     width: 45vw;
     border-style: solid;
     border-width: 1px;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.home-article {
+    border-style: solid;
+    border-width: 1px;
+    margin: 1px 1px 1px 1px;
 }
 
 
