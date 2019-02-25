@@ -14,9 +14,9 @@ class Home extends Component {
             <div class="row home-row">
                     <div class="col-lg-6 home-cell container">
                         <div class="row home-inner-row">
-                            <div class="col-lg-6 home-article-col">
+                            <div class="home-article-col">
                                 </div>
-                            <div class="col-lg-6 home-article-col">
+                            <div class="home-article-col">
                                         </div>
                             </div>
                 </div>
@@ -36,9 +36,9 @@ class Home extends Component {
                 </div>
                 <div class="col-lg-6 home-cell container">
                         <div class="row home-inner-row">
-                    <div class="col-lg-6 home-article-col">
+                    <div class="home-article-col">
                         </div>
-                    <div class="col-lg-6 home-article-col">
+                    <div class="home-article-col">
                         </div>
                     </div>
                     </div>
