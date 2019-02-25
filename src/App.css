@@ -67,3 +67,11 @@
     height: 40vh
 }
 
+.home-cell {
+    height: 38vh;
+    width: 45vw;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
