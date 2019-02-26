@@ -65,7 +65,8 @@
 
 .home-container{
     width: 100vw;
-    left: 3vw;
+    margin-left: 1vw;
+
 }
 
 .home-row {

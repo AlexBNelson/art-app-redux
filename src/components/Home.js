@@ -8,45 +8,58 @@ import '../bootstrap.css'
 
 class Home extends Component {
 
+//     <div class="row home-row">
+//    <div class="col-lg-6 home-cell container">
+//        <div class="row home-inner-row">
+//            <div class="home-article-col">
+//            </div>
+//            <div class="home-article-col">
+//            </div>
+//        </div>
+//    </div>
+//    <div class="col-lg-6 home-cell container">
+//        <div class="row home-article-row">
+//        </div>
+//        <div class="row home-article-row">
+//        </div>
+//    </div>
+//</div>
+//    <div class="row home-row">
+//        <div class="col-lg-6 home-cell container">
+//            <div class="row home-article-row">
+//            </div>
+//            <div class="row home-article-row">
+//            </div>
+//        </div>
+//        <div class="col-lg-6 home-cell container">
+//            <div class="row home-inner-row">
+//                <div class="home-article-col">
+//                </div>
+//                <div class="home-article-col">
+//                </div>
+//            </div>
+//        </div>
+//    </div>
+
     render() {
         return (
-            <div class="container home-container">
-            <div class="row home-row">
-                    <div class="col-lg-6 home-cell container">
-                        <div class="row home-inner-row">
-                            <div class="home-article-col">
-                                </div>
-                            <div class="home-article-col">
-                                        </div>
-                            </div>
-                </div>
-                    <div class="col-lg-6 home-cell container">
-                        <div class="row home-article-row">
-                            </div>
-                        <div class="row home-article-row">
-                            </div>
-                        </div>
-                </div>
-                <div class="row home-row">
-                <div class="col-lg-6 home-cell container">
-                    <div class="row home-article-row">
+            <div class="container-fluid home-container">
+                <div class="row">
+                    <div class="col-lg-2">
                     </div>
-                    <div class="row home-article-row">
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-2">
                     </div>
                 </div>
-                <div class="col-lg-6 home-cell container">
-                        <div class="row home-inner-row">
-                    <div class="home-article-col">
-                        </div>
-                    <div class="home-article-col">
-                        </div>
                     </div>
-                    </div>
-                </div>
-            </div>
             )
-
-      
     }
 }
 
