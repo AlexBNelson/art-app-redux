@@ -62,4 +62,4 @@ class ArticleThumbnailComponent extends Component {
     }
 }
 
-export default Home;
+export default ArticleThumbnailComponent;

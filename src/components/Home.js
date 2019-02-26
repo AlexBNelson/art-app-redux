@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 import '../bootstrap.css'
+import ArticleThumbnailComponent from './Home/ArticleThumbnailComponent.js'
 
 
 
