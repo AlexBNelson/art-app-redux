@@ -64,7 +64,10 @@
 }
 
 .home-row {
-    height: 40vh
+    height: 40vh;
+    width: 105vw;
+    margin-top: 1vh;
+    margin-bottom:  1vh;
 }
 
 .home-cell {
