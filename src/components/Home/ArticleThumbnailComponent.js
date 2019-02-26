@@ -18,7 +18,7 @@ class ArticleThumbnailComponent extends Component {
 
     componentDidMount() {
 
-        const imageLinkUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + 'Url?code=zF45E2dH8FYsKMHo6I3wo51lw0BX8a8h5/n9hC51n04VBoQFNg/f0w==';
+        const imageLinkUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Url?code=zF45E2dH8FYsKMHo6I3wo51lw0BX8a8h5/n9hC51n04VBoQFNg/f0w==';
 
         axios({
             method: 'get',
@@ -34,7 +34,7 @@ class ArticleThumbnailComponent extends Component {
 
             });
 
-        const articleTitleUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + 'Title?code=zF45E2dH8FYsKMHo6I3wo51lw0BX8a8h5/n9hC51n04VBoQFNg/f0w==';
+        const articleTitleUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Title?code=zF45E2dH8FYsKMHo6I3wo51lw0BX8a8h5/n9hC51n04VBoQFNg/f0w==';
 
         axios({
             method: 'get',
