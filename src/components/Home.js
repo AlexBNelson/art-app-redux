@@ -10,7 +10,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div class="container">
+            <div class="container home-container">
             <div class="row home-row">
                     <div class="col-lg-6 home-cell container">
                         <div class="row home-inner-row">
