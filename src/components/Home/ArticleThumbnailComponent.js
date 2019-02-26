@@ -60,7 +60,7 @@ class ArticleThumbnailComponent extends Component {
     render() {
         return (
             <div>
-                <img src={this.state.imageLink} />
+                <a><img src={this.state.imageLink} /></a>
                 <div></div>
             </div>
         )
