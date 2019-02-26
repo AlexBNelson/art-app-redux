@@ -9,8 +9,8 @@
     "\\src\\components\\Article\\ArticlePane\\ImagePane",
     "\\src\\components\\Article\\ArticlePane\\TextPane",
     "\\src\\components\\Article\\HomePage",
-    "\\src\\components\\Persistent Components"
+    "\\src\\components\\Home"
   ],
-  "SelectedNode": "\\src\\App.css",
+  "SelectedNode": "\\src\\components\\Home\\ArticleThumbnailComponent.js",
   "PreviewInSolutionExplorer": false
 }
