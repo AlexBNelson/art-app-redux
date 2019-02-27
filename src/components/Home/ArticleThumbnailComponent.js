@@ -53,9 +53,11 @@ class ArticleThumbnailComponent extends Component {
     }
 
     render() {
+
+        var link = "Article/" + this.props.id
         return (
             <div class="thumbnail-container">
-                <a><img class="thumbnail-image" src={this.state.imageLink} /></a>
+                <a href={link}><img class="thumbnail-image" src={this.state.imageLink} /></a>
                 <div class="thumbnail-title">{this.state.articleTitle}</div>
             </div>
         )
