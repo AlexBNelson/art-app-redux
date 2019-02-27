@@ -47,10 +47,14 @@ class Home extends Component {
         return (
             <div class="container-fluid home-container">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <SiteIntroComponent/>
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                    <div class="col-lg-4 container">
+                        <row>
+                            <SiteIntroComponent />
+                        </row>
+                        <row>
+                            <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                            <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        </row>
                     </div>
                     <div class="col-lg-2">
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
