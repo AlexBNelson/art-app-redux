@@ -4,6 +4,7 @@ import logo from '../logo.svg';
 import '../App.css';
 import '../bootstrap.css'
 import ArticleThumbnailComponent from './Home/ArticleThumbnailComponent.js'
+import SiteIntroComponent from './Home/SiteIntroComponent.js'
 
 
 
@@ -46,27 +47,20 @@ class Home extends Component {
         return (
             <div class="container-fluid home-container">
                 <div class="row">
-                    <div class="col-lg-2">
+                    <div class="col-lg-4">
+                        <SiteIntroComponent/>
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-4">
+                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-4">
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                     </div>
