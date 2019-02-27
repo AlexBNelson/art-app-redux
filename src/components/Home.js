@@ -52,15 +52,19 @@ class Home extends Component {
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                     </div>
-                    <div class="col-lg-4">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                    <div class="col-lg-2">
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-2">
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                    </div>
+                    <div class="col-lg-2">
+                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                    </div>
+                    <div class="col-lg-2">
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                     </div>
