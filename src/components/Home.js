@@ -52,8 +52,8 @@ class Home extends Component {
                             <SiteIntroComponent />
                         </row>
                         <row>
-                            <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                            <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                            <ArticleThumbnailComponent class="thumbnail-left" id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                            <ArticleThumbnailComponent class="thumbnail-right" id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
                         </row>
                     </div>
                     <div class="col-lg-2">
