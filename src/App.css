@@ -127,8 +127,10 @@
     transform: translate(-50%, -50%);
 }
 
-.site-intro{
+.site-intro {
     width: 30vw;
     height: 45vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
