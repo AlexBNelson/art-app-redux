@@ -113,6 +113,7 @@
     color: white;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    width: 15vw;
 }
 
 .thumbnail-image{
@@ -134,3 +135,10 @@
     margin-bottom: 1vh;
 }
 
+.thumbnail-left{
+    float: left
+}
+
+.thumbnail-right {
+    float: right
+}
