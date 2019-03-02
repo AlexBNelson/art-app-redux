@@ -166,7 +166,7 @@ class TextPane extends Component {
 
         var displayedInfo
 
-        var htmlArray
+        var infoHtml
         
         if (this.props.viewState == false && this.props.imageSource == 0) {
             displayedInfo = this.state.info[this.state.info.length - 1]
