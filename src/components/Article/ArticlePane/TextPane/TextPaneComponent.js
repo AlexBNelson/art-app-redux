@@ -187,10 +187,10 @@ class TextPane extends Component {
                 if (formattedArray[i][0] == 'L') {
 
                     var link = formattedArray[i].replace('Link: ', '')
-                    infoHtml.push(<div class="info-text">Link: <a href={link}>{link}</a></div>)
+                    infoHtml.push(<div class="info-title">Link: <a href={link}>{link}</a></div>)
                 }
                 else {
-                    infoHtml.push(<div class="info-text">{formattedArray[i]}</div>)
+                    infoHtml.push(<div class="info-title">{formattedArray[i]}</div>)
                 }
             }
         }

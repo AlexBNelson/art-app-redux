@@ -91,6 +91,12 @@ article-intro-gap {
     white-space: nowrap;
 }
 
+.info-title {
+    font-size: 20px;
+    height: 13px;
+    overflow: hidden;
+}
+
 .image-details-pane {
     vertical-align: text-bottom;
     background-color: #e2e2e2;
