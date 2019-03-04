@@ -42,7 +42,7 @@ article-intro-gap {
     width: 45vw;
     font-family: 'EB Garamond', serif;
     margin-right: -1vw;
-    background-color: #f5dfc9
+    background-color: #fbf3ea;
 }
 
 
@@ -98,6 +98,8 @@ article-intro-gap {
     font-size: 18px;
     height: 40px;
     overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
 }
 
 .image-details-pane {
