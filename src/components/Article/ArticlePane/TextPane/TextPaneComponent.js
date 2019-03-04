@@ -185,9 +185,7 @@ class TextPane extends Component {
 
             for (i = 0; i < formattedArray.length; i++) {
                 if (formattedArray[i][0] == 'L') {
-
-                    formattedArray[i].replace('Link: ', '')
-                    formattedArray[i].replace('Link: ', '')
+                    var link = formattedArray[i].replace('Link: ', '')
                     infoHtml.push(<div class="info-title">Link: <a href={link}>{link}</a></div>)
                 }
                 else {
