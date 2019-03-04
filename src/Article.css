@@ -3,10 +3,6 @@ html, body {
     height: 100%;
 }
 
-@font-face {
-    font-family: 'garamond';
-}
-
 article-intro-gap {
     padding-top: 90vh;
     margin-left: -15vh;
@@ -34,8 +30,6 @@ article-intro-gap {
 .article-body-pane {
     padding-top: 5vh;
     margin-left: 5vh;
-    font-family: 'garamond';
-}
 }
 .article-intro-pane {
     padding-top: 15vh;

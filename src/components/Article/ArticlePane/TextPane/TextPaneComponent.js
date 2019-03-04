@@ -187,8 +187,7 @@ class TextPane extends Component {
                 if (formattedArray[i][0] == 'L') {
 
                     formattedArray[i].replace('Link: ', '')
-                    formattedArray[i].replace('Artist: ', '')
-                    formattedArray[i].replace('Date of Image Creation:', '')
+                    formattedArray[i].replace('Link: ', '')
                     infoHtml.push(<div class="info-title">Link: <a href={link}>{link}</a></div>)
                 }
                 else {

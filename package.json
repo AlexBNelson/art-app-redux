@@ -16,8 +16,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
-    "superagent": "^3.8.3",
-    "typeface-eb-garamond": "0.0.72"
+    "superagent": "^3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",

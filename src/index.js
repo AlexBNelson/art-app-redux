@@ -5,7 +5,6 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 import App from './components/App'
-import "typeface-eb-garamond";
 
 const store = createStore(rootReducer)
 
