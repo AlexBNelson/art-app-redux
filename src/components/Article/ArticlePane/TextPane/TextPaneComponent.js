@@ -228,8 +228,8 @@ class TextPane extends Component {
                 </div>
                 
                         <div class="page-buttons col-lg-2">
-                            <button class="page-button" onClick={this.nextPage.bind(this)}><img class="button-img" src={arrowLeft}></img></button>
-                            <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                            <button class="page-button" onClick={this.nextPage.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                            <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={arrowLeft}></img></button>
             </div>
                     </div>
                 </div></div>
