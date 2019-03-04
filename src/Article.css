@@ -41,7 +41,7 @@ article-intro-gap {
     height: 90vh;
     width: 45vw;
     font-family: 'EB Garamond', serif;
-    margin-right: 0vw;
+    margin-right: -1vw;
 }
 
 
@@ -94,7 +94,7 @@ article-intro-gap {
 }
 
 .info-title {
-    font-size: 14px;
+    font-size: 18px;
     height: 40px;
     overflow: hidden;
 }
@@ -141,7 +141,7 @@ article-intro-gap {
     float: right;
     height: 90vh;
     position: fixed;
-    right: 1vw;
+    right: 3vw;
 }
 
 .button-img {
