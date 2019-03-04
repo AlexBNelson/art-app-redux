@@ -45,7 +45,8 @@ article-intro-gap {
     overflow-y: scroll;
     flex: 1;
     height: 90vh;
-    width:45vw;
+    width: 45vw;
+    font-family: 'EB Garamond', serif;
 }
 
 
