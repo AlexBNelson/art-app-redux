@@ -129,18 +129,18 @@ article-intro-gap {
 }
 
 .page-button {
-    width: 5vw;
+    width: 3vw;
     height: 45vh;
     background: none;
     border: none;
 }
 
 .page-buttons {
-    width: 5vw;
+    width: 3vw;
     float: right;
     height: 90vh;
     position: fixed;
-    right: 5vw;
+    right: 1vw;
 }
 
 .button-img {
