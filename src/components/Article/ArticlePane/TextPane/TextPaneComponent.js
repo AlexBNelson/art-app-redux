@@ -10,8 +10,8 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
 import { VisibilityFilters } from '../../../../actions'
 import axios from 'axios'
-import rightarrow from '../../../../rightarrow.png';
-import leftarrow from '../../../../leftarrow.png';
+import arrowLeft from '../../../../arrowLeft.png';
+import arrowRight from '../../../../arrowRight.png';
 
 
 
@@ -228,8 +228,8 @@ class TextPane extends Component {
                 </div>
                 
                         <div class="page-buttons col-lg-2">
-                            <button class="page-button" onClick={this.nextPage.bind(this)}><img  class="button-img" src={rightarrow}></img></button>
-                            <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={leftarrow}></img></button>
+                            <button class="page-button" onClick={this.nextPage.bind(this)}><img class="button-img" src={arrowLeft}></img></button>
+                            <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={arrowRight}></img></button>
             </div>
                     </div>
                 </div></div>
