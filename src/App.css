@@ -117,7 +117,8 @@
     margin-top: 2vh;
     margin-bottom: 2vh;
     width: 12vw;
-
+    margin-right: 0;
+    margin-left:0;
 }
 
 .thumbnail-image{
@@ -137,6 +138,9 @@
     height: 45vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    padding-top:2vh;
+    text-align: center;
+    font-weight: 400
 }
 
 .thumbnail-left{
