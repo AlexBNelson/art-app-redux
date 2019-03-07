@@ -63,10 +63,10 @@
     margin-bottom: 10px;
 }
 
-.home-container{
+.home-container {
     width: 100vw;
     margin-left: 1vw;
-
+    background-image: url("https://ucarecdn.com/78e0303b-69fd-4bd9-9a18-3cdd7ef89f07/backgroundCanvas.png");
 }
 
 .home-row {

@@ -1,16 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
-    "\\src\\actions",
     "\\src\\components",
     "\\src\\components\\Article",
     "\\src\\components\\Article\\ArticlePane",
     "\\src\\components\\Article\\ArticlePane\\ImagePane",
     "\\src\\components\\Article\\ArticlePane\\TextPane",
-    "\\src\\components\\Article\\BackgroundPane",
     "\\src\\components\\Article\\InfoPane"
   ],
-  "SelectedNode": "\\src\\Article.css",
+  "SelectedNode": "\\src\\components\\Article\\ArticlePane\\ImagePane\\ImagePaneComponent.js",
   "PreviewInSolutionExplorer": false
 }
