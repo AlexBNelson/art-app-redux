@@ -31,7 +31,6 @@
 
 
 .nav-head {
-    margin-bottom: 10px;
     z-index: 1100;
 }
 
@@ -115,9 +114,10 @@
     position: relative;
     text-align: center;
     color: white;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    width: 15vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 13vw;
+
 }
 
 .thumbnail-image{
