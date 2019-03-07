@@ -38,7 +38,7 @@ article-intro-gap {
 .article-text-pane {
     overflow-y: scroll;
     flex: 1;
-    height: 90vh;
+    height: 95vh;
     width: 45vw;
     font-family: 'EB Garamond', serif;
     margin-right: -1vw;
