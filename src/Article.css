@@ -51,10 +51,6 @@ article-intro-gap {
     width: 53vw;
     overflow: hidden;
     position: absolute;
-    margin-top: 1vh;
-    margin-left: -5vh;
-    margin-bottom: 2vh;
-    border-radius: 5px;
 }
 
 .article-image-container {
