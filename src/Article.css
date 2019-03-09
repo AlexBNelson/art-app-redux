@@ -51,6 +51,7 @@ article-intro-gap {
     width: 53vw;
     overflow: hidden;
     position: absolute;
+    left: 0vw;
 }
 
 .article-image-container {
