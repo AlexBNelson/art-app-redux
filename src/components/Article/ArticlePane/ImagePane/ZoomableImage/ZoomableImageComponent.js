@@ -11,7 +11,12 @@ class ZoomableImageComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            zoomState: 1
+            zoomState: 1,
+            dragMode: false,
+            mouseDownX: 0,
+            mouseDownY: 0,
+            imageDiffX: 0,
+            imageDiffY: 0
         };
     }
 
@@ -28,17 +33,25 @@ class ZoomableImageComponent extends Component {
 
     }
 
-    onMouseDown(event) {
+    
 
+    onMouseDown(event) {
+        this.setState({ drageMode: true })
+        this.setState({ mouseDownX: event.pageX })
+        this.setState({ mouseDownY: event.pageY })
     }
 
     onMouseUp(event) {
-
+        this.setState({ drageMode: false })
     }
 
-    onDrag(react) {
-
+    onMouseMove(event) {
+        if (this.state.zoomState == true) {
+            this.setState({ imageDiffX: event.pageX-this.state.mouseDownX })
+            this.setState({ imageDiffY: event.pageY-this.state.mouseDownY })
+        }
     }
+
 
     render() {
         var zoomInDisabled
@@ -65,7 +78,7 @@ class ZoomableImageComponent extends Component {
             <div className={className}>
                 <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 <button class="img-zoom-btn" disabled={zooOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <img  onDrag={this.onDrag} onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} src={this.props.id} />
+                <img  onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} src={this.props.id} />
                 </div>
             )
     }
