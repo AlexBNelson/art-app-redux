@@ -7,10 +7,10 @@
     "\\src\\components\\Article",
     "\\src\\components\\Article\\ArticlePane",
     "\\src\\components\\Article\\ArticlePane\\ImagePane",
+    "\\src\\components\\Article\\ArticlePane\\ImagePane\\ZoomableImage",
     "\\src\\components\\Article\\ArticlePane\\TextPane",
-    "\\src\\components\\Home",
-    "\\src\\components\\Persistent Components"
+    "\\src\\components\\Home"
   ],
-  "SelectedNode": "\\src\\components\\Persistent Components\\NavHead.js",
+  "SelectedNode": "\\src\\components\\Article\\ArticlePane\\TextPane\\TextPaneComponent.js",
   "PreviewInSolutionExplorer": false
 }
