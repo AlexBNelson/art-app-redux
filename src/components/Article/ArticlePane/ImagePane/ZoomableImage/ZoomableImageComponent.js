@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../../../../../Article.css'
-import arrowRight from '../../../../../arrowLeft.css'
+import arrowRight from '../../../../../arrowLeft.png'
 import { Component } from 'react'
 import axios from 'axios'
 import base64Img from 'base'

@@ -4,7 +4,7 @@ import '../../../../Article.css'
 import { Component } from 'react'
 import axios from 'axios'
 import base64Img from 'base'
-import ZoomableImageComponent from './ZoomableImageComponent.js'
+import ZoomableImageComponent from './ZoomableImage/ZoomableImageComponent.js'
 
 class ImagePaneComponent extends Component {
 
