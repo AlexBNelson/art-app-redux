@@ -70,6 +70,14 @@ article-intro-gap {
     background-color: black;
 }
 
+.zoom-img-2 {
+    z-index: 10000;
+    height: 200vh;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .zoom-img-1 {
     z-index: 10000;
     height: 93vh;

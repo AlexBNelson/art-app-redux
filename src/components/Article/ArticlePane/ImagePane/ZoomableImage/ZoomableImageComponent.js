@@ -16,8 +16,11 @@ class ZoomableImageComponent extends Component {
             mouseDownX: 0,
             mouseDownY: 0,
             imageDiffX: 0,
-            imageDiffY: 0
+            imageDiffY: 0,
+            currentX: 0,
+            currentY: 0
         };
+        this.imageRef = React.createRef()
     }
 
     componentDidMount() {
@@ -48,7 +51,7 @@ class ZoomableImageComponent extends Component {
     onMouseMove(event) {
         if (this.state.zoomState == true) {
             this.setState({ imageDiffX: event.pageX-this.state.mouseDownX })
-            this.setState({ imageDiffY: event.pageY-this.state.mouseDownY })
+            this.setState({ imageDiffY: event.pageY - this.state.mouseDownY })
         }
     }
 
@@ -72,22 +75,35 @@ class ZoomableImageComponent extends Component {
             zoomOutDisabled == false;
         }
 
-        var zoomState = "zoo-img-" + this.state.zoomState;
+        var zoomState = "zoom-img-" + this.state.zoomState;
+        
+        var objectPosition;
 
-        var topPosition = this.state.imageDiffY + 'px'
+        if (zoomState != 0) {
 
-        var leftPosition = this.state.imageDiffX + 'px'
-         
-        var objectPosition = {
-            top: {topPosition },
-            left: { leftPosition }
-        }        
+            if ((this.state.currentX - this.state.imageDiffX) < 0) {
+
+                this.setState({ currentX: currentX - this.state.imageDiffX })
+
+                this.setState({ currentY: currentY - this.state.imageDiffY })
+
+                var bottomX = this.state.currentX + 'px'
+
+                var bottomY = this.state.currentY + 'px'
+
+                objectPosition = {
+                    bottom: { bottomX },
+                    left: { bottomY }
+                }
+            }    
+        }
+
 
         return (
             <div class="zoom-img-div">
                 <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 <button class="img-zoom-btn" disabled={zooOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <img style={objectPosition} className={zoomState} onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} src={this.props.id} />
+                <img ref={this.imageRef} style={objectPosition} className={zoomState} onMouseMove={this.onMouseMove} onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} src={this.props.id} />
                 </div>
             )
     }
