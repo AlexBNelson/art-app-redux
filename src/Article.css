@@ -66,10 +66,22 @@ article-intro-gap {
     max-height: 100%;
 }
 
-.zoom-img {
+.zoom-img-div{
+    background-color: black;
+}
+
+.zoom-img-1 {
     z-index: 10000;
     height: 93vh;
     object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.zoom-img-0 {
+    z-index: 10000;
+    height: 93vh;
+    object-fit: ;
     max-width: 100%;
     max-height: 100%;
 }

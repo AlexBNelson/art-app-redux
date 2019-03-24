@@ -72,13 +72,22 @@ class ZoomableImageComponent extends Component {
             zoomOutDisabled == false;
         }
 
-        var className = "zoo-img-" + this.state.zoomState;
+        var zoomState = "zoo-img-" + this.state.zoomState;
+
+        var topPosition = this.state.imageDiffY + 'px'
+
+        var leftPosition = this.state.imageDiffX + 'px'
+         
+        var objectPosition = {
+            top: {topPosition },
+            left: { leftPosition }
+        }        
 
         return (
-            <div className={className}>
+            <div class="zoom-img-div">
                 <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 <button class="img-zoom-btn" disabled={zooOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <img  onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} src={this.props.id} />
+                <img style={objectPosition} className={zoomState} onMouseDown={this.onMouseDown} onMouseUp={this.onMouseUp} src={this.props.id} />
                 </div>
             )
     }
