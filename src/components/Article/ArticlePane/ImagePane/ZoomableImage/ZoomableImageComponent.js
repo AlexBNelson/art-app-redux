@@ -83,9 +83,9 @@ class ZoomableImageComponent extends Component {
 
             if ((this.state.currentX - this.state.imageDiffX) < 0) {
 
-                this.setState({ currentX: currentX - this.state.imageDiffX })
+                this.setState({ currentX: this.state.currentX - this.state.imageDiffX })
 
-                this.setState({ currentY: currentY - this.state.imageDiffY })
+                this.setState({ currentY: this.state.currentY - this.state.imageDiffY })
 
                 var bottomX = this.state.currentX + 'px'
 
