@@ -4,6 +4,7 @@ import '../../../../Article.css'
 import { Component } from 'react'
 import axios from 'axios'
 import base64Img from 'base'
+import ZoomableImageComponent from './ZoomableImageComponent.js'
 
 class ImagePaneComponent extends Component {
 
@@ -64,11 +65,11 @@ class ImagePaneComponent extends Component {
             
             if (this.props.imageSource-1 != i) {
 
-                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} style={{ display: 'none' }} />
+                var a = <ZoomableImageComponent imgSrc={this.state.imageUrls[i]} style={{ display: 'none' }} />
             }
             else {
                 console.log("viewstate =" + this.props.viewState)
-                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]}/>
+                var a = <ZoomableImageComponent imgSrc={this.state.imageUrls[i]}/>
             }
             images.push(a)
         }
