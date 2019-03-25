@@ -24,7 +24,7 @@ class ZoomableImageComponent extends Component {
     }
 
     componentDidMount() {
-        this.setState({ zoomState: 0 })
+        this.setState({ zoomState: 1 })
     }
 
     zoomIn() {
