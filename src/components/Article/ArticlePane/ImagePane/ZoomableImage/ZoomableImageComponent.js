@@ -24,7 +24,7 @@ class ZoomableImageComponent extends Component {
     }
 
     componentDidMount() {
-        
+        this.setState({ zoomState: 0 })
     }
 
     zoomIn() {
@@ -39,13 +39,13 @@ class ZoomableImageComponent extends Component {
     
 
     onMouseDown(event) {
-        this.setState({ drageMode: true })
+        this.setState({ dragMode: true })
         this.setState({ mouseDownX: event.pageX })
         this.setState({ mouseDownY: event.pageY })
     }
 
     onMouseUp(event) {
-        this.setState({ drageMode: false })
+        this.setState({ dragMode: false })
     }
 
     onMouseMove(event) {
