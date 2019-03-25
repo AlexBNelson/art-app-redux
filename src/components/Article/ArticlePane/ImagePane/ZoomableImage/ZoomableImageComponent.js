@@ -49,7 +49,7 @@ class ZoomableImageComponent extends Component {
     }
 
     onMouseMove(event) {
-        if (this.state.zoomState == true) {
+        if (this.state.zoomState != 0) {
             this.setState({ imageDiffX: event.pageX-this.state.mouseDownX })
             this.setState({ imageDiffY: event.pageY - this.state.mouseDownY })
         }
