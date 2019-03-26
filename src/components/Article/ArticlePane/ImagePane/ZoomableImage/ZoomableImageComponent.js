@@ -113,6 +113,10 @@ class ZoomableImageComponent extends Component {
 
 export default ZoomableImageComponent;
 
+//https://stackoverflow.com/questions/20926551/recommended-way-of-making-react-component-div-draggable
+
+//https://stackoverflow.com/questions/30668326/what-is-the-difference-between-using-constructor-vs-getinitialstate-in-react-r
+
 /*getDefaultProps: function () {
     return {
       // allow the initial position to be passed in as a prop
