@@ -13,18 +13,22 @@ class ZoomableImageComponent extends Component {
         this.state = {
             zoomState: 1,
             dragMode: false,
-            mouseDownX: 0,
-            mouseDownY: 0,
-            imageDiffX: 0,
-            imageDiffY: 0,
-            currentX: 0,
-            currentY: 0
+            pos: this.props.initialPos,
+      dragging: false,
+      rel: null // position relative to the cursor
         };
         this.imageRef = React.createRef()
     }
 
     componentDidMount() {
         this.setState({ zoomState: 1 })
+        if (this.state.dragging && !state.dragging) {
+            document.addEventListener('mousemove', this.onMouseMove)
+            document.addEventListener('mouseup', this.onMouseUp)
+        } else if (!this.state.dragging && state.dragging) {
+            document.removeEventListener('mousemove', this.onMouseMove)
+            document.removeEventListener('mouseup', this.onMouseUp)
+        }
     }
 
     zoomIn() {
@@ -38,22 +42,38 @@ class ZoomableImageComponent extends Component {
 
     
 
-    _onMouseDown(event) {
-        this.setState({ dragMode: true })
-        this.setState({ mouseDownX: event.pageX })
-        this.setState({ mouseDownY: event.pageY })
-    }
-
-    _onMouseUp(event) {
-        this.setState({ dragMode: false })
-    }
-
-    _onMouseMove(event) {
-        if (this.state.zoomState != 0) {
-            this.setState({ imageDiffX: event.pageX-this.state.mouseDownX })
-            this.setState({ imageDiffY: event.pageY - this.state.mouseDownY })
+    onMouseDown(e) {
+    // only left mouse button
+    if (e.button !== 0) return
+    var pos = $(this.getDOMNode()).offset()
+    this.setState({
+        dragging: true,
+        rel: {
+            x: e.pageX - pos.left,
+            y: e.pageY - pos.top
         }
+    })
+    e.stopPropagation()
+    e.preventDefault()
     }
+
+onMouseUp(e) {
+    this.setState({ dragging: false })
+    e.stopPropagation()
+    e.preventDefault()
+    }
+
+onMouseMove(e) {
+    if (!this.state.dragging) return
+    this.setState({
+        pos: {
+            x: e.pageX - this.state.rel.x,
+            y: e.pageY - this.state.rel.y
+        }
+    })
+    e.stopPropagation()
+    e.preventDefault()
+}
 
 
     render() {
@@ -77,27 +97,12 @@ class ZoomableImageComponent extends Component {
 
         var zoomState = "zoom-img-" + this.state.zoomState;
         
-        var objectPosition;
+        var objectPosition = {
+            left: this.state.pos.x + 'px',
+            top: this.state.pos.y + 'px'
+        };
 
-        if (zoomState != 0) {
-
-            if ((this.state.currentX - this.state.imageDiffX) < 0) {
-
-                this.setState({ currentX: this.state.currentX - this.state.imageDiffX })
-
-                this.setState({ currentY: this.state.currentY - this.state.imageDiffY })
-
-                var bottomX = this.state.currentX + 'px'
-
-                var bottomY = this.state.currentY + 'px'
-
-                objectPosition = {
-                    bottom: { bottomX },
-                    left: { bottomY }
-                }
-            }    
-        }
-
+        
 
         return (
             <div class="zoom-img-div">
