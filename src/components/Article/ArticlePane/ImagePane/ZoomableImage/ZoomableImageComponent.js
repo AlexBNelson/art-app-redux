@@ -55,8 +55,8 @@ class ZoomableImageComponent extends Component {
         }
 
         var zoomState = "zoom-img-" + this.state.zoomState;
-        
 
+        console.log("source=" + this.props.imgSrc)
         
 
         return (
