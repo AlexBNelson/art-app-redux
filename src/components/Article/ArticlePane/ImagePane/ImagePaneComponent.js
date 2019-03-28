@@ -5,6 +5,7 @@ import { Component } from 'react'
 import axios from 'axios'
 import base64Img from 'base'
 import ZoomableImageComponent from './ZoomableImage/ZoomableImageComponent.js'
+import arrowRight from '../../../../arrowLeft.png'
 
 class ImagePaneComponent extends Component {
 
@@ -88,14 +89,33 @@ class ImagePaneComponent extends Component {
             images.push(a)
         }
 
+        var zoomInDisabled
+
+        var zoomOutDisabled
+
+         if (this.state.zoomState == 0) {
+            zoomInDisabled == true;
+        }
+        else {
+            zoomInDisabled == false;
+        }
+
+        if (this.state.zoomState == 2) {
+            zoomOutDisabled == true;
+        }
+        else {
+            zoomOutDisabled == false;
+        }
+
         var zoomState = "zoom-img-" + this.state.zoomState;
+
 
         return (
 
             <ul>
                 <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 <button class="img-zoom-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <div class="article-image-pane">
+                <div className={zoomState} class="article-image-pane">
                         {images[0]}
                         {images[1]}
                         {images[2]}
