@@ -179,4 +179,4 @@ export default ZoomableImageComponent;
     })
     e.stopPropagation()
     e.preventDefault()
-  },
+  },*/
