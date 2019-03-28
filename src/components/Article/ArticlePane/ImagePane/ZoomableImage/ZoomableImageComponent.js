@@ -20,11 +20,15 @@ class ZoomableImageComponent extends Component {
     }
 
     zoomIn() {
-        this.setState({ zoomState: this.state.zoomState - 1 })
+        if (this.state.zoomState > 0) {
+            this.setState({ zoomState: this.state.zoomState - 1 })
+        }
     }
 
     zoomOut() {
-        this.setState({ zoomState: this.state.zoomState+1 })
+        if (this.state.zoomState < 2) {
+            this.setState({ zoomState: this.state.zoomState + 1 })
+        }
 
     }
 
