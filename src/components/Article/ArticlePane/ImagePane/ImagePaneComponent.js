@@ -65,11 +65,11 @@ class ImagePaneComponent extends Component {
             
             if (this.props.imageSource-1 != i) {
 
-                var a = <ZoomableImageComponent imgSrc={this.state.imageUrls[i]} style={{ display: 'none' }} />
+                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} style={{ display: 'none' }} />
             }
             else {
                 console.log("viewstate =" + this.props.viewState)
-                var a = <ZoomableImageComponent imgSrc={this.state.imageUrls[i]}/>
+                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]}/>
             }
             images.push(a)
         }
