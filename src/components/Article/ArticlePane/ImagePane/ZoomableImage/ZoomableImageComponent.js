@@ -11,24 +11,12 @@ class ZoomableImageComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            zoomState: 1,
-            dragMode: false,
-            pos: this.props.initialPos,
-      dragging: false,
-      rel: null // position relative to the cursor
+            zoomState: 1
         };
         this.imageRef = React.createRef()
     }
 
     componentDidMount() {
-        this.setState({ zoomState: 1 })
-        if (this.state.dragging && !state.dragging) {
-            document.addEventListener('mousemove', this.onMouseMove)
-            document.addEventListener('mouseup', this.onMouseUp)
-        } else if (!this.state.dragging && state.dragging) {
-            document.removeEventListener('mousemove', this.onMouseMove)
-            document.removeEventListener('mouseup', this.onMouseUp)
-        }
     }
 
     zoomIn() {
@@ -40,40 +28,7 @@ class ZoomableImageComponent extends Component {
 
     }
 
-    
 
-    onMouseDown(e) {
-    // only left mouse button
-    if (e.button !== 0) return
-    var pos = $(this.getDOMNode()).offset()
-    this.setState({
-        dragging: true,
-        rel: {
-            x: e.pageX - pos.left,
-            y: e.pageY - pos.top
-        }
-    })
-    e.stopPropagation()
-    e.preventDefault()
-    }
-
-onMouseUp(e) {
-    this.setState({ dragging: false })
-    e.stopPropagation()
-    e.preventDefault()
-    }
-
-onMouseMove(e) {
-    if (!this.state.dragging) return
-    this.setState({
-        pos: {
-            x: e.pageX - this.state.rel.x,
-            y: e.pageY - this.state.rel.y
-        }
-    })
-    e.stopPropagation()
-    e.preventDefault()
-}
 
 
     render() {
