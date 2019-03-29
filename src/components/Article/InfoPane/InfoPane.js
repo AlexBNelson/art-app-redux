@@ -25,7 +25,7 @@ class InfoPane extends Component {
             method: 'get',
             url: infoUrl
         })
-            .then(response => this.setState({ info: response.data.split(",") })
+            .then(response => this.setState({ info: response.data.split("\",\"") })
             )
             .catch(function (error) {
                 window.alert(error);
@@ -38,53 +38,41 @@ class InfoPane extends Component {
 
         var displayedInfo
 
-        var actualInfo =[]
+        var htmlArray
 
         //the reason for this inital if statement is because of the strange behaviour of the image display logic
         if (this.props.viewState == false && this.props.imageSource == 0) {
             displayedInfo = this.state.info[this.state.info.length - 1]
         }
         else {
-            displayedInfo = this.state.info[this.props.imageSource]
+            displayedInfo = this.state.info[this.props.imageSource-1]
 
         }
 
         if (displayedInfo != null) {
+            displayedInfo.replace("[\"", "")
+            var formattedArray = displayedInfo.split('|');
+            var i = 0;
+            htmlArray = [];
 
 
-            var displayedInfo2 = displayedInfo.replace("\"[", "")
+            for (i = 0; i < formattedArray.length; i++) {
+                if (formattedArray[i][0] == 'L') {
 
-            var displayedInfo3 = displayedInfo2.replace("Title:", ",")
-
-            var displayedInfo4 = displayedInfo3.replace("Artist:", ",")
-
-            var displayedInfo5 = displayedInfo4.replace("Date of Creation:", ",")
-
-            var displayedInfo6 = displayedInfo5.replace("Link:", ",")
-
-            var displayedInfo7 = displayedInfo6.replace("Chapter Title:", ",")
-            
-            var finalDisplayedInfo = displayedInfo7.replace("\"", "")
-
-            actualInfo = finalDisplayedInfo.split(",")
-
-            console.log("displayedInfo = " + actualInfo);
+                    var link = formattedArray[i].replace('Link: ', '')
+                    htmlArray.push(<div class="info-text">Link: <a href={link}>{link}</a></div>)
+                }
+                else {
+                    htmlArray.push(<div class="info-text">{formattedArray[i]}</div>)
+                }
+            }
         }
 
-       
-
-        
-
-       
-        
         return (
 
            
             <div class="info-pane">
-                ImageTitle: {actualInfo[0]}
-                Artist: {actualInfo[1]}
-                Date of Image Creation:  {actualInfo[2]}
-                Chapter Title: {actualInfo[3]}
+                {htmlArray}
                 </div>
         );
     }

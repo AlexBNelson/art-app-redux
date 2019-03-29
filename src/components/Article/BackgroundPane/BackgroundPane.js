@@ -40,8 +40,8 @@ class BackgroundPane extends Component {
         //Logic for fading background image
         var opacityValue = 0.8 - (this.props.articleScrollValue / 700)
 
-        if (opacityValue < 0.3) {
-            opacityValue = 0.3
+        if (this.props.imageSource!=0) {
+            opacityValue = 0
         }
 
         const imgStyle = {

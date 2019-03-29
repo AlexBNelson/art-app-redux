@@ -4,13 +4,16 @@ import '../../../../Article.css'
 import { Component } from 'react'
 import axios from 'axios'
 import base64Img from 'base'
+import ZoomableImageComponent from './ZoomableImage/ZoomableImageComponent.js'
+import arrowRight from '../../../../arrowLeft.png'
 
 class ImagePaneComponent extends Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            imageUrls: []
+            imageUrls: [],
+            zoomState: 1
         };
     }
 
@@ -51,6 +54,19 @@ class ImagePaneComponent extends Component {
         this.setState({ imageUrls: imageLinks })
     }
 
+    zoomIn() {
+        if (this.state.zoomState > 0) {
+            this.setState({ zoomState: this.state.zoomState - 1 })
+        }
+    }
+
+    zoomOut() {
+        if (this.state.zoomState < 2) {
+            this.setState({ zoomState: this.state.zoomState + 1 })
+        }
+
+    }
+
     render() {
 
         var images = [];
@@ -73,17 +89,38 @@ class ImagePaneComponent extends Component {
             images.push(a)
         }
 
+        var zoomInDisabled
+
+        var zoomOutDisabled
+
+         if (this.state.zoomState == 0) {
+            zoomInDisabled == true;
+        }
+        else {
+            zoomInDisabled == false;
+        }
+
+        if (this.state.zoomState == 2) {
+            zoomOutDisabled == true;
+        }
+        else {
+            zoomOutDisabled == false;
+        }
+
+        var zoomState = "zoom-img-" + this.state.zoomState;
+
+
         return (
 
             <ul>
-                <div class="article-image-pane">
-                    <div class="article-image-container" className={this.props.viewState ? 'visible article-image-container' : 'hidden article-image-container'}>
+                <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                <button class="img-zoom-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                <div className={zoomState} class="article-image-pane">
                         {images[0]}
                         {images[1]}
                         {images[2]}
                         {images[3]}
                         {images[4]}
-                    </div>
                 </div>
             </ul>
 

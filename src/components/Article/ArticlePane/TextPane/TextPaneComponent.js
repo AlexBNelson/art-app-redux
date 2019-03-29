@@ -10,8 +10,8 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
 import { VisibilityFilters } from '../../../../actions'
 import axios from 'axios'
-import rightarrow from '../../../../rightarrow.png';
-import leftarrow from '../../../../leftarrow.png';
+import arrowLeft from '../../../../arrowLeft.png';
+import arrowRight from '../../../../arrowRight.png';
 
 
 
@@ -23,12 +23,14 @@ class TextPane extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            info: [],
             intro: '',
-            chapters: [],
+            chapters: '',
             scrollPoints: []
         };
     }
 
+    
 
     componentDidMount() {
         const { hideImage, dispatch } = this.props;
@@ -37,6 +39,19 @@ class TextPane extends Component {
         const scrollPointUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ImagePositions/0';
 
         var scrollPoints = [];
+
+        var infoUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ArticleInfo/0'
+
+        axios({
+            method: 'get',
+            url: infoUrl
+        })
+            .then(response => this.setState({ info: response.data.split("\",\"") })
+            )
+            .catch(function (error) {
+                window.alert(error);
+
+            });
 
         axios({
             method: 'get',
@@ -88,45 +103,10 @@ class TextPane extends Component {
                 window.alert(error);
 
             });
+        
+        scrollNode.addEventListener('scroll', function () { })
 
-
-
-
-
-        scrollNode.addEventListener('scroll', function () {
-
-            var i;
-
-            dispatch(setScrollValue(scrollNode.scrollTop))
-
-
-            if (scrollNode.scrollTop <= scrollPoints[0]) {
-                dispatch(setVisibilityFilter(VisibilityFilters.INVISIBLE));
-            }
-            else {
-                dispatch(setVisibilityFilter(VisibilityFilters.VISIBLE))
-            }
-            for (i = 0; i < scrollPoints.length; i++) {
-                if (i == 0) {
-                    if (scrollNode.scrollTop > scrollPoints[i] || scrollNode.scrollTop < scrollPoints[i + 1]) {
-                        dispatch(setImageSource(0))
-                    }
-                }
-                else if (scrollNode.scrollTop < scrollPoints[i] && scrollNode.scrollTop > scrollPoints[i - 1]) {
-                    dispatch(setImageSource(i))
-                }
-            }
-        }
-            //if (scrollNode.scrollTop <= 300) {
-            //    dispatch(setVisibilityFilter(VisibilityFilters.INVISIBLE));
-            //}
-            //else if (scrollNode.scrollTop > 300) {
-            //    dispatch(setVisibilityFilter(VisibilityFilters.VISIBLE));
-            //    dispatch(setImageSource("http://localhost:58282/featuredArticle2"))
-            //}
-        )
-
-        const introUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';;
+        const introUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Intro/0';;
 
 
         axios({
@@ -152,9 +132,7 @@ class TextPane extends Component {
                     "Accept": "text/html" 
                 }
             })
-                .then(response => this.setState({ chapters: response.data
-                })
-                )
+                .then(response => this.setState({ chapters: response.data }))
                 .catch(function (error) {
                     window.alert(error);
 
@@ -170,7 +148,6 @@ class TextPane extends Component {
 
     handleScroll() {
         const {dispatch } = this.props;
-        dispatch(setImageSource(0))
     }
 
     nextPage() {
@@ -185,26 +162,74 @@ class TextPane extends Component {
     }
 
     render() {
-        const introText = this.state.intro;
+        var introText
+
+        var displayedInfo
+
+        var infoHtml
         
+        if (this.props.viewState == false && this.props.imageSource == 0) {
+            displayedInfo = this.state.info[this.state.info.length - 1]
+        }
+        else {
+            displayedInfo = this.state.info[this.props.imageSource - 1]
+
+        }
+
+        if (displayedInfo != null) {
+            displayedInfo.replace("[\"", "")
+            var formattedArray = displayedInfo.split('|');
+            var i = 0;
+            infoHtml = [];
+
+
+            for (i = 0; i < formattedArray.length; i++) {
+                if (formattedArray[i][0] == 'L') {
+                    var link = formattedArray[i].replace('Link: ', '')
+                    infoHtml.push(<div class="info-title">Link: <a href={link}>{link}</a></div>)
+                }
+                else {
+                    infoHtml.push(<div class="info-title">{formattedArray[i]}</div>)
+                }
+            }
+        }
+
+        if (this.props.imageSource==0) {
+            introText = this.state.intro;
+        }
+
+
+        var array = this.state.chapters.split('%');
+        var i = 0;
+        var textArray = [];
+
+        for (i = 0; i < array.length; i++) {
+            var paraList = array[i].split('|');
+            var htmlElement = [];
+            var j = 0;
+            for (j = 0; j < paraList.length; j++) {
+                htmlElement.push(<p>{paraList[j]}</p>)
+            }
+            textArray.push(htmlElement)
+        }
 
         return (
             <div>
             <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                 <div class="row">
-                <div class="text-column col-lg-10">
-                    <div class="article-intro-pane">
-                    {articles.data[0].Text}
-                    {introText}
+                        <div class="text-column col-lg-10">
+                            {infoHtml}
+                            <div class="article-intro-pane">
+                                {introText}
                     </div>
                             <div class="article-body-pane">
-                                {this.state.chapters[this.props.imageSource]}
+                                {textArray[this.props.imageSource-1]}
                     </div>
                 </div>
                 
                         <div class="page-buttons col-lg-2">
-                            <button class="page-button" onClick={this.nextPage.bind(this)}><img  class="button-img" src={rightarrow}></img></button>
-                            <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={leftarrow}></img></button>
+                            <button class="page-button" onClick={this.nextPage.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                            <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={arrowLeft}></img></button>
             </div>
                     </div>
                 </div></div>

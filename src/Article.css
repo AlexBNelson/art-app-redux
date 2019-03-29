@@ -11,7 +11,7 @@ article-intro-gap {
     position: absolute;
     z-index: 0;
     opacity: 0.6;
-    width: 100%;
+    width: 60%;
     height: auto;
 }
 
@@ -24,11 +24,11 @@ article-intro-gap {
 }
 
 .visible{
-    opacity: 0;
+    opacity: 1;
 }
 
 .article-body-pane {
-    padding-top: 75vh;
+    padding-top: 5vh;
     margin-left: 5vh;
 }
 .article-intro-pane {
@@ -38,20 +38,20 @@ article-intro-gap {
 .article-text-pane {
     overflow-y: scroll;
     flex: 1;
-    height: 90vh;
-    width:45vw;
+    height: 95vh;
+    width: 45vw;
+    font-family: 'EB Garamond', serif;
+    margin-right: -1vw;
+    background-color: #fbf3ea;
 }
 
 
 .article-image-pane {
-    height: 89vh;
-    width: 53vw;
+    height: 93vh;
+    width: 57vw;
     overflow: hidden;
     position: absolute;
-    margin-top: 1vh;
-    margin-left: -5vh;
-    margin-bottom: 2vh;
-    border-radius: 5px;
+    left: 0vw;
 }
 
 .article-image-container {
@@ -59,15 +59,46 @@ article-intro-gap {
 }
 
 .article-image-pane-img {
-    transform: translate(-20%, -30%);
     z-index: 10000;
-    width: 160vh; /* you can use % */
-    height: auto;
-    object-fit: contain;
+    height: 93vh;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
 }
 
+.zoom-img-div{
+    background-color: black;
+}
 
+.zoom-img-2 {
+    z-index: 10000;
+    height: 200vh;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
 
+.zoom-img-1 {
+    z-index: 10000;
+    height: 93vh;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.zoom-img-0 {
+    z-index: 10000;
+    height: 93vh;
+    object-fit: ;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-zoom-btn{
+    position: relative;
+    right: 2vw;
+    top: 2vh;
+}
 
 .image-pane {
     overflow: hidden;
@@ -76,12 +107,28 @@ article-intro-gap {
 
 .info-pane {
     position: absolute;
-    top: 2vh;
+    top: 0.5vh;
     right: 2vh;
     height: 10vh;
     width: 40vh;
     z-index:2000;
     font-size: 1.5vh;
+}
+
+.info-text {
+    font-size: 11px;
+    text-overflow: ellipsis;
+    height: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.info-title {
+    font-size: 18px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: italic;
 }
 
 .image-details-pane {
@@ -111,21 +158,22 @@ article-intro-gap {
 .text-column {
     width: 40vw;
     float: left;
+    color: #333333;
 }
 
 .page-button {
-    width: 5vw;
+    width: 3vw;
     height: 45vh;
     background: none;
     border: none;
 }
 
 .page-buttons {
-    width: 5vw;
+    width: 3vw;
     float: right;
     height: 90vh;
     position: fixed;
-    right: 5vw;
+    right: 3vw;
 }
 
 .button-img {
