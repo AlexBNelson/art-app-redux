@@ -34,7 +34,6 @@ class ImagePaneComponent extends Component {
                 var str1 = response.data.replace("]", "")
                 var str2 = str1.replace("[", "")
                 var array = str2.split(",")
-                console.log(response.data)
 
                 var i;
 
@@ -74,7 +73,7 @@ class ImagePaneComponent extends Component {
         var i;
         
         console.log(this.state.imageUrls)
-        console.log("imageSource = " + this.props.imageSource)
+        console.log("zoomstate" = this.state.zoomState)
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
             
@@ -83,7 +82,6 @@ class ImagePaneComponent extends Component {
                 var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} style={{ display: 'none' }} />
             }
             else {
-                console.log("viewstate =" + this.props.viewState)
                 var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]}/>
             }
             images.push(a)

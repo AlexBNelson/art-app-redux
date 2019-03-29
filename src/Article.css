@@ -98,6 +98,7 @@ article-intro-gap {
     position: relative;
     right: 2vw;
     top: 2vh;
+    z-index: 100000;
 }
 
 .image-pane {
