@@ -68,30 +68,11 @@ class ImagePaneComponent extends Component {
 
     render() {
 
-        var images = [];
-
-        var i;
-        
-        console.log(this.state.imageUrls)
-        console.log("zoomstate=" + this.state.zoomState)
-        //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
-        for (i = 0; i < this.state.imageUrls.length; i++) {
-            
-            if (this.props.imageSource-1 != i) {
-
-                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]} style={{ display: 'none' }} />
-            }
-            else {
-                var a = <img class="article-image-pane-img" src={this.state.imageUrls[i]}/>
-            }
-            images.push(a)
-        }
-
         var zoomInDisabled
 
         var zoomOutDisabled
 
-         if (this.state.zoomState == 0) {
+        if (this.state.zoomState == 0) {
             zoomInDisabled == true;
         }
         else {
@@ -108,12 +89,33 @@ class ImagePaneComponent extends Component {
         var zoomState = "zoom-img-" + this.state.zoomState;
 
 
+        var images = [];
+
+        var i;
+        
+        
+        console.log("zoomstate=" + this.state.zoomState)
+        //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
+        for (i = 0; i < this.state.imageUrls.length; i++) {
+            
+            if (this.props.imageSource-1 != i) {
+
+                var a = <img className={zoomState}  src={this.state.imageUrls[i]} style={{ display: 'none' }} />
+            }
+            else {
+                var a = <img className={zoomState}  src={this.state.imageUrls[i]}/>
+            }
+            images.push(a)
+        }
+
+        
+
         return (
 
             <ul>
                 <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 <button class="img-zoom-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <div className={zoomState} class="article-image-pane">
+                <div  class="article-image-pane">
                         {images[0]}
                         {images[1]}
                         {images[2]}
