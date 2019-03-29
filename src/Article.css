@@ -52,6 +52,7 @@ article-intro-gap {
     overflow: hidden;
     position: absolute;
     left: 0vw;
+    background-color: black;
 }
 
 .article-image-container {
@@ -95,28 +96,28 @@ article-intro-gap {
     transform: scale(2, 2);
 }
 
-img-move-left {
+.img-move-left {
     z-index: 10000;
     position: relative;
     right: 6vw;
     top: 6vh;
 }
 
-img-move-right {
+.img-move-right {
     z-index: 10000;
     position: absolute;
     right: 8vw;
     top: 6vh;
 }
 
-img-move-up {
+.img-move-up {
     z-index: 10000;
     position: absolute;
     right: 7vw;
     top: 4vh;
 }
 
-img-move-down {
+.img-move-down {
     z-index: 10000;
     position: absolute;
     right: 7vw;
