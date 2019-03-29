@@ -119,10 +119,10 @@ class ImagePaneComponent extends Component {
                     <button class="img-zoom-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 </div>
                 <div>
-                <button class="img-move-right" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <button class="img-move-left" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <button class="img-move-up" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                    <button class="img-move-down" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                <button class="img-move-right" onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                <button class="img-move-left"  onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                <button class="img-move-up" onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                    <button class="img-move-down"  onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                     </div>
                     </div>
                 <div  class="article-image-pane">
