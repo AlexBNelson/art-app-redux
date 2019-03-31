@@ -52,6 +52,7 @@ article-intro-gap {
     overflow: hidden;
     position: absolute;
     left: 0vw;
+    background-color: black;
 }
 
 .article-image-container {
@@ -72,8 +73,8 @@ article-intro-gap {
 
 .zoom-img-2 {
     z-index: 10000;
-    height: 200vh;
-    object-fit: cover;
+    height: 93vh;
+    object-fit: contain;
     max-width: 100%;
     max-height: 100%;
 }
@@ -88,16 +89,46 @@ article-intro-gap {
 
 .zoom-img-0 {
     z-index: 10000;
-    height: 93vh;
-    object-fit: ;
+    height: 200vh;
+    object-fit: cover;
     max-width: 100%;
     max-height: 100%;
+    transform: scale(2, 2);
+}
+
+.img-move-left {
+    z-index: 10000;
+    position: relative;
+    right: 6vw;
+    top: 6vh;
+}
+
+.img-move-right {
+    z-index: 10000;
+    position: absolute;
+    right: 8vw;
+    top: 6vh;
+}
+
+.img-move-up {
+    z-index: 10000;
+    position: absolute;
+    right: 7vw;
+    top: 4vh;
+}
+
+.img-move-down {
+    z-index: 10000;
+    position: absolute;
+    right: 7vw;
+    top: 6vh;
 }
 
 .img-zoom-btn{
     position: relative;
     right: 2vw;
     top: 2vh;
+    z-index: 100000;
 }
 
 .image-pane {
