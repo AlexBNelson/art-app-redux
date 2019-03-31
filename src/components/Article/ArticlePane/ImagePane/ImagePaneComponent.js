@@ -70,8 +70,7 @@ class ImagePaneComponent extends Component {
                     if (this.state.imgTop > 0) {
                         this.setState({ imgTop: this.state.imgTop - 10 })
                     }
-                }.bind(this),
-            })(++current_i), 200); 
+                }}.bind(this), 200));
            
         }
     
@@ -87,8 +86,8 @@ class ImagePaneComponent extends Component {
                    // if (this.imgTop < node.offsetHeight) {
                         this.setState({ imgTop: this.state.imgTop + 10 })
                    // }
-                }.bind(this),
-            })(++current_i), 200);
+                }
+            }.bind(this), 200));
 
     }
 
@@ -101,8 +100,8 @@ class ImagePaneComponent extends Component {
                     if (this.state.imgTop > 0) {
                         this.setState({ imgLeft: this.state.imgLeft - 10 })
                     }
-                }.bind(this),
-            })(++current_i), 200);
+                }
+            }.bind(this), 200));
 
     }
 
@@ -119,8 +118,8 @@ class ImagePaneComponent extends Component {
                  //   if (this.imgTop > node.offsetWidth) {
                         this.setState({ imgTop: this.state.imgLeft + 10 })
                    // }
-                }.bind(this),
-            })(++current_i), 200);
+                }
+            }.bind(this), 200));
 
 
     }
