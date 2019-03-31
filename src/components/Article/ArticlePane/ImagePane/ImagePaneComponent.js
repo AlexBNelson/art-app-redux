@@ -13,7 +13,9 @@ class ImagePaneComponent extends Component {
         super(props)
         this.state = {
             imageUrls: [],
-            zoomState: 1
+            zoomState: 1,
+            imgLeft: 0,
+            imgTop: 0
         };
     }
 
@@ -51,7 +53,67 @@ class ImagePaneComponent extends Component {
             });
 
         this.setState({ imageUrls: imageLinks })
+
+        this.componentRef = React.createRef();
     }
+
+
+
+    moveUp() {
+        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
+
+        const node = this.componentRef.current;
+
+        setTimeout(
+            (function (index) {
+                return function () {
+                    this.setState({ imgTop: this.state.imgTop - 10 })
+                };
+            })(++current_i), 200); 
+           
+        }
+    
+
+    moveDown() {
+        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
+
+        const node = this.componentRef.current;
+
+        setTimeout(
+            (function (index) {
+                return function () {
+                    this.setState({ imgTop: this.state.imgTop + 10 })
+                };
+            })(++current_i), 200);
+
+    }
+
+    moveLeft() {
+        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
+
+        const node = this.componentRef.current;
+
+        setTimeout(
+            (function (index) {
+                return function () {
+                    this.setState({ imgTop: this.state.imgLeft - 10 })
+                };
+            })(++current_i), 200);
+
+    }
+    moveRight() {
+        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
+
+        setTimeout(
+            (function (index) {
+                return function () {
+                    this.setState({ imgTop: this.state.imgLeft + 10 })
+                };
+            })(++current_i), 200);
+
+
+    }
+
 
     zoomIn() {
         if (this.state.zoomState > 0) {
@@ -118,11 +180,11 @@ class ImagePaneComponent extends Component {
                 <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                     <button class="img-zoom-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 </div>
-                <div>
-                <button class="img-move-right" onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <button class="img-move-left"  onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                <button class="img-move-up" onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                    <button class="img-move-down"  onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                    <div>
+                        <button class="img-move-right" onMouseDown={this.moveRight.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-left" onMouseDown={this.moveLeft.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-up" onMouseDown={this.moveUp.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-down" onMouseDown={this.moveDown.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                     </div>
                     </div>
                 <div  class="article-image-pane">

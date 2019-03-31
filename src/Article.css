@@ -98,7 +98,7 @@ article-intro-gap {
 
 .img-move-left {
     z-index: 10000;
-    position: relative;
+    position: absolute;
     right: 6vw;
     top: 6vh;
 }
