@@ -61,9 +61,7 @@ class ImagePaneComponent extends Component {
 
     moveUp() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-
-        const node = this.componentRef.current;
-
+        
         setTimeout(
             (function (index) {
                 return function () {
@@ -94,9 +92,7 @@ class ImagePaneComponent extends Component {
 
     moveLeft() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-
-        const node = this.componentRef.current;
-
+        
         setTimeout(
             (function (index) {
                 return function () {
@@ -165,7 +161,7 @@ class ImagePaneComponent extends Component {
         var i;
         
         var imgLeft = this.state.imgLeft;
-        var imgRight = this.state.imgTop;
+        var imgTop = this.state.imgTop;
         console.log("zoomstate=" + this.state.zoomState)
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
