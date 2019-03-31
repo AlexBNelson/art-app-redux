@@ -17,6 +17,9 @@ class ImagePaneComponent extends Component {
             imgLeft: 0,
             imgTop: 0
         };
+
+
+        this.componentRef = React.createRef();
     }
 
     componentDidMount() {
@@ -54,7 +57,6 @@ class ImagePaneComponent extends Component {
 
         this.setState({ imageUrls: imageLinks })
 
-        this.componentRef = React.createRef();
     }
 
 
