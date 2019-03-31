@@ -165,8 +165,8 @@ class ImagePaneComponent extends Component {
 
         var i;
         
-        var imgLeft = this.state.imgLeft;
-        var imgTop = this.state.imgTop;
+        var imgLeft = this.state.imgLeft + "px";
+        var imgTop = this.state.imgTop + "px";
 
         console.log("imgLeft=" + imgLeft + "imgTop=" + imgTop)
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
