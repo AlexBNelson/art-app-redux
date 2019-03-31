@@ -167,7 +167,8 @@ class ImagePaneComponent extends Component {
         
         var imgLeft = this.state.imgLeft;
         var imgTop = this.state.imgTop;
-        console.log("zoomstate=" + this.state.zoomState)
+
+        console.log("imgLeft=" + imgLeft + "imgTop=" + imgTop)
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
             
