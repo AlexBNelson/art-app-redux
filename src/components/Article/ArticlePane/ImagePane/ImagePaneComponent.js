@@ -84,9 +84,9 @@ class ImagePaneComponent extends Component {
         setTimeout(
             (function (index) {
                 return function () {
-                    if (this.imgTop < node.offsetHeight) {
+                   // if (this.imgTop < node.offsetHeight) {
                         this.setState({ imgTop: this.state.imgTop + 10 })
-                    }
+                   // }
                 };
             })(++current_i), 200);
 
@@ -114,9 +114,9 @@ class ImagePaneComponent extends Component {
         setTimeout(
             (function (index) {
                 return function () {
-                    if (this.imgTop > node.offsetWidth) {
+                 //   if (this.imgTop > node.offsetWidth) {
                         this.setState({ imgTop: this.state.imgLeft + 10 })
-                    }
+                   // }
                 };
             })(++current_i), 200);
 
