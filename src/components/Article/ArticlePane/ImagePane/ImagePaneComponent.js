@@ -67,7 +67,9 @@ class ImagePaneComponent extends Component {
         setTimeout(
             (function (index) {
                 return function () {
-                    this.setState({ imgTop: this.state.imgTop - 10 })
+                    if (this.imgTop > 0) {
+                        this.setState({ imgTop: this.state.imgTop - 10 })
+                    }
                 };
             })(++current_i), 200); 
            
@@ -82,7 +84,9 @@ class ImagePaneComponent extends Component {
         setTimeout(
             (function (index) {
                 return function () {
-                    this.setState({ imgTop: this.state.imgTop + 10 })
+                    if (this.imgTop < node.offsetHeight) {
+                        this.setState({ imgTop: this.state.imgTop + 10 })
+                    }
                 };
             })(++current_i), 200);
 
@@ -96,18 +100,23 @@ class ImagePaneComponent extends Component {
         setTimeout(
             (function (index) {
                 return function () {
-                    this.setState({ imgTop: this.state.imgLeft - 10 })
+                    if (this.imgTop > 0) {
+                        this.setState({ imgTop: this.state.imgLeft - 10 })
+                    }
                 };
             })(++current_i), 200);
 
     }
+
     moveRight() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
         setTimeout(
             (function (index) {
                 return function () {
-                    this.setState({ imgTop: this.state.imgLeft + 10 })
+                    if (this.imgTop > node.offsetWidth) {
+                        this.setState({ imgTop: this.state.imgLeft + 10 })
+                    }
                 };
             })(++current_i), 200);
 
@@ -155,17 +164,21 @@ class ImagePaneComponent extends Component {
 
         var i;
         
-        
+        var imgLeft = this.state.imgLeft;
+        var imgRight = this.state.imgTop;
         console.log("zoomstate=" + this.state.zoomState)
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
             
             if (this.props.imageSource-1 != i) {
 
-                var a = <img className={zoomState}  src={this.state.imageUrls[i]} style={{ display: 'none' }} />
+                var a = <img className={zoomState} src={this.state.imageUrls[i]} style={{ display: 'none', }} />
             }
             else {
-                var a = <img className={zoomState}  src={this.state.imageUrls[i]}/>
+                var a = <img className={zoomState} src={this.state.imageUrls[i]} style={{
+                    left: imgLeft,
+                    top: imgTop
+                }}/>
             }
             images.push(a)
         }
