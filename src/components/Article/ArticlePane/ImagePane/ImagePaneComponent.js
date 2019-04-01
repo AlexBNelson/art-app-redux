@@ -161,6 +161,11 @@ class ImagePaneComponent extends Component {
 
         var zoomState = "zoom-img-" + this.state.zoomState;
 
+        var zoomTransform
+
+        if (zoomState == 0) {
+            zoomTransform = 'scale(2, 2)';
+        }
 
         var images = [];
 
@@ -180,7 +185,8 @@ class ImagePaneComponent extends Component {
             else {
                 var a = <img ref={this.componentRef} className={zoomState} src={this.state.imageUrls[i]} style={{
                     transform: 'translateX(' + imgLeft + ')',
-                    transform: 'translateY(' + imgTop + ')'
+                    transform: 'translateY(' + imgTop + ')',
+                    tranform: zoomTransform
                 }}/>
             }
             images.push(a)
