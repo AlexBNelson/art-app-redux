@@ -178,9 +178,9 @@ class ImagePaneComponent extends Component {
                 var a = <img className={zoomState} src={this.state.imageUrls[i]} style={{ display: 'none', }} />
             }
             else {
-                var a = <img ref={this.componentRef}  className={zoomState} src={this.state.imageUrls[i]} style={{
-                    left: imgLeft,
-                    top: imgTop
+                var a = <img ref={this.componentRef} className={zoomState} src={this.state.imageUrls[i]} style={{
+                    transform: translateX(imgLeft),
+                    transform: translateY(imgTop)
                 }}/>
             }
             images.push(a)
