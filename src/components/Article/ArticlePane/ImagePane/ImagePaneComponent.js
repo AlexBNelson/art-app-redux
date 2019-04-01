@@ -124,7 +124,7 @@ class ImagePaneComponent extends Component {
          //   (function (index) {
            //     return function () {
         //   if (this.imgTop > node.offsetWidth) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetWidth)
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
         if (maxDistance >= this.state.imgLeft) {
             this.setState({ imgLeft: this.state.imgLeft + 10 })
         }
