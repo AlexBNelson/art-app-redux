@@ -82,7 +82,7 @@ class ImagePaneComponent extends Component {
     moveDown() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
-        const maxDistance  = this.imgRef.current.offsetHeight - this.containerRef.current.offsetHeight;
+        const maxDistance  = this.imgRef.current.scrollHeight - this.containerRef.current.offsetHeight;
 
         //setTimeout(
           //  (function (index) {
@@ -117,7 +117,7 @@ class ImagePaneComponent extends Component {
     moveRight() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
-        const maxDistance = this.imgRef.current.offsetWidth - this.containerRef.current.offsetWidth;
+        const maxDistance = this.imgRef.current.scrollWidth- this.containerRef.current.offsetWidth;
         
 
        //setTimeout(
