@@ -149,7 +149,10 @@ class ImagePaneComponent extends Component {
     zoomOut() {
         if (this.state.zoomState == 0) {
             this.setState({ imgLeft: this.state.imgLeft / 2 })
-            this.setState({ imgLeft: this.state.imgTop / 2 })
+            this.setState({ imgTop: this.state.imgTop / 2 })
+        } else {
+            this.setState({ imgLeft: 0 })
+            this.setState({ imgTop: 0 })
         }
         if (this.state.zoomState < 2) {
             this.setState({ zoomState: this.state.zoomState + 1 })
