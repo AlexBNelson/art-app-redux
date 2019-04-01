@@ -85,7 +85,7 @@ class ImagePaneComponent extends Component {
             //    return function () {
                    // if (this.imgTop < node.offsetHeight) {
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
-        if (node.offsetHeight < imgTop) {
+        if (node.offsetHeight < this.state.imgTop) {
             this.setState({ imgTop: this.state.imgTop + 10 })
         }
             // }
@@ -119,7 +119,7 @@ class ImagePaneComponent extends Component {
          //   (function (index) {
            //     return function () {
         //   if (this.imgTop > node.offsetWidth) {
-        if (this.componentRef.offsetWidth < imgLeft) {
+        if (node.offsetWidth < this.state.imgLeft) {
             this.setState({ imgTop: this.state.imgLeft + 10 })
         }
                    // }
