@@ -100,7 +100,7 @@ class ImagePaneComponent extends Component {
        // setTimeout(
          //   (function (index) {
            //     return function () {
-                    if (this.state.imgTop > 0) {
+                    if (this.state.imgTop >= 0) {
                         this.setState({ imgLeft: this.state.imgLeft - 10 })
                     }
              //   }
@@ -119,8 +119,8 @@ class ImagePaneComponent extends Component {
          //   (function (index) {
            //     return function () {
         //   if (this.imgTop > node.offsetWidth) {
-        if (node.offsetWidth < this.state.imgLeft) {
-            this.setState({ imgTop: this.state.imgLeft + 10 })
+        if (node.offsetWidth >= this.state.imgLeft) {
+            this.setState({ imgLeft: this.state.imgLeft + 10 })
         }
                    // }
               //  }
@@ -172,6 +172,8 @@ class ImagePaneComponent extends Component {
         var imgStyle
 
         if (this.state.zoomState == 0) {
+            this.setState({ imgLeft: this.state.imgLeft * 2 })
+            this.setState({ imgLeft: this.state.imgTop * 2 })
             imgStyle = {
                 transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ') ' + 'scale(2, 2)'
             }
