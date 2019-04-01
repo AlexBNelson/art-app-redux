@@ -64,13 +64,13 @@ class ImagePaneComponent extends Component {
     moveUp() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
         
-        setTimeout(
-            (function (index) {
-                return function () {
-                    if (this.state.imgTop > 0) {
+        //setTimeout(
+          //  (function (index) {
+            //    return function () {
+              //      if (this.state.imgTop > 0) {
                         this.setState({ imgTop: this.state.imgTop - 10 })
-                    }
-                }}.bind(this), 200));
+                //    }
+                //}}.bind(this), 200));
            
         }
     
@@ -80,29 +80,29 @@ class ImagePaneComponent extends Component {
 
         const node = this.componentRef.current;
 
-        setTimeout(
-            (function (index) {
-                return function () {
+        //setTimeout(
+          //  (function (index) {
+            //    return function () {
                    // if (this.imgTop < node.offsetHeight) {
                     console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
                         this.setState({ imgTop: this.state.imgTop + 10 })
                    // }
-                }
-            }.bind(this), 200));
+              //  }
+            //}.bind(this), 200));
 
     }
 
     moveLeft() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
         
-        setTimeout(
-            (function (index) {
-                return function () {
+       // setTimeout(
+         //   (function (index) {
+           //     return function () {
                     if (this.state.imgTop > 0) {
                         this.setState({ imgLeft: this.state.imgLeft - 10 })
                     }
-                }
-            }.bind(this), 200));
+             //   }
+            //}.bind(this), 200));
 
     }
 
@@ -113,14 +113,14 @@ class ImagePaneComponent extends Component {
 
         var component = this
 
-        setTimeout(
-            (function (index) {
-                return function () {
+       //setTimeout(
+         //   (function (index) {
+           //     return function () {
                  //   if (this.imgTop > node.offsetWidth) {
                         this.setState({ imgTop: this.state.imgLeft + 10 })
                    // }
-                }
-            }.bind(this), 200));
+              //  }
+            //}.bind(this), 200));
 
 
     }
@@ -197,10 +197,10 @@ class ImagePaneComponent extends Component {
                     <button class="img-zoom-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                 </div>
                     <div>
-                        <button class="img-move-right" onMouseDown={this.moveRight.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                        <button class="img-move-left" onMouseDown={this.moveLeft.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                        <button class="img-move-up" onMouseDown={this.moveUp.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                        <button class="img-move-down" onMouseDown={this.moveDown.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-right" onClick={this.moveRight.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-left" onClick={this.moveLeft.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-up" onClick={this.moveUp.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-down" onClick={this.moveDown.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                     </div>
                     </div>
                 <div  class="article-image-pane">
@@ -224,3 +224,5 @@ ImagePaneComponent.propTypes = {
 }
 
 export default ImagePaneComponent
+
+  // https://stackoverflow.com/questions/40114942/react-button-pressed-keep-calling-function for zooming
