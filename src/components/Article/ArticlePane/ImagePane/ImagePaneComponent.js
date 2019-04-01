@@ -160,19 +160,36 @@ class ImagePaneComponent extends Component {
         }
 
         var zoomState = "zoom-img-" + this.state.zoomState;
+        
 
-        var zoomTransform
+        var imgLeft = this.state.imgLeft + "px";
+        var imgTop = this.state.imgTop + "px";
 
-        if (zoomState == 0) {
-            zoomTransform = 'scale(2, 2)';
+        var imgStyle
+
+        if (this.state.zoomState == 0) {
+            imgStyle = {
+                transform: 'translateX(' + imgLeft + ')',
+                transform: 'translateY(' + imgTop + ')',
+                transform: 'scale(2, 2)'
+            }
+        } else if (this.state.zoomState == 1) {
+            imgStyle = {
+                transform: 'translateX(' + imgLeft + ')',
+                transform: 'translateY(' + imgTop + ')'
+            }
+        } else if (this.state.zoomState == 2){
+            imgStyle = {
+                transform: 'translateX(' + imgLeft + ')',
+                transform: 'translateY(' + imgTop + ')'
+            }
         }
 
         var images = [];
 
         var i;
         
-        var imgLeft = this.state.imgLeft + "px";
-        var imgTop = this.state.imgTop + "px";
+       
 
         
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
@@ -183,11 +200,7 @@ class ImagePaneComponent extends Component {
                 var a = <img className={zoomState} src={this.state.imageUrls[i]} style={{ display: 'none', }} />
             }
             else {
-                var a = <img ref={this.componentRef} className={zoomState} src={this.state.imageUrls[i]} style={{
-                    transform: 'translateX(' + imgLeft + ')',
-                    transform: 'translateY(' + imgTop + ')',
-                    tranform: zoomTransform
-                }}/>
+                var a = <img ref={this.componentRef} className={zoomState} src={this.state.imageUrls[i]} style={imgStyle} />
             }
             images.push(a)
         }
