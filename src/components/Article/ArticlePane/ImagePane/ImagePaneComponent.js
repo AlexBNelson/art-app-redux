@@ -169,19 +169,15 @@ class ImagePaneComponent extends Component {
 
         if (this.state.zoomState == 0) {
             imgStyle = {
-                transform: 'translateX(' + imgLeft + ')',
-                transform: 'translateY(' + imgTop + ')',
-                transform: 'scale(2, 2)'
+                transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ') ' + 'scale(2, 2)'
             }
         } else if (this.state.zoomState == 1) {
             imgStyle = {
-                transform: 'translateX(' + imgLeft + ')',
-                transform: 'translateY(' + imgTop + ')'
+                transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ')'
             }
         } else if (this.state.zoomState == 2){
             imgStyle = {
-                transform: 'translateX(' + imgLeft + ')',
-                transform: 'translateY(' + imgTop + ')'
+                transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ')'
             }
         }
 
