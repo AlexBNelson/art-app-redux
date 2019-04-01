@@ -68,6 +68,7 @@ class ImagePaneComponent extends Component {
           //  (function (index) {
             //    return function () {
               //      if (this.state.imgTop > 0) {
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetHeight)
         if (this.state.imgTop >= 0) {
             this.setState({ imgTop: this.state.imgTop - 10 })
         }
@@ -86,7 +87,7 @@ class ImagePaneComponent extends Component {
           //  (function (index) {
             //    return function () {
                    // if (this.imgTop < node.offsetHeight) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetHeight)
         if (node.offsetHeight > this.state.imgTop) {
             this.setState({ imgTop: this.state.imgTop + 10 })
         }
@@ -102,6 +103,7 @@ class ImagePaneComponent extends Component {
        // setTimeout(
          //   (function (index) {
            //     return function () {
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetWidth)
                     if (this.state.imgLeft >= 0) {
                         this.setState({ imgLeft: this.state.imgLeft - 10 })
                     }
@@ -121,6 +123,7 @@ class ImagePaneComponent extends Component {
          //   (function (index) {
            //     return function () {
         //   if (this.imgTop > node.offsetWidth) {
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetWidth)
         if (node.offsetWidth >= this.state.imgLeft) {
             this.setState({ imgLeft: this.state.imgLeft + 10 })
         }
