@@ -84,6 +84,7 @@ class ImagePaneComponent extends Component {
             (function (index) {
                 return function () {
                    // if (this.imgTop < node.offsetHeight) {
+                    console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
                         this.setState({ imgTop: this.state.imgTop + 10 })
                    // }
                 }
@@ -168,7 +169,7 @@ class ImagePaneComponent extends Component {
         var imgLeft = this.state.imgLeft + "px";
         var imgTop = this.state.imgTop + "px";
 
-        console.log("imgLeft=" + imgLeft + "imgTop=" + imgTop)
+        
         //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
         for (i = 0; i < this.state.imageUrls.length; i++) {
             
