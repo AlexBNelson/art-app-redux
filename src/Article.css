@@ -89,10 +89,7 @@ article-intro-gap {
 
 .zoom-img-0 {
     z-index: 10000;
-    height: 200vh;
     object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
 
 }
 
