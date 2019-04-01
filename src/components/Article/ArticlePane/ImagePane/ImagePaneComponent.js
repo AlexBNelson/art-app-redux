@@ -63,7 +63,7 @@ class ImagePaneComponent extends Component {
 
     moveUp() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-        
+        const node = this.componentRef.current;
         //setTimeout(
           //  (function (index) {
             //    return function () {
@@ -98,8 +98,9 @@ class ImagePaneComponent extends Component {
     }
 
     moveLeft() {
-        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-        
+        var current_i = 0;
+        // current_i is used to handle double click (to not act like a hold)
+        const node = this.componentRef.current;
        // setTimeout(
          //   (function (index) {
            //     return function () {
