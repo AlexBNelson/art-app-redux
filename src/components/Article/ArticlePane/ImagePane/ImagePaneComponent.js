@@ -19,7 +19,8 @@ class ImagePaneComponent extends Component {
         };
 
 
-        this.componentRef = React.createRef();
+        this.imgRef = React.createRef();
+        this.containerRef = React.createRef();
     }
 
     componentDidMount() {
@@ -63,7 +64,7 @@ class ImagePaneComponent extends Component {
 
     moveUp() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-        const node = this.componentRef.current;
+        const node = this.imgRef.current;
         //setTimeout(
           //  (function (index) {
             //    return function () {
@@ -81,14 +82,14 @@ class ImagePaneComponent extends Component {
     moveDown() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
-        const node = this.componentRef.current;
+        const maxDistance  = this.imgRef.current.offsetHeight - this.containerRef.current.offsetHeight;
 
         //setTimeout(
           //  (function (index) {
             //    return function () {
-                   // if (this.imgTop < node.offsetHeight) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetHeight)
-        if (node.offsetHeight > this.state.imgTop) {
+        // if (this.imgTop < node.offsetHeight) {
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
+        if (maxDistance > this.state.imgTop) {
             this.setState({ imgTop: this.state.imgTop + 10 })
         }
             // }
@@ -100,11 +101,11 @@ class ImagePaneComponent extends Component {
     moveLeft() {
         var current_i = 0;
         // current_i is used to handle double click (to not act like a hold)
-        const node = this.componentRef.current;
+        
        // setTimeout(
          //   (function (index) {
            //     return function () {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetWidth)
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
                     if (this.state.imgLeft >= 0) {
                         this.setState({ imgLeft: this.state.imgLeft - 10 })
                     }
@@ -116,16 +117,15 @@ class ImagePaneComponent extends Component {
     moveRight() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
-        const node = this.componentRef.current;
-
-        var component = this
+        const maxDistance = this.imgRef.current.offsetWidth - this.containerRef.current.offsetWidth;
+        
 
        //setTimeout(
          //   (function (index) {
            //     return function () {
         //   if (this.imgTop > node.offsetWidth) {
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetWidth)
-        if (node.offsetWidth >= this.state.imgLeft) {
+        if (maxDistance >= this.state.imgLeft) {
             this.setState({ imgLeft: this.state.imgLeft + 10 })
         }
                    // }
@@ -211,7 +211,7 @@ class ImagePaneComponent extends Component {
                 var a = <img className={zoomState} src={this.state.imageUrls[i]} style={{ display: 'none', }} />
             }
             else {
-                var a = <img ref={this.componentRef} className={zoomState} src={this.state.imageUrls[i]} style={imgStyle} />
+                var a = <img ref={this.imgRef} className={zoomState} src={this.state.imageUrls[i]} style={imgStyle} />
             }
             images.push(a)
         }
@@ -233,7 +233,7 @@ class ImagePaneComponent extends Component {
                         <button class="img-move-down" onClick={this.moveDown.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                     </div>
                     </div>
-                <div  class="article-image-pane">
+                <div ref={this.containerRef} class="article-image-pane">
                         {images[0]}
                         {images[1]}
                         {images[2]}
