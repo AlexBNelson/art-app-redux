@@ -99,14 +99,14 @@ article-intro-gap {
 .img-move-left {
     z-index: 10000;
     position: absolute;
-    right: 6vw;
+    right: 8vw;
     top: 6vh;
 }
 
 .img-move-right {
     z-index: 10000;
     position: absolute;
-    right: 8vw;
+    right: 6vw;
     top: 6vh;
 }
 

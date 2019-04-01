@@ -194,11 +194,7 @@ class ImagePaneComponent extends Component {
             imgStyle = {
                 transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ')'
             }
-        } else if (this.state.zoomState == 2){
-            imgStyle = {
-                transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ')'
-            }
-        }
+        } 
 
         var images = [];
 
