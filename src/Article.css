@@ -106,7 +106,8 @@ article-intro-gap {
     width: 8vw;
     right: -30px;
     background-color: black;
-    opacity: 0.5
+    opacity: 0.5;
+    z-index: 100000099;
 }
 
 .img-move-right {
