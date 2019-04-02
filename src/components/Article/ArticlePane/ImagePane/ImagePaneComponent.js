@@ -8,6 +8,10 @@ import ZoomableImageComponent from './ZoomableImage/ZoomableImageComponent.js'
 import arrowRight from '../../../../arrowLeft.png'
 import zoomIn from '../../../../ZoomIn.png'
 import zoomOut from '../../../../ZoomOut.png'
+import panDown from '../../../../panDown.png'
+import panLeft from '../../../../panLeft.png'
+import panRight from '../../../../panRight.png'
+import panUp from '../../../../panUp.png'
 
 class ImagePaneComponent extends Component {
 
@@ -232,10 +236,10 @@ class ImagePaneComponent extends Component {
                     <button class="img-zoom-out-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={zoomOut}></img></button>
                 </div>
                     <div>
-                        <button class="img-move-right" onClick={this.moveRight.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                        <button class="img-move-left" onClick={this.moveLeft.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                        <button class="img-move-up" onClick={this.moveUp.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                        <button class="img-move-down" onClick={this.moveDown.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                        <button class="img-move-right" onClick={this.moveRight.bind(this)}><img class="button-img" src={panRight}></img></button>
+                        <button class="img-move-left" onClick={this.moveLeft.bind(this)}><img class="button-img" src={panLeft}></img></button>
+                        <button class="img-move-up" onClick={this.moveUp.bind(this)}><img class="button-img" src={panUp}></img></button>
+                        <button class="img-move-down" onClick={this.moveDown.bind(this)}><img class="button-img" src={panDown}></img></button>
                     </div>
                     </div>
                 <div ref={this.containerRef} class="article-image-pane">
