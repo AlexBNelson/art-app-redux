@@ -96,7 +96,7 @@ article-intro-gap {
 .img-move-left {
     z-index: 10000;
     position: absolute;
-    right: 8vw;
+    right: 3vw;
     top: 6vh;
 }
 
@@ -110,28 +110,35 @@ article-intro-gap {
 .img-move-right {
     z-index: 10000;
     position: absolute;
-    right: 6vw;
+    right: 1vw;
     top: 6vh;
 }
 
 .img-move-up {
     z-index: 10000;
     position: absolute;
-    right: 7vw;
-    top: 4vh;
+    right: 2vw;
+    top: 5vh;
 }
 
 .img-move-down {
     z-index: 10000;
     position: absolute;
-    right: 7vw;
-    top: 8vh;
+    right: 2vw;
+    top: 7vh;
 }
 
-.img-zoom-btn{
+.img-zoom-in-btn{
     position: absolute;
     right: 2vw;
-    top: 2vh;
+    top: 3vh;
+    z-index: 100000;
+}
+
+.img-zoom-out-btn {
+    position: absolute;
+    right: 2vw;
+    top: 4vh;
     z-index: 100000;
 }
 
