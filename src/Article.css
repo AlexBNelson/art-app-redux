@@ -103,7 +103,8 @@ article-intro-gap {
 .image-buttons{
     position:absolute;
     height: 60vh;
-    width: 4vw;
+    width: 6vw;
+    right: 0px
 }
 
 .img-move-right {
