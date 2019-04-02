@@ -97,7 +97,7 @@ article-intro-gap {
     z-index: 10000;
     position: absolute;
     right: 3vw;
-    top: 11vh;
+    top: 15vh;
 }
 
 .image-buttons{
@@ -111,21 +111,21 @@ article-intro-gap {
     z-index: 10000;
     position: absolute;
     right: 1vw;
-    top: 11vh;
+    top: 15vh;
 }
 
 .img-move-up {
     z-index: 10000;
     position: absolute;
     right: 2vw;
-    top: 9vh;
+    top: 14vh;
 }
 
 .img-move-down {
     z-index: 10000;
     position: absolute;
     right: 2vw;
-    top: 13vh;
+    top: 16vh;
 }
 
 .img-zoom-in-btn{
