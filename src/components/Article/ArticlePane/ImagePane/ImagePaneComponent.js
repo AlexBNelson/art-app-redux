@@ -6,6 +6,8 @@ import axios from 'axios'
 import base64Img from 'base'
 import ZoomableImageComponent from './ZoomableImage/ZoomableImageComponent.js'
 import arrowRight from '../../../../arrowLeft.png'
+import zoomIn from '../../../../ZoomIn.png'
+import zoomOut from '../../../../ZoomOut.png'
 
 class ImagePaneComponent extends Component {
 
@@ -225,9 +227,9 @@ class ImagePaneComponent extends Component {
 
             <ul>
                 <div class="image-buttons">
-                <div>
-                <button class="img-zoom-in-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                    <button class="img-zoom-out-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
+                    <div>
+                        <button class="img-zoom-in-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={zoomIn}></img></button>
+                    <button class="img-zoom-out-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={zoomOut}></img></button>
                 </div>
                     <div>
                         <button class="img-move-right" onClick={this.moveRight.bind(this)}><img class="button-img" src={arrowRight}></img></button>
