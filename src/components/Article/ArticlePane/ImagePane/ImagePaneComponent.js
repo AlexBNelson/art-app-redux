@@ -224,7 +224,7 @@ class ImagePaneComponent extends Component {
         return (
 
             <ul>
-                <div>
+                <div class="image-buttons">
                 <div>
                 <button class="img-zoom-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                     <button class="img-zoom-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={arrowRight}></img></button>
