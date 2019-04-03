@@ -111,7 +111,6 @@ article-intro-gap {
     opacity: 0;
     z-index: 99999;
     overflow: hidden;
-    display: none;
     transition: opacity 0.3s;
 }
 
