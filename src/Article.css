@@ -190,12 +190,13 @@ article-intro-gap {
 }
 
 .info-title {
-    font-size: 18px;
+    font-size: 25px;
     height: 25px;
     width: 40vw;
     overflow: hidden;
     text-overflow: ellipsis;
     font-style: italic;
+    margin: auto;
 }
 
 .image-details-pane {
