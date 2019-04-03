@@ -112,7 +112,7 @@ article-intro-gap {
     z-index: 99999;
     overflow: hidden;
     display: none;
-    transition: 0.3s;
+    transition: opacity 0.3s;
 }
 
 .image-buttons:hover {
