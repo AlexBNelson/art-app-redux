@@ -21,7 +21,8 @@ class ImagePaneComponent extends Component {
             imageUrls: [],
             zoomState: 1,
             imgLeft: 0,
-            imgTop: 0
+            imgTop: 0,
+            imageButtonsVisible: false
         };
 
 
@@ -167,6 +168,15 @@ class ImagePaneComponent extends Component {
 
     }
 
+    mouseOverImg() {
+        this.setState({imageButtonsVisible: true})
+    }
+
+
+    mouseLeaveImg() {
+        this.setState({ imageButtonsVisible: false })
+    }
+
     render() {
 
         var zoomInDisabled
@@ -242,7 +252,7 @@ class ImagePaneComponent extends Component {
                         <button class="img-move-down" onClick={this.moveDown.bind(this)}><img class="button-img" src={panDown}></img></button>
                     </div>
                     </div>
-                <div ref={this.containerRef} class="article-image-pane">
+                <div ref={this.containerRef} onMouseOver={this.mouseOverImg.bind(this)} onMouseLeave={this.mouseLeaveImg.bind(this)} class="article-image-pane">
                         {images[0]}
                         {images[1]}
                         {images[2]}
