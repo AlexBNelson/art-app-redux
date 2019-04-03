@@ -110,7 +110,12 @@ article-intro-gap {
     background-color: black;
     opacity: 0.5;
     z-index: 99999;
-    overflow:hidden
+    overflow:hidden;
+    display:none;
+}
+
+.image-buttons:hover {
+    display:block;
 }
 
 .img-move-right {
