@@ -188,10 +188,6 @@ class TextPane extends Component {
                     var link = formattedArray[i].replace('Link: ', '')
                     infoHtml.push(<div class="info-title"><a href={link}>{link}</a></div>)
                 }
-                else if (formattedArray[i][0] == 'T') {
-                    var link = formattedArray[i].replace('Title: ', '')
-                    infoHtml.push(<div class="info-title">{link}</div>)
-                }
                 else if (formattedArray[i][0] == 'A') {
                     var link = formattedArray[i].replace('Artist: ', '')
                     infoHtml.push(<div class="info-title">{link}</div>)
@@ -200,8 +196,11 @@ class TextPane extends Component {
                     var link = formattedArray[i].replace('Date of Image Creation: ', '')
                     infoHtml.push(<div class="info-title">{link}</div>)
                 }
-                else {
-                    infoHtml.push(<div class="info-title">{formattedArray[i]}</div>)
+                else { //in case of title-first char logic not working properly
+                    var formatted = formattedArray[i].replace('Title: ', '')
+                    var formattedFinal = formatted.replace('Date of Image Creation: ', '')
+                    infoHtml.push(<div class="info-title">{formattedFinal}</div>)
+                    infoHtml.push(<div class="info-title">{formattedArray[i]}</div>
                 }
             }
         }
