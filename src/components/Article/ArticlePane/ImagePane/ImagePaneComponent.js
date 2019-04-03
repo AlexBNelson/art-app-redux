@@ -167,15 +167,7 @@ class ImagePaneComponent extends Component {
         
 
     }
-
-    mouseOverImg() {
-        this.setState({imageButtonsVisible: true})
-    }
-
-
-    mouseLeaveImg() {
-        this.setState({ imageButtonsVisible: false })
-    }
+    
 
     render() {
 

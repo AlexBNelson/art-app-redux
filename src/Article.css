@@ -90,6 +90,7 @@ article-intro-gap {
 .zoom-img-0 {
     z-index: 100000;
     object-fit: cover;
+    right: 0px;
 }
 
 .img-move-left {
