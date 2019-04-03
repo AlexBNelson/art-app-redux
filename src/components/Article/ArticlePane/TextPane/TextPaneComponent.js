@@ -190,14 +190,17 @@ class TextPane extends Component {
                 }
                 else if (formattedArray[i][0] == 'T') {
                     var link = formattedArray[i].replace('Title: ', '')
-                    infoHtml.push(<div class="info-title">{formattedArray[i]}</div>)
+                    infoHtml.push(<div class="info-title">{link}</div>)
                 }
                 else if (formattedArray[i][0] == 'A') {
                     var link = formattedArray[i].replace('Artist: ', '')
-                    infoHtml.push(<div class="info-title">{formattedArray[i]}</div>)
+                    infoHtml.push(<div class="info-title">{link}</div>)
                 }
                 else if (formattedArray[i][0] == 'D') {
                     var link = formattedArray[i].replace('Date of Image Creation: ', '')
+                    infoHtml.push(<div class="info-title">{link}</div>)
+                }
+                else {
                     infoHtml.push(<div class="info-title">{formattedArray[i]}</div>)
                 }
             }
