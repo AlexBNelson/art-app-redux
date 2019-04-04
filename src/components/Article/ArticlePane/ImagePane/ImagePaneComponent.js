@@ -72,9 +72,14 @@ class ImagePaneComponent extends Component {
 
     moveDown() {
         
-        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
+        var zoomFactor = 1;
+        // current_i is used to handle double click (to not act like a hold)
+        if (this.state.zoomState == 0) {
 
-        const maxDistance = (this.state.zoomCoefficient *this.imgRef.current.scrollHeight) - this.containerRef.current.offsetHeight;
+            zoomFactor = 2
+        }
+
+        const maxDistance = (zoomFactor *this.imgRef.current.scrollHeight) - this.containerRef.current.offsetHeight;
 
         //setTimeout(
         //  (function (index) {
@@ -108,10 +113,13 @@ class ImagePaneComponent extends Component {
     }
 
     moveRight() {
-        var current_i = 0;
+        var zoomFactor = 1;
         // current_i is used to handle double click (to not act like a hold)
-        
-        const maxDistance = (this.state.zoomCoefficient*this.imgRef.current.scrollWidth) - this.containerRef.current.offsetWidth;
+        if (this.state.zoomState == 0) { 
+    
+            zoomFactor = 2
+        }
+        const maxDistance = (zoomFactor*this.imgRef.current.scrollWidth) - this.containerRef.current.offsetWidth;
 
 
         //setTimeout(
