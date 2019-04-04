@@ -90,6 +90,7 @@ article-intro-gap {
     z-index: 100000;
     object-fit: cover;
     right: 0px;
+    transform-origin: top right;
 }
 
 .img-move-left {
