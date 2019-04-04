@@ -118,7 +118,7 @@ class ImagePaneComponent extends Component {
         //   if (this.imgTop > node.offsetWidth) {
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
         if (maxDistance >= this.state.imgLeft) {
-            this.setState({ imgLeft: this.state.imgLeft + 10 })
+            this.setState({ imgLeft: this.state.imgLeft + 30 })
         }
              //   }
             //}.bind(this), 200));
@@ -131,7 +131,7 @@ class ImagePaneComponent extends Component {
         
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
         if (this.state.imgLeft >= 0) {
-            this.setState({ imgLeft: this.state.imgLeft - 10 })
+            this.setState({ imgLeft: this.state.imgLeft - 30 })
         }
                    // }
               //  }
@@ -142,10 +142,13 @@ class ImagePaneComponent extends Component {
 
 
     zoomIn() {
+        
+
         if (this.state.zoomState > 0) {
             this.setState({ zoomState: this.state.zoomState - 1 })
         }
         if (this.state.zoomState == 0) {
+
             this.setState({ imgLeft: this.state.imgLeft * 2 })
             this.setState({ imgLeft: this.state.imgTop * 2 })
         }
@@ -153,8 +156,8 @@ class ImagePaneComponent extends Component {
 
     zoomOut() {
         if (this.state.zoomState == 0) {
-            this.setState({ imgLeft: this.state.imgLeft / 2 })
-            this.setState({ imgTop: this.state.imgTop / 2 })
+            this.setState({ imgLeft: 0 })
+            this.setState({ imgTop: 0 })
         } else {
             this.setState({ imgLeft: 0 })
             this.setState({ imgTop: 0 })
@@ -191,7 +194,7 @@ class ImagePaneComponent extends Component {
         
 
         var imgLeft = (-1*this.state.imgLeft) + "px";
-        var imgTop = (-1 *this.state.imgTop) + "px";
+        var imgTop = (this.state.imgTop) + "px";
 
         var imgStyle
 
