@@ -227,12 +227,19 @@ class ImagePaneComponent extends Component {
             images.push(a)
         }
 
-        
+        var zoomPaneVisible;
+
+        if (this.props.imageSource == 0) {
+            zoomPaneVisible = 'hidden';
+        }
+        else {
+            zoomPaneVisible = 'visible';
+        }
 
         return (
 
             <ul>
-                <div class="image-buttons">
+                <div class="image-buttons" visiblity={zoomPaneVisible} >
                     <div>
                         <button class="img-zoom-in-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={zoomIn}></img></button>
                     <button class="img-zoom-out-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={zoomOut}></img></button>
