@@ -22,7 +22,8 @@ class ImagePaneComponent extends Component {
             zoomState: 1,
             imgLeft: 0,
             imgTop: 0,
-            imageButtonsVisible: false
+            imageButtonsVisible: false,
+            zoomCoefficient:  1
         };
 
 
@@ -73,7 +74,7 @@ class ImagePaneComponent extends Component {
         
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
-        const maxDistance = this.imgRef.current.scrollHeight - this.containerRef.current.offsetHeight;
+        const maxDistance = (this.state.zoomCoefficient *this.imgRef.current.scrollHeight) - this.containerRef.current.offsetHeight;
 
         //setTimeout(
         //  (function (index) {
@@ -110,7 +111,7 @@ class ImagePaneComponent extends Component {
         var current_i = 0;
         // current_i is used to handle double click (to not act like a hold)
         
-        const maxDistance = this.imgRef.current.scrollWidth - this.containerRef.current.offsetWidth;
+        const maxDistance = (this.state.zoomCoefficient*this.imgRef.current.scrollWidth) - this.containerRef.current.offsetWidth;
 
 
         //setTimeout(
@@ -149,7 +150,7 @@ class ImagePaneComponent extends Component {
             this.setState({ zoomState: this.state.zoomState - 1 })
         }
         if (this.state.zoomState == 0) {
-
+            this.setState({ zoomCoefficient: 2 })
             this.setState({ imgLeft: this.state.imgLeft * 2 })
             this.setState({ imgLeft: this.state.imgTop * 2 })
         }
@@ -157,6 +158,7 @@ class ImagePaneComponent extends Component {
 
     zoomOut() {
         if (this.state.zoomState == 0) {
+            this.setState({ zoomCoefficient: 1 })
             this.setState({ imgLeft: 0 })
             this.setState({ imgTop: 0 })
         } else {
