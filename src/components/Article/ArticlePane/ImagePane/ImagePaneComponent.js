@@ -244,7 +244,7 @@ class ImagePaneComponent extends Component {
                         <button class="img-move-down" onClick={this.moveDown.bind(this)}><img class="button-img" src={panDown}></img></button>
                     </div>
                     </div>
-                <div ref={this.containerRef} onMouseOver={this.mouseOverImg.bind(this)} onMouseLeave={this.mouseLeaveImg.bind(this)} class="article-image-pane">
+                <div ref={this.containerRef} class="article-image-pane">
                         {images[0]}
                         {images[1]}
                         {images[2]}

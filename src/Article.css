@@ -9,7 +9,7 @@ article-intro-gap {
 }
 .article-background-pane {
     position: absolute;
-    z-index: 0;
+    z-index: 10000;
     opacity: 0.6;
     width: 60%;
     height: auto;
