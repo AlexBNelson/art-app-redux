@@ -69,7 +69,7 @@ class ImagePaneComponent extends Component {
 
 
 
-    moveUp() {
+    moveDown() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
         const node = this.imgRef.current;
         //setTimeout(
@@ -86,7 +86,7 @@ class ImagePaneComponent extends Component {
         }
     
 
-    moveDown() {
+    moveUp() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
         const maxDistance  = this.imgRef.current.scrollHeight - this.containerRef.current.offsetHeight;
@@ -105,7 +105,7 @@ class ImagePaneComponent extends Component {
 
     }
 
-    moveLeft() {
+    moveRight() {
         var current_i = 0;
         // current_i is used to handle double click (to not act like a hold)
         
@@ -121,7 +121,7 @@ class ImagePaneComponent extends Component {
 
     }
 
-    moveRight() {
+    moveLeft() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
         const maxDistance = this.imgRef.current.scrollWidth- this.containerRef.current.offsetWidth;
