@@ -121,12 +121,13 @@
     margin-left: 0;
     -webkit-filter: grayscale(50%);
     filter: grayscale(50%);
-    border-radius: 15px 15px 15px 15px;
+    
 }
 
-.thumbnail-image{
+.thumbnail-image {
     width: 12vw;
     height: 45vh;
+    border-radius: 15px 15px 15px 15px;
 }
 
 .thumbnail-title {
