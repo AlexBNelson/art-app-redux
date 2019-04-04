@@ -200,7 +200,6 @@ class TextPane extends Component {
                     var formatted = formattedArray[i].replace('Title: ', '')
                     var formattedFinal = formatted.replace('Date of Image Creation: ', '')
                     infoHtml.push(<div class="info-title">{formattedFinal}</div>)
-                    infoHtml.push(<div class="info-title">{formattedArray[i]}</div>)
                 }
             
             }
