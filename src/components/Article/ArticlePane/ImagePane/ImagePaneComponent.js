@@ -190,8 +190,8 @@ class ImagePaneComponent extends Component {
         var zoomState = "zoom-img-" + this.state.zoomState;
         
 
-        var imgLeft = this.state.imgLeft + "px";
-        var imgTop = this.state.imgTop + "px";
+        var imgLeft = (-1*this.state.imgLeft) + "px";
+        var imgTop = (-1 *this.state.imgTop) + "px";
 
         var imgStyle
 
