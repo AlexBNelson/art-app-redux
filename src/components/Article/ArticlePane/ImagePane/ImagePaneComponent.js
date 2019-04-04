@@ -109,13 +109,17 @@ class ImagePaneComponent extends Component {
         var current_i = 0;
         // current_i is used to handle double click (to not act like a hold)
         
-       // setTimeout(
-         //   (function (index) {
-           //     return function () {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
-                    if (this.state.imgLeft >= 0) {
-                        this.setState({ imgLeft: this.state.imgLeft - 10 })
-                    }
+        const maxDistance = this.imgRef.current.scrollWidth - this.containerRef.current.offsetWidth;
+
+
+        //setTimeout(
+        //   (function (index) {
+        //     return function () {
+        //   if (this.imgTop > node.offsetWidth) {
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
+        if (maxDistance >= this.state.imgLeft) {
+            this.setState({ imgLeft: this.state.imgLeft + 10 })
+        }
              //   }
             //}.bind(this), 200));
 
@@ -124,16 +128,10 @@ class ImagePaneComponent extends Component {
     moveLeft() {
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
-        const maxDistance = this.imgRef.current.scrollWidth- this.containerRef.current.offsetWidth;
         
-
-       //setTimeout(
-         //   (function (index) {
-           //     return function () {
-        //   if (this.imgTop > node.offsetWidth) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
-        if (maxDistance >= this.state.imgLeft) {
-            this.setState({ imgLeft: this.state.imgLeft + 10 })
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
+        if (this.state.imgLeft >= 0) {
+            this.setState({ imgLeft: this.state.imgLeft - 10 })
         }
                    // }
               //  }
