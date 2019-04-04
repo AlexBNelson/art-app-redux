@@ -87,7 +87,7 @@ class ImagePaneComponent extends Component {
         // if (this.imgTop < node.offsetHeight) {
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
         if (maxDistance > this.state.imgTop) {
-            this.setState({ imgTop: this.state.imgTop + 10 })
+            this.setState({ imgTop: this.state.imgTop + 60 })
         }
             // }
               //  }
@@ -105,7 +105,7 @@ class ImagePaneComponent extends Component {
         //      if (this.state.imgTop > 0) {
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetHeight)
         if (this.state.imgTop >= 0) {
-            this.setState({ imgTop: this.state.imgTop - 10 })
+            this.setState({ imgTop: this.state.imgTop - 60 })
         }
                 //    }
                 //}}.bind(this), 200));
@@ -128,7 +128,7 @@ class ImagePaneComponent extends Component {
         //   if (this.imgTop > node.offsetWidth) {
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
         if (maxDistance >= this.state.imgLeft) {
-            this.setState({ imgLeft: this.state.imgLeft + 30 })
+            this.setState({ imgLeft: this.state.imgLeft + 60 })
         }
              //   }
             //}.bind(this), 200));
@@ -141,7 +141,7 @@ class ImagePaneComponent extends Component {
         
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
         if (this.state.imgLeft >= 0) {
-            this.setState({ imgLeft: this.state.imgLeft - 30 })
+            this.setState({ imgLeft: this.state.imgLeft - 60 })
         }
                    // }
               //  }
