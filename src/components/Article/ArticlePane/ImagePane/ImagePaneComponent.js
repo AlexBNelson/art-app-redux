@@ -70,30 +70,14 @@ class ImagePaneComponent extends Component {
 
 
     moveDown() {
-        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-        const node = this.imgRef.current;
-        //setTimeout(
-          //  (function (index) {
-            //    return function () {
-              //      if (this.state.imgTop > 0) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetHeight)
-        if (this.state.imgTop >= 0) {
-            this.setState({ imgTop: this.state.imgTop - 10 })
-        }
-                //    }
-                //}}.bind(this), 200));
-           
-        }
-    
-
-    moveUp() {
+        
         var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
 
-        const maxDistance  = this.imgRef.current.scrollHeight - this.containerRef.current.offsetHeight;
+        const maxDistance = this.imgRef.current.scrollHeight - this.containerRef.current.offsetHeight;
 
         //setTimeout(
-          //  (function (index) {
-            //    return function () {
+        //  (function (index) {
+        //    return function () {
         // if (this.imgTop < node.offsetHeight) {
         console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
         if (maxDistance > this.state.imgTop) {
@@ -102,6 +86,23 @@ class ImagePaneComponent extends Component {
             // }
               //  }
             //}.bind(this), 200));
+           
+        }
+    
+
+    moveUp() {
+        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
+        const node = this.imgRef.current;
+        //setTimeout(
+        //  (function (index) {
+        //    return function () {
+        //      if (this.state.imgTop > 0) {
+        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetHeight)
+        if (this.state.imgTop >= 0) {
+            this.setState({ imgTop: this.state.imgTop - 10 })
+        }
+                //    }
+                //}}.bind(this), 200));
 
     }
 
@@ -194,7 +195,7 @@ class ImagePaneComponent extends Component {
         
 
         var imgLeft = (-1*this.state.imgLeft) + "px";
-        var imgTop = (this.state.imgTop) + "px";
+        var imgTop = (-1*this.state.imgTop) + "px";
 
         var imgStyle
 
@@ -228,19 +229,19 @@ class ImagePaneComponent extends Component {
             images.push(a)
         }
 
-        var zoomPaneVisible;
+        var zoomPaneVisibility;
 
         if (this.props.imageSource == 0) {
-            zoomPaneVisible = 'hidden';
+            zoomPaneVisibility = { visibility: 'hidden' }
         }
         else {
-            zoomPaneVisible = 'visible';
+            zoomPaneVisibility = { visibility: 'visible' }
         }
 
         return (
 
             <ul>
-                <div class="image-buttons" visibility={zoomPaneVisible} >
+                <div class="image-buttons" style={zoomPaneVisibility} >
                     <div>
                         <button class="img-zoom-in-btn" disabled={zoomInDisabled} onClick={this.zoomIn.bind(this)}><img class="button-img" src={zoomIn}></img></button>
                     <button class="img-zoom-out-btn" disabled={zoomOutDisabled} onClick={this.zoomOut.bind(this)}><img class="button-img" src={zoomOut}></img></button>
