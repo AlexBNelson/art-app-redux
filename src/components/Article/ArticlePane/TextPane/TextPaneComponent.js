@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../../../bootstrap.css';
 import '../../../../Article.css';
-import {articles} from '../../../../ArticleText.js';
+import { articles } from '../../../../ArticleText.js';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -30,7 +30,7 @@ class TextPane extends Component {
         };
     }
 
-    
+
 
     componentDidMount() {
         const { hideImage, dispatch } = this.props;
@@ -103,7 +103,7 @@ class TextPane extends Component {
                 window.alert(error);
 
             });
-        
+
         scrollNode.addEventListener('scroll', function () { })
 
         const introUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Intro/0';;
@@ -122,32 +122,32 @@ class TextPane extends Component {
                 window.alert(error);
 
             });
-        
-            var chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
-            axios({
-                method: 'get',
-                url: chaptersUrl,
-                headers: {
-                    "Authorization": "09627a2d93144d10828042019f504b06",
-                    "Accept": "text/html" 
-                }
-            })
-                .then(response => this.setState({ chapters: response.data }))
-                .catch(function (error) {
-                    window.alert(error);
 
-                });
-        }
-    
+        var chaptersUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Chapters/0';
+        axios({
+            method: 'get',
+            url: chaptersUrl,
+            headers: {
+                "Authorization": "09627a2d93144d10828042019f504b06",
+                "Accept": "text/html"
+            }
+        })
+            .then(response => this.setState({ chapters: response.data }))
+            .catch(function (error) {
+                window.alert(error);
 
-        
+            });
+    }
 
-       
-    
-    
+
+
+
+
+
+
 
     handleScroll() {
-        const {dispatch } = this.props;
+        const { dispatch } = this.props;
     }
 
     nextPage() {
@@ -167,7 +167,7 @@ class TextPane extends Component {
         var displayedInfo
 
         var infoHtml
-        
+
         if (this.props.viewState == false && this.props.imageSource == 0) {
             displayedInfo = this.state.info[this.state.info.length - 1]
         }
@@ -201,11 +201,11 @@ class TextPane extends Component {
                     var formattedFinal = formatted.replace('Date of Image Creation: ', '')
                     infoHtml.push(<div class="info-title">{formattedFinal}</div>)
                 }
-            
+
             }
         }
 
-        if (this.props.imageSource==0) {
+        if (this.props.imageSource == 0) {
             introText = this.state.intro;
         }
 
@@ -226,22 +226,22 @@ class TextPane extends Component {
 
         return (
             <div>
-            <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
-                <div class="row">
+                <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
+                    <div class="row">
                         <div class="text-column col-lg-10">
                             {infoHtml}
                             <div class="article-intro-pane">
                                 {introText}
-                    </div>
+                            </div>
                             <div class="article-body-pane">
-                                {textArray[this.props.imageSource-1]}
-                    </div>
-                </div>
-                
+                                {textArray[this.props.imageSource - 1]}
+                            </div>
+                        </div>
+
                         <div class="page-buttons col-lg-2">
                             <button class="page-button" onClick={this.nextPage.bind(this)}><img class="button-img" src={arrowRight}></img></button>
                             <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={arrowLeft}></img></button>
-            </div>
+                        </div>
                     </div>
                 </div></div>
 

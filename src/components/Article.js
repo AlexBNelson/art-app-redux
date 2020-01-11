@@ -14,7 +14,7 @@ class Article extends Component {
     constructor(props) {
         super(props);
         this.setState({articleId: props.id.articleId})
-        }
+    }
     
 
     render() {
