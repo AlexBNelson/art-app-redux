@@ -84,7 +84,8 @@ class TextPane extends Component {
                 
             }
 
-        introText = <div><p>{data.introPage.title}</p><p>{data.introPage.title}</p><p>{data.introPage.}</p></div>
+        introText = <div><p>{data.introPage.title}</p><p>{data.introPage.title}</p><p>{data.introPage}</p></div>
+        }
 
         return (
             <div>
