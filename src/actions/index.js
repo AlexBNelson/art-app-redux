@@ -14,6 +14,11 @@ export const setScrollValue = value => ({
     value
 })
 
+export const setArticleData = data => ({
+    type: 'SET_ARTICLE_DATA',
+    data
+})
+
 export const VisibilityFilters = {
     VISIBLE: 'VISIBLE',
     INVISIBLE: 'INVISIBLE'

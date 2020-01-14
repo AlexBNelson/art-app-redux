@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import '../../App.css';
 import '../../bootstrap.css'
+import { setArticleData } from '../../../../actions'
 
 
 
@@ -18,38 +19,25 @@ class ArticleThumbnailComponent extends Component {
 
     componentDidMount() {
 
-        const imageLinkUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Url?code=zF45E2dH8FYsKMHo6I3wo51lw0BX8a8h5/n9hC51n04VBoQFNg/f0w==';
+    }
+
+    onSelect() {
+
+        var articleData = {};
 
         axios({
             method: 'get',
-            url: imageLinkUrl,
-            headers: {
-                "Authorization": "09627a2d93144d10828042019f504b06"
-            }
+            url: infoUrl
         })
-            .then(response => this.setState({ imageLink: response.data })
-            )
+            .then(response => articleData = response.data)
             .catch(function (error) {
                 window.alert(error);
 
             });
 
-        const articleTitleUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/Title?code=zF45E2dH8FYsKMHo6I3wo51lw0BX8a8h5/n9hC51n04VBoQFNg/f0w==';
+        dispatch(setArticleData(articleData))
 
-        axios({
-            method: 'get',
-            url: articleTitleUrl,
-            headers: {
-                "Authorization": "09627a2d93144d10828042019f504b06"
-            }
-        })
-            .then(response => this.setState({ articleTitle: response.data })
-            )
-            .catch(function (error) {
-                window.alert(error);
-
-            });
-
+        return true;
     }
 
     render() {
@@ -57,7 +45,7 @@ class ArticleThumbnailComponent extends Component {
         var link = "Article/" + this.props.id
         return (
             <div class="thumbnail-container" className={this.props.position}>
-                <a href={link}><img class="thumbnail-image" src={this.state.imageLink} /></a>
+                <a href={link} onClick={this.nextPage.onSelect(this)}><img class="thumbnail-image" src={this.state.imageLink} /></a>
                 <div class="thumbnail-title">{this.state.articleTitle}</div>
             </div>
         )

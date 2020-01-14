@@ -17,10 +17,14 @@ const getImageSource = (source) => {
     return source;
 }
 
+const getArticleData = (data) => {
+    return data;
+}
 
 const mapStateToProps = state => ({
     viewState: getViewState(state.visibilityFilter),
-    imageSource: getImageSource(state.imagePaneSource)
+    imageSource: getImageSource(state.imagePaneSource),
+    imageSource: getArticleData(state.articleData)
 })
 
 export default connect(
