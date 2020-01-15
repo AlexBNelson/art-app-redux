@@ -103,7 +103,7 @@ class TextPane extends Component {
 
         var appendixText = ""
 
-        var data = this.props.articleData
+        var data = this.props.article
        
         if(this.props.imageSource==0){
             introText= this.formText(data.introPage)

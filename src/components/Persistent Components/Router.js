@@ -4,7 +4,7 @@ import InDepth from '../InDepth.js'
 import App from '../App.js';
 import Home from '../Home.js'
 import NavHead from './NavHead.js';
-import Article from '../Article.js';
+import ArticleContainer from '../ArticleContainer';
 
 
 const HomePage = () => (
@@ -25,7 +25,7 @@ const InDepthPage = () => (
 const ArticlePage = (articleId) => (
     <div>
         <NavHead />
-        <Article id={articleId} />
+        <ArticleContainer id={articleId} />
     </div>
 
 );
