@@ -60,31 +60,61 @@ class TextPane extends Component {
         dispatch(setImageSource(this.props.imageSource - 1))
     }
 
-    render() {
-        var introText
+    formText(bodyText){
+        var formedText = [];
 
-        var data = this.props.articleData
-       
-        if(this.props.imageSource==0){
+            for (var i = 0; i < bodyText.length; i++) {
 
-            var introBody = [];
+                var para =[];
+                var body = bodyText[i]
 
-            for (var i = 0; i < data.introPage.body.length; i++) {
-                var para;
-                var body = data.introPage.body[i]
                 for (var j = 0; j < body.elements.length; j++) {
                     var element = body.elements[j];
 
                     switch(element.style){
+                        case 0:
+                            para.push(<span> {element.text}</span>)
+                            break;
                         case 1:
+                            para.push(<i> {element.text}</i>)
+                            break;
+                        case 2:
+                            para.push(<b> {element.text}</b>)
+                            break;
+                        case 3:
+                            para.push(<a href={element.uri}> {element.text}</a>)
                             break;
                         default:
                     }
                 }
-                
+                formedText.push(<p>{para}</p>);
             }
+            return formedText;
+    }
 
-        introText = <div><p>{data.introPage.title}</p><p>{data.introPage.title}</p><p>{data.introPage}</p></div>
+    render() {
+        var introHeader
+
+        var introText
+
+        var bodyHeader
+
+        var bodyText
+
+        var appendixText
+
+        var data = this.props.articleData
+       
+        if(this.props.imageSource==0){
+            introText= formText(data.introPage)
+
+            introHeader = <div><p>{data.introPage.title}</p><p>{data.introPage.title}</p><p>{data.introPage}</p></div>
+        }
+        else if(this.props.imageSource < data.bodyPages.length){
+            appendixText=data.appendixPage.sources
+        }
+        else{
+            
         }
 
         return (
