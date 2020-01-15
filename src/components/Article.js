@@ -7,7 +7,7 @@ import ArticlePane from './Article/ArticlePane.js';
 import BackgroundPaneContainer from './Article/BackgroundPane/BackgroundPaneContainer.js';
 import '../Article.css';
 import InfoPaneContainer from './Article/InfoPane/InfoPaneContainer.js';
-
+import { connect } from 'react-redux'
 
 class Article extends Component {
 
@@ -28,4 +28,4 @@ class Article extends Component {
         }
     }
 
-export default Article;
+    export default connect()(Article)
