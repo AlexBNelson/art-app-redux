@@ -63,10 +63,10 @@ class TextPane extends Component {
     formText(bodyText){
         var formedText = [];
 
-            for (var i = 0; i < bodyText.length; i++) {
+            for (var i = 0; i < bodyText.body.length; i++) {
 
                 var para =[];
-                var body = bodyText[i]
+                var body = bodyText.body[i]
 
                 for (var j = 0; j < body.elements.length; j++) {
                     var element = body.elements[j];

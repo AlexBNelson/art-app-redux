@@ -50,7 +50,7 @@ class ArticleThumbnailComponent extends Component {
         var link = "Article/" + this.props.id
         return (
             <div class="thumbnail-container" className={this.props.position}>
-                <a href={link} onClick={this.onSelect(this)}><img class="thumbnail-image" src={this.state.imageLink} /></a>
+                <a href={link} onClick={this.onSelect(this)}><img class="thumbnail-image" src="" /></a>
                 <div class="thumbnail-title">{this.state.articleTitle}</div>
             </div>
         )
