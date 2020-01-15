@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import '../../App.css';
 import '../../bootstrap.css'
-import { setArticleData } from '../../../../actions'
+import { setArticleData } from '../../actions'
+import { connect } from 'react-redux'
 
 
 
@@ -37,6 +38,8 @@ class ArticleThumbnailComponent extends Component {
 
             });
 
+        const { dispatch } = this.props;
+
         dispatch(setArticleData(articleData))
 
         return true;
@@ -47,11 +50,11 @@ class ArticleThumbnailComponent extends Component {
         var link = "Article/" + this.props.id
         return (
             <div class="thumbnail-container" className={this.props.position}>
-                <a href={link} onClick={this.nextPage.onSelect(this)}><img class="thumbnail-image" src={this.state.imageLink} /></a>
+                <a href={link} onClick={this.onSelect(this)}><img class="thumbnail-image" src={this.state.imageLink} /></a>
                 <div class="thumbnail-title">{this.state.articleTitle}</div>
             </div>
         )
     }
 }
 
-export default ArticleThumbnailComponent;
+export default connect()(ArticleThumbnailComponent);

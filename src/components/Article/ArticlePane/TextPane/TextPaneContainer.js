@@ -24,7 +24,7 @@ const getArticleData = (data) => {
 const mapStateToProps = state => ({
     viewState: getViewState(state.visibilityFilter),
     imageSource: getImageSource(state.imagePaneSource),
-    imageSource: getArticleData(state.articleData)
+    articleData: getArticleData(state.articleData)
 })
 
 export default connect(

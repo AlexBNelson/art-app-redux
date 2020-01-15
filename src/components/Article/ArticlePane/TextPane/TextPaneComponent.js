@@ -93,25 +93,25 @@ class TextPane extends Component {
     }
 
     render() {
-        var introHeader
+        var introHeader = ""
 
-        var introText
+        var introText = ""
 
-        var bodyHeader
+        var bodyHeader = ""
 
-        var bodyText
+        var bodyText = ""
 
-        var appendixText
+        var appendixText = ""
 
         var data = this.props.articleData
        
         if(this.props.imageSource==0){
-            introText= formText(data.introPage)
+            introText= this.formText(data.introPage)
 
-            introHeader = <div><p>{data.introPage.title}</p><p>{data.introPage.title}</p><p>{data.introPage}</p></div>
+            introHeader = (<div><p>{data.introPage.title}</p><p>{data.introPage.author}</p></div>)
         }
         else if(this.props.imageSource < data.bodyPages.length){
-            bodyText= formText(data.bodyPages[this.props.imageSource-1])
+            bodyText= this.formText(data.bodyPages[this.props.imageSource-1])
 
             bodyHeader = <div><p>{data.bodyPages[this.props.imageSource-1].title}</p><p>{data.bodyPages[this.props.imageSource-1].artist}</p><p>{data.bodyPages[this.props.imageSource-1].medium}</p><p>{data.bodyPages[this.props.imageSource-1].museum}</p><p>{data.bodyPages[this.props.imageSource-1].date}</p></div>
         }
@@ -124,12 +124,18 @@ class TextPane extends Component {
                 <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                     <div class="row">
                         <div class="text-column col-lg-10">
-                            {infoHtml}
+                            {introHeader}
                             <div class="article-intro-pane">
                                 {introText}
                             </div>
+                            <div>
+                                {bodyHeader}
+                            </div>
                             <div class="article-body-pane">
-                                {textArray[this.props.imageSource - 1]}
+                                {bodyText}
+                            </div>
+                            <div class="article-body-pane">
+                                {appendixText}
                             </div>
                         </div>
 
