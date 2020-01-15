@@ -111,10 +111,12 @@ class TextPane extends Component {
             introHeader = <div><p>{data.introPage.title}</p><p>{data.introPage.title}</p><p>{data.introPage}</p></div>
         }
         else if(this.props.imageSource < data.bodyPages.length){
-            appendixText=data.appendixPage.sources
+            bodyText= formText(data.bodyPages[this.props.imageSource-1])
+
+            bodyHeader = <div><p>{data.bodyPages[this.props.imageSource-1].title}</p><p>{data.bodyPages[this.props.imageSource-1].artist}</p><p>{data.bodyPages[this.props.imageSource-1].medium}</p><p>{data.bodyPages[this.props.imageSource-1].museum}</p><p>{data.bodyPages[this.props.imageSource-1].date}</p></div>
         }
         else{
-            
+            appendixText=data.appendixPage.sources
         }
 
         return (
