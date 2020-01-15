@@ -15,6 +15,7 @@ class ArticleThumbnailComponent extends Component {
             imageLink: '',
             articleTitle: ''
         };
+        this.onSelect = this.onSelect.bind(this);
     }
 
     componentDidMount() {
@@ -22,12 +23,13 @@ class ArticleThumbnailComponent extends Component {
     }
 
     onSelect() {
+        var url = "http://localhost:7071/api/article/Exekias: From Fine Craftsman to True Artist"
 
         var articleData = {};
 
         axios({
             method: 'get',
-            url: infoUrl
+            url: url
         })
             .then(response => articleData = response.data)
             .catch(function (error) {
