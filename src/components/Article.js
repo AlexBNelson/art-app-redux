@@ -16,7 +16,7 @@ class Article extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            article: {}
+            article: null
         };
     }
 
@@ -28,6 +28,8 @@ class Article extends Component {
 
         const { dispatch } = this.props;
 
+        var self = this;
+
         axios({
             method: 'get',
             url: url
@@ -35,16 +37,20 @@ class Article extends Component {
             .then(function (response) {
                 console.log(response);
                 articleData = response.data
-                this.setState({article: articleData});
+                self.setState({article: articleData});
             })
             .catch(function (error) {
                 window.alert(error);
             });
 
-        
+            
     }
 
     render() {
+        if(this.state.article === null){
+            return null;
+        }
+
          const articleId = this.props.id
             return (
                 <div>
