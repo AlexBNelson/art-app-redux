@@ -12,6 +12,8 @@ import panDown from '../../../../panDown.png'
 import panLeft from '../../../../panLeft.png'
 import panRight from '../../../../panRight.png'
 import panUp from '../../../../panUp.png'
+import OpenSeadragon from 'openseadragon';
+
 
 class ImagePaneComponent extends Component {
 
@@ -32,222 +34,37 @@ class ImagePaneComponent extends Component {
     }
 
     componentDidMount() {
-        var imageLinks = [];
-
-        const imageLinksUrl = 'https://dyptychfa2.azurewebsites.net/api/' + this.props.id + '/ImageLinks/0';
-        
-        axios({
-            method: 'get',
-            url: imageLinksUrl,
-            headers: {
-                "Authorization": "09627a2d93144d10828042019f504b06"
-            }
-        })
-            .then(function (response) {
-                
-                var str1 = response.data.replace("]", "")
-                var str2 = str1.replace("[", "")
-                var array = str2.split(",")
-
-                var i;
-
-                for (i = 0; i < array.length; i++) {
-                    if (array[i].substring(1, array[i].length - 1).includes("https")) {
-                        var element = array[i].substring(1, array[i].length) + "," + array[i+1].substring(0, array[i + 1].length - 1);
-                        imageLinks.push(element)
-                    }
-                }
-            }
-            )
-            .catch(function (error) {
-                console.log(error);
-
-            });
-
-        this.setState({ imageUrls: imageLinks })
-
+        this.initOpenseadragon();
     }
 
+    initSeaDragon() {
+        var imageLink
 
-
-    moveDown() {
+        if(this.props.imageSource == 0){
+            imageLink =  this.props.article.introPage.imageUrl
+        }else if(this.props.imageSource < this.props.article.bodyPages.length){
+            imageLink = this.props.article.bodyPages[this.props.imageSource - 1].imageUrl
+        }else{
+            imageLink =  this.props.article.appendixPage.imageUrl
+        }
         
-        var zoomFactor = 1;
-        // current_i is used to handle double click (to not act like a hold)
-        if (this.state.zoomState == 0) {
-
-            zoomFactor = 2
-        }
-
-        const maxDistance = (zoomFactor *this.imgRef.current.scrollHeight) - this.containerRef.current.offsetHeight;
-
-        //setTimeout(
-        //  (function (index) {
-        //    return function () {
-        // if (this.imgTop < node.offsetHeight) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
-        if (maxDistance > this.state.imgTop) {
-            this.setState({ imgTop: this.state.imgTop + 60 })
-        }
-            // }
-              //  }
-            //}.bind(this), 200));
-           
-        }
     
-
-    moveUp() {
-        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-        const node = this.imgRef.current;
-        //setTimeout(
-        //  (function (index) {
-        //    return function () {
-        //      if (this.state.imgTop > 0) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + node.offsetHeight)
-        if (this.state.imgTop >= 0) {
-            this.setState({ imgTop: this.state.imgTop - 60 })
-        }
-                //    }
-                //}}.bind(this), 200));
-
-    }
-
-    moveRight() {
-        var zoomFactor = 1;
-        // current_i is used to handle double click (to not act like a hold)
-        if (this.state.zoomState == 0) { 
-    
-            zoomFactor = 2
-        }
-        const maxDistance = (zoomFactor*this.imgRef.current.scrollWidth) - this.containerRef.current.offsetWidth;
-
-
-        //setTimeout(
-        //   (function (index) {
-        //     return function () {
-        //   if (this.imgTop > node.offsetWidth) {
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop + "imgHeight=" + maxDistance)
-        if (maxDistance >= this.state.imgLeft) {
-            this.setState({ imgLeft: this.state.imgLeft + 60 })
-        }
-             //   }
-            //}.bind(this), 200));
-
-    }
-
-    moveLeft() {
-        var current_i = 0;              // current_i is used to handle double click (to not act like a hold)
-
-        
-        console.log("imgLeft=" + this.state.imgLeft + "imgTop=" + this.state.imgTop)
-        if (this.state.imgLeft >= 0) {
-            this.setState({ imgLeft: this.state.imgLeft - 60 })
-        }
-                   // }
-              //  }
-            //}.bind(this), 200));
-
-
-    }
-
-
-    zoomIn() {
-        
-
-        if (this.state.zoomState > 0) {
-            this.setState({ zoomState: this.state.zoomState - 1 })
-        }
-        if (this.state.zoomState == 0) {
-            this.setState({ zoomCoefficient: 2 })
-            this.setState({ imgLeft: this.state.imgLeft * 2 })
-            this.setState({ imgLeft: this.state.imgTop * 2 })
-        }
-    }
-
-    zoomOut() {
-        if (this.state.zoomState == 0) {
-            this.setState({ zoomCoefficient: 1 })
-            this.setState({ imgLeft: 0 })
-            this.setState({ imgTop: 0 })
-        } else {
-            this.setState({ imgLeft: 0 })
-            this.setState({ imgTop: 0 })
-        }
-        if (this.state.zoomState < 2) {
-            this.setState({ zoomState: this.state.zoomState + 1 })
-        }
-        
-
-    }
-    
+        OpenSeadragon({
+          id: 'seadragon',
+          homeButton: 'reset',
+          fullPageButton: 'full-screen',
+          tileSources: {
+            type: 'image',
+            url: imageLink,
+            buildPyramid: false
+          },
+          showNavigator: showNavigator
+        });
+      }
 
     render() {
 
-        var zoomInDisabled
-
-        var zoomOutDisabled
-
-        if (this.state.zoomState == 0) {
-            zoomInDisabled == true;
-        }
-        else {
-            zoomInDisabled == false;
-        }
-
-        if (this.state.zoomState == 2) {
-            zoomOutDisabled == true;
-        }
-        else {
-            zoomOutDisabled == false;
-        }
-
-        var zoomState = "zoom-img-" + this.state.zoomState;
         
-
-        var imgLeft = (-1*this.state.imgLeft) + "px";
-        var imgTop = (-1*this.state.imgTop) + "px";
-
-        var imgStyle
-
-        if (this.state.zoomState == 0) {
-            imgStyle = {
-                transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ') ' + 'scale(2, 2)'
-            }
-        } else if (this.state.zoomState == 1) {
-            imgStyle = {
-                transform: 'translateX(' + imgLeft + ') ' + 'translateY(' + imgTop + ')'
-            }
-        } 
-
-        var images = [];
-
-        var i;
-        
-       
-
-        
-        //Push images to image[] array, if the index of the image is not the same as the imageSource, it is invisible
-        for (i = 0; i < this.state.imageUrls.length; i++) {
-            
-            if (this.props.imageSource-1 != i) {
-
-                var a = <img className={zoomState} src={this.state.imageUrls[i]} style={{ display: 'none', }} />
-            }
-            else {
-                var a = <img ref={this.imgRef} className={zoomState} src={this.state.imageUrls[i]} style={imgStyle} />
-            }
-            images.push(a)
-        }
-
-        var zoomPaneVisibility;
-
-        if (this.props.imageSource == 0) {
-            zoomPaneVisibility = { visibility: 'hidden' }
-        }
-        else {
-            zoomPaneVisibility = { visibility: 'visible' }
-        }
-
         return (
 
             <ul>
@@ -263,12 +80,8 @@ class ImagePaneComponent extends Component {
                         <button class="img-move-down" onClick={this.moveDown.bind(this)}><img class="button-img" src={panDown}></img></button>
                     </div>
                     </div>
-                <div ref={this.containerRef} class="article-image-pane">
-                        {images[0]}
-                        {images[1]}
-                        {images[2]}
-                        {images[3]}
-                        {images[4]}
+                <div id="seadragon" ref={this.containerRef} class="article-image-pane">
+                        
                 </div>
             </ul>
 
