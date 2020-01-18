@@ -4,9 +4,7 @@ import '../App.css';
 import Bootstrap from 'bootstrap';
 import '../bootstrap.css';
 import ArticlePane from './Article/ArticlePane.js';
-import BackgroundPaneContainer from './Article/BackgroundPane/BackgroundPaneContainer.js';
 import '../Article.css'
-import InfoPaneContainer from './Article/InfoPane/InfoPaneContainer.js';
 import { connect } from 'react-redux'
 import { setArticleData } from '../actions'
 import axios from "axios"
@@ -54,8 +52,6 @@ class Article extends Component {
          const articleId = this.props.id
             return (
                 <div>
-                    <InfoPaneContainer id={articleId} />
-                    <BackgroundPaneContainer id={articleId}/>
                     <ArticlePane article={this.state.article} id={articleId}/>
                 </div>)
         }

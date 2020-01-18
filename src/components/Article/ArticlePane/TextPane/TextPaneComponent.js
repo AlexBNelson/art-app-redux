@@ -3,13 +3,9 @@ import React, { Component } from 'react';
 import Bootstrap from 'bootstrap';
 import '../../../../bootstrap.css';
 import '../../../../Article.css';
-import { articles } from '../../../../ArticleText.js';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
-import { VisibilityFilters } from '../../../../actions'
-import axios from 'axios'
 import arrowLeft from '../../../../arrowLeft.png';
 import arrowRight from '../../../../arrowRight.png';
 
@@ -38,17 +34,6 @@ class TextPane extends Component {
         scrollNode.addEventListener('scroll', function () { })
     }
 
-
-
-
-
-
-
-
-    handleScroll() {
-        const { dispatch } = this.props;
-    }
-
     nextPage() {
         const { dispatch } = this.props;
         dispatch(setImageSource(this.props.imageSource + 1))
@@ -60,63 +45,67 @@ class TextPane extends Component {
         dispatch(setImageSource(this.props.imageSource - 1))
     }
 
-    formText(bodyText){
+    formText(bodyText) {
         var formedText = [];
 
-            for (var i = 0; i < bodyText.body.length; i++) {
+        for (var i = 0; i < bodyText.body.length; i++) {
 
-                var para =[];
-                var body = bodyText.body[i]
+            var para = [];
+            var body = bodyText.body[i]
 
-                for (var j = 0; j < body.elements.length; j++) {
-                    var element = body.elements[j];
+            for (var j = 0; j < body.elements.length; j++) {
+                var element = body.elements[j];
 
-                    switch(element.style){
-                        case 0:
-                            para.push(<span> {element.text}</span>)
-                            break;
-                        case 1:
-                            para.push(<i> {element.text}</i>)
-                            break;
-                        case 2:
-                            para.push(<b> {element.text}</b>)
-                            break;
-                        case 3:
-                            para.push(<a href={element.uri}> {element.text}</a>)
-                            break;
-                        default:
-                    }
+                switch (element.style) {
+                    case 0:
+                        para.push(<span> {element.text}</span>)
+                        break;
+                    case 1:
+                        para.push(<i> {element.text}</i>)
+                        break;
+                    case 2:
+                        para.push(<b> {element.text}</b>)
+                        break;
+                    case 3:
+                        para.push(<a href={element.uri}> {element.text}</a>)
+                        break;
+                    default:
                 }
-                formedText.push(<p>{para}</p>);
             }
-            return formedText;
+            formedText.push(<p>{para}</p>);
+        }
+        return formedText;
     }
 
     render() {
-        var introHeader = ""
+        var header = ""
 
-        var introText = ""
-
-        var bodyHeader = ""
-
-        var bodyText = ""
-
-        var appendixText = ""
+        var body = ""
 
         var data = this.props.article
-       
-        if(this.props.imageSource==0){
-            introText= this.formText(data.introPage)
 
-            introHeader = (<div><p>{data.introPage.title}</p><p>{data.introPage.author}</p></div>)
-        }
-        else if(this.props.imageSource < data.bodyPages.length){
-            bodyText= this.formText(data.bodyPages[this.props.imageSource-1])
+        if (this.props.imageSource == 0) {
+            body = this.formText(data.introPage)
 
-            bodyHeader = <div><p>{data.bodyPages[this.props.imageSource-1].title}</p><p>{data.bodyPages[this.props.imageSource-1].artist}</p><p>{data.bodyPages[this.props.imageSource-1].medium}</p><p>{data.bodyPages[this.props.imageSource-1].museum}</p><p>{data.bodyPages[this.props.imageSource-1].date}</p></div>
+            header = (<div>
+                        <div class="article-header-fixed">{data.introPage.title}</div>
+                        <div class="article-header-scroll">{data.introPage.author}</div>
+                      </div>
+            )
         }
-        else{
-            appendixText=data.appendixPage.sources
+        else if (this.props.imageSource < data.bodyPages.length) {
+            body = this.formText(data.bodyPages[this.props.imageSource - 1])
+
+            header = (<div>
+                        <div class="article-header-fixed">{data.bodyPages[this.props.imageSource - 1].title}</div>
+                        <div class="article-header-fixed">{data.bodyPages[this.props.imageSource - 1].artist}</div>
+                        <div class="article-header-scroll">{data.bodyPages[this.props.imageSource - 1].medium}</div>
+                        <div class="article-header-scroll">{data.bodyPages[this.props.imageSource - 1].museum}</div>
+                        <div class="article-header-scroll">{data.bodyPages[this.props.imageSource - 1].date}</div>
+                      </div>)
+        }
+        else {
+            body = data.appendixPage.sources
         }
 
         return (
@@ -124,18 +113,11 @@ class TextPane extends Component {
                 <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                     <div class="row">
                         <div class="text-column col-lg-10">
-                            {introHeader}
-                            <div class="article-intro-pane">
-                                {introText}
-                            </div>
                             <div>
-                                {bodyHeader}
+                                {header}
                             </div>
                             <div class="article-body-pane">
-                                {bodyText}
-                            </div>
-                            <div class="article-body-pane">
-                                {appendixText}
+                                {body}
                             </div>
                         </div>
 
@@ -144,7 +126,8 @@ class TextPane extends Component {
                             <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={arrowLeft}></img></button>
                         </div>
                     </div>
-                </div></div>
+                </div>
+            </div>
 
 
         );
