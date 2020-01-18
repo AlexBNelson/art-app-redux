@@ -2,35 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../../../../Article.css'
 import { Component } from 'react'
-import OpenSeadragon from 'openseadragon';
+import ImageViewer from './ImageViewer/ImageViewer.js';
 
 
 class ImagePaneComponent extends Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-        };
-
-
-        this.imgRef = React.createRef();
-        this.containerRef = React.createRef();
-
-        this.initOpenSeaDragon.bind(this)
     }
 
-    componentDidMount() {
-        this.initOpenSeaDragon();
-    }
+    render() {
 
-    componentDidUpdate() {
-        //delete current viewer instance before update
-
-        this.initOpenSeaDragon();
-    }
-
-    initOpenSeaDragon() {
-        var imageLink
+        var imageLink;
 
         if (this.props.imageSource == 0) {
             imageLink = this.props.article.introPage.imageUrl
@@ -40,28 +23,13 @@ class ImagePaneComponent extends Component {
             imageLink = this.props.article.appendixPage.imageUrl
         }
 
-
-     OpenSeadragon({
-            id: 'seadragon',
-            homeButton: 'reset',
-            fullPageButton: 'full-screen',
-            tileSources: {
-                type: 'image',
-                url: imageLink,
-                buildPyramid: false
-            }
-        });
-    }
-
-    render() {
+        var randomKey =  Math.random()
 
 
         return (
 
             <ul>
-                <div id="seadragon" class="article-image-pane">
-
-                </div>
+                <ImageViewer key={randomKey} imageLink={imageLink}/>
             </ul>
 
         );
