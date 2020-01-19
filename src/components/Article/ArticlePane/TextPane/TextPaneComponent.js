@@ -86,7 +86,7 @@ class TextPane extends Component {
         if (this.props.imageSource == 0) {
             body = this.formText(data.introPage)
 
-            header = (<div>
+            header = (<div class="article-header">
                         <div class="article-header-fixed">{data.introPage.title}</div>
                         <div class="article-header-scroll">{data.introPage.author}</div>
                       </div>
@@ -95,12 +95,12 @@ class TextPane extends Component {
         else if (this.props.imageSource < data.bodyPages.length) {
             body = this.formText(data.bodyPages[this.props.imageSource - 1])
 
-            header = (<div>
-                        <div class="article-header-fixed">{data.bodyPages[this.props.imageSource - 1].title}</div>
-                        <div class="article-header-fixed">{data.bodyPages[this.props.imageSource - 1].artist}</div>
-                        <div class="article-header-scroll">{data.bodyPages[this.props.imageSource - 1].medium}</div>
-                        <div class="article-header-scroll">{data.bodyPages[this.props.imageSource - 1].museum}</div>
-                        <div class="article-header-scroll">{data.bodyPages[this.props.imageSource - 1].date}</div>
+            header = (<div class="article-header">
+                        <div class="article-header-title">{data.bodyPages[this.props.imageSource - 1].title}</div>
+                        <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
+                        <div class="article-header-date">{data.bodyPages[this.props.imageSource - 1].medium}</div>
+                        <div class="article-header-medium">{data.bodyPages[this.props.imageSource - 1].museum}</div>
+                        <div class="article-header-museum">{data.bodyPages[this.props.imageSource - 1].date}</div>
                       </div>)
         }
         else {

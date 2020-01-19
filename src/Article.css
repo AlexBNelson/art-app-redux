@@ -45,10 +45,42 @@ article-intro-gap {
     background-color: #fbf3ea;
 }
 
-.article-header-fixed{
+.article-header{
+    height:20vh;
+}
+
+.article-header-title{
     width: 45vw;
-    position:fixed;
+    position:absolute;
     display: inline-block;
+}
+
+.article-header-artist{
+    width: 45vw;
+    position:absolute;
+    display: inline-block;
+    margin-top:2vh;
+}
+
+.article-header-medium{
+    width: 45vw;
+    position:relative;
+    display: inline-block;
+    top: 5vh;
+}
+
+.article-header-museum{
+    width: 45vw;
+    position:relative;
+    display: inline-block;
+    top: 6vh;
+}
+
+.article-header-date{
+    width: 45vw;
+    position:relative;
+    display: inline-block;
+    top: 4vh;
 }
 
 .article-header-scroll{
