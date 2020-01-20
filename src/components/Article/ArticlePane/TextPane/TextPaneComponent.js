@@ -23,6 +23,9 @@ class TextPane extends Component {
             chapters: '',
             scrollPoints: []
         };
+
+        this.previousPage.bind(this)
+        this.nextPage.bind(this)
     }
 
 
@@ -83,12 +86,18 @@ class TextPane extends Component {
 
         var data = this.props.article
 
+        var self = this;
+
         if (this.props.imageSource == 0) {
             body = this.formText(data.introPage)
 
             header = (<div class="article-header">
-                        <div class="article-header-fixed">{data.introPage.title}</div>
-                        <div class="article-header-scroll">{data.introPage.author}</div>
+                        <span>
+                            <button class="prev-button" onClick={self.previousPage.bind(self)}/>
+                            <div class="article-header-title">{data.introPage.title}</div>
+                            <button class="next-button" onClick={self.nextPage.bind(self)}/>
+                        </span>
+                        <div class="article-header-author">{data.introPage.author}</div>
                       </div>
             )
         }
@@ -96,7 +105,11 @@ class TextPane extends Component {
             body = this.formText(data.bodyPages[this.props.imageSource - 1])
 
             header = (<div class="article-header">
-                        <div class="article-header-title">{data.bodyPages[this.props.imageSource - 1].title}</div>
+                        <span>
+                            <button class="prev-button" onClick={self.previousPage.bind(self)}/>
+                            <div class="article-header-title">{data.bodyPages[this.props.imageSource - 1].title}</div>
+                            <button class="next-button" onClick={self.nextPage.bind(self)}/>
+                        </span>
                         <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
                         <div class="article-header-date">{data.bodyPages[this.props.imageSource - 1].medium}</div>
                         <div class="article-header-medium">{data.bodyPages[this.props.imageSource - 1].museum}</div>
@@ -118,11 +131,6 @@ class TextPane extends Component {
                             <div class="article-body-pane">
                                 {body}
                             </div>
-                        </div>
-
-                        <div class="page-buttons col-lg-2">
-                            <button class="page-button" onClick={this.nextPage.bind(this)}><img class="button-img" src={arrowRight}></img></button>
-                            <button class="page-button" onClick={this.previousPage.bind(this)}><img class="button-img" src={arrowLeft}></img></button>
                         </div>
                     </div>
                 </div>
