@@ -291,6 +291,8 @@ article-intro-gap {
     position: absolute;
     top: 2vh;
     z-index: 9999999999999;
+    background: none;
+    border: none;
 }
 
 .next-button{
@@ -299,8 +301,11 @@ article-intro-gap {
     position: absolute;
     top: 2vh;
     z-index: 0;
+    background: none;
+    border: none;
 }
 
 .button-img {
-    width: 2vw;
+    width: 1vw;
+    z-index: 999999999;
 }

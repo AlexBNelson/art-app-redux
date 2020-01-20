@@ -5,8 +5,8 @@ import '../../../../Article.css';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
-import arrowLeft from '../../../../arrowLeft.png';
-import arrowRight from '../../../../arrowRight.png';
+import arrowLeft from '../../../../arrowLeft.svg';
+import arrowRight from '../../../../arrowRight.svg';
 
 
 
@@ -93,10 +93,13 @@ class TextPane extends Component {
 
             header = (<div class="article-header">
                         <span>
-                            <button class="prev-button" onClick={self.previousPage.bind(self)}/>
+                            <button class="prev-button" onClick={self.previousPage.bind(self)}>
+                                <img class="button-img" src={arrowLeft}/>
+                            </button>                            
                             <div class="article-header-title">{data.introPage.title}</div>
-                            <button class="next-button" onClick={self.nextPage.bind(self)}/>
-                        </span>
+                            <button class="next-button" onClick={self.nextPage.bind(self)}>
+                                <img class="button-img" src={arrowRight}/>
+                            </button>                        </span>
                         <div class="article-header-author">{data.introPage.author}</div>
                       </div>
             )
@@ -106,9 +109,13 @@ class TextPane extends Component {
 
             header = (<div class="article-header">
                         <span>
-                            <button class="prev-button" onClick={self.previousPage.bind(self)}/>
+                            <button class="prev-button" onClick={self.previousPage.bind(self)}>
+                                <img class="button-img" src={arrowLeft}/>
+                            </button>
                             <div class="article-header-title">{data.bodyPages[this.props.imageSource - 1].title}</div>
-                            <button class="next-button" onClick={self.nextPage.bind(self)}/>
+                            <button class="next-button" onClick={self.nextPage.bind(self)}>
+                                <img class="button-img" src={arrowRight}/>
+                            </button>
                         </span>
                         <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
                         <div class="article-header-date">{data.bodyPages[this.props.imageSource - 1].medium}</div>
