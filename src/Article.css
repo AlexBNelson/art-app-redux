@@ -30,6 +30,7 @@ article-intro-gap {
 .article-body-pane {
     padding-top: 5vh;
     margin-left: 5vh;
+    margin-right: 5vh;
 }
 .article-intro-pane {
     padding-top: 15vh;
@@ -56,14 +57,16 @@ article-intro-gap {
     display: inline-block;
     text-align: center;
     font-size: 25px;
+    background-color: #fbf3ea;
 }
 
 .article-header-artist{
     width: 45vw;
     position:absolute;
     display: inline-block;
-    margin-top:2vh;
+    margin-top:4vh;
     text-align: center;
+    background-color: #fbf3ea;
 }
 
 .article-header-author{
@@ -79,24 +82,27 @@ article-intro-gap {
     width: 45vw;
     position:relative;
     display: inline-block;
-    top: 5vh;
+    top: 7vh;
     text-align: center;
+    z-index: 0;
 }
 
 .article-header-museum{
     width: 45vw;
     position:relative;
     display: inline-block;
-    top: 6vh;
+    top: 8vh;
     text-align: center;
+    z-index: 0;
 }
 
 .article-header-date{
     width: 45vw;
     position:relative;
     display: inline-block;
-    top: 4vh;
+    top: 6vh;
     text-align: center;
+    z-index: 0;
 }
 
 .article-header-scroll{
@@ -260,7 +266,7 @@ article-intro-gap {
 }
 
 .text-column {
-    width: 40vw;
+    width: 45vw;
     float: left;
     color: #333333;
 }
@@ -281,10 +287,10 @@ article-intro-gap {
 }
 
 .prev-button{
-    left:2vw;
     float: left;
     position: absolute;
     top: 2vh;
+    z-index: 9999999999999;
 }
 
 .next-button{
@@ -292,6 +298,7 @@ article-intro-gap {
     float: right;
     position: absolute;
     top: 2vh;
+    z-index: 0;
 }
 
 .button-img {

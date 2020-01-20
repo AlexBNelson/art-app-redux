@@ -124,7 +124,7 @@ class TextPane extends Component {
             <div>
                 <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                     <div class="row">
-                        <div class="text-column col-lg-10">
+                        <div class="text-column">
                             <div>
                                 {header}
                             </div>
