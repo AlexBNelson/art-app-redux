@@ -118,9 +118,9 @@ class TextPane extends Component {
                             </button>
                         </span>
                         <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
-                        <div class="article-header-date">{data.bodyPages[this.props.imageSource - 1].medium}</div>
-                        <div class="article-header-medium">{data.bodyPages[this.props.imageSource - 1].museum}</div>
-                        <div class="article-header-museum">{data.bodyPages[this.props.imageSource - 1].date}</div>
+                        <div class="article-header-date">{data.bodyPages[this.props.imageSource - 1].date}</div>
+                        <div class="article-header-medium">{data.bodyPages[this.props.imageSource - 1].medium}</div>
+                        <div class="article-header-museum">{data.bodyPages[this.props.imageSource - 1].museum}</div>
                       </div>)
         }
         else {

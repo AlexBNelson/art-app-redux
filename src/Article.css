@@ -58,6 +58,7 @@ article-intro-gap {
     text-align: center;
     font-size: 25px;
     background-color: #fbf3ea;
+    z-index: 999999;
 }
 
 .article-header-artist{
@@ -67,6 +68,7 @@ article-intro-gap {
     margin-top:4vh;
     text-align: center;
     background-color: #fbf3ea;
+    z-index: 999999;
 }
 
 .article-header-author{
@@ -82,7 +84,7 @@ article-intro-gap {
     width: 45vw;
     position:relative;
     display: inline-block;
-    top: 7vh;
+    top: 10vh;
     text-align: center;
     z-index: 0;
 }
@@ -91,7 +93,7 @@ article-intro-gap {
     width: 45vw;
     position:relative;
     display: inline-block;
-    top: 8vh;
+    top: 12vh;
     text-align: center;
     z-index: 0;
 }
@@ -100,7 +102,7 @@ article-intro-gap {
     width: 45vw;
     position:relative;
     display: inline-block;
-    top: 6vh;
+    top: 8vh;
     text-align: center;
     z-index: 0;
 }
@@ -300,7 +302,7 @@ article-intro-gap {
     float: right;
     position: absolute;
     top: 2vh;
-    z-index: 0;
+    z-index: 999999999;
     background: none;
     border: none;
 }
