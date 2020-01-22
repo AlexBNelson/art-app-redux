@@ -74,7 +74,7 @@ class TextPane extends Component {
                     default:
                 }
             }
-            formedText.push(<p>{para}</p>);
+            formedText.push(<p class="body-para">{para}</p>);
         }
         return formedText;
     }
@@ -91,7 +91,7 @@ class TextPane extends Component {
         if (this.props.imageSource == 0) {
             body = this.formText(data.introPage)
 
-            header = (<div class="article-header">
+            header = (<div class="article-header-intro">
                         <span>
                             <button class="prev-button" onClick={self.previousPage.bind(self)}>
                                 <img class="button-img" src={arrowLeft}/>

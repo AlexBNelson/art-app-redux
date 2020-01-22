@@ -10,6 +10,7 @@ import SiteIntroComponent from './Home/SiteIntroComponent.js'
 
 class Home extends Component {
 
+    
 
     render() {
         return (
@@ -21,36 +22,36 @@ class Home extends Component {
                         </row>
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
+                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
                     </div>
                 </div>
 

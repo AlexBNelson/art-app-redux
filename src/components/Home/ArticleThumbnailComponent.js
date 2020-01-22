@@ -13,23 +13,45 @@ class ArticleThumbnailComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            imageLink: '',
-            articleTitle: ''
+            thumbnail: {}
         };
     }
 
-    componentDidMount() {
 
+    componentWillMount(){
+
+
+        
+        var url = "http://localhost:7071/api/thumbnail/" + this.props.id;
+
+        var self = this;
+
+        axios({
+            method: 'get',
+            url: url
+        })
+            .then(function (response) {
+                console.log(response);
+                var thumbnailData = response.data
+                self.setState({thumbnail: thumbnailData});
+            })
+            .catch(function (error) {
+                window.alert(error);
+            });
+
+            
     }
 
     render() {
 
-        var link = "Article/" + this.props.id
+        var link = "Article/" + "c0ee"
+
+        var thumbnail = this.state.thumbnail;
 
         return (
             <div class="thumbnail-container" className={this.props.position}>
-                <a href={link}><img class="thumbnail-image" src="" /></a>
-                <div class="thumbnail-title">{this.state.articleTitle}</div>
+                <a href={link}><img class="thumbnail-image" src={thumbnail.imageUri} /></a>
+                <div class="thumbnail-title">{thumbnail.title}</div>
             </div>
         )
     }
