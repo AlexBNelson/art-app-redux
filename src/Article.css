@@ -34,6 +34,20 @@ article-intro-gap {
     margin-bottom: 5vh;
 }
 
+.body-para-first{
+    margin-bottom: 5vh;
+}
+
+.body-para-first:first-child::first-letter{
+    float: left;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+
 .hidden {
     opacity: 1;
 }
@@ -50,6 +64,7 @@ article-intro-gap {
     font-family: 'Libre Caslon Text';
     padding-bottom: 6vh;
 }
+
 .article-intro-pane {
     padding-top: 15vh;
     margin-left: 5vh;

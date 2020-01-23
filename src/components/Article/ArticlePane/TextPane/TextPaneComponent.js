@@ -43,8 +43,10 @@ class TextPane extends Component {
     }
 
     previousPage() {
-        const { dispatch } = this.props;
-        dispatch(setImageSource(this.props.imageSource - 1))
+        if(this.props.imageSource !== 0){
+            const { dispatch } = this.props;
+            dispatch(setImageSource(this.props.imageSource - 1))
+        }
     }
 
     formText(bodyText) {
@@ -74,7 +76,12 @@ class TextPane extends Component {
                     default:
                 }
             }
-            formedText.push(<p class="body-para">{para}</p>);
+            if(i==0){
+                formedText.push(<p class="body-para-first">{para}</p>);
+            }
+            else{
+                formedText.push(<p class="body-para">{para}</p>);
+            }
         }
         return formedText;
     }
@@ -104,7 +111,7 @@ class TextPane extends Component {
                       </div>
             )
         }
-        else if (this.props.imageSource < data.bodyPages.length) {
+        else if (this.props.imageSource <= data.bodyPages.length) {
             body = this.formText(data.bodyPages[this.props.imageSource - 1])
 
             header = (<div class="article-header">
