@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import '../../bootstrap.css';
 import Bootstrap from 'bootstrap';
 import { Link } from 'react-router-component';
+import instagram from '../../instagram.svg'; 
+import '../../App.css';
 
 class NavHead extends Component {
     render() {
@@ -11,10 +13,9 @@ class NavHead extends Component {
             <div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
                     <div class="container-fluid">
+                        
                         <a class="navbar-brand" href="#"><img class="dyptych-logo" src="https://ucarecdn.com/6330425f-1126-420c-8438-414d62714b0a/dyptychLogo.svg" />   (In Development, Copyright Alex Nelson 2020)</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <img class="insta" src={instagram}/>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
