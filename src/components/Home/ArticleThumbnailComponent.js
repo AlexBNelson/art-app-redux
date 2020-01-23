@@ -22,7 +22,7 @@ class ArticleThumbnailComponent extends Component {
 
 
         
-        var url = "http://localhost:7071/api/thumbnail/" + this.props.id;
+        var url = "https://dyptych-api.azurewebsites.net/api/thumbnail/" + this.props.id;
 
         var self = this;
 
