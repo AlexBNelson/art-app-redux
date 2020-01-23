@@ -22,36 +22,27 @@ class Home extends Component {
                         </row>
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
-                    </div>
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
+                    </div>]
                 </div>
                 <div class="row">
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
                     <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekias: From Fine Craftsman to True Artist" />
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
                 </div>
 
