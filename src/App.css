@@ -25,6 +25,18 @@
   to { transform: rotate(360deg); }
 }
 
+.carousel-left{
+    position: absolute;
+    left: 50px;
+    top:50%;
+}
+
+.carousel-right{
+    position: absolute;
+    right: 50px;
+    top:50%;
+}
+
 .dyptych-logo{
     width: 8vw;
     left: -1vw;
@@ -114,6 +126,7 @@
     height: 37vh;
 }
 
+
 .thumbnail-container {
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 4s; /* Firefox < 16 */
@@ -122,10 +135,12 @@
     position: relative;
     text-align: center;
     color: white;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    width: 200px;
-    height: 283px;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    width: 300px;
+    height: 485px;
     margin-right: 0;
     margin-left: 0;
     -webkit-filter: grayscale(50%);
@@ -134,8 +149,8 @@
 }
 
 .thumbnail-image {
-    width: 200px;
-    height: 283px;
+    width: 300px;
+    height: 485px;
 }
 
 .thumbnail-title {

@@ -16,36 +16,24 @@ class Home extends Component {
         return (
             <div class="container-fluid home-container">
                 <div class="row">
-                    <div class="col-lg-4 container">
-                        <row>
-                            <SiteIntroComponent />
-                        </row>
-                    </div>
-                    <div class="col-lg-2">
+                    <button class="carousel-left"/>
+                    <div class="col-lg-3">
                         <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
                         <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-3">
                         <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
-                    </div>]
+                    </div>
+                    <div class="col-lg-3">
+                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
+                    </div>
+                    <button class="carousel-right"/>
                 </div>
                 <div class="row">
-                    <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259" />
-                    </div>
-                </div>
 
+                </div>
             </div>
         )
     }
