@@ -25,17 +25,6 @@
   to { transform: rotate(360deg); }
 }
 
-.carousel-left{
-    position: absolute;
-    left: 50px;
-    top:50%;
-}
-
-.carousel-right{
-    position: absolute;
-    right: 50px;
-    top:50%;
-}
 
 .dyptych-logo{
     width: 120px;
@@ -176,13 +165,24 @@
 }
 
 .site-intro {
-    width: 30vw;
-    height: 45vh;
+    width: 35vw;
+    height: 15vh;
     margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-bottom: -4vh;
+    margin-left: 3vw;
     padding-top:2vh;
-    text-align: center;
-    font-weight: 400
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-bottom: 1px solid black;
+}
+
+.site-intro:first-child::first-letter{
+    float: left;
+    font-size: 45px;
+    line-height: 30px;
+    padding-top: 4px;
+    padding-right: 3px;
 }
 
 .thumbnail-left{

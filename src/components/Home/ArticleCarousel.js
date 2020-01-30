@@ -36,7 +36,7 @@ class ArticleCarousel extends Component {
           };
 
         return (
-            <Carousel responsive={responsive} itemClass="slider-image-item" containerClass="carousel-container-with-scrollbar">
+            <Carousel responsive={responsive}  itemClass="slider-image-item" containerClass="carousel-container-with-scrollbar">
                 <div><ArticleThumbnailContainer id="Pieter609b400b-fdd6-4e5a-bc48-8d92c1bb0bdb"/></div>
                 <div><ArticleThumbnailContainer id="Caillebotte49ce37ab-95e4-4873-bd00-d2fd88c6e36c"/></div>
                 <div><ArticleThumbnailContainer id="Goya6089bfaa-63f6-47f8-97dd-f361e45b7ac1"/></div>

@@ -10,11 +10,13 @@ import ArticleCarousel from './Home/ArticleCarousel.js'
 
 class Home extends Component {
 
-    
+
 
     render() {
         return (
             <div>
+                <div class="site-intro">Welcome to Dyptych! Immerse yourself in the history, drama, scandal and brilliance behind the most significant and powerful works of art, accompanied by vivid, full-height images. </div>
+                
                 <ArticleCarousel centerMode={true} />
             </div>
         )
