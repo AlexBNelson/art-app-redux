@@ -13,15 +13,14 @@ class ArticleThumbnailComponent extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            thumbnail: {}
+            thumbnail: {},
+            expanded: false
         };
     }
 
 
     componentWillMount(){
 
-
-        
         var url = "https://dyptych-api.azurewebsites.net/api/thumbnail/" + this.props.id;
 
         var self = this;
@@ -37,9 +36,7 @@ class ArticleThumbnailComponent extends Component {
             })
             .catch(function (error) {
                 window.alert(error);
-            });
-
-            
+            });  
     }
 
     render() {
@@ -48,8 +45,12 @@ class ArticleThumbnailComponent extends Component {
 
         var thumbnail = this.state.thumbnail;
 
+        var titleStyle;
+
+        var self = this;
+
         return (
-            <div class="thumbnail-container" className={this.props.position}>
+            <div  class="thumbnail-container" className={this.props.position}>
                 <a href={link}><img class="thumbnail-image" src={thumbnail.imageUri} /></a>
                 <div class="thumbnail-title">{thumbnail.title}</div>
             </div>

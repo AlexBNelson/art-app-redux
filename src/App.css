@@ -124,7 +124,8 @@
     color: white;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    width: 12vw;
+    width: 200px;
+    height: 283px;
     margin-right: 0;
     margin-left: 0;
     -webkit-filter: grayscale(50%);
@@ -133,16 +134,30 @@
 }
 
 .thumbnail-image {
-    width: 12vw;
-    height: 45vh;
-    border-radius: 15px 15px 15px 15px;
+    width: 200px;
+    height: 283px;
 }
 
 .thumbnail-title {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+    opacity: 0.9;
+    color: black;
+    background-color: gray;
+    
+}
+
+.thumbnail-title :hover {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 90px;
+    opacity: 0.9;
+    color: black;
+    background-color: lightgray;
+    
 }
 
 .site-intro {
