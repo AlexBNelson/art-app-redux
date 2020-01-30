@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import '../../App.css';
 import '../../bootstrap.css'
-import { setArticleData } from '../../actions'
 import { connect } from 'react-redux'
+import './Carousel.css'
 
 
 

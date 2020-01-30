@@ -12,6 +12,7 @@
     "popper.js": "^1.14.4",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-multi-carousel": "^2.5.0",
     "react-redux": "^5.0.7",
     "react-router-component": "^0.39.1",
     "react-scripts": "1.1.5",
