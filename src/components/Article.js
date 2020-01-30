@@ -20,7 +20,7 @@ class Article extends Component {
 
     componentWillMount(){
 
-        var url = "https://dyptych-api.azurewebsites.net/api/article/Exekias: From Fine Craftsman to True Artist"
+        var url = "https://dyptych-api.azurewebsites.net/api/article/" + this.props.id.articleId
 
         var articleData = {};
 

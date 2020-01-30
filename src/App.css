@@ -38,7 +38,7 @@
 }
 
 .dyptych-logo{
-    width: 8vw;
+    width: 120px;
     left: -1vw;
     position: relative;
 }
@@ -51,7 +51,7 @@
 
 .nav-head {
     z-index: 1100;
-    height: 8vh;
+    height: 60px;
 }
 
 

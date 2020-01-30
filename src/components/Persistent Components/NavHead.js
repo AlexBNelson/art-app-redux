@@ -14,7 +14,7 @@ class NavHead extends Component {
                 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
                     <div class="container-fluid">
                         
-                        <a class="navbar-brand" href="#"><img class="dyptych-logo" src="https://ucarecdn.com/6330425f-1126-420c-8438-414d62714b0a/dyptychLogo.svg" />   (In Development, Copyright Alex Nelson 2020)</a>
+                        <a class="navbar-brand" href="/"><img class="dyptych-logo" src="https://ucarecdn.com/6330425f-1126-420c-8438-414d62714b0a/dyptychLogo.svg" />   (In Development, Copyright Alex Nelson 2020)</a>
                         <img class="insta" src={instagram}/>
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">

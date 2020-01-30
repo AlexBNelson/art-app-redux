@@ -167,6 +167,7 @@ article-intro-gap {
     overflow: hidden;
     position: absolute;
     left: 0vw;
+    z-index: 0;
     background-color: black;
 }
 

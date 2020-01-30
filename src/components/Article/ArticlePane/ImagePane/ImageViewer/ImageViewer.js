@@ -21,7 +21,6 @@ class ImageViewer extends Component {
         this.setState({
             viewer: OpenSeadragon({
                 id: 'seadragon',
-                homeButton: 'reset',
                 fullPageButton: 'full-screen',
                 tileSources: {
                     type: 'image',

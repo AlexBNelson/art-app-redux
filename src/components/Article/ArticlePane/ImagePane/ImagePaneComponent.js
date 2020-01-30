@@ -17,7 +17,7 @@ class ImagePaneComponent extends Component {
 
         if (this.props.imageSource == 0) {
             imageLink = this.props.article.introPage.imageUrl
-        } else if (this.props.imageSource < this.props.article.bodyPages.length) {
+        } else if (this.props.imageSource <= this.props.article.bodyPages.length) {
             imageLink = this.props.article.bodyPages[this.props.imageSource - 1].imageUrl
         } else {
             imageLink = this.props.article.appendixPage.imageUrl
