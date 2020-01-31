@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
 import arrowLeft from '../../../../arrowLeft.svg';
 import arrowRight from '../../../../arrowRight.svg';
+import PageIndicator from './PageIndicator.js'
 
 
 
@@ -106,8 +107,10 @@ class TextPane extends Component {
                             <div class="article-header-title">{data.introPage.title}</div>
                             <button class="next-button" onClick={self.nextPage.bind(self)}>
                                 <img class="button-img" src={arrowRight}/>
-                            </button>                        </span>
+                            </button>                        
+                        </span>
                         <div class="article-header-author">{data.introPage.author}</div>
+                        <PageIndicator class="page-indicator" page={1} total={data.bodyPages.length+2}/>
                       </div>
             )
         }
@@ -125,6 +128,7 @@ class TextPane extends Component {
                             </button>
                         </span>
                         <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
+                        <PageIndicator class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
                         <div class="article-header-date">{data.bodyPages[this.props.imageSource - 1].date}</div>
                         <div class="article-header-medium">{data.bodyPages[this.props.imageSource - 1].medium}</div>
                         <div class="article-header-museum">{data.bodyPages[this.props.imageSource - 1].museum}</div>
@@ -132,6 +136,14 @@ class TextPane extends Component {
         }
         else {
             body = data.appendixPage.sources
+
+            header = (<div class="article-header">
+                        <span>
+                            <button class="prev-button" onClick={self.previousPage.bind(self)}>
+                                <img class="button-img" src={arrowLeft}/>
+                            </button>
+                        </span>
+                      </div>)
         }
 
         return (
