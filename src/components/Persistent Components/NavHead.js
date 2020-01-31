@@ -5,6 +5,7 @@ import '../../bootstrap.css';
 import Bootstrap from 'bootstrap';
 import { Link } from 'react-router-component';
 import instagram from '../../instagram.svg'; 
+import copyright from '../../Copyright.svg'; 
 import '../../App.css';
 
 class NavHead extends Component {
@@ -14,8 +15,8 @@ class NavHead extends Component {
                 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
                     <div class="container-fluid">
                         
-                        <a class="navbar-brand" href="/"><img class="dyptych-logo" src="https://ucarecdn.com/6330425f-1126-420c-8438-414d62714b0a/dyptychLogo.svg" />   (In Development, Copyright Alex Nelson 2020)</a>
-                        <img class="insta" src={instagram}/>
+                        <a class="navbar-brand" href="/"><img class="dyptych-logo" src="https://ucarecdn.com/6330425f-1126-420c-8438-414d62714b0a/dyptychLogo.svg" /></a>
+                        
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
@@ -23,11 +24,11 @@ class NavHead extends Component {
                                     <Link class="nav-link" href="/">Home</Link>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="/InDepth">InDepth</a>
+                                    <a class="nav-link" href="/About">About</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Dropdown
+                                        Articles
                                     </a>
                                     <div class="dropdown-menu" onClick={this.toggleOpen} aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="#">Fine Art</a>
@@ -36,7 +37,10 @@ class NavHead extends Component {
                                         <a class="dropdown-item" href="#">Architecture</a>
                                     </div>
                                 </li>
+                                <img class="insta" src={instagram}/>
+                                <img class="copyright" src={copyright}/>
                             </ul>
+                            
                         </div></div>
                 </nav>
             </div>

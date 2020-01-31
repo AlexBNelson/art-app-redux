@@ -25,6 +25,14 @@
   to { transform: rotate(360deg); }
 }
 
+.copyright{
+    height:13px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1.4vw;
+    opacity: 0.4;
+}
+
 
 .dyptych-logo{
     width: 120px;
@@ -33,8 +41,10 @@
 }
 
 .insta{
-    height:3vh;
-    margin-right: 1vw;
+    height:23px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1.4vw;
 }
 
 
@@ -69,6 +79,21 @@
     overflow: hidden;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.home{
+    overflow-y: scroll;
+}
+
+.home-footer{
+    width: 100%;
+    background-color: darkcyan;
+    color: black;
+    height: 10vh;
+    float: bottom;
+    position: static;
+    margin-top: 5vh;
+    text-align: left;
 }
 
 .home-container {
