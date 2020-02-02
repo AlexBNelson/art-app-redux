@@ -37,7 +37,7 @@ class NavHead extends Component {
                                         <a class="dropdown-item" href="#">Architecture</a>
                                     </div>
                                 </li>
-                                <a href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></a>
+                                <Link class="insta-link" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></Link>
                                 <img class="copyright" src={copyright}/>
                             </ul>
                             
