@@ -343,6 +343,21 @@ article-intro-gap {
     z-index: 999999999;
 }
 
+.quote{
+    text-align: center;
+    padding-right: 4vw;
+    padding-left: 4vw;
+    font-style: italic;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    font-size: 19px;
+}
+
+.quote-mark{
+    font-size: 28px;
+    font-style: bold;
+}
+
 .text-intro-pane {
     height: 90vh;
     font-style: italic;
