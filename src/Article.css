@@ -354,8 +354,8 @@ article-intro-gap {
 }
 
 .quote-mark{
-    font-size: 28px;
-    font-style: bold;
+    font-size: 32px;
+    line-height: 10%;
 }
 
 .text-intro-pane {
