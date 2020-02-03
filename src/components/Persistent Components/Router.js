@@ -5,6 +5,7 @@ import App from '../App.js';
 import Home from '../Home.js'
 import NavHead from './NavHead.js';
 import ArticleContainer from '../ArticleContainer';
+import About from '../About';
 
 
 const HomePage = () => (
@@ -14,10 +15,10 @@ const HomePage = () => (
     </div>
 );
 
-const InDepthPage = () => (
+const AboutPage = () => (
     <div>
         <NavHead />
-        <InDepth />
+        <About />
     </div>
 
 );
@@ -38,7 +39,7 @@ class Router extends Component {
 
             <Locations>
                 <Location path="/" handler={HomePage} />
-                <Location path="/InDepth" handler={InDepthPage} />
+                <Location path="/About" handler={AboutPage} />
                 <Location path="/Article/:articleId" handler={ArticlePage} />
             </Locations>
 
