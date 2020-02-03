@@ -14,7 +14,10 @@ class ArticlePane extends Component {
     }
 
     render() {
+        var introLabel
+
         return (
+            
 
             <div class="container-fluid">
                 <div class="row">
