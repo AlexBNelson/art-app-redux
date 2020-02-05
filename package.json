@@ -10,7 +10,7 @@
     "node": "^11.12.0",
     "openseadragon": "^2.4.1",
     "popper.js": "^1.14.4",
-    "react": "^16.4.2",
+    "react": "^16.12.0",
     "react-dom": "^16.4.2",
     "react-multi-carousel": "^2.5.0",
     "react-redux": "^5.0.7",
