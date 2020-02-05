@@ -22,7 +22,7 @@ class About extends Component {
 
             return (
                 <div class="about">
-                    <p>All Text Copyright Dyptych/Alex Nelson 2020. Refer to original museums for image rights.</p>
+                    <p>All Text Copyright Dyptych/Alex Nelson 2020. Refer to original institutions for image rights.</p>
                 </div>)
         }
     }

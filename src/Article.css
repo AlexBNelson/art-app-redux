@@ -80,7 +80,7 @@ article-intro-gap {
 }
 
 .article-header{
-    height:28vh;
+    height:30vh;
     width: auto;
     font-family: 'Libre Baskerville';
     background-color: rgb(250, 250, 250);
@@ -94,8 +94,23 @@ article-intro-gap {
 }
 
 .article-header-title{
-    width: 37vw;
-    margin-left:4vw;
+    width: 45vw;
+    padding-left:4vw;
+    padding-right:4vw;
+    position:absolute;
+    display: inline-block;
+    text-align: center;
+    font-size: 28px;
+    z-index: 9999998;
+    background-color: rgb(250, 250, 250);
+    font-family: 'trebuchet ms';
+}
+
+.article-header-title-intro{
+    width: 45vw;
+    padding-left:4vw;
+    padding-right:4vw;
+    padding-bottom: 2vh;
     position:absolute;
     display: inline-block;
     text-align: center;

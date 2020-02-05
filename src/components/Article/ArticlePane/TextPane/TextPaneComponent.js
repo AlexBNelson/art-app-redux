@@ -107,7 +107,7 @@ class TextPane extends Component {
                             <button class="prev-button" onClick={self.previousPage.bind(self)}>
                                 <img class="button-img" src={arrowLeft}/>
                             </button>                            
-                            <div class="article-header-title">{data.introPage.title}</div>
+                            <div class="article-header-title-intro">{data.introPage.title}</div>
                             <button class="next-button" onClick={self.nextPage.bind(self)}>
                                 <img class="button-img" src={arrowRight}/>
                             </button>                        
