@@ -22,7 +22,7 @@ class About extends Component {
 
             return (
                 <div class="about">
-                    <p>All Text and Source Code Copyright Dyptych/Alex Nelson 2020. Refer to original institutions for image rights.</p>
+                    <p>All Text, Design and Source Code Copyright Dyptych/Alex Nelson 2020. Refer to original institutions for image rights.</p>
                     <a href="https://www.nationalgallery.org.uk/paintings/glossary/diptych" target="_blank">What is a diptych?</a>
                 </div>)
         }
