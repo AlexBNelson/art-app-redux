@@ -4,15 +4,15 @@ import { Component } from 'react'
 import OpenSeadragon from 'openseadragon';
 
 class ImageViewer extends Component {
-  
+
     constructor(props) {
         super(props)
-        
+
         this.initOpenSeaDragon.bind(this)
     }
 
     componentDidMount() {
-      this.initOpenSeaDragon();
+        this.initOpenSeaDragon();
     }
 
     initOpenSeaDragon() {
@@ -25,6 +25,10 @@ class ImageViewer extends Component {
                 tileSources: {
                     type: 'image',
                     url: imageLink,
+                    zoomInButton: 'zoom-in',
+                    zoomOutButton: '',
+                    homeButton: 'reset',
+                    fullPageButton: 'full-page',
                     buildPyramid: false
                 }
             })
@@ -34,13 +38,17 @@ class ImageViewer extends Component {
     render() {
 
         return (
-
-            <ul>
-                <div id="seadragon" class="article-image-pane"></div>
-            </ul>
-
-        );
+            <div>
+                
+                <ul>
+                    <div id="seadragon" class="article-image-pane">
+                        
+                    </div>
+                </ul>
+                
+            </div>
+            );
+        }
     }
-  }
-  
-  export default ImageViewer;
+    
+export default ImageViewer;
