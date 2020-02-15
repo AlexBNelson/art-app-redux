@@ -23,25 +23,41 @@ class PageIndicator extends Component {
         var i
 
         for(i=1; i <= this.props.total; i++){
-            if(i <= this.props.page){
-                sections.push(<img class="page-indicator-filled" src={indicatorFilled}/>)
+            if(i == this.props.page){
+                if(i == 1){
+                    sections.push(<span class="page-indicator-filled-word">intro</span>)
+                }else if(i == this.props.total){
+                    sections.push(<span class="page-indicator-filled-word">appendix</span>)
+                }else{
+                    sections.push(<span class="page-indicator-filled">{i.toString()}</span>)
+                }
             }
             else{
-                sections.push(<img class="page-indicator-empty" src={indicatorEmpty}/>)
+                if(i == 1){
+                    sections.push(<span class="page-indicator-empty">intro</span>)
+                }else if(i == this.props.total){
+                    sections.push(<span class="page-indicator-empty">appendix</span>)
+                }else{
+                    sections.push(<span class="page-indicator-empty">{i.toString()}</span>)
+                }
             }
         }
 
         var indicatorClass
 
+        var self= this;
+        var indicator = '';
         if(this.props.page == 1){
             indicatorClass = "indicator-container-intro"
+            indicator = ''
         }else{
             indicatorClass = "indicator-container"
+            indicator = self.props.page + "/" + self.props.total
         }
 
         return (
             <div class={indicatorClass}>
-                {sections}    
+                {sections}     
             </div> 
         )
     }

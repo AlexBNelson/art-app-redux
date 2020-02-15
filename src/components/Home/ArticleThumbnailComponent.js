@@ -52,7 +52,8 @@ class ArticleThumbnailComponent extends Component {
         return (
             <div  class="thumbnail-container" className={this.props.position}>
                 <a href={link}><img class="thumbnail-image" src={thumbnail.imageUri} /></a>
-                <div class="thumbnail-title">{thumbnail.title}</div>
+                <div class="thumbnail-title"> {thumbnail.title}<a href={link} class="btn read-button">Read</a></div>
+                
             </div>
         )
     }

@@ -22,11 +22,14 @@ class TextPane extends Component {
             info: [],
             intro: '',
             chapters: '',
-            scrollPoints: []
+            scrollPoints: [],
+            headerOffset: 0
         };
 
         this.previousPage.bind(this)
         this.nextPage.bind(this)
+
+        this.introRef = React.createRef()
     }
 
 
@@ -35,6 +38,16 @@ class TextPane extends Component {
         const scrollNode = this.myScroll;
 
         scrollNode.addEventListener('scroll', function () { })
+
+        if(this.introRef.current === null){
+
+        }
+        else if(this.introRef.current.clientHeight > 70 ){
+            this.setState({headerOffset: 2})
+        }
+        else{
+            this.setState({headerOffset: 0})
+        }
     }
 
     nextPage() {
@@ -99,20 +112,26 @@ class TextPane extends Component {
 
         var self = this;
 
+        //how far header elements are offset from top depending on whether title is one line or two
+        var headerOffset = 0
+
+        var introBreak
+
+        var titleLabel
+
         if (this.props.imageSource == 0) {
             body = this.formText(data.introPage)
 
-            header = (<div class="article-header-intro">
-                        <span>
-                            <button class="prev-button" onClick={self.previousPage.bind(self)}>
-                                <img class="button-img" src={arrowLeft}/>
-                            </button>                            
-                            <div class="article-header-title-intro">{data.introPage.title}</div>
+            introBreak = <div class="intro-break"><br/>_____________________<br/><br/></div>
+
+            header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
+                        <span>                          
+                            <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
                             <button class="next-button" onClick={self.nextPage.bind(self)}>
                                 <img class="button-img" src={arrowRight}/>
                             </button>                        
                         </span>
-                        <div class="article-header-author">{data.introPage.author}</div>
+                        <div class="article-header-author" style={{margin: (7 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
                         <PageIndicator class="page-indicator" page={1} total={data.bodyPages.length+2}/>
                       </div>
             )
@@ -125,17 +144,19 @@ class TextPane extends Component {
                             <button class="prev-button" onClick={self.previousPage.bind(self)}>
                                 <img class="button-img" src={arrowLeft}/>
                             </button>
-                            <div class="article-header-title">{data.bodyPages[this.props.imageSource - 1].title}</div>
+                            <div class="article-header-title" ref={this.titleRef}>{data.bodyPages[this.props.imageSource - 1].title}</div>
                             <button class="next-button" onClick={self.nextPage.bind(self)}>
                                 <img class="button-img" src={arrowRight}/>
                             </button>
                         </span>
                         <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
                         <PageIndicator class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
-                        <div class="article-header-date">{data.bodyPages[this.props.imageSource - 1].date}</div>
-                        <div class="article-header-medium">{data.bodyPages[this.props.imageSource - 1].medium}</div>
-                        <div class="article-header-museum">{data.bodyPages[this.props.imageSource - 1].museum}</div>
+                        <div class="article-header-date" style={{top: (1.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].date}</div>
+                        <div class="article-header-medium" style={{top: (2.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].medium}</div>
+                        <div class="article-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>
                       </div>)
+
+            titleLabel = (<div class="title-label">{data.introPage.title}</div>)
         }
         else {
             body = data.appendixPage.sources
@@ -154,9 +175,11 @@ class TextPane extends Component {
                 <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
                     <div class="row">
                         <div class="text-column">
+                            {titleLabel}
                             <div>
                                 {header}
                             </div>
+                                {introBreak}
                             <div class="article-body-pane">
                                 {body}
                             </div>

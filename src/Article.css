@@ -87,7 +87,7 @@ article-intro-gap {
 }
 
 .article-header-intro{
-    height:15vh;
+    height:17vh;
     width: auto;
     font-family: 'Libre Baskerville';
     background-color: rgb(250, 250, 250);
@@ -325,22 +325,50 @@ article-intro-gap {
 
 
 .indicator-container{
-    margin-left: 16vw;
+    margin-left: 15.5vw;
     position:relative;
     display: inline-block;
-    margin-top:10vh;
+    margin-top:11vh;
     z-index:10000;
     margin-bottom: 2px;
     height: auto;
+    
 }
 
 .indicator-container-intro{
-    margin-left: 16vw;
+    margin-left: 15.3vw;
     position:relative;
     display: inline-block;
     z-index:10000;
     margin-bottom: 2px;
+    margin-top: 15px;
     height: auto;
+}
+
+/* (absolute indicator)  
+.indicator-container{
+    right: 4vw;
+    position: fixed;
+    top:3vh;
+    z-index:9999999999;
+    height: auto;
+    width:200px;
+}
+
+.indicator-container-intro{
+    right: 4vw;
+    position: fixed;
+    top:3vh;
+    z-index:9999999999;
+    height: auto;
+    width:200px;
+} */
+
+
+.intro-break{
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
 }
 
 .intro-label{
@@ -363,15 +391,42 @@ article-intro-gap {
 
 .page-indicator-filled{
     height: 4px;
-    margin-right: 4px;
+    margin-right: 8px;
     z-index: 999999999;
+    font-weight: 1000;
+    font-size: large;
+    color: transparent;
+    -webkit-background-size: cover;
+            background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url(https://ucarecdn.com/5976cb7d-6114-429b-ba20-5b2956f26d90/Turner_1839_FightingTemeraire.jpg);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.page-indicator-filled-word{
+    height: 4px;
+    margin-right: 11px;
+    margin-left: 11px;
+    z-index: 999999999;
+    font-weight: 1000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: transparent;
+    -webkit-background-size: cover;
+            background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url(https://ucarecdn.com/5976cb7d-6114-429b-ba20-5b2956f26d90/Turner_1839_FightingTemeraire.jpg);
 }
 
 .page-indicator-empty{
     height: 4px;
-    margin-right:4px;
-    
+    margin-right:8px;
+    font-weight: 500;
+    color: rgb(187, 187, 187);
     z-index: 999999999;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .quote{
@@ -389,6 +444,8 @@ article-intro-gap {
     line-height: 10%;
 }
 
+
+
 .text-intro-pane {
     height: 90vh;
     font-style: italic;
@@ -400,6 +457,15 @@ article-intro-gap {
     width: 45vw;
     float: left;
     color: #333333;
+}
+
+.title-label{
+    position: fixed;
+    right: 20vw;
+    top: 3vh;
+    width: 400px;
+    color:rgb(116, 116, 116);
+    z-index: 999999999;
 }
 
 .page-button {

@@ -150,6 +150,19 @@
     height: 37vh;
 }
 
+.read-button{
+    position: relative;
+    font-size: large;
+    font-weight:500 !important;
+    height: 30px;
+    margin-left: 10px;
+    opacity: 1 !important;
+    padding-top: 2px !important;
+    padding-bottom: 5px !important; 
+    background-color: rgb(129, 212, 250, 1);
+    color: rgb(144, 12, 63);
+}
+
 
 .thumbnail-container {
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
