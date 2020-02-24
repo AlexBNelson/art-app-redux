@@ -23,8 +23,10 @@ class About extends Component {
 
             return (
                 <div class="about">
+                    <br/><br/><br/><br/><br/><br/>
                     <p>All Text, Design and Source Code Copyright Dyptych/Alex Nelson 2020. Refer to original institutions for image rights.</p>
                     <a href="https://www.nationalgallery.org.uk/paintings/glossary/diptych" target="_blank">What is a diptych?</a>
+                    <br/><br/>
                     <p>Logo Background Image: <span class="italic-about">Mont St. Victoire</span>, Paul Cezanne</p>
                     <p>Dyptych aims to combine the elements of image-centric design, rigorous interpretation and compelling storytelling to create an engaging digital experience</p>
                 </div>)
