@@ -20,7 +20,7 @@
   font-size: large;
 }
 
-.About{
+.about{
     text-align:center;
 }
 
@@ -148,6 +148,10 @@
 .home-inner-row {
     width: 44vw;
     height: 37vh;
+}
+
+.italic-about{
+    font-style: italic;
 }
 
 .read-button{
