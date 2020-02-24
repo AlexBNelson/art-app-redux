@@ -7,7 +7,8 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
 import arrowLeft from '../../../../arrowLeft.svg';
 import arrowRight from '../../../../arrowRight.svg';
-import PageIndicator from './PageIndicator.js'
+import PageIndicatorContainer from './PageIndicatorContainer.js'
+
 
 
 
@@ -132,7 +133,7 @@ class TextPane extends Component {
                             </button>                        
                         </span>
                         <div class="article-header-author" style={{margin: (7 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
-                        <PageIndicator class="page-indicator" page={1} total={data.bodyPages.length+2}/>
+                        <PageIndicatorContainer class="page-indicator" page={1} total={data.bodyPages.length+2}/>
                       </div>
             )
         }
@@ -150,7 +151,7 @@ class TextPane extends Component {
                             </button>
                         </span>
                         <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
-                        <PageIndicator class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
+                        <PageIndicatorContainer class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
                         <div class="article-header-date" style={{top: (1.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].date}</div>
                         <div class="article-header-medium" style={{top: (2.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].medium}</div>
                         <div class="article-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>

@@ -461,8 +461,8 @@ article-intro-gap {
 
 .title-label{
     position: fixed;
-    right: 20vw;
-    top: 3vh;
+    right: 19vw;
+    top: 4vh;
     width: 400px;
     color:rgb(116, 116, 116);
     z-index: 999999999;

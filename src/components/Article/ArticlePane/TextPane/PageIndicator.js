@@ -5,6 +5,8 @@ import '../../../../Article.css';
 import '../../../../bootstrap.css'
 import indicatorFilled from '../../../../indicator-filled.svg';
 import indicatorEmpty from '../../../../indicator-empty.svg';
+import { connect } from 'react-redux'
+import { setImageSource } from '../../../../actions'
 
 
 
@@ -13,32 +15,64 @@ class PageIndicator extends Component {
     constructor(props) {
         super(props)
     }
-
    
 
     render() {
         
         var sections = []
 
+        const { dispatch } = this.props;
+
         var i
+        
+        var self = this;
 
         for(i=1; i <= this.props.total; i++){
             if(i == this.props.page){
                 if(i == 1){
-                    sections.push(<span class="page-indicator-filled-word">intro</span>)
-                }else if(i == this.props.total){
-                    sections.push(<span class="page-indicator-filled-word">appendix</span>)
-                }else{
-                    sections.push(<span class="page-indicator-filled">{i.toString()}</span>)
+                    sections.push(<span class="page-indicator-filled-word" onClick={() => {dispatch(setImageSource(0))}}>intro</span>)
                 }
+                else if(i == this.props.total){
+                    sections.push(<span class="page-indicator-filled-word" onClick={() => {dispatch(setImageSource(self.props.total-1))}}>appendix</span>)
+                }
+                else if (i==2){
+                    sections.push(<span class="page-indicator-filled" onClick={() => { dispatch(setImageSource(1))}}>{i.toString()}</span>)
+                }
+                else if (i==3){
+                    sections.push(<span class="page-indicator-filled" onClick={() => { dispatch(setImageSource(2))}}>{i.toString()}</span>)
+                }
+                else if (i==4){
+                    sections.push(<span class="page-indicator-filled" onClick={() => { dispatch(setImageSource(3))}}>{i.toString()}</span>)
+                }
+                else if (i==5){
+                    sections.push(<span class="page-indicator-filled" onClick={() => { dispatch(setImageSource(4))}}>{i.toString()}</span>)
+                }
+                else if (i==6){
+                    sections.push(<span class="page-indicator-filled" onClick={() => { dispatch(setImageSource(5))}}>{i.toString()}</span>)
+                }
+
             }
             else{
                 if(i == 1){
-                    sections.push(<span class="page-indicator-empty">intro</span>)
-                }else if(i == this.props.total){
-                    sections.push(<span class="page-indicator-empty">appendix</span>)
-                }else{
-                    sections.push(<span class="page-indicator-empty">{i.toString()}</span>)
+                    sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(0))}}>intro</span>)
+                }
+                else if(i == this.props.total){
+                    sections.push(<span class="page-indicator-empty" onClick={() => {dispatch(setImageSource(self.props.total-1))}}>appendix</span>)
+                }
+                else if (i==2){
+                    sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(1))}}>{i.toString()}</span>)
+                }
+                else if (i==3){
+                    sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(2))}}>{i.toString()}</span>)
+                }
+                else if (i==4){
+                    sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(3))}}>{i.toString()}</span>)
+                }
+                else if (i==5){
+                    sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(4))}}>{i.toString()}</span>)
+                }
+                else if (i==6){
+                    sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(5))}}>{i.toString()}</span>)
                 }
             }
         }
@@ -63,4 +97,4 @@ class PageIndicator extends Component {
     }
 }
 
-export default PageIndicator;
+export default connect() (PageIndicator);
