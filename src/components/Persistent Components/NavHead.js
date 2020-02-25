@@ -10,12 +10,20 @@ import '../../App.css';
 
 class NavHead extends Component {
     render() {
+
+        const isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+        const isEdge = !isIE && !!window.StyleMedia;
+
         return (
             <div>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
                     <div class="container-fluid">
                         
-                        <a class="navbar-brand" href="/"><img class="dyptych-logo" src="https://ucarecdn.com/6330425f-1126-420c-8438-414d62714b0a/dyptychLogo.svg" /></a>
+                        <a class="navbar-brand" href="/">
+                            {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoIE.svg' />
+                            : <img class="dyptych-logo" src='https://ucarecdn.com/6330425f-1126-420c-8438-414d62714b0a/dyptychLogo.svg'/>}
+                        </a>
                         
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
