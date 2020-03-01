@@ -2,7 +2,6 @@ import React from 'react'
 import '../../../../../Article.css'
 import { Component } from 'react'
 import OpenSeadragon from 'openseadragon';
-import fullscreen from '../../../../../fullscreen.svg';
 
 class ImageViewer extends Component {
 
@@ -16,25 +15,6 @@ class ImageViewer extends Component {
         this.initOpenSeaDragon();
     }
 
-    renderZoomControls(){
-        return (
-          <div class="image-toolbar">
-            <button id="zoom-in">
-              Zoom In
-            </button>
-            <button id="zoom-out">
-              Zoom Out
-            </button>
-            <button id="reset">
-              Reset Zoom
-            </button>
-            <button id="full-screen">
-              Toggle Fullscreen
-            </button>
-          </div>
-        );
-      };
-
     initOpenSeaDragon() {
         var imageLink = this.props.imageLink
 
@@ -42,13 +22,13 @@ class ImageViewer extends Component {
             viewer: OpenSeadragon({
                 id: 'seadragon',
                 fullPageButton: 'full-screen',
-                zoomInButton: 'zoom-in',
-                zoomOutButton: 'zoom-out',
-                homeButton: 'reset',
                 tileSources: {
                     type: 'image',
                     url: imageLink,
-                    fullPageButton: 'full-screen',
+                    zoomInButton: 'zoom-in',
+                    zoomOutButton: '',
+                    homeButton: 'reset',
+                    fullPageButton: 'full-page',
                     buildPyramid: false
                 }
             })
@@ -61,10 +41,9 @@ class ImageViewer extends Component {
             <div>
                 
                 <ul>
-                    <div id="seadragon" class="article-image-pane">
-                        {this.renderZoomControls()}
+                    <div id="seadragon" class="mobile-seadragon-viewer">
+                        
                     </div>
-                    
                 </ul>
                 
             </div>

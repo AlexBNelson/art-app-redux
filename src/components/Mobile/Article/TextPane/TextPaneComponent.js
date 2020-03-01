@@ -1,10 +1,9 @@
-import { Location, Locations } from 'react-router-component';
 import React, { Component } from 'react';
 import '../../../../bootstrap.css';
 import '../../../../Article.css';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
+import { setImageSource } from '../../../../actions'
 import arrowLeft from '../../../../arrowLeft.svg';
 import arrowRight from '../../../../arrowRight.svg';
 import PageIndicatorContainer from './PageIndicatorContainer.js'
@@ -102,7 +101,7 @@ class TextPane extends Component {
             }
         }
         return formedText;
-    } 
+    }
 
     render() {
         var header = ""
@@ -125,39 +124,45 @@ class TextPane extends Component {
 
             introBreak = <div class="intro-break"><br/>_____________________<br/><br/></div>
 
-            header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
+            header = (<div class="mobile-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
                         <span>                          
-                            <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
-                            <button class="next-button" onClick={self.nextPage.bind(self)}>
-                                <img class="button-img" src={arrowRight}/>
-                            </button>                        
+                            <div class="mobile-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
+                                                  
                         </span>
-                        <div class="article-header-author" style={{margin: (7 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
-                        <PageIndicatorContainer class="page-indicator" page={1} total={data.bodyPages.length+2}/>
+                        <div class="mobile-header-author" style={{margin: (7 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
+                        <PageIndicatorContainer class="mobile-page-indicator" page={1} total={data.bodyPages.length+2}/>
+                        <div class="mobile-button-container-intro">
+                            <button class="mobile-next-button" onClick={self.nextPage.bind(self)}>
+                                <img class="mobile-button-img" src={arrowRight}/>
+                            </button>  
+                        </div>
                       </div>
             )
         }
         else if (this.props.imageSource <= data.bodyPages.length) {
             body = this.formText(data.bodyPages[this.props.imageSource - 1])
 
-            header = (<div class="article-header">
+            header = (<div class="mobile-article-header">
                         <span>
-                            <button class="prev-button" onClick={self.previousPage.bind(self)}>
-                                <img class="button-img" src={arrowLeft}/>
-                            </button>
-                            <div class="article-header-title" ref={this.titleRef}>{data.bodyPages[this.props.imageSource - 1].title}</div>
-                            <button class="next-button" onClick={self.nextPage.bind(self)}>
-                                <img class="button-img" src={arrowRight}/>
-                            </button>
+                            <div class="mobile-header-title" ref={this.titleRef}>{data.bodyPages[this.props.imageSource - 1].title}</div>
+                            
                         </span>
-                        <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
-                        <PageIndicatorContainer class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
-                        <div class="article-header-date" style={{top: (1.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].date}</div>
-                        <div class="article-header-medium" style={{top: (2.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].medium}</div>
-                        <div class="article-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>
+                        <div class="mobile-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
+                        <PageIndicatorContainer class="mobile-page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
+                        <div class="mobile-header-date" style={{top: (1.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].date}</div>
+                        <div class="mobile-header-medium" style={{top: (2.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].medium}</div>
+                        <div class="mobile-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>
+                        <div class="mobile-button-container">
+                            <button class="mobile-prev-button" onClick={self.previousPage.bind(self)}>
+                                <img class="mobile-button-img" src={arrowLeft}/>
+                            </button>
+                            <button class="mobile-next-button" onClick={self.nextPage.bind(self)}>
+                                <img class="mobile-button-img" src={arrowRight}/>
+                            </button>
+                        </div>
                       </div>)
 
-            titleLabel = (<div class="title-label">{data.introPage.title}</div>)
+            titleLabel = (<div class="mobile-title-label">{data.introPage.title}</div>)
         }
         else {
             body = data.appendixPage.sources
@@ -165,7 +170,7 @@ class TextPane extends Component {
             header = (<div class="article-header">
                         <span>
                             <button class="prev-button" onClick={self.previousPage.bind(self)}>
-                                <img class="button-img" src={arrowLeft}/>
+                                <img class="mobile-button-img" src={arrowLeft}/>
                             </button>
                         </span>
                       </div>)
@@ -173,15 +178,15 @@ class TextPane extends Component {
 
         return (
             <div>
-                <div id="TextPane.scrollDiv" class="container article-text-pane" ref={ref => this.myScroll = ref} >
+                <div id="TextPane.scrollDiv" class="container" ref={ref => this.myScroll = ref} >
                     <div class="row">
-                        <div class="text-column">
+                        <div class="mobile-text-column">
                             {titleLabel}
                             <div>
                                 {header}
                             </div>
                                 {introBreak}
-                            <div class="article-body-pane">
+                            <div class="mobile-body-pane">
                                 {body}
                             </div>
                         </div>
