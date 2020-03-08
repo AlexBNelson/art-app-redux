@@ -42,9 +42,10 @@
 
 
 .dyptych-logo{
-    width: 120px;
-    left: -1vw;
+    left: -2.2vw;
     position: relative;
+    height:70px;
+    margin-bottom: -2px;
 }
 
 .insta{
@@ -60,10 +61,29 @@
     margin-left: 1.2vw;
 }
 
+.navbar-collapse{
+    margin-right:9vw;
+    float:left;
+    margin-left:-4vw;
+}
 
 .nav-head {
     z-index: 1100;
-    height: 60px;
+    height: 41px;
+    /*border-bottom: 1px solid #000000;*/
+    /*border-image: linear-gradient(to bottom right, #b827fc 0%, #b8fd33 25%, #2c90fc 50%, #b827fc 75%, #fd1892 100%);*/
+    border-image-slice: 10;
+    /*box-shadow: 0px 1px 10px 2px black;*/
+}
+
+.nav-head-home {
+    z-index: 1100;
+    height: 40px;
+    box-shadow: 0px 1px 10px 2px #e4e4e4;
+}
+
+.nav-link{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 

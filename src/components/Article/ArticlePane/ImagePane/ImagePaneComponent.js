@@ -28,11 +28,13 @@ class ImagePaneComponent extends Component {
 
         var randomKey =  Math.random()
 
+        var isIntro = (this.props.imageSource == 0);
+
 
         return (
 
             <ul>
-                <ImageViewer key={randomKey} imageLink={imageLink}/>
+                <ImageViewer isIntro={isIntro} key={randomKey} imageLink={imageLink}/>
                 {introLabel}
             </ul>
 

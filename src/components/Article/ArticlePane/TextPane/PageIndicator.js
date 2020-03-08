@@ -82,11 +82,21 @@ class PageIndicator extends Component {
         var self= this;
         var indicator = '';
         if(this.props.page == 1){
-            indicatorClass = "indicator-container-intro"
-            indicator = ''
+            if(this.props.shift){
+                indicatorClass = "indicator-container-intro-shift"
+                indicator = ''
+            }else{
+                indicatorClass = "indicator-container-intro"
+                indicator = ''
+            }
         }else{
-            indicatorClass = "indicator-container"
-            indicator = self.props.page + "/" + self.props.total
+            if(this.props.shift){
+                indicatorClass = "indicator-container-shift"
+                indicator = self.props.page + "/" + self.props.total
+            }else{
+                indicatorClass = "indicator-container"
+                indicator = self.props.page + "/" + self.props.total
+            }
         }
 
         return (

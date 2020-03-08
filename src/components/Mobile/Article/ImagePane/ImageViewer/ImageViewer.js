@@ -15,6 +15,16 @@ class ImageViewer extends Component {
         this.initOpenSeaDragon();
     }
 
+    renderZoomControls(){
+        return (
+          <div class="image-toolbar">
+            <button id="full-screen">
+              Toggle Fullscreen
+            </button>
+          </div>
+        );
+      };
+
     initOpenSeaDragon() {
         var imageLink = this.props.imageLink
 
@@ -42,7 +52,7 @@ class ImageViewer extends Component {
                 
                 <ul>
                     <div id="seadragon" class="mobile-seadragon-viewer">
-                        
+                        {this.renderZoomControls()}
                     </div>
                 </ul>
                 

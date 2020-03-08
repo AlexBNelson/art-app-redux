@@ -8,7 +8,7 @@ import instagram from '../../instagram.svg';
 import copyright from '../../Copyright.svg'; 
 import '../../App.css';
 
-class NavHead extends Component {
+class NavHeadHome extends Component {
     render() {
 
         const isIE = /*@cc_on!@*/false || !!document.documentMode;
@@ -17,7 +17,7 @@ class NavHead extends Component {
 
         return (
             <div>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head-home navbar-fixed-top">
                     <div class="container-fluid">
                         
                         <a class="navbar-brand" href="/">
@@ -56,4 +56,4 @@ class NavHead extends Component {
     }
 }
 
-export default NavHead;
+export default NavHeadHome;

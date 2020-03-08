@@ -38,7 +38,30 @@ class ImageViewer extends Component {
     initOpenSeaDragon() {
         var imageLink = this.props.imageLink
 
-        this.setState({
+        if(this.props.isIntro){
+          this.setState({
+            viewer: OpenSeadragon({
+                id: 'seadragon',
+                fullPageButton: 'full-screen',
+                zoomInButton: 'zoom-in',
+                zoomOutButton: 'zoom-out',
+                homeButton: 'reset',
+                defaultZoomLevel: 0,
+                zoomPerScroll: 1,
+                zoomPerClick: 1,
+                panVertical: false,
+                panHorizontal: false,
+                tileSources: {
+                    type: 'image',
+                    url: imageLink,
+                    fullPageButton: 'full-screen',
+                    buildPyramid: false
+                }
+            })
+        });
+
+        }else{
+          this.setState({
             viewer: OpenSeadragon({
                 id: 'seadragon',
                 fullPageButton: 'full-screen',
@@ -53,16 +76,21 @@ class ImageViewer extends Component {
                 }
             })
         });
+        }
+
+        
     }
 
     render() {
+
+        var isIntro = this.props.isIntro
 
         return (
             <div>
                 
                 <ul>
                     <div id="seadragon" class="article-image-pane">
-                        {this.renderZoomControls()}
+                        {isIntro ? <div></div>: this.renderZoomControls()}
                     </div>
                     
                 </ul>

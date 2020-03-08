@@ -31,6 +31,7 @@ class TextPane extends Component {
         this.nextPage.bind(this)
 
         this.introRef = React.createRef()
+        this.titleRef = React.createRef()
     }
 
 
@@ -125,7 +126,8 @@ class TextPane extends Component {
 
             introBreak = <div class="intro-break"><br/>_____________________<br/><br/></div>
 
-            header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
+            if(data.introPage.title.length<40){
+                header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
                         <span>                          
                             <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
                             <button class="next-button" onClick={self.nextPage.bind(self)}>
@@ -133,14 +135,29 @@ class TextPane extends Component {
                             </button>                        
                         </span>
                         <div class="article-header-author" style={{margin: (7 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
-                        <PageIndicatorContainer class="page-indicator" page={1} total={data.bodyPages.length+2}/>
+                        <PageIndicatorContainer shift={false}  class="page-indicator" page={1} total={data.bodyPages.length+2}/>
                       </div>
             )
+            }else{
+                header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
+                <span>                          
+                    <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
+                    <button class="next-button" onClick={self.nextPage.bind(self)}>
+                        <img class="button-img" src={arrowRight}/>
+                    </button>                        
+                </span>
+                <div class="article-header-author-shift">{data.introPage.author}</div>
+                <PageIndicatorContainer shift={true}  class="page-indicator" page={1} total={data.bodyPages.length+2}/>
+              </div>
+    ) 
+            }
+
         }
         else if (this.props.imageSource <= data.bodyPages.length) {
             body = this.formText(data.bodyPages[this.props.imageSource - 1])
 
-            header = (<div class="article-header">
+            if(data.bodyPages[this.props.imageSource - 1].title.length<40){
+                header = (<div class="article-header">
                         <span>
                             <button class="prev-button" onClick={self.previousPage.bind(self)}>
                                 <img class="button-img" src={arrowLeft}/>
@@ -151,11 +168,32 @@ class TextPane extends Component {
                             </button>
                         </span>
                         <div class="article-header-artist">{data.bodyPages[this.props.imageSource - 1].artist}</div>
-                        <PageIndicatorContainer class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
+                        <PageIndicatorContainer shift={false}  class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
                         <div class="article-header-date" style={{top: (1.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].date}</div>
                         <div class="article-header-medium" style={{top: (2.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].medium}</div>
                         <div class="article-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>
                       </div>)
+            }
+            else{
+                header = (<div class="article-header">
+                        <span>
+                            <button class="prev-button" onClick={self.previousPage.bind(self)}>
+                                <img class="button-img" src={arrowLeft}/>
+                            </button>
+                            <div class="article-header-title" ref={this.titleRef}>{data.bodyPages[this.props.imageSource - 1].title}</div>
+                            <button class="next-button" onClick={self.nextPage.bind(self)}>
+                                <img class="button-img" src={arrowRight}/>
+                            </button>
+                        </span>
+                        <div class="article-header-artist-shift">{data.bodyPages[this.props.imageSource - 1].artist}</div>
+                        <PageIndicatorContainer shift={true} class="page-indicator-shift" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
+                        <div class="article-header-date" style={{top: (1.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].date}</div>
+                        <div class="article-header-medium" style={{top: (2.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].medium}</div>
+                        <div class="article-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>
+                      </div>)
+            }
+
+            
 
             titleLabel = (<div class="title-label">{data.introPage.title}</div>)
         }

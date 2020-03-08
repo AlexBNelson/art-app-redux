@@ -4,21 +4,23 @@ import InDepth from '../InDepth.js'
 import App from '../App.js';
 import Home from '../Home.js'
 import NavHead from './NavHead.js';
+import NavHeadHome from './NavHeadHome.js';
 import ArticleContainer from '../ArticleContainer';
 import About from '../About';
 import MobileArticle from '../Mobile/Article/MobileArticle.js'
+import MobileHome from '../Mobile/Home/MobileHome.js'
 
 
 const HomePage = () => (
     <div>
-        <NavHead />
+        <NavHeadHome />
         <Home />
     </div>
 );
 
 const AboutPage = () => (
     <div>
-        <NavHead />
+        <NavHeadHome />
         <About />
     </div>
 
@@ -34,7 +36,7 @@ const ArticlePage = (articleId) => (
 const MobileHomePage = () => (
     <div>
         <NavHead />
-        <Home />
+        <MobileHome />
     </div>
 );
 

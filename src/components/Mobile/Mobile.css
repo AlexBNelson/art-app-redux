@@ -83,7 +83,7 @@
     z-index: 999999;
     background-color: rgb(250, 250, 250);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #494949;
+    color: #2d2d2d;
 }
 
 .mobile-header-author{
@@ -95,7 +95,7 @@
     margin-left: 3vw;
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #494949;
+    color: #2d2d2d;
 }
 
 .mobile-header-medium{
@@ -107,7 +107,7 @@
     text-align: left;
     z-index: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #494949;
+    color: #2d2d2d;
 }
 
 .mobile-header-museum{
@@ -120,7 +120,7 @@
     z-index: 0;
     padding-bottom: 1vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #494949;
+    color: #2d2d2d;
 }
 
 .mobile-header-date{
@@ -131,7 +131,7 @@
     text-align: left;
     z-index: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #494949;
+    color: #2d2d2d;
 }
 
 .mobile-indicator-container{
@@ -167,7 +167,8 @@
     width: 300px;
     color:rgb(163, 163, 163);
     z-index: 999999999;
-    font-size: 15px;
+    font-size: 10px;
+    text-align:right;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
