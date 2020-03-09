@@ -89,47 +89,53 @@ article-intro-gap {
     height:30vh;
     width: auto;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #494949;
     color: rgb(250, 250, 250);
 }
+
+/*.article-header > *{
+    background-color: #636363 !important;
+}*/
 
 .article-header-intro{
     height:17vh;
     width: auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #494949;
     color: rgb(250, 250, 250);
 }
 
 .article-header-title{
-    width: 45vw;
+    width: 43.8vw;
     padding-left:4vw;
     padding-right:4vw;
+    padding-top: 4px;
     position:absolute;
     display: inline-block;
     text-align: center;
     font-size: 28px;
     z-index: 9999998;
-    font-family: 'trebuchet ms';
+    font-family: 'Lora', serif;
     background-color: #494949;
 }
 
+
 .article-header-title-intro{
-    width: 45vw;
+    width: 43.8vw;
     padding-left:4vw;
     padding-right:4vw;
-    padding-bottom: 2vh;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
     position:absolute;
     display: inline-block;
     text-align: center;
     font-size: 28px;
     z-index: 9999998;
     background-color: #494949;
-    font-family: 'trebuchet ms';
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
 }
 
 .article-header-artist{
-    width: 45vw;
+    width: 43.8vw;
     position:absolute;
     display: inline-block;
     padding-top:6vh;
@@ -138,23 +144,24 @@ article-intro-gap {
     z-index: 999999;
     padding-bottom: 1vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(201, 201, 201);
     background-color: #494949;
 }
 
 .article-header-author{
-    width: 45vw;
+    width: 43.8vw;
     position:relative;
     display: inline-block;
     margin-top:7vh;
     text-align: center;
     font-size: 16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Cinzel', serif;
     color: rgb(201, 201, 201);
     background-color: #494949;
 }
 
 .article-header-medium{
-    width: 45vw;
+    width: 43.8vw;
     position:relative;
     display: inline-block;
     top: 2.5vh;
@@ -165,7 +172,7 @@ article-intro-gap {
 }
 
 .article-header-museum{
-    width: 45vw;
+    width: 43.8vw;
     position:relative;
     display: inline-block;
     top: 3.5vh;
@@ -177,7 +184,7 @@ article-intro-gap {
 }
 
 .article-header-date{
-    width: 45vw;
+    width: 43.8vw;
     position:relative;
     display: inline-block;
     top: 1.5vh;
@@ -189,7 +196,7 @@ article-intro-gap {
 
 
 .article-header-artist-shift{
-    width: 45vw;
+    width: 43.8vw;
     position:absolute;
     display: inline-block;
     padding-top:6vh;
@@ -199,10 +206,11 @@ article-intro-gap {
     padding-bottom: 1vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #494949;
+    color: rgb(201, 201, 201);
 }
 
 .article-header-author-shift{
-    width: 45vw;
+    width: 43.8vw;
     position:relative;
     display: inline-block;
     margin-top:13vh;
@@ -494,12 +502,13 @@ article-intro-gap {
     z-index: 999999999;
     font-weight: 1000;
     font-size: large;
-    color: transparent;
-    -webkit-background-size: cover;
+    color: white;
+    /*-webkit-background-size: cover;
             background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: url(https://ucarecdn.com/5976cb7d-6114-429b-ba20-5b2956f26d90/Turner_1839_FightingTemeraire.jpg);
+    background-image: url(https://ucarecdn.com/5976cb7d-6114-429b-ba20-5b2956f26d90/Turner_1839_FightingTemeraire.jpg);*/
+
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -511,12 +520,13 @@ article-intro-gap {
     font-weight: 1000;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-    color: transparent;
-    -webkit-background-size: cover;
+    color: white;
+    /*-webkit-background-size: cover;
             background-size: cover;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: url(https://ucarecdn.com/5976cb7d-6114-429b-ba20-5b2956f26d90/Turner_1839_FightingTemeraire.jpg);
+    background-image: url(https://ucarecdn.com/5976cb7d-6114-429b-ba20-5b2956f26d90/Turner_1839_FightingTemeraire.jpg);*/
+
 }
 
 .page-indicator-empty{
@@ -568,6 +578,15 @@ article-intro-gap {
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: right;
+}
+
+.title-label{
+ 
+    -webkit-animation: fadein 0.3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.3s; /* Firefox < 16 */
+     -ms-animation: fadein 0.3s; /* Internet Explorer */
+      -o-animation: fadein 0.3s; /* Opera < 12.1 */
+         animation: fadein 0.3s;
 }
 
 .page-button {
