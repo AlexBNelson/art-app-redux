@@ -36,7 +36,7 @@ article-intro-gap {
 
 .body-para-first{
     margin-bottom: 5vh;
-    font-size: 17px;
+    font-size: 15.0px;
 }
 
 .body-para-first:first-child::first-letter{
@@ -62,8 +62,8 @@ article-intro-gap {
     padding-top: 5vh;
     margin-left: 5vh;
     margin-right: 5vh;
-    font-size: 17.0px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15.0px;
+    font-family: 'Lato', sans-serif;
     font-weight: 100;
     padding-bottom: 6vh;
     color: rgb(250, 250, 250);
@@ -229,13 +229,21 @@ article-intro-gap {
 
 .article-image-pane {
     height: 95vh;
-    width: 57vw;
-    overflow: hidden;
+    width: 58vw;
     position: absolute;
     left: 0vw;
     z-index: 0;
     background-color: black;
     box-shadow: 5px 0px 3px -4px rgb(31,31,31);
+}
+
+.article-image-pane-intro {
+    height: 95vh;
+    width: 57vw;
+    position: absolute;
+    left: 0vw;
+    z-index: 0;
+    background-color: #494949;
 }
 
 .article-image-pane * {
@@ -511,6 +519,15 @@ article-intro-gap {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.page-indicator-filled{
+ 
+    -webkit-animation: fadein 0.2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.2s; /* Firefox < 16 */
+     -ms-animation: fadein 0.2s; /* Internet Explorer */
+      -o-animation: fadein 0.2s; /* Opera < 12.1 */
+         animation: fadein 0.2s;
+}
+
 .page-indicator-filled-word{
     height: 4px;
     margin-right: 11px;
@@ -526,6 +543,15 @@ article-intro-gap {
     background-clip: text;
     background-image: url(https://ucarecdn.com/5976cb7d-6114-429b-ba20-5b2956f26d90/Turner_1839_FightingTemeraire.jpg);*/
 
+}
+
+.page-indicator-filled-word{
+ 
+    -webkit-animation: fadein 0.2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.2s; /* Firefox < 16 */
+     -ms-animation: fadein 0.2s; /* Internet Explorer */
+      -o-animation: fadein 0.2s; /* Opera < 12.1 */
+         animation: fadein 0.2s;
 }
 
 .page-indicator-empty{

@@ -89,9 +89,9 @@ class ImageViewer extends Component {
             <div>
                 
                 <ul>
-                    <div id="seadragon" class="article-image-pane">
-                        {isIntro ? <div></div>: this.renderZoomControls()}
-                    </div>
+                    
+                    {isIntro ? <div id="seadragon" class="article-image-pane-intro"></div>: <div id="seadragon" class="article-image-pane">{this.renderZoomControls()}</div>} 
+                
                     
                 </ul>
                 

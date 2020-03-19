@@ -50,6 +50,9 @@ class PageIndicator extends Component {
                 else if (i==6){
                     sections.push(<span class="page-indicator-filled" onClick={() => { dispatch(setImageSource(5))}}>{i.toString()}</span>)
                 }
+                else if (i==7){
+                    sections.push(<span class="page-indicator-filled" onClick={() => { dispatch(setImageSource(6))}}>{i.toString()}</span>)
+                }
 
             }
             else{
@@ -73,6 +76,9 @@ class PageIndicator extends Component {
                 }
                 else if (i==6){
                     sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(5))}}>{i.toString()}</span>)
+                }
+                else if (i==7){
+                    sections.push(<span class="page-indicator-empty" onClick={() => { dispatch(setImageSource(6))}}>{i.toString()}</span>)
                 }
             }
         }
