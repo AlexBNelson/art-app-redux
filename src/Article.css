@@ -229,7 +229,7 @@ article-intro-gap {
 
 .article-image-pane {
     height: 95vh;
-    width: 58vw;
+    width: 56vw;
     position: absolute;
     left: 0vw;
     z-index: 0;
@@ -239,7 +239,7 @@ article-intro-gap {
 
 .article-image-pane-intro {
     height: 95vh;
-    width: 57vw;
+    width: 56vw;
     position: absolute;
     left: 0vw;
     z-index: 0;
@@ -326,7 +326,7 @@ article-intro-gap {
 
 #seadragon{
     z-index: 99999999999999999999999999999;
-    width: 55vw;
+    width: 56vw;
     /*background-color: #414141 !important;*/
 }
 
