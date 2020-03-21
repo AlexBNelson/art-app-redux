@@ -198,7 +198,7 @@ class TextPane extends Component {
             titleLabel = (<div class="title-label">{data.introPage.title}</div>)
         }
         else {
-            body = data.appendixPage.sources
+            body = <div><p>{data.appendixPage.sources}</p><p>Image Credits:</p></div>
 
             header = (<div class="article-header">
                         <span>

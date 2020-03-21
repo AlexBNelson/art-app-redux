@@ -62,8 +62,11 @@ article-intro-gap {
     padding-top: 5vh;
     margin-left: 5vh;
     margin-right: 5vh;
-    font-size: 15.0px;
+    font-size: 15.5px;
     font-family: 'Lato', sans-serif;
+    /*font-family: 'Baloo 2', cursive;*/
+    /*font-family: 'Istok Web', sans-serif;*/
+
     font-weight: 100;
     padding-bottom: 6vh;
     color: rgb(250, 250, 250);
@@ -122,14 +125,18 @@ article-intro-gap {
     padding-left:4vw;
     padding-right:4vw;
     padding-bottom: 1vh;
-    padding-top: 1vh;
+    padding-top: 0.5vh;
     position:absolute;
     display: inline-block;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     z-index: 9999998;
     background-color: #494949;
-    font-family: 'Cinzel', serif;
+    /*font-family: 'Cinzel', serif;*/
+    font-family: 'Playfair Display SC', serif;
+
+
+
     font-weight: 500;
 }
 
@@ -154,7 +161,7 @@ article-intro-gap {
     margin-top:7vh;
     text-align: center;
     font-size: 16px;
-    font-family: 'Cinzel', serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(201, 201, 201);
     background-color: #494949;
 }
@@ -489,7 +496,7 @@ article-intro-gap {
     opacity: 1;
     color:white;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: lighter;
     bottom: 2px;
     position: absolute;
     width: 51.3vw;
@@ -497,7 +504,7 @@ article-intro-gap {
     padding-right: 8px;
     padding-left: 8px;
     box-shadow: 0px -3px 0px 0px black;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans Pro', 'sans-serif';
 
 }
 

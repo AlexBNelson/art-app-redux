@@ -46,7 +46,7 @@ class ImageViewer extends Component {
                 zoomInButton: 'zoom-in',
                 zoomOutButton: 'zoom-out',
                 homeButton: 'reset',
-                defaultZoomLevel: 0,
+                defaultZoomLevel: 1.05,
                 zoomPerScroll: 1,
                 zoomPerClick: 1,
                 panVertical: false,
