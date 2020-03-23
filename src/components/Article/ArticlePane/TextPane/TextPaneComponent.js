@@ -126,7 +126,7 @@ class TextPane extends Component {
 
             introBreak = <div class="intro-break"><br/>_____________________<br/><br/></div>
 
-            if(data.introPage.title.length<40){
+            if(data.introPage.title.length<30){
                 header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
                         <span>                          
                             <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>

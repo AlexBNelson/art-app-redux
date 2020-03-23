@@ -64,8 +64,8 @@ article-intro-gap {
     margin-right: 5vh;
     font-size: 15.5px;
     font-family: 'Lato', sans-serif;
-    /*font-family: 'Baloo 2', cursive;*/
-    /*font-family: 'Istok Web', sans-serif;*/
+    /*font-family: 'Baloo 2', cursive;
+    font-family: 'Istok Web', sans-serif;*/
 
     font-weight: 100;
     padding-bottom: 6vh;
@@ -206,7 +206,7 @@ article-intro-gap {
     position:absolute;
     display: inline-block;
     padding-top:6vh;
-    top: 5vh;
+    top: 5.5vh;
     text-align: center;
     z-index: 999999;
     padding-bottom: 1vh;
@@ -219,7 +219,7 @@ article-intro-gap {
     width: 43.8vw;
     position:relative;
     display: inline-block;
-    margin-top:13vh;
+    margin-top:14vh;
     text-align: center;
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -438,7 +438,7 @@ article-intro-gap {
     margin-left: 15.5vw;
     position:relative;
     display: inline-block;
-    margin-top:15vh;
+    margin-top:16vh;
     z-index:10000;
     margin-bottom: 2px;
     height: auto;
