@@ -297,9 +297,30 @@ article-intro-gap {
     max-height: 100%;
 }
 
+.cc-logo{
+    height:15px;
+    margin-left: 15px;
+    margin-bottom: 2px;
+}
+
 .image-pane {
     overflow: hidden;
     height: 90vh;
+}
+
+.image-credit{
+    font-family: 'trebuchet ms';
+    background-color: rgb(49, 49, 49);
+    color: white;
+    margin-top: 100px;
+    width: 8vw;
+    border: 1px solid black;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.italic-style{
+    font-style: italic;
 }
 
 .info-pane {

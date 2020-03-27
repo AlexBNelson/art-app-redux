@@ -21,7 +21,7 @@ class NavHeadHome extends Component {
                     <div class="container-fluid">
                         
                         <a class="navbar-brand" href="/">
-                            {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoIE.svg' />
+                            {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
                             : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
                         </a>
                         

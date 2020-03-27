@@ -3,6 +3,7 @@ import '../../../../../Article.css'
 import { Component } from 'react'
 import OpenSeadragon from 'openseadragon';
 import fullscreen from '../../../../../fullscreen.svg';
+import creativeCommons from '../../../../../cc.svg'
 
 class ImageViewer extends Component {
 
@@ -17,6 +18,13 @@ class ImageViewer extends Component {
     }
 
     renderZoomControls(){
+
+      var imageCreditPara;
+
+      if(this.props.imageCredit!=null){
+        imageCreditPara = <p class="image-credit"><span class="italic-style">Credit: </span>{this.props.imageCredit}</p>;
+      }
+
         return (
           <div class="image-toolbar">
             <button id="zoom-in">
@@ -31,6 +39,7 @@ class ImageViewer extends Component {
             <button id="full-screen">
               Toggle Fullscreen
             </button>
+            {imageCreditPara}
           </div>
         );
       };

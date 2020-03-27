@@ -7,7 +7,8 @@ import { connect } from 'react-redux'
 import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
 import arrowLeft from '../../../../arrowLeft.svg';
 import arrowRight from '../../../../arrowRight.svg';
-import PageIndicatorContainer from './PageIndicatorContainer.js'
+import PageIndicatorContainer from './PageIndicatorContainer.js';
+import creativeCommons from '../../../../cc.svg';
 
 
 
@@ -171,7 +172,7 @@ class TextPane extends Component {
                         <PageIndicatorContainer shift={false}  class="page-indicator" page={this.props.imageSource + 1} total={data.bodyPages.length+2}/>
                         <div class="article-header-date" style={{top: (1.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].date}</div>
                         <div class="article-header-medium" style={{top: (2.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].medium}</div>
-                        <div class="article-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>
+                        <div class="article-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}<img class="cc-logo" alt="Image Credits" src={creativeCommons}/></div>
                       </div>)
             }
             else{

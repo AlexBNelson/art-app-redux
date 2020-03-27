@@ -48,6 +48,14 @@
     margin-bottom: -2px;
     margin-top: 3px !important;
 }
+.dyptych-logo-ie{
+    left: -2.2vw;
+    position: relative;
+    height:38px;
+    margin-top: 2px !important;
+    margin-left: 5px;
+    margin-right: 80px;
+}
 
 .insta{
     height:23px;
@@ -208,8 +216,8 @@
     height: 485px;
     margin-right: 0;
     margin-left: 0;
-    -webkit-filter: grayscale(50%);
-    filter: grayscale(50%);
+    /*-webkit-filter: grayscale(50%);
+    filter: grayscale(50%);*/
 }
 
 .thumbnail-container:hover > .thumbnail-title {
@@ -259,6 +267,7 @@
 }
 
 .thumbnail-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
     bottom: 0px;
     width: 100%;
