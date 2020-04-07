@@ -88,7 +88,7 @@ class TextPane extends Component {
                         para.push(<b> {element.text}</b>)
                         break;
                     case 3:
-                        para.push(<a target="_blank" href={element.uri}> {element.text}</a>)
+                        para.push(<a class="article-link" target="_blank" href={element.uri}>&nbsp;{element.text}</a>)
                         break;
                     case 4:
                         para.push(<p class="quote"><strong class="quote-mark">"</strong> {element.text}</p>)

@@ -32,11 +32,13 @@ article-intro-gap {
 
 .body-para{
     margin-bottom: 5vh;
+    line-height: 25px;
 }
 
 .body-para-first{
     margin-bottom: 5vh;
     font-size: 15.0px;
+    line-height: 25px;
 }
 
 .body-para-first:first-child::first-letter{
@@ -297,6 +299,31 @@ article-intro-gap {
     max-height: 100%;
 }
 
+/*
+
+.article-link{
+    color: rgb(250, 250, 250);
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.article-link:after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(250, 250, 250);
+    opacity: .5;
+    transition: all .1s ease;
+}
+
+.article-link:hover:after{
+    height: 90%;
+}*/
+
 .cc-logo{
     height:15px;
     margin-left: 15px;
@@ -314,7 +341,7 @@ article-intro-gap {
     color: white;
     margin-top: 100px;
     width: 8vw;
-    border: 1px solid black;
+    border: 1px solid white;
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -519,6 +546,7 @@ article-intro-gap {
     font-size: 14px;
     font-weight: lighter;
     bottom: 2px;
+    left:2px;
     position: absolute;
     width: 51.3vw;
     z-index: 9999999999;
