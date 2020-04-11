@@ -15,7 +15,7 @@ class Home extends Component {
 
         return (
             <div class="home">
-                <div class="site-intro">Welcome to Dyptych! Immerse yourself in the history, drama, scandal and brilliance behind the most significant and powerful works of art, accompanied by vivid, high-definition images. </div>
+                <div class="mobile-site-intro">Welcome to Dyptych! Immerse yourself in the history, drama, scandal and brilliance behind the most significant and powerful works of art, accompanied by vivid, high-definition images. </div>
                 
                 <ArticleCarousel centerMode={true} />
 

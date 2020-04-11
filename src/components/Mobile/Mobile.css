@@ -252,6 +252,11 @@
     color: black;
 }
 
+.mobile-site-intro{
+    width: 90vw;
+    height: 70vh;
+}
+
 .mobile-next-button{
     z-index: 9999999999999;
     background: none;
