@@ -136,9 +136,6 @@ article-intro-gap {
     background-color: #494949;
     /*font-family: 'Cinzel', serif;*/
     font-family: 'Playfair Display SC', serif;
-
-
-
     font-weight: 500;
 }
 
@@ -545,8 +542,8 @@ article-intro-gap {
     color:white;
     font-size: 14px;
     font-weight: lighter;
-    bottom: 2px;
-    left:2px;
+    bottom: 1px;
+    left:0px;
     position: absolute;
     width: 51.3vw;
     z-index: 9999999999;
