@@ -7,6 +7,7 @@ import { Link } from 'react-router-component';
 import instagram from '../../instagram.svg'; 
 import copyright from '../../Copyright.svg'; 
 import '../../App.css';
+import './Mobile.css';
 
 class NavHeadMobile extends Component {
     render() {
@@ -21,8 +22,8 @@ class NavHeadMobile extends Component {
                     <div class="container-fluid">
                         
                         <a class="navbar-brand dyptych-logo-container" href="/">
-                            {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
-                            : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
+                            {isEdge ? <img class="mobile-dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
+                            : <img class="mobile-dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
                         </a>
                         
 

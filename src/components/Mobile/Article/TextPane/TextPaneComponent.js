@@ -133,7 +133,7 @@ class TextPane extends Component {
                         <PageIndicatorContainer class="mobile-page-indicator" page={1} total={data.bodyPages.length+2}/>
                         <div class="mobile-button-container-intro">
                             <button class="mobile-next-button" onClick={self.nextPage.bind(self)}>
-                                <img class="mobile-button-img" src={arrowRight}/>
+                                <img class="mobile-button-img" src={arrowLeft}/>
                             </button>  
                         </div>
                       </div>
@@ -154,10 +154,10 @@ class TextPane extends Component {
                         <div class="mobile-header-museum"style={{top: (3.5 + headerOffset) + "vh"}}>{data.bodyPages[this.props.imageSource - 1].museum}</div>
                         <div class="mobile-button-container">
                             <button class="mobile-prev-button" onClick={self.previousPage.bind(self)}>
-                                <img class="mobile-button-img" src={arrowLeft}/>
+                                <img class="mobile-button-img" src={arrowRight}/>
                             </button>
                             <button class="mobile-next-button" onClick={self.nextPage.bind(self)}>
-                                <img class="mobile-button-img" src={arrowRight}/>
+                                <img class="mobile-button-img" src={arrowLeft}/>
                             </button>
                         </div>
                       </div>)
@@ -169,8 +169,8 @@ class TextPane extends Component {
 
             header = (<div class="article-header">
                         <span>
-                            <button class="prev-button" onClick={self.previousPage.bind(self)}>
-                                <img class="mobile-button-img" src={arrowLeft}/>
+                            <button class="mobile-next-button" onClick={self.previousPage.bind(self)}>
+                                <img class="mobile-button-img" src={arrowRight}/>
                             </button>
                         </span>
                       </div>)

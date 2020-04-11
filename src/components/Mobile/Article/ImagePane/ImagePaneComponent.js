@@ -17,9 +17,12 @@ class ImagePaneComponent extends Component {
 
         var introLabel;
 
+        var isIntro = false;
+
         if (this.props.imageSource == 0) {
+            isIntro = true;
             imageLink = this.props.article.introPage.imageUrl
-            introLabel = <p class="intro-label">{this.props.article.introPage.imageLabel}</p>
+            introLabel = <p class="mobile-intro-label">{this.props.article.introPage.imageLabel}</p>
         } else if (this.props.imageSource <= this.props.article.bodyPages.length) {
             imageLink = this.props.article.bodyPages[this.props.imageSource - 1].imageUrl
         } else {
@@ -32,7 +35,7 @@ class ImagePaneComponent extends Component {
         return (
 
             <ul>
-                <ImageViewer key={randomKey} imageLink={imageLink}/>
+                <ImageViewer isIntro={isIntro} key={randomKey} imageLink={imageLink}/>
                 {introLabel}
             </ul>
 
