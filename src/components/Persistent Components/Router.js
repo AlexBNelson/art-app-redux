@@ -9,6 +9,7 @@ import ArticleContainer from '../ArticleContainer';
 import About from '../About';
 import MobileArticle from '../Mobile/Article/MobileArticle.js'
 import MobileHome from '../Mobile/Home/MobileHome.js'
+import NavHeadMobile from '../Mobile/NavHeadMobile.js';
 
 
 const HomePage = () => (
@@ -35,14 +36,14 @@ const ArticlePage = (articleId) => (
 
 const MobileHomePage = () => (
     <div>
-        <NavHead />
+        <NavHeadMobile />
         <MobileHome />
     </div>
 );
 
 const MobileArticlePage = (articleId) => (
     <div>
-        <NavHead />
+        <NavHeadMobile />
         <MobileArticle id={articleId} />
     </div>
 );
