@@ -252,7 +252,8 @@
 
 .mobile-site-intro{
     width: 400px;
-    height: 70vh;
+    height: 100px;
+    margin-top: 10px;
 }
 
 .mobile-next-button{
