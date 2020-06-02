@@ -33,11 +33,18 @@ class ImagePaneComponent extends Component {
 
         var isIntro = (this.props.imageSource == 0);
 
+        var introHero
+
+        /*if(isIntro){
+            introHero=<div  class="intro-hero"><img class="intro-hero-image" src={imageLink}/></div>
+        }*/
+
 
         return (
 
             <ul>
                 <ImageViewer isIntro={isIntro} key={randomKey} imageCredit={imageCredit} imageLink={imageLink}/>
+                {introHero}
                 {introLabel}
             </ul>
 

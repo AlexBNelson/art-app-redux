@@ -33,12 +33,12 @@ article-intro-gap {
 .body-para{
     margin-bottom: 5vh;
     line-height: 25px;
-    font-size: 15.0px;
+    font-size: 16px;
 }
 
 .body-para-first{
     margin-bottom: 5vh;
-    font-size: 15.0px;
+    font-size: 16px;
     line-height: 25px;
 }
 
@@ -65,11 +65,9 @@ article-intro-gap {
     padding-top: 5vh;
     margin-left: 5vh;
     margin-right: 5vh;
-    font-size: 15.5px;
-    font-family: 'Lato', sans-serif;
-    /*font-family: 'Baloo 2', cursive;
-    font-family: 'Istok Web', sans-serif;*/
-
+    
+    
+    font-family: 'Ovo', serif;
     font-weight: 100;
     padding-bottom: 6vh;
     color: rgb(250, 250, 250);
@@ -535,6 +533,29 @@ article-intro-gap {
     text-align: center;
     font-weight: 400;
     font-size: 25px;
+}
+
+.intro-hero{
+    position: fixed;
+    right:0px;
+    top:0px;
+    opacity: 0.5;
+    z-index: 999999999999999999999999999999999999;
+    height:40px;
+    width:500px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 25%, white 75%);
+    mask-image: linear-gradient(to right, transparent 25%, white 75%);
+    
+}
+
+.intro-hero-image{
+    position:  absolute;
+    top: -150px;
+    left:-30px;
+    height: 500px;
+    width: 550px;
+    
 }
 
 .intro-label{

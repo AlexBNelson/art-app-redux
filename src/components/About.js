@@ -29,6 +29,7 @@ class About extends Component {
                     <br/><br/>
                     <p>Logo Background Image: <span class="italic-about">Mont St. Victoire</span>, Paul Cezanne</p>
                     <p>Dyptych aims to combine the elements of image-centric design, rigorous interpretation and compelling storytelling to create an engaging digital experience</p>
+                    <p>Image viewer powered by OpenSeaDragon<img class="osd-logo" src="https://avatars2.githubusercontent.com/u/3392630?s=200&v=4"/></p>
                 </div>)
         }
     }

@@ -42,11 +42,10 @@
 
 
 .dyptych-logo{
-    left: -2.2vw;
-    position: relative;
-    height:65px;
-    margin-bottom: -2px;
-    margin-top: 3px !important;
+    top: -7px;
+    position: fixed;
+    height:55px;
+    left: 0px;
 }
 .dyptych-logo-container{
     width: 250px;
@@ -180,6 +179,10 @@
 
 .italic-about{
     font-style: italic;
+}
+
+.osd-logo{
+    height: 20px;
 }
 
 .read-button{
