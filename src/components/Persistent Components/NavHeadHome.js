@@ -34,17 +34,7 @@ class NavHeadHome extends Component {
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/About">About</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Articles
-                                    </a>
-                                    <div class="dropdown-menu" onClick={this.toggleOpen} aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Fine Art</a>
-                                        <a class="dropdown-item" href="#">Photography</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Architecture</a>
-                                    </div>
-                                </li>
+                                
                                 <Link class="insta-link" target="_blank" to="https://www.instagram.com/dyptych_art" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></Link>
                                 <img class="copyright" src={copyright}/>
                             </ul>
@@ -57,3 +47,15 @@ class NavHeadHome extends Component {
 }
 
 export default NavHeadHome;
+
+/*<li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Articles
+                                    </a>
+                                    <div class="dropdown-menu" onClick={this.toggleOpen} aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Fine Art</a>
+                                        <a class="dropdown-item" href="#">Photography</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Architecture</a>
+                                    </div>
+                                </li>*/
