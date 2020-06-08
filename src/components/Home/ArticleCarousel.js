@@ -44,6 +44,7 @@ class ArticleCarousel extends Component {
                 <div><ArticleThumbnailContainer id="Persian2859d1fc-ed35-4c11-abb5-444c8d491c1b"/></div>
                 <div><ArticleThumbnailContainer id="Whistler07f2fc85-e9e2-4d08-b570-a43a104d93a7"/></div>
                 <div><ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259"/></div>
+                <div><ArticleThumbnailContainer id="Suffolk5efa11d3-17cc-4b45-9d4b-2a25fb3dfa6c"/></div>
             </Carousel>
         )
     }
