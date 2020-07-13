@@ -23,6 +23,7 @@ class NavHead extends Component {
                         <a class="navbar-brand dyptych-logo-container" href="/">
                             {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
                             : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
+                            
                         </a>
                         
 

@@ -15,10 +15,10 @@ class Home extends Component {
     render() {
 
         //add to bottom <div class="home-footer">All content copyright Dyptych/Alex Nelson 2020</div>
-
+        //dyptych is an online museum curating the most compelling stories in art from across history and the globe, in a unique side-by-side format.
         return (
             <div class="home">
-                <div class="site-intro">Welcome to Dyptych! Immerse yourself in the history, drama, scandal and brilliance behind the most significant and powerful works of art, accompanied by vivid, high-definition images. </div>
+                <div class="site-intro">Welcome to Dyptych, an online museum curating the most compelling stories in art from across history and the globe, in a unique side-by-side format. Enjoy and Explore!</div>
                 
                 <ArticleCarousel centerMode={true} />
 

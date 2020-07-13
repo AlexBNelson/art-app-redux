@@ -22,7 +22,7 @@ class NavHeadHome extends Component {
                         
                         <a class="navbar-brand dyptych-logo-container" href="/">
                             {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
-                            : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
+                            : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}<span style={{paddingLeft: '100px'}}> </span>(BETA)
                         </a>
                         
 

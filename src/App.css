@@ -71,8 +71,10 @@
 }
 
 .nav-head {
-    z-index: 1100;
     height: 41px;
+    width:100%;
+    position: fixed !important;
+    top:0px;
     /*border-bottom: 1px solid #000000;*/
     /*border-image: linear-gradient(to bottom right, #b827fc 0%, #b8fd33 25%, #2c90fc 50%, #b827fc 75%, #fd1892 100%);*/
     border-image-slice: 10;

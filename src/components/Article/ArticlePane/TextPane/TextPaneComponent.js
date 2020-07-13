@@ -199,7 +199,16 @@ class TextPane extends Component {
             titleLabel = (<div class="title-label">{data.introPage.title}</div>)
         }
         else {
-            body = <div><p>{data.appendixPage.sources}</p><p>Image Credits:</p></div>
+
+            var sources = []
+
+            var sourceArray = data.appendixPage.sources.split(" ");
+            
+            for (var i = 0; i < sourceArray.length; i++){
+                sources.push(<p><a target="_blank" href={sourceArray[i]}>{sourceArray[i]}</a></p>)
+            }
+
+            body = <div><p><h3>Sources:</h3> </p>{sources}</div>
 
             header = (<div class="article-header">
                         <span>

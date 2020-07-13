@@ -19,7 +19,7 @@ class ArticlePane extends Component {
         return (
             
 
-            <div class="container-fluid">
+            <div class="container-fluid article-pane">
                 <div class="row">
                     <div class="col-6 article-image-div">
                         <ImagePaneContainer article={this.props.article} id={this.props.id} />

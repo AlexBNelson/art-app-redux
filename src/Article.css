@@ -26,6 +26,11 @@ article-intro-gap {
     height: auto;
 }
 
+.article-pane{
+    position:fixed;
+    top:41px;
+}
+
 .background-container{
 
 }
@@ -93,6 +98,7 @@ article-intro-gap {
     height:30vh;
     width: auto;
     color: rgb(250, 250, 250);
+    z-index:999999999999999999999;
 }
 
 /*.article-header > *{
@@ -673,7 +679,7 @@ article-intro-gap {
     top: 1.5vh;
     width: 400px;
     color:#494949;
-    z-index: 999999999;
+    z-index: 99999999999999999999;
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: right;
