@@ -35,7 +35,7 @@ class NavHeadHome extends Component {
                                     <a class="nav-link" href="/About">About</a>
                                 </li>
                                 
-                                <Link class="insta-link" target="_blank" to="https://www.instagram.com/dyptych_art" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></Link>
+                                <a class="insta-link" target="_blank" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></a>
                                 <img class="copyright" src={copyright}/>
                             </ul>
                             
