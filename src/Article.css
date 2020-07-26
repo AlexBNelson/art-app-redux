@@ -577,7 +577,7 @@ article-intro-gap {
     z-index: 9999999999;
     padding-right: 8px;
     padding-left: 8px;
-    border-radius: 8px;
+    border-radius: 0px 8px 0px 0px;;
     font-family: 'Source Sans Pro', 'sans-serif';
     box-shadow: 0px -3px 0px 0px black;
 
