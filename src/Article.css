@@ -570,15 +570,16 @@ article-intro-gap {
     color:white;
     font-size: 14px;
     font-weight: lighter;
-    bottom: 1px;
+    bottom: 4px;
     left:0px;
     position: absolute;
     width: 51.3vw;
     z-index: 9999999999;
     padding-right: 8px;
     padding-left: 8px;
-    box-shadow: 0px -3px 0px 0px black;
+    border-radius: 8px;
     font-family: 'Source Sans Pro', 'sans-serif';
+    box-shadow: 0px -3px 0px 0px black;
 
 }
 
