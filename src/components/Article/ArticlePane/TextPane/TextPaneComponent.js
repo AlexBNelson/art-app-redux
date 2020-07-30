@@ -135,7 +135,7 @@ class TextPane extends Component {
                                 <img class="button-img" src={arrowRight}/>
                             </button>                        
                         </span>
-                        <div class="article-header-author" style={{margin: (7 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
+                        <div class="article-header-author" style={{margin: (7.3 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
                         <PageIndicatorContainer shift={false}  class="page-indicator" page={1} total={data.bodyPages.length+2}/>
                       </div>
             )
