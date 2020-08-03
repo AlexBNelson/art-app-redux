@@ -27,6 +27,7 @@
     width: 100vw !important;
     height:40vh;
     left:0px;
+    position: absolute;
 }
 .mobile-seadragon-viewer-intro{
     height: 40vh;

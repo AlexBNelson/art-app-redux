@@ -7,3 +7,7 @@
     padding-bottom: 20px;
     overflow: visible !important;
   }
+
+  .react-multi-carousel-dot-list{
+    bottom: 20px !important;
+  }
