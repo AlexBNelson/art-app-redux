@@ -1,4 +1,22 @@
-
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -130,7 +148,9 @@
 }
 
 .home{
-    overflow-y: scroll;
+    
+    height:300%;
+    
 }
 
 .home-footer{
@@ -217,20 +237,38 @@
     animation: fadein 4s;
     position: relative;
     text-align: center;
-    color: white;
-    margin-top: 6vh;
-    margin-bottom: 6vh;
-    margin-left: 3vh;
-    margin-right: 3vh;
+    color: rgb(116, 102, 102);
+    margin-right:30px;
+    margin-left:30px;
     width: 300px;
-    height: 485px;
-    margin-right: 0;
-    margin-left: 0;
+    height: 390px;
+    display:inline-flex;
+    margin-bottom:60px;
+    float:bottom;
     /*-webkit-filter: grayscale(50%);
     filter: grayscale(50%);*/
 }
 
-.thumbnail-container:hover > .thumbnail-title {
+.featured-container {
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s; /* Firefox < 16 */
+    -o-animation: fadein 4s; /* Opera < 12.1 */
+    animation: fadein 4s;
+    position: relative;
+    top:-40px;
+    text-align: center;
+    color: white;
+    margin-right:30px;
+    margin-left:30px;
+    width: 380px;
+    height: 440px;
+    display:inline-flex;
+    margin-bottom:60px;
+    /*-webkit-filter: grayscale(50%);
+    filter: grayscale(50%);*/
+}
+
+/* .thumbnail-container:hover > .thumbnail-title {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -240,12 +278,24 @@
     font-style: bold;
     color: black;
     background-color: lightgray;
-}
+} */
 
 
 .thumbnail-image {
-    width: 300px;
-    height: 485px;
+    
+    width: 270px;
+    height: 360px;
+    margin-top:30px;
+    -webkit-animation: fadein 0.2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.2s; /* Firefox < 16 */
+     -ms-animation: fadein 0.2s; /* Internet Explorer */
+      -o-animation: fadein 0.2s; /* Opera < 12.1 */
+         animation: fadein 0.2s;
+}
+
+.featured-image {
+    width: 370px;
+    height: 440px;
     -webkit-animation: fadein 0.2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 0.2s; /* Firefox < 16 */
      -ms-animation: fadein 0.2s; /* Internet Explorer */
@@ -277,25 +327,58 @@
 }
 
 .thumbnail-title {
+    font-size:17px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
+    width: 250px;
     height: 70px;
-    opacity: 0.9;
-    color: rgb(0, 0, 0);
+    font-variant-caps: small-caps;
+    color: white;
     font-weight: 400;
-    background-color: rgb(151, 151, 151);
-    text-align: bottom;
+    background-color: #008db1;
+    text-align: center;
     padding-right: 8px;
     padding-left: 8px;
-    font-size: 17px;
+    
     font-style: bold;
     padding-top: 10px;
-    transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s, font-size 0.3s, padding-top 0.3s, font-style 0.3s;
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    border-radius: 5px;
+    /* transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s, font-size 0.3s, padding-top 0.3s, font-style 0.3s; */
 }
 
-.thumbnail-title:hover {
+.featured-title {
+    font-variant-caps: small-caps;
+    font-size:18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 300px;
+    height: 210px;
+    opacity: 1;
+    color: white;
+    background-color: #460e56;
+    text-align: center;
+    padding-right: 8px;
+    padding-left: 8px;
+    
+    font-style: bold;
+    padding-top: 10px;
+    position: absolute;
+    left: -60px;
+    bottom: -40px;
+    border-radius: 5px;
+    /* transition: width 0.3s, height 0.3s, background-color 0.3s, opacity 0.3s, font-size 0.3s, padding-top 0.3s, font-style 0.3s; */
+}
+
+.featured-description{
+    font-style: normal;
+    font-variant-caps:normal;
+    
+    font-size:15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* .thumbnail-title:hover {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -305,10 +388,45 @@
     padding-top: 16px;
     font-style: bold;
     background-color: lightgray;
+} */
+
+.footer{
+    opacity: 0.85;
+    width: 40vw;
+    font-variant-caps: small-caps;
+    font-size: 21px;
+    position: relative;
+    left: 30vw;
+    bottom: 10px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Georgia';
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.copyright{
+    opacity: 0.85;
+    width: 40vw;
+    font-variant-caps: small-caps;
+    font-size: 15px;
+    position: relative;
+    left: 38vw;
+    bottom: 10px;
+    height: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Georgia';
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .site-intro {
-    width: 500px;
+    width:300px;
+    position:absolute;
+    left:35vw;
+    top:0vh;
     height: 15vh;
     margin-top: 1vh;
     margin-bottom: -4vh;
@@ -316,8 +434,8 @@
     padding-top:2vh;
     text-align: left;
     font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border-bottom: 1px solid black;
+    font-family: 'Georgia';
+    text-align: center;
 }
 
 .site-intro:first-child::first-letter{
@@ -335,3 +453,65 @@
 .thumbnail-right {
     float: right
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+.title-left{
+    font-size: 180px;
+    position: relative;
+    float:left;
+    top:-40px;
+    font-family: 'Libre Baskerville', serif;
+    color: #008db1;
+    letter-spacing: 8px;
+    opacity: 70%;
+}
+
+.title-right{
+    font-size: 180px;
+    position:relative;
+    float:right;
+    top:-40px;
+    font-family: 'Libre Baskerville', serif;
+    color: #008db1;
+    letter-spacing: 8px;
+    opacity: 70%;
+}
+
+.insta-icon{
+    padding:20px;
+    width:70px;
+    opacity:60%;
+    position: relative;
+    top:16vh;
+    left:20vw;
+    border-top: 1px solid black;
+}
+
+.more-stories{
+    position: relative;
+    width: 50px;
+    opacity:100%;
+}
+
+.more-stories-text{
+    font-size:20px;
+    color:#460e56;
+    opacity:100%;
+    margin-left:10px;
+    font-weight:700;
+}
+/* position: absolute;
+    bottom: 4vh;
+    left:47.5vw; */
+
+.more-stories-container{
+    position:relative;
+    width:100vw;
+    height:60px;
+    top: -7vh;
+    text-align: center;
+}
+
+
+

@@ -14,6 +14,7 @@ class ArticlePane extends Component {
     }
 
     render() {
+        document.body.style.overflowY = "hidden";
         var introLabel
 
         return (

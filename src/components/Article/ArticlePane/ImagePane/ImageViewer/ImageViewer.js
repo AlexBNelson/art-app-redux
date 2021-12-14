@@ -55,7 +55,7 @@ class ImageViewer extends Component {
                 zoomInButton: 'zoom-in',
                 zoomOutButton: 'zoom-out',
                 homeButton: 'reset',
-                defaultZoomLevel: 1.05,
+                defaultZoomLevel: 1.20,
                 zoomPerScroll: 1,
                 zoomPerClick: 1,
                 panVertical: false,
@@ -72,6 +72,9 @@ class ImageViewer extends Component {
         }else{
           this.setState({
             viewer: OpenSeadragon({
+                button:{
+
+                },
                 id: 'seadragon',
                 fullPageButton: 'full-screen',
                 zoomInButton: 'zoom-in',

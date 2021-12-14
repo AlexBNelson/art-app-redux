@@ -130,7 +130,6 @@ class TextPane extends Component {
                                                   
                         </span>
                         <div class="mobile-header-author" style={{margin: (7 + headerOffset) + "vh 0 0 0"}}>{data.introPage.author}</div>
-                        <PageIndicatorContainer class="mobile-page-indicator" page={1} total={data.bodyPages.length+2}/>
                         <div class="mobile-button-container-intro">
                             <button class="mobile-next-button" onClick={self.nextPage.bind(self)}>
                                 <img class="mobile-button-img" src={arrowLeft}/>
@@ -162,7 +161,6 @@ class TextPane extends Component {
                         </div>
                       </div>)
 
-            titleLabel = (<div class="mobile-title-label">{data.introPage.title}</div>)
         }
         else {
             body = data.appendixPage.sources

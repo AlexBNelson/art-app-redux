@@ -5,12 +5,14 @@ import '../App.css';
 import '../bootstrap.css'
 import ArticleThumbnailContainer from './Home/ArticleThumbnailContainer.js'
 import SiteIntroComponent from './Home/SiteIntroComponent.js'
-import ArticleCarousel from './Home/ArticleCarousel.js'
+import ArticleSection from './Home/ArticleSection.js'
+import instag from '../instag.svg'; 
+
 
 
 class Home extends Component {
 
-
+   
 
     render() {
 
@@ -18,10 +20,15 @@ class Home extends Component {
         //dyptych is an online museum curating the most compelling stories in art from across history and the globe, in a unique side-by-side format.
         return (
             <div class="home">
-                <div class="site-intro">Welcome to Dyptych, an online museum curating the most compelling stories in art from across history and the globe, in a unique side-by-side format. Enjoy and Explore!</div>
+                <p class="title-left">dyp</p>
+                <p class="title-right">tych</p>
+                <div><a href="https://www.instagram.com/dyptych_art/?hl=en" target="_blank"><img class="insta-icon" src={instag} href="https://www.instagram.com/dyptych_art/?hl=en"/></a></div>
                 
-                <ArticleCarousel centerMode={true} />
-
+                <div class="site-intro">Welcome to Dyptych, where we reveal the stories of the past through the eyes of its greatest artists!</div>
+                
+                <ArticleSection />
+                <div class="footer"><a>About</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <a>  Categories</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a>Image Rights</a></div>
+                <a class="copyright">Copyright Dyptych 2021</a>
             </div>
         )
     }

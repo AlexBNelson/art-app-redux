@@ -1,6 +1,6 @@
-html, body {
-    overflow: hidden;
-    height: 100%;
+body {
+    overflow-y:scroll;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -28,7 +28,6 @@ article-intro-gap {
 
 .article-pane{
     position:fixed;
-    top:41px;
 }
 
 .background-container{
@@ -67,15 +66,14 @@ article-intro-gap {
 }
 
 .article-body-pane {
-    padding-top: 5vh;
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin-left: 40px;
+    margin-right:40px;
     
-    
-    font-family: 'Ovo', serif;
-    font-weight: 100;
+    text-align:justify;
+    font-family: 'Ovo';
+    font-weight: bold;
     padding-bottom: 6vh;
-    color: rgb(250, 250, 250);
+    color: black;
     
 }
 
@@ -86,18 +84,29 @@ article-intro-gap {
 .article-text-pane {
     overflow-y: scroll;
     flex: 1;
-    height: 97vh;
+    height: 100vh;
     width: 45vw;
     margin-right: -1vw;
-    background-color: #494949;
-    color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250);;;
+    color: black;
+}
+
+.article-text-pane-intro {
+    overflow-y: scroll;
+    height: 100vh;
+    width: 45vw;
+    position:absolute;
+    left:-23vw;
+    margin-right: -1vw;
+    background-color: rgb(250, 250, 250);
+    color: black;
 }
 
 
 .article-header{
-    height:30vh;
+    height:25vh;
     width: auto;
-    color: rgb(250, 250, 250);
+    color: black;
     z-index:999999999999999999999;
 }
 
@@ -108,22 +117,23 @@ article-intro-gap {
 .article-header-intro{
     height:17vh;
     width: auto;
-    background-color: #494949;
-    color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250);;;
+    color: black;
 }
 
 .article-header-title{
     width: 43.8vw;
     padding-left:4vw;
     padding-right:4vw;
-    padding-top: 4px;
+    padding-top: 15px;
     position:absolute;
     display: inline-block;
     text-align: center;
     font-size: 28px;
     z-index: 9999998;
     font-family: 'Lora', serif;
-    background-color: #494949;
+    background-color: rgb(250, 250, 250);
+    font-weight:800;
 }
 
 
@@ -132,16 +142,16 @@ article-intro-gap {
     padding-left:4vw;
     padding-right:4vw;
     padding-bottom: 1vh;
-    padding-top: 0.5vh;
+    padding-top: 5vh;
     position:absolute;
     display: inline-block;
     text-align: center;
-    font-size: 32px;
+    font-size: 36px;
     z-index: 9999998;
-    background-color: #494949;
+    background-color: rgb(250, 250, 250);;;
     /*font-family: 'Cinzel', serif;*/
     font-family: 'Playfair Display SC', serif;
-    font-weight: 500;
+    font-weight: 800;
 }
 
 .article-header-artist{
@@ -149,59 +159,50 @@ article-intro-gap {
     position:absolute;
     display: inline-block;
     padding-top:6vh;
-    top: 1vh;
+    top: 4vh;
     text-align: center;
     z-index: 999999;
     padding-bottom: 1vh;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(201, 201, 201);
-    background-color: #494949;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    color: rgb(22, 22, 22);
+    background-color: rgb(250, 250, 250);;;
 }
 
-.article-header-author{
-    width: 43.8vw;
+.article-header-details{
+    width: 35vw;
     position:relative;
+    left:5vw;
     display: inline-block;
-    margin-top:7.3vh;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(201, 201, 201);
-    background-color: #494949;
-}
-
-.article-header-medium{
-    width: 43.8vw;
-    position:relative;
-    display: inline-block;
-    top: 2.5vh;
+    margin-top: 15vh;
     text-align: center;
     z-index: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(201, 201, 201);
+    font-family: 'Lora', serif;
+    color: rgb(22, 22, 22);
+    font-weight: bold;
 }
 
-.article-header-museum{
+.article-header-details-shift{
     width: 43.8vw;
     position:relative;
     display: inline-block;
-    top: 3.5vh;
+    margin-top: 20vh;
     text-align: center;
     z-index: 0;
-    padding-bottom: 1vh;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(201, 201, 201);
+    font-family: 'Lora', serif;
+    color: rgb(22, 22, 22);
+    font-weight: bold;
 }
 
 .article-header-date{
     width: 43.8vw;
     position:relative;
     display: inline-block;
-    top: 1.5vh;
+    top: 15vh;
     text-align: center;
     z-index: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(201, 201, 201);
+    color: black;
 }
 
 
@@ -210,25 +211,27 @@ article-intro-gap {
     position:absolute;
     display: inline-block;
     padding-top:6vh;
-    top: 5.5vh;
+    top: 10vh;
     text-align: center;
     z-index: 999999;
     padding-bottom: 1vh;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #494949;
-    color: rgb(201, 201, 201);
+    font-family: 'Lora', serif;
+    background-color: rgb(250, 250, 250);;
+    color: black;
+    font-weight:bold;
 }
 
 .article-header-author-shift{
     width: 43.8vw;
     position:relative;
     display: inline-block;
-    margin-top:14vh;
+    margin-top:18vh;
     text-align: center;
     font-size: 16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(201, 201, 201);
-    background-color: #494949;
+    font-family: 'Lora', serif;
+    color: black;
+    
+    background-color: rgb(250, 250, 250);;;
 }
 
 .article-header-scroll{
@@ -239,23 +242,24 @@ article-intro-gap {
 
 
 .article-image-pane {
-    height: 95vh;
+    height: 100vh;
     width: 55.2vw;
     position: absolute;
     left: 0vw;
-    z-index: 0;
-    background-color: black;
-    box-shadow: 5px 0px 3px -4px rgb(31,31,31);
+    z-index: 0 !important;
+    background-color: rgb(250, 250, 250);
 }
 
 .article-image-pane-intro {
-    height: 95vh;
-    width: 56vw;
+    height: 100vh;
+    width: 100vw !important;
     position: absolute;
     left: 0vw;
-    z-index: 0;
-    background-color: #494949;
+    z-index: 0 !important;
+    background-color: rgb(250, 250, 250);
 }
+
+
 
 .article-image-pane * {
  
@@ -304,7 +308,7 @@ article-intro-gap {
 /*
 
 .article-link{
-    color: rgb(250, 250, 250);
+    color: rgb(250, 250, 250);;;
     position: relative;
     display: inline-block;
     text-decoration: none;
@@ -317,7 +321,7 @@ article-intro-gap {
     left: 0px;
     width: 100%;
     height: 10%;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(250, 250, 250);;;
     opacity: .5;
     transition: all .1s ease;
 }
@@ -340,10 +344,10 @@ article-intro-gap {
 .image-credit{
     font-family: 'trebuchet ms';
     background-color: rgb(49, 49, 49);
-    color: white;
+    color: rgb(250, 250, 250);;;
     margin-top: 100px;
     width: 8vw;
-    border: 1px solid white;
+    border: 1px solid rgb(250, 250, 250);;;
     padding-left: 2px;
     padding-right: 2px;
 }
@@ -367,7 +371,7 @@ article-intro-gap {
     text-overflow: ellipsis;
     height: 13px;
     overflow: hidden;
-    white-space: nowrap;
+    background-color: rgb(250, 250, 250);;;
 }
 
 .info-title {
@@ -419,36 +423,36 @@ article-intro-gap {
 
 #zoom-in{
     background-color: black;
-    color: white;
+    color: rgb(250, 250, 250);;;
     width: 8vw;
     margin-top: 5vh;
-    border: 1px solid white;
+    border: 1px solid rgb(250, 250, 250);;;
 
 
 }
 
 #zoom-out{
     background-color: black;
-    color: white;
+    color: rgb(250, 250, 250);;;
     width: 8vw;
     margin-top: 6vh;
-    border: 1px solid white;
+    border: 1px solid rgb(250, 250, 250);;;
 }
 
 #reset{
     background-color: black;
-    color: white;
+    color: rgb(250, 250, 250);;;
     width: 8vw;
     margin-top: 6vh;
-    border: 1px solid white;
+    border: 1px solid rgb(250, 250, 250);;;
 }
 #full-screen{
     background-color: black;
     border: none;
     width: 8vw;
     margin-top: 6vh;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid rgb(250, 250, 250);;;
+    color: rgb(250, 250, 250);;;
 }
 
 .full-screen-image{
@@ -550,8 +554,8 @@ article-intro-gap {
     height:40px;
     width:500px;
     overflow: hidden;
-    -webkit-mask-image: linear-gradient(to right, transparent 25%, white 75%);
-    mask-image: linear-gradient(to right, transparent 25%, white 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent 25%, rgb(250, 250, 250);; 75%);
+    mask-image: linear-gradient(to right, transparent 25%, rgb(250, 250, 250);; 75%);
     
 }
 
@@ -565,22 +569,11 @@ article-intro-gap {
 }
 
 .intro-label{
-    background-color: #494949;
-    opacity: 1;
-    color:rgb(250, 250, 250);
+    font-style:italic;
+    color:black;
     font-size: 14px;
-    font-weight: lighter;
-    bottom: 0px;
-    left:0px;
-    position: absolute;
-    width: 51.3vw;
-    z-index: 9999999999;
-    padding-right: 8px;
-    padding-left: 8px;
-    padding-bottom: 4px;
-    border-radius: 0px 8px 0px 0px;;
-    font-family: 'Source Sans Pro', 'sans-serif';
-    box-shadow: 0px -3px 0px 0px black;
+    margin-top:70px;
+    
 
 }
 
@@ -592,7 +585,7 @@ article-intro-gap {
     z-index: 999999999;
     font-weight: 1000;
     font-size: large;
-    color: white;
+    color: rgb(250, 250, 250);;;
     /*-webkit-background-size: cover;
             background-size: cover;
     -webkit-background-clip: text;
@@ -619,7 +612,7 @@ article-intro-gap {
     font-weight: 1000;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
-    color: white;
+    color: rgb(250, 250, 250);;;
     /*-webkit-background-size: cover;
             background-size: cover;
     -webkit-background-clip: text;
@@ -714,18 +707,38 @@ article-intro-gap {
 .prev-button{
     float: left;
     position: absolute;
-    top: 2vh;
+    top: 6vh;
     z-index: 9999999999999;
     background: none;
     border: none;
     margin-left: 2vw;
 }
 
+.home-button{
+    font-size: 15px;
+    float: left;
+    position: absolute;
+    top: 1vh;
+    left:5vw;
+    z-index: 999999999999999999999999;
+    background: none;
+    border: none;
+    margin-left: 2vw;
+    color:black;
+    
+}
+
+.home-img{
+    z-index: 9999999999999999999999;
+    width:20px;
+    opacity: 0.4;
+}
+
 .next-button{
     right:1vw;
     float: right;
     position: absolute;
-    top: 2vh;
+    top: 6vh;
     z-index: 999999999;
     background: none;
     border: none;

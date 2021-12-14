@@ -21,7 +21,6 @@ class ImagePaneComponent extends Component {
 
         if (this.props.imageSource == 0) {
             imageLink = this.props.article.introPage.imageUrl
-            introLabel = <p class="intro-label">{this.props.article.introPage.imageLabel}</p>
         } else if (this.props.imageSource <= this.props.article.bodyPages.length) {
             imageLink = this.props.article.bodyPages[this.props.imageSource - 1].imageUrl
             imageCredit = this.props.article.bodyPages[this.props.imageSource - 1].imageCredit
@@ -45,7 +44,6 @@ class ImagePaneComponent extends Component {
             <ul>
                 <ImageViewer isIntro={isIntro} key={randomKey} imageCredit={imageCredit} imageLink={imageLink}/>
                 {introHero}
-                {introLabel}
             </ul>
 
         );

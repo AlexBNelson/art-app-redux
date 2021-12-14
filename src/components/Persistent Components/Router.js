@@ -14,7 +14,7 @@ import NavHeadMobile from '../Mobile/NavHeadMobile.js';
 
 const HomePage = () => (
     <div>
-        <NavHeadHome />
+        {/* <NavHeadHome /> */}
         <Home />
     </div>
 );
@@ -29,7 +29,6 @@ const AboutPage = () => (
 
 const ArticlePage = (articleId) => (
     <div>
-        <NavHead />
         <ArticleContainer id={articleId} />
     </div>
 );

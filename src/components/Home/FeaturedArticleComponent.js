@@ -8,7 +8,7 @@ import './Carousel.css'
 
 
 
-class ArticleThumbnailComponent extends Component {
+class FeaturedArticlelComponent extends Component {
 
     constructor(props) {
         super(props)
@@ -50,13 +50,13 @@ class ArticleThumbnailComponent extends Component {
         var self = this;
 
         return (
-            <div  class="thumbnail-container" >
-                <a href={link}><img class="thumbnail-image" src={thumbnail.imageUri} /></a>
-                <div class="thumbnail-title"> {thumbnail.title}</div>
+            <div  class="featured-container" >
+                <a href={link}><img class="featured-image" src={thumbnail.imageUri} /></a>
+                <div class="featured-title">Featured: {thumbnail.title}<p class="featured-description">Gustave Caillebotte bankrolled the Impressionists, but often did not paint like them. He had his own ideas about how to paint modernity, and they centred around the newly rebuilt Paris of the 1870s. </p></div>
                 
             </div>
         )
     }
 }
 
-export default connect()(ArticleThumbnailComponent);
+export default connect()(FeaturedArticlelComponent);
