@@ -231,10 +231,10 @@
 
 
 .thumbnail-container {
-    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 4s; /* Firefox < 16 */
-    -o-animation: fadein 4s; /* Opera < 12.1 */
-    animation: fadein 4s;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
     position: relative;
     text-align: center;
     color: rgb(116, 102, 102);
@@ -250,10 +250,10 @@
 }
 
 .featured-container {
-    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 4s; /* Firefox < 16 */
-    -o-animation: fadein 4s; /* Opera < 12.1 */
-    animation: fadein 4s;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
     position: relative;
     top:-40px;
     text-align: center;
@@ -389,6 +389,10 @@
     font-style: bold;
     background-color: lightgray;
 } */
+.secondary-section{
+    position: relative;
+    padding-left:25px;
+}
 
 .footer{
     opacity: 0.85;
@@ -396,7 +400,7 @@
     font-variant-caps: small-caps;
     font-size: 21px;
     position: relative;
-    left: 30vw;
+    left: 29vw;
     bottom: 10px;
     height: 40px;
     font-weight: 400;
@@ -404,6 +408,19 @@
     font-family: 'Georgia';
     margin-bottom: 50px;
     margin-top: 20px;
+    
+}
+
+.footer a{
+    color:black !important;
+}
+
+.home-button-about{
+    width:40px;
+    opacity:0.8;
+    margin-top:60px;
+    margin-bottom:-200px;
+    position: relative;
 }
 
 .copyright{

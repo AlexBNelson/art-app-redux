@@ -644,10 +644,11 @@ article-intro-gap {
     padding-right: 4vw;
     padding-left: 4vw;
     font-style: italic;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-    font-size: 19px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 17px;
 }
+
 
 .quote-mark{
     font-size: 32px;
@@ -745,7 +746,26 @@ article-intro-gap {
     margin-right: 2vw;
 }
 
+.next-button-intro{
+    right:-15px;
+    float: right;
+    position: absolute;
+    top: 6vh;
+    z-index: 999999999;
+    background: none;
+    border: none;
+    margin-right: 2vw;
+}
+
 .button-img {
     width: 1vw;
     z-index: 999999999;
+}
+
+.continue-article{
+    font-size:10px;
+    margin-top:10px;
+    font-weight:bold;
+    opacity:0.8;
+    font-style:italic;
 }

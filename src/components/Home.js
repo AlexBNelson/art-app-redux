@@ -27,7 +27,7 @@ class Home extends Component {
                 <div class="site-intro">Welcome to Dyptych, where we reveal the stories of the past through the eyes of its greatest artists!</div>
                 
                 <ArticleSection />
-                <div class="footer"><a>About</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <a>  Categories</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a>Image Rights</a></div>
+                <div class="footer"><a href="/About">About</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a>More Articles coming soon!</a></div>
                 <a class="copyright">Copyright Dyptych 2021</a>
             </div>
         )

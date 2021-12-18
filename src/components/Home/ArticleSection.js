@@ -65,14 +65,19 @@ class ArticleSection extends Component {
             {/* </section>
             
             <section class="second-page"> */}
+
+            <div class="secondary-section">
             <ArticleThumbnailContainer id="Persian2859d1fc-ed35-4c11-abb5-444c8d491c1b"/>
             <ArticleThumbnailContainer id="Suffolk5efa11d3-17cc-4b45-9d4b-2a25fb3dfa6c"/>
                 <ArticleThumbnailContainer id="Whistler07f2fc85-e9e2-4d08-b570-a43a104d93a7"/>
                 <ArticleThumbnailContainer id="Exekiasa11e87fa-3b16-44de-9354-446c771bc259"/>
-                <ArticleThumbnailContainer id="Caillebotte49ce37ab-95e4-4873-bd00-d2fd88c6e36c"/>
-            <ArticleThumbnailContainer id="Pieter609b400b-fdd6-4e5a-bc48-8d92c1bb0bdb"/>
-                <ArticleThumbnailContainer id="Goya6089bfaa-63f6-47f8-97dd-f361e45b7ac1"/>
-                <ArticleThumbnailContainer id="Muralismof2fecee1-3036-4a47-978e-f7b34c93b885"/>
+                </div>
+                <div class="secondary-section">
+                <ArticleThumbnailContainer id="EarlyRenaissancef89f01df-da5a-4b5d-acbf-51c561b084db"/>
+            <ArticleThumbnailContainer id="Kollwitz0c9e7e0c-b62d-4c3f-83ff-bf044f674121"/>
+                <ArticleThumbnailContainer id="Fayum17a7b69e-212e-421f-ac17-894b68ca9527"/>
+                <ArticleThumbnailContainer id="Sargent34da7c7e-54ba-4e56-83ec-e9635c531e50"/>
+                </div>
             {/* </section> */}
             </div>
             

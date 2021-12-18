@@ -8,6 +8,7 @@ import '../Article.css'
 import { connect } from 'react-redux'
 import { setArticleData } from '../actions'
 import axios from "axios"
+import homeButton from '../home-button.svg';
 
 class About extends Component {
 
@@ -23,15 +24,20 @@ class About extends Component {
 
             return (
                 <div class="about">
-                    <br/><br/><br/><br/><br/><br/>
-                    <p>Hi, I'm Alex, and I have a passion for Art and Web Development. I created Dyptych to combine the elements of image-centric design, rigorous interpretation and storytelling to create an deep and engaging digital art experience</p>
-                    <br/><br/>
+                    <br/><br/><br/>
+                    <a href="/" class="home-button-about"><img class="home-img" src={homeButton}/></a>
+                    <br/><br/><br/>
+                    <p>Dyptych aims to tell the stories of art through close visual analysis and exploring its wider context, in an accessible and readable way</p>
+                    <br/>
+                    
                     <p>All Text, Design and Source Code Copyright Dyptych/Alex Nelson 2020. Refer to original institutions for image rights.</p>
-                    <p>Dyptych respects the rights of image creators and owners. The majority of images are taken from Wikimedia and are public domain. For any copyright queries, please get in touch at dyptych@zoho.com</p>
-                    <a href="https://www.nationalgallery.org.uk/paintings/glossary/diptych" target="_blank">What is a diptych?</a>
+                    <br/><p>Dyptych respects the rights of image creators and owners. The majority of images are taken from Wikimedia and are public domain. For any copyright queries, please get in touch at dyptych@zoho.com</p>
+                    
+                    <br/><p>The name is taken from the word 'diptych', which is an artwork with two panels. Similar to a diptych, in our articles we use a format with image and text side-by-side.</p>
+
                     <br/><br/>
-                    <p>Logo Background Image: <span class="italic-about">Mont St. Victoire</span>, Paul Cezanne</p>
-                    <p>Image viewer powered by OpenSeaDragon<img class="osd-logo" src="https://avatars2.githubusercontent.com/u/3392630?s=200&v=4"/></p>
+                    
+                    <p>Image viewer powered by OpenSeaDragon</p>
                 </div>)
         }
     }

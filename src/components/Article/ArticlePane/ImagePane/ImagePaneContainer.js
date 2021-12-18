@@ -17,10 +17,14 @@ const getImageSource = (source) => {
     return source;
 }
 
+const getImageLink = (imgLink) => {
+    return imgLink;
+}
 
 const mapStateToProps = state => ({
     viewState: getViewState(state.visibilityFilter),
-    imageSource: getImageSource(state.imagePaneSource)
+    imageSource: getImageSource(state.imagePaneSource),
+    imgLink: getImageLink(state.imageLink)
 })
 
 export default connect(

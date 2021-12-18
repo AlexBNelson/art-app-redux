@@ -9,6 +9,11 @@ export const setImageSource = source => ({
     source
 })
 
+export const setImageLink = imgLink => ({
+    type: 'SET_IMAGE_LINK',
+    imgLink
+})
+
 export const setScrollValue = value => ({
     type: 'SET_SCROLL_VALUE',
     value

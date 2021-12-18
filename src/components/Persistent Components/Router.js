@@ -21,7 +21,6 @@ const HomePage = () => (
 
 const AboutPage = () => (
     <div>
-        <NavHeadHome />
         <About />
     </div>
 

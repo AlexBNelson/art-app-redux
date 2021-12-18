@@ -4,10 +4,12 @@ import '../../../../bootstrap.css';
 import '../../../../Article.css';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { setVisibilityFilter, setImageSource, setScrollValue } from '../../../../actions'
+import { setVisibilityFilter, setImageSource, setScrollValue, setImageLink } from '../../../../actions'
 import arrowLeft from '../../../../arrowLeft.svg';
 import arrowRight from '../../../../arrowRight.svg';
 import homeButton from '../../../../home-button.svg';
+import twitterIcon from '../../../../twitter.svg';
+import facebookIcon from '../../../../facebook.svg';
 import PageIndicatorContainer from './PageIndicatorContainer.js';
 import creativeCommons from '../../../../cc.svg';
 
@@ -31,6 +33,7 @@ class TextPane extends Component {
 
         this.previousPage.bind(this)
         this.nextPage.bind(this)
+        this.hoverImage.bind(this)
 
         this.introRef = React.createRef()
         this.titleRef = React.createRef()
@@ -54,6 +57,13 @@ class TextPane extends Component {
         }
     }
 
+    hoverImage(link) {
+        console.log(link)
+        const { dispatch } = this.props;
+        dispatch(setImageLink(link))
+
+    }
+
     nextPage() {
 
         const { dispatch } = this.props;
@@ -75,6 +85,21 @@ class TextPane extends Component {
     formText(bodyText) {
         var formedText = [];
 
+        var linkArray = []
+
+        var linkCount = 0
+
+        for (var q = 0; q < bodyText.body.length; q++) {
+            for (var p = 0; p < bodyText.body[q].elements.length; p++) {
+                if(bodyText.body[q].elements[p].style==3){
+                    linkArray.push(bodyText.body[q].elements[p].uri)
+                }
+            }}
+
+            
+            var link="";
+
+
         for (var i = 0; i < bodyText.body.length; i++) {
 
             var para = [];
@@ -94,13 +119,18 @@ class TextPane extends Component {
                         para.push(<b> {element.text}</b>)
                         break;
                     case 3:
-                        para.push(<a class="article-link" target="_blank" href={element.uri}>&nbsp;{element.text}</a>)
+                        link=element.uri
+                        // para.push(<a class="article-link" onMouseEnter ={() => this.hoverImage(link)}
+                        // onMouseLeave ={() => this.hoverImage("")} target="_blank" href={element.uri}>{element.text}</a>)
+                        para.push(<a class="article-link"  target="_blank" href={element.uri}>{element.text}</a>)
+                        linkCount++
                         break;
                     case 4:
                         para.push(<p class="quote"><strong class="quote-mark">"</strong> {element.text}</p>)
                         break;
                     default:
                 }
+                
             }
             if(i==0){
                 formedText.push(<p class="body-para-first">{para}</p>);
@@ -109,6 +139,10 @@ class TextPane extends Component {
                 formedText.push(<p class="body-para">{para}</p>);
             }
         }
+
+        console.log(linkArray)
+
+        console.log(linkCount)
         return formedText;
     } 
 
@@ -137,8 +171,9 @@ class TextPane extends Component {
                 header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
                         <span>                          
                             <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
-                            <button class="next-button" onClick={self.nextPage.bind(self)}>
+                            <button class="next-button-intro" onClick={self.nextPage.bind(self)}>
                                 <img class="button-img" src={arrowRight}/>
+                                <p class="continue-article">Continue</p>
                             </button>                        
                         </span>
                         <div class="article-header-author">{data.introPage.author}</div>
@@ -148,8 +183,9 @@ class TextPane extends Component {
                 header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
                 <span>                          
                     <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
-                    <button class="next-button" onClick={self.nextPage.bind(self)}>
+                    <button class="next-button-intro" onClick={self.nextPage.bind(self)}>
                         <img class="button-img" src={arrowRight}/>
+                        <p class="continue-article">Continue</p>
                     </button>                        
                 </span>
                 <div class="article-header-author-shift">{data.introPage.author}</div>
@@ -211,7 +247,10 @@ class TextPane extends Component {
                 sources.push(<p><a target="_blank" href={sourceArray[i]}>{sourceArray[i]}</a></p>)
             }
 
-            body = <div><div>Related Articles</div><p><h3>Sources:</h3> </p>{sources}</div>
+            body = <div>
+            <div><h4>Share:&nbsp;&nbsp;&nbsp; <img src={twitterIcon}/>&nbsp;&nbsp;<img src={facebookIcon}/></h4> </div>
+            <br/>
+            <p><h4>Sources:</h4> </p>{sources}</div>
 
             header = (<div class="article-header">
                         <span>
