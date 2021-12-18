@@ -3,89 +3,32 @@ import React, { Component } from 'react';
 import logo from '../logo.svg';
 import '../App.css';
 import '../bootstrap.css'
-import ArticleThumbnailComponent from './Home/ArticleThumbnailComponent.js'
+import ArticleThumbnailContainer from './Home/ArticleThumbnailContainer.js'
 import SiteIntroComponent from './Home/SiteIntroComponent.js'
+import ArticleSection from './Home/ArticleSection.js'
+import instag from '../instag.svg'; 
 
 
 
 class Home extends Component {
 
-    //     <div class="row home-row">
-    //    <div class="col-lg-6 home-cell container">
-    //        <div class="row home-inner-row">
-    //            <div class="home-article-col">
-    //            </div>
-    //            <div class="home-article-col">
-    //            </div>
-    //        </div>
-    //    </div>
-    //    <div class="col-lg-6 home-cell container">
-    //        <div class="row home-article-row">
-    //        </div>
-    //        <div class="row home-article-row">
-    //        </div>
-    //    </div>
-    //</div>
-    //    <div class="row home-row">
-    //        <div class="col-lg-6 home-cell container">
-    //            <div class="row home-article-row">
-    //            </div>
-    //            <div class="row home-article-row">
-    //            </div>
-    //        </div>
-    //        <div class="col-lg-6 home-cell container">
-    //            <div class="row home-inner-row">
-    //                <div class="home-article-col">
-    //                </div>
-    //                <div class="home-article-col">
-    //                </div>
-    //            </div>
-    //        </div>
-    //    </div>
+   
 
     render() {
-        return (
-            <div class="container-fluid home-container">
-                <div class="row">
-                    <div class="col-lg-4 container">
-                        <row>
-                            <SiteIntroComponent />
-                        </row>
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                    <div class="col-lg-2">
-                        <ArticleThumbnailComponent id='c0ee64d3-14c4-41cc-9548-c371118c32ab' />
-                    </div>
-                </div>
 
+        //add to bottom <div class="home-footer">All content copyright Dyptych/Alex Nelson 2020</div>
+        //dyptych is an online museum curating the most compelling stories in art from across history and the globe, in a unique side-by-side format.
+        return (
+            <div class="home">
+                <p class="title-left">dyp</p>
+                <p class="title-right">tych</p>
+                <div><a href="https://www.instagram.com/dyptych_art/?hl=en" target="_blank"><img class="insta-icon" src={instag} href="https://www.instagram.com/dyptych_art/?hl=en"/></a></div>
+                
+                <div class="site-intro">Welcome to Dyptych, where we reveal the stories of the past through the eyes of its greatest artists!</div>
+                
+                <ArticleSection />
+                <div class="footer"><a href="/About">About</a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a>More Articles coming soon!</a></div>
+                <a class="copyright">Copyright Dyptych 2021</a>
             </div>
         )
     }

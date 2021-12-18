@@ -8,7 +8,7 @@ import instagram from '../../instagram.svg';
 import copyright from '../../Copyright.svg'; 
 import '../../App.css';
 
-class NavHead extends Component {
+class NavHeadHome extends Component {
     render() {
 
         const isIE = /*@cc_on!@*/false || !!document.documentMode;
@@ -17,13 +17,12 @@ class NavHead extends Component {
 
         return (
             <div>
-                <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head navbar-fixed-top">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light nav-head-home navbar-fixed-top">
                     <div class="container-fluid">
                         
                         <a class="navbar-brand dyptych-logo-container" href="/">
                             {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
-                            : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
-                            
+                            : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}<span style={{paddingLeft: '100px'}}> </span>(BETA)
                         </a>
                         
 
@@ -36,7 +35,7 @@ class NavHead extends Component {
                                     <a class="nav-link" href="/About">About</a>
                                 </li>
                                 
-                                <a class="insta-link" target="_blank" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></a>
+                                <div class="follow-us">follow us on</div><a class="insta-link" target="_blank" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></a>
                                 <img class="copyright" src={copyright}/>
                             </ul>
                             
@@ -47,7 +46,7 @@ class NavHead extends Component {
     }
 }
 
-export default NavHead;
+export default NavHeadHome;
 
 /*<li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,5 +58,4 @@ export default NavHead;
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#">Architecture</a>
                                     </div>
-                                </li>
-                                --articles tab*/
+                                </li>*/

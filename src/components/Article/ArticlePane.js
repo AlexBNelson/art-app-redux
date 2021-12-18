@@ -9,20 +9,28 @@ import ImagePaneContainer from './ArticlePane/ImagePane/ImagePaneContainer'
 
 class ArticlePane extends Component {
 
+    constructor(props){
+        super(props)
+    }
+
     render() {
+        document.body.style.overflowY = "hidden";
+        var introLabel
+
         return (
-           
-            <div class="container-fluid">
+            
+
+            <div class="container-fluid article-pane">
                 <div class="row">
                     <div class="col-6 article-image-div">
-                        <ImagePaneContainer id={this.props.id}/>
+                        <ImagePaneContainer article={this.props.article} id={this.props.id} />
                     </div>
                     <div class="col-6 article-text-div">
-                        <TextPaneContainer id={this.props.id}/>
+                        <TextPaneContainer article={this.props.article} id={this.props.id} />
                     </div>
 
                 </div>
-                </div>
+            </div>
 
         );
     }

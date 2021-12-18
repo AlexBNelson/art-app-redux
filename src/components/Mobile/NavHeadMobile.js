@@ -7,8 +7,9 @@ import { Link } from 'react-router-component';
 import instagram from '../../instagram.svg'; 
 import copyright from '../../Copyright.svg'; 
 import '../../App.css';
+import './Mobile.css';
 
-class NavHead extends Component {
+class NavHeadMobile extends Component {
     render() {
 
         const isIE = /*@cc_on!@*/false || !!document.documentMode;
@@ -21,9 +22,8 @@ class NavHead extends Component {
                     <div class="container-fluid">
                         
                         <a class="navbar-brand dyptych-logo-container" href="/">
-                            {isEdge ? <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
-                            : <img class="dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
-                            
+                            {isEdge ? <img class="mobile-dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitkaIE.svg' />
+                            : <img class="mobile-dyptych-logo" src='https://dyptycharticles.blob.core.windows.net/images/dyptychLogoSitka.svg'/>}
                         </a>
                         
 
@@ -35,21 +35,7 @@ class NavHead extends Component {
                                 <li class="nav-item active">
                                     <a class="nav-link" href="/About">About</a>
                                 </li>
-                                
-                                <a class="insta-link" target="_blank" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></a>
-                                <img class="copyright" src={copyright}/>
-                            </ul>
-                            
-                        </div></div>
-                </nav>
-            </div>
-        );
-    }
-}
-
-export default NavHead;
-
-/*<li class="nav-item dropdown">
+                                <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Articles
                                     </a>
@@ -60,4 +46,15 @@ export default NavHead;
                                         <a class="dropdown-item" href="#">Architecture</a>
                                     </div>
                                 </li>
-                                --articles tab*/
+                                <Link class="insta-link" target="_blank" to="https://www.instagram.com/dyptych_art" href="https://www.instagram.com/dyptych_art"><img class="insta" src={instagram}/></Link>
+                                <img class="copyright" src={copyright}/>
+                            </ul>
+                            
+                        </div></div>
+                </nav>
+            </div>
+        );
+    }
+}
+
+export default NavHeadMobile;

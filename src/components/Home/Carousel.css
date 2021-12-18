@@ -1,0 +1,39 @@
+.slider-image-item {
+    padding: 20px 0 20px 20px;
+    position:absolute;
+    top: 30vh;
+    height:50vh;
+    width:100vw;
+    display: inline-block	;
+    flex-shrink:0;
+  }
+
+  .carousel-container-with-scrollbar {
+    padding-left: 1.5vw;
+    padding-bottom: 20px;
+    overflow: visible !important;
+  }
+
+  .react-multi-carousel-dot-list{
+    bottom: 40px !important;
+  }
+
+  .second-page{
+    position:absolute;
+    height:70vh;
+    width:100vw;
+  }
+
+  .section-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    top: -5vh;
+    width:100vw;
+    position:relative;
+    margin-left: 30px;
+
+  }
+  
+
+ 

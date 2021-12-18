@@ -15,41 +15,28 @@ class ImagePaneComponent extends Component {
 
         var imageLink;
 
-        var imageCredit;
-
         var introLabel;
 
+        var isIntro = false;
+
         if (this.props.imageSource == 0) {
+            isIntro = true;
             imageLink = this.props.article.introPage.imageUrl
+            introLabel = <p class="mobile-intro-label">{this.props.article.introPage.imageLabel}</p>
         } else if (this.props.imageSource <= this.props.article.bodyPages.length) {
-
             imageLink = this.props.article.bodyPages[this.props.imageSource - 1].imageUrl
-
-            if(this.props.imgLink !=""){
-                imageLink = this.props.imgLink
-            }
-    
-            imageCredit = this.props.article.bodyPages[this.props.imageSource - 1].imageCredit
         } else {
             imageLink = this.props.article.appendixPage.imageUrl
         }
 
         var randomKey =  Math.random()
 
-        var isIntro = (this.props.imageSource == 0);
-
-        var introHero
-
-        /*if(isIntro){
-            introHero=<div  class="intro-hero"><img class="intro-hero-image" src={imageLink}/></div>
-        }*/
-
 
         return (
 
             <ul>
-                <ImageViewer isIntro={isIntro} key={randomKey} imageCredit={imageCredit} imageLink={imageLink}/>
-                {introHero}
+                <ImageViewer isIntro={isIntro} key={randomKey} imageLink={imageLink}/>
+                {introLabel}
             </ul>
 
         );

@@ -4,45 +4,79 @@ import InDepth from '../InDepth.js'
 import App from '../App.js';
 import Home from '../Home.js'
 import NavHead from './NavHead.js';
-import Article from '../Article.js';
+import NavHeadHome from './NavHeadHome.js';
+import ArticleContainer from '../ArticleContainer';
+import About from '../About';
+import MobileArticle from '../Mobile/Article/MobileArticle.js'
+import MobileHome from '../Mobile/Home/MobileHome.js'
+import NavHeadMobile from '../Mobile/NavHeadMobile.js';
 
 
 const HomePage = () => (
     <div>
-        <NavHead />
+        {/* <NavHeadHome /> */}
         <Home />
     </div>
 );
 
-const InDepthPage = () => (
+const AboutPage = () => (
     <div>
-        <NavHead />
-        <InDepth />
+        <About />
     </div>
 
 );
 
 const ArticlePage = (articleId) => (
     <div>
-        <NavHead />
-        <Article id={articleId} />
+        <ArticleContainer id={articleId} />
     </div>
+);
 
+const MobileHomePage = () => (
+    <div>
+        <NavHeadMobile />
+        <MobileHome />
+    </div>
+);
+
+const MobileArticlePage = (articleId) => (
+    <div>
+        <NavHeadMobile />
+        <MobileArticle id={articleId} />
+    </div>
 );
 
 class Router extends Component {
 
+    constructor() {
+        super();
+        this.state = {
+          width: window.innerWidth,
+        };
+      }
+
     render() {
-        return (
 
+        const { width } = this.state;
+        const isMobile = width <= 500;
 
-            <Locations>
-                <Location path="/" handler={HomePage} />
-                <Location path="/InDepth" handler={InDepthPage} />
-                <Location path="/Article/:articleId" handler={ArticlePage} />
-            </Locations>
+        var desktop = (<Locations>
+            <Location path="/" handler={HomePage} />
+            <Location path="/About" handler={AboutPage} />
+            <Location path="/Article/:articleId" handler={ArticlePage} />
+        </Locations>)
 
-        );
+        var mobile = (<Locations>
+            <Location path="/" handler={MobileHomePage} />
+            <Location path="/About" handler={MobileArticlePage} />
+            <Location path="/Article/:articleId" handler={MobileArticlePage} />
+        </Locations>)
+
+        if(isMobile) {
+            return mobile;
+        }else{
+            return desktop;
+        }
     }
 }
 

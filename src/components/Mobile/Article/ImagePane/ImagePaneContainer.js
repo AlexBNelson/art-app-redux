@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
+import ImagePaneComponent from './ImagePaneComponent'
 import { VisibilityFilters } from '../../../../actions'
-import TextPaneComponent from './TextPaneComponent';
 
-const getViewState = (filter) => {
+const getViewState = ( filter) => {
     switch (filter) {
         case VisibilityFilters.INVISIBLE:
             return true
@@ -17,16 +17,12 @@ const getImageSource = (source) => {
     return source;
 }
 
-const getArticleData = (data) => {
-    return data;
-}
 
 const mapStateToProps = state => ({
     viewState: getViewState(state.visibilityFilter),
-    imageSource: getImageSource(state.imagePaneSource),
-    articleData: getArticleData(state.articleData)
+    imageSource: getImageSource(state.imagePaneSource)
 })
 
 export default connect(
     mapStateToProps
-)(TextPaneComponent)
+)(ImagePaneComponent)

@@ -22,7 +22,7 @@ class SiteIntroComponent extends Component {
         
         return (
             <div class="site-intro">
-                Welcome to Dyptych ("dip-tick")! Immerse yourself in the most significant and powerful works of Art presented in highest definition, alongside analysis that helps unpack the secrets of their genius.   
+                   
             </div>
         )
     }

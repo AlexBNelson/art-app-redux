@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <circle style="fill: rgb(216, 216, 216); stroke: rgb(70, 14, 86); fill-opacity: 0; stroke-width: 8px;" cx="160.882" cy="118.266" r="110.131"/>
+  <rect style="stroke: rgb(70, 14, 86); stroke-width: 4px; fill: rgb(70, 14, 86);" transform="matrix(0.819152, 0.573576, -0.573576, 0.819152, 93.67205, -81.349174)" x="101.172" y="139.977" width="90" height="18" rx="2" ry="2"/>
+  <rect style="stroke: rgb(70, 14, 86); stroke-width: 4px; fill: rgb(70, 14, 86);" transform="matrix(0.819152, -0.573577, 0.573577, 0.819152, -14.562459, 86.039322)" x="101.171" y="139.975" width="90" height="18" rx="2" ry="2"/>
+</svg>

@@ -1,10 +1,10 @@
 import { Location, Locations } from 'react-router-component';
 import React, { Component } from 'react';
 import axios from 'axios'
-import '../../App.css';
-import '../../bootstrap.css'
+import '../../../App.css';
+import '../../../bootstrap.css'
 import { connect } from 'react-redux'
-import './Carousel.css'
+import '../../Home/Carousel.css'
 
 
 
@@ -50,9 +50,9 @@ class ArticleThumbnailComponent extends Component {
         var self = this;
 
         return (
-            <div  class="thumbnail-container" >
-                <a href={link}><img class="thumbnail-image" src={thumbnail.imageUri} /></a>
-                <div class="thumbnail-title"> {thumbnail.title}</div>
+            <div  class="mobile-thumbnail-container" className={this.props.position}>
+                <a href={link}><img class="mobile-thumbnail-image" src={thumbnail.imageUri} /></a>
+                <div class="mobile-thumbnail-title"> {thumbnail.title}<a href={link} class="btn read-button">Read</a></div>
                 
             </div>
         )
