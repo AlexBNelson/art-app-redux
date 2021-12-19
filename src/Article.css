@@ -729,6 +729,16 @@ article-intro-gap {
     
 }
 
+.home-button-intro{
+    left:20px;
+    position: absolute;
+    top: 10px;
+    z-index: 999999999;
+    background: none;
+    width:40px;
+
+}
+
 .home-img{
     z-index: 9999999999999999999999;
     width:20px;
@@ -750,11 +760,18 @@ article-intro-gap {
     right:-15px;
     float: right;
     position: absolute;
-    top: 6vh;
+    top: 55px;
     z-index: 999999999;
     background: none;
     border: none;
     margin-right: 2vw;
+}
+
+.next-button-circle{
+    position:fixed;
+    width:80px;
+    right:50px;
+    bottom:50px;
 }
 
 .button-img {

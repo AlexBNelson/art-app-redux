@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="55mm"
+   height="55mm"
+   viewBox="0 0 55 55"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="continueButton.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.72337262"
+     inkscape:cx="-6.912067"
+     inkscape:cy="31.104302"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-61.579806,-23.540395)">
+    <circle
+       style="font-variation-settings:normal;opacity:1;fill:#ffffff;fill-opacity:0.705645;fill-rule:evenodd;stroke:#460e56;stroke-width:2.364;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1"
+       id="path846"
+       cx="89.434578"
+       cy="52.492458"
+       r="22.667963" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.29167px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:none;fill-opacity:1;stroke:#460e56;stroke-width:0.565;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="70.358131"
+       y="53.898769"
+       id="text5934"><tspan
+         sodipodi:role="line"
+         id="tspan10050"
+         x="70.358131"
+         y="53.898769"
+         style="fill:none;fill-opacity:1;stroke:#460e56;stroke-width:0.565;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">CONTINUE</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#460e56;stroke-width:0.759748;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect42516"
+       width="17.692141"
+       height="0.87282747"
+       x="93.90197"
+       y="-52.81308"
+       transform="matrix(0.61338281,0.78978575,-0.74086635,0.67165248,0,0)" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:0.649193;stroke:#460e56;stroke-width:0.759748;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect42600"
+       width="17.692141"
+       height="0.87282747"
+       x="6.711936"
+       y="114.55009"
+       transform="matrix(0.67127432,-0.741209,0.79009866,0.6129797,0,0)" />
+    <ellipse
+       style="font-variation-settings:normal;opacity:1;fill:none;fill-opacity:0.705645;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.13537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000;stop-opacity:1"
+       id="circle46894"
+       cx="88.703049"
+       cy="52.309578"
+       rx="25.458353"
+       ry="25.641235" />
+  </g>
+</svg>

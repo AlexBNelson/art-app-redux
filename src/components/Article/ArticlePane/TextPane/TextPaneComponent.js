@@ -10,6 +10,7 @@ import arrowRight from '../../../../arrowRight.svg';
 import homeButton from '../../../../home-button.svg';
 import twitterIcon from '../../../../twitter.svg';
 import facebookIcon from '../../../../facebook.svg';
+import continueIcon from '../../../../continueButton.svg';
 import PageIndicatorContainer from './PageIndicatorContainer.js';
 import creativeCommons from '../../../../cc.svg';
 
@@ -171,7 +172,9 @@ class TextPane extends Component {
                 header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
                         <span>                          
                             <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
+                            <a href="/" class="home-button-intro"><img class="home-img" src={homeButton}/></a>
                             <button class="next-button-intro" onClick={self.nextPage.bind(self)}>
+                                {/* <img src={continueIcon} class="next-button-circle"/> */}
                                 <img class="button-img" src={arrowRight}/>
                                 <p class="continue-article">Continue</p>
                             </button>                        
@@ -183,7 +186,9 @@ class TextPane extends Component {
                 header = (<div class="article-header-intro" style={{height: (17 + this.state.headerOffset) + "vh"}}>
                 <span>                          
                     <div class="article-header-title-intro" ref={this.introRef}>{data.introPage.title}</div>
+                    <a href="/" class="home-button-intro"><img class="home-img" src={homeButton}/></a>
                     <button class="next-button-intro" onClick={self.nextPage.bind(self)}>
+                        {/* <img src={continueIcon} class="next-button-circle"/> */}
                         <img class="button-img" src={arrowRight}/>
                         <p class="continue-article">Continue</p>
                     </button>                        
