@@ -478,3 +478,29 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-variant-caps: small-caps;
 }
+
+.more-stories{
+    position: relative;
+    width: 50px;
+    opacity:100%;
+}
+
+.more-stories-text{
+    font-size:20px;
+    color:#460e56;
+    opacity:100%;
+    margin-left:10px;
+    font-weight:700;
+}
+/* position: absolute;
+    bottom: 4vh;
+    left:47.5vw; */
+
+.more-stories-container{
+    position:relative;
+    width:100vw;
+    height:60px;
+    top: -10px;
+    left:55px;
+    text-align: center;
+}

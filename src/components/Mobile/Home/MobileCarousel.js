@@ -10,6 +10,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import '../Mobile.css';
 import instag from '../../../instag.svg'; 
+import moreStories from '../../../moreStories.svg'
 
 
 class MobileCarousel extends Component {
@@ -40,6 +41,10 @@ class MobileCarousel extends Component {
         return (
             <div class="home-container">
                 <div><ArticleThumbnailContainer id="Pieter609b400b-fdd6-4e5a-bc48-8d92c1bb0bdb"/></div>
+                <a onClick={this.handleScroll} class="more-stories-container">
+                <img onClick={this.handleScroll} class="more-stories" src={moreStories}/>
+                <span onClick={this.handleScroll} class="more-stories-text">More Stories</span>
+                </a>
                 <div><ArticleThumbnailContainer id="Caillebotte49ce37ab-95e4-4873-bd00-d2fd88c6e36c"/></div>
                 <div><ArticleThumbnailContainer id="Goya6089bfaa-63f6-47f8-97dd-f361e45b7ac1"/></div>
                 <div><ArticleThumbnailContainer id="Muralismof2fecee1-3036-4a47-978e-f7b34c93b885"/></div>
