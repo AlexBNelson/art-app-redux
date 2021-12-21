@@ -34,14 +34,12 @@ const ArticlePage = (articleId) => (
 
 const MobileHomePage = () => (
     <div>
-        <NavHeadMobile />
         <MobileHome />
     </div>
 );
 
 const MobileArticlePage = (articleId) => (
     <div>
-        <NavHeadMobile />
         <MobileArticle id={articleId} />
     </div>
 );

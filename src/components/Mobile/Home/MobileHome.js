@@ -5,6 +5,7 @@ import '../../../bootstrap.css'
 import MobileCarousel from './MobileCarousel.js'
 
 
+
 class Home extends Component {
 
 
@@ -15,10 +16,11 @@ class Home extends Component {
 
         return (
             <div class="home">
-                <div class="mobile-site-intro">Welcome to Dyptych, an online museum curating the most compelling stories in art from across history and the globe, in a unique side-by-side format. Enjoy and Explore! </div>
+                <div class="mobile-title">dyptych</div>
+                <div class="mobile-site-intro">Welcome to Dyptych, where we reveal the stories of the past through the eyes of its greatest artists!</div>
                 
                 <MobileCarousel class="mobile-carousel" centerMode={true} />
-
+                
             </div>
         )
     }

@@ -164,11 +164,6 @@
     text-align: left;
 }
 
-.home-container {
-    width: 100vw;
-    margin-left: 1vw;
-    background-image: url("https://ucarecdn.com/78e0303b-69fd-4bd9-9a18-3cdd7ef89f07/backgroundCanvas.png");
-}
 
 .home-row {
     height: 40vh;
@@ -395,10 +390,10 @@
 }
 
 .footer{
-    opacity: 0.85;
+    opacity: 0.6;
     width: 40vw;
     font-variant-caps: small-caps;
-    font-size: 21px;
+    font-size: 19px;
     position: relative;
     left: 29vw;
     bottom: 10px;
@@ -424,18 +419,18 @@
 }
 
 .copyright{
-    opacity: 0.85;
+    opacity: 0.9;
     width: 40vw;
     font-variant-caps: small-caps;
-    font-size: 15px;
+    font-size: 16px;
     position: relative;
-    left: 38vw;
+    left: 28vw;
     bottom: 10px;
     height: 40px;
     font-weight: 400;
     text-align: center;
     font-family: 'Georgia';
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
