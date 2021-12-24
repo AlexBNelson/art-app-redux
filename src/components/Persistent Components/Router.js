@@ -56,7 +56,7 @@ class Router extends Component {
     render() {
 
         const { width } = this.state;
-        const isMobile = width <= 500;
+        const isMobile = width <= 1030;
 
         var desktop = (<Locations>
             <Location path="/" handler={HomePage} />

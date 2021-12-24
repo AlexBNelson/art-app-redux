@@ -786,3 +786,20 @@ article-intro-gap {
     opacity:0.8;
     font-style:italic;
 }
+
+.endstop{
+    font-size:30px;
+}
+
+.thank-you{
+    position:absolute;
+    top:20vh;
+    left:20vw;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+}
+
+.appendix-body{
+    margin-left:20px;
+}

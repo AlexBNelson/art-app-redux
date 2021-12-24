@@ -64,7 +64,7 @@ class TextPane extends Component {
         }
     }
 
-    formText(bodyText) {
+    formText(bodyText, isEnd=false) {
         var formedText = [];
 
         for (var i = 0; i < bodyText.body.length; i++) {
@@ -74,6 +74,8 @@ class TextPane extends Component {
 
             for (var j = 0; j < body.elements.length; j++) {
                 var element = body.elements[j];
+
+                
 
                 switch (element.style) {
                     case 0:
@@ -141,7 +143,12 @@ class TextPane extends Component {
             )
         }
         else if (this.props.imageSource <= data.bodyPages.length) {
+
+            if(this.props.imageSource == data.bodyPages.length-1){ //add endstop
+                body = this.formText(data.bodyPages[this.props.imageSource - 1],true)
+            }else{
             body = this.formText(data.bodyPages[this.props.imageSource - 1])
+            }
 
             header = (<div class="mobile-article-header">
                         <span>

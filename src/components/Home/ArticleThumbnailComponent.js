@@ -45,10 +45,6 @@ class ArticleThumbnailComponent extends Component {
 
         var thumbnail = this.state.thumbnail;
 
-        var titleStyle;
-
-        var self = this;
-
         return (
             <div  class="thumbnail-container" >
                 <a href={link}><img class="thumbnail-image" src={thumbnail.imageUri} /></a>

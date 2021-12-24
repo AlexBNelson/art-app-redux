@@ -15,12 +15,20 @@ import moreStories from '../../../moreStories.svg'
 
 class MobileCarousel extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-        };
-    }
+  constructor(props) {
+    super(props)
+    this.state = {
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+}
 
+
+
+handleScroll() {
+  window.scrollTo({left: 0,top:800, behavior: 'smooth'});
+
+}
+    
 
     render() {
         const responsive = {
@@ -41,9 +49,9 @@ class MobileCarousel extends Component {
         return (
             <div class="home-container">
                 <div><ArticleThumbnailContainer id="Pieter609b400b-fdd6-4e5a-bc48-8d92c1bb0bdb"/></div>
-                <a onClick={this.handleScroll} class="more-stories-container">
-                <img onClick={this.handleScroll} class="more-stories" src={moreStories}/>
-                <span onClick={this.handleScroll} class="more-stories-text">More Stories</span>
+                <a onClick={this.handleScroll} class="mobile-more-stories-container">
+                <img onClick={this.handleScroll} class="mobile-more-stories" src={moreStories}/>
+                <span onClick={this.handleScroll} class="mobile-more-stories-text">More Stories</span>
                 </a>
                 <div><ArticleThumbnailContainer id="Caillebotte49ce37ab-95e4-4873-bd00-d2fd88c6e36c"/></div>
                 <div><ArticleThumbnailContainer id="Goya6089bfaa-63f6-47f8-97dd-f361e45b7ac1"/></div>

@@ -255,7 +255,7 @@
 }
 
 .mobile-site-intro{
-    width: 300px;
+    width: 100vw;
     height: 100px;
     margin-top: 10px;
     margin-left:30px;
@@ -264,6 +264,8 @@
     position: absolute;
     font-size:13px;
     text-align: center;
+    padding-left:20px;
+    padding-right:40px;
 }
 
 .mobile-thumbnail-container {
@@ -453,8 +455,9 @@
 
 .home-container{
     position:absolute;
-    top:20vh;
+    top:150px;
     padding-left:20px;
+    text-align: center;
 }
 
 .mobile-title{
@@ -479,13 +482,13 @@
     font-variant-caps: small-caps;
 }
 
-.more-stories{
+.mobile-more-stories{
     position: relative;
     width: 50px;
     opacity:100%;
 }
 
-.more-stories-text{
+.mobile-more-stories-text{
     font-size:20px;
     color:#460e56;
     opacity:100%;
@@ -496,11 +499,10 @@
     bottom: 4vh;
     left:47.5vw; */
 
-.more-stories-container{
+.mobile-more-stories-container{
     position:relative;
     width:100vw;
     height:60px;
     top: -10px;
-    left:55px;
     text-align: center;
 }

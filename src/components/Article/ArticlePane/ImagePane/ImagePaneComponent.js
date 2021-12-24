@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import '../../../../Article.css'
 import { Component } from 'react'
 import ImageViewer from './ImageViewer/ImageViewer.js';
+import ArticleThumbnailContainer from '../../../Home/ArticleThumbnailContainer'
 
 
 class ImagePaneComponent extends Component {
@@ -38,21 +39,33 @@ class ImagePaneComponent extends Component {
 
         var isIntro = (this.props.imageSource == 0);
 
-        var introHero
+       
 
-        /*if(isIntro){
-            introHero=<div  class="intro-hero"><img class="intro-hero-image" src={imageLink}/></div>
-        }*/
+        if(this.props.imageSource == this.props.article.bodyPages.length+1){
+            var relatedArticles = []
+
+            var relatedSection ={}
+
+            if(this.props.article.appendixPage.relatedArticles){
+
+                for(var i=0; i<this.props.article.appendixPage.relatedArticles.length; i++ ){
+                    relatedArticles.push(<ArticleThumbnailContainer id={this.props.article.appendixPage.relatedArticles[i]}/>);
+                }
+                
+                 relatedSection = <div><br/><div>Related Articles:{relatedArticles}</div></div>
+            }
 
 
+            return(<ul class="thank-you">Thanks for Reading!<br/>{relatedSection}</ul>)
+        }else{
         return (
 
             <ul>
                 <ImageViewer isIntro={isIntro} key={randomKey} imageCredit={imageCredit} imageLink={imageLink}/>
-                {introHero}
+                
             </ul>
 
-        );
+        );}
     }
 }
 

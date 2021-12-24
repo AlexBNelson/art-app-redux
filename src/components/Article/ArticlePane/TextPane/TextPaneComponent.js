@@ -13,6 +13,8 @@ import facebookIcon from '../../../../facebook.svg';
 import continueIcon from '../../../../continueButton.svg';
 import PageIndicatorContainer from './PageIndicatorContainer.js';
 import creativeCommons from '../../../../cc.svg';
+import ShareLink from 'react-facebook-share-link';
+
 
 
 
@@ -252,8 +254,17 @@ class TextPane extends Component {
                 sources.push(<p><a target="_blank" href={sourceArray[i]}>{sourceArray[i]}</a></p>)
             }
 
-            body = <div>
-            <div><h4>Share:&nbsp;&nbsp;&nbsp; <img src={twitterIcon}/>&nbsp;&nbsp;<img src={facebookIcon}/></h4> </div>
+            body = <div class="appendix-body">
+            <div>
+                <h4>Share:&nbsp;&nbsp;&nbsp; 
+                <a target="_blank" href={"https://twitter.com/intent/tweet?url="+window.location.href}>
+                        <img src={twitterIcon}/>
+                </a>&nbsp;&nbsp;
+                <ShareLink link={window.location.href}>
+                    {link => (<a href={link} target="_blank">
+                        <img src={facebookIcon}/></a>)}
+                </ShareLink></h4> 
+            </div>
             <br/>
             <p><h4>Sources:</h4> </p>{sources}</div>
 
