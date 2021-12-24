@@ -803,3 +803,15 @@ article-intro-gap {
 .appendix-body{
     margin-left:20px;
 }
+
+.thank-you-container{
+    position: fixed;
+    width:55vw;
+    height:100vh;
+    z-index: 999999999999999999999999999999999999;
+    background-color: rgb(250,250,250);
+}
+
+.related-text{
+    font-weight:100;
+}

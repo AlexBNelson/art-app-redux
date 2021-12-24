@@ -44,7 +44,7 @@ class ImagePaneComponent extends Component {
         if(this.props.imageSource == this.props.article.bodyPages.length+1){
             var relatedArticles = []
 
-            var relatedSection ={}
+            var relatedSection = <div></div>
 
             if(this.props.article.appendixPage.relatedArticles){
 
@@ -52,11 +52,11 @@ class ImagePaneComponent extends Component {
                     relatedArticles.push(<ArticleThumbnailContainer id={this.props.article.appendixPage.relatedArticles[i]}/>);
                 }
                 
-                 relatedSection = <div><br/><div>Related Articles:{relatedArticles}</div></div>
+                 relatedSection = <div><br/><div><span class="related-text">Related Articles:</span>{relatedArticles}</div></div>
             }
 
 
-            return(<ul class="thank-you">Thanks for Reading!<br/>{relatedSection}</ul>)
+            return(<div class="thank-you-container"><ul class="thank-you">Thanks for Reading!{relatedSection}<br/></ul></div>)
         }else{
         return (
 
