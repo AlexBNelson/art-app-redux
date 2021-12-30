@@ -7,7 +7,10 @@ import { setImageSource } from '../../../../actions'
 import arrowLeft from '../../../../arrowLeft.svg';
 import arrowRight from '../../../../arrowRight.svg';
 import homeButton from '../../../../home-button.svg';
-import PageIndicatorContainer from './PageIndicatorContainer.js'
+import PageIndicatorContainer from './PageIndicatorContainer.js';
+import twitterIcon from '../../../../twitter.svg';
+import facebookIcon from '../../../../facebook.svg';
+import ShareLink from 'react-facebook-share-link';
 
 
 
@@ -172,7 +175,7 @@ class TextPane extends Component {
 
         }
         else {
-            body = data.appendixPage.sources
+            body = (<div><h4>Sources: </h4> {data.appendixPage.sources}</div>)
 
             header = (<div class="article-header">
                         <span>
@@ -180,6 +183,14 @@ class TextPane extends Component {
                                 <img class="mobile-button-img" src={arrowLeft}/>
                             </button>
                         </span>
+                        <h4>&nbsp;&nbsp;&nbsp;Share:&nbsp;&nbsp;&nbsp; 
+                <a target="_blank" href={"https://twitter.com/intent/tweet?url="+window.location.href}>
+                        <img src={twitterIcon}/>
+                </a>&nbsp;&nbsp;
+                <ShareLink link={window.location.href}>
+                    {link => (<a href={link} target="_blank">
+                        <img src={facebookIcon}/></a>)}
+                </ShareLink></h4>
                       </div>)
         }
 

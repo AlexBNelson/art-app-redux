@@ -4,6 +4,7 @@ import '../../../../Article.css'
 import { Component } from 'react'
 import ImageViewer from './ImageViewer/ImageViewer.js';
 import ArticleThumbnailContainer from '../../../Home/ArticleThumbnailContainer'
+import instag from '../../../../instag.svg'; 
 
 
 class ImagePaneComponent extends Component {
@@ -56,7 +57,11 @@ class ImagePaneComponent extends Component {
             }
 
 
-            return(<div class="thank-you-container"><ul class="thank-you">Thanks for Reading!{relatedSection}<br/></ul></div>)
+            return(<div class="thank-you-container">
+                <ul class="thank-you">
+                    <p>Thanks for Reading!</p>
+                    <p>Follow us on Instagram<a href="https://www.instagram.com/dyptych_art/?hl=en" target="_blank"><img class="insta-icon-thank" src={instag} href="https://www.instagram.com/dyptych_art/?hl=en"/></a></p>
+                    {relatedSection}<br/></ul></div>)
         }else{
         return (
 

@@ -41,7 +41,7 @@ class ArticleThumbnailComponent extends Component {
 
     render() {
 
-        var link = "Article/" + this.props.id
+        var link = "http://localhost:3000/Article/" + this.props.id
 
         var thumbnail = this.state.thumbnail;
 

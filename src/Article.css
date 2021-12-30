@@ -210,8 +210,8 @@ article-intro-gap {
     width: 43.8vw;
     position:absolute;
     display: inline-block;
-    padding-top:6vh;
-    top: 10vh;
+    padding-top:10vh;
+    top: 6vh;
     text-align: center;
     z-index: 999999;
     padding-bottom: 1vh;
@@ -814,4 +814,9 @@ article-intro-gap {
 
 .related-text{
     font-weight:100;
+}
+
+.insta-icon-thank{
+    width:25px;
+    margin-left:10px;
 }

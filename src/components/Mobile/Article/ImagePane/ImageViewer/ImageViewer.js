@@ -4,6 +4,8 @@ import { Component } from 'react'
 import OpenSeadragon from 'openseadragon';
 import '../../../Mobile.css';
 
+//Used on both mobile and desktop
+
 class ImageViewer extends Component {
 
     constructor(props) {
