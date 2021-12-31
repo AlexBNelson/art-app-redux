@@ -38,6 +38,7 @@ class TextPane extends Component {
         this.previousPage.bind(this)
         this.nextPage.bind(this)
         this.hoverImage.bind(this)
+        this.copy.bind(this)
 
         this.introRef = React.createRef()
         this.titleRef = React.createRef()
@@ -85,6 +86,15 @@ class TextPane extends Component {
             dispatch(setImageSource(this.props.imageSource - 1))
         }
     }
+
+    copy() {
+        const el = document.createElement('input');
+        el.value = window.location.href;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+      }
 
     formText(bodyText) {
         var formedText = [];
@@ -257,7 +267,7 @@ class TextPane extends Component {
 
             body = <div class="appendix-body">
             <div>
-                <h4>Share:&nbsp;&nbsp;&nbsp; 
+                <h5>Share:&nbsp;&nbsp;&nbsp; 
                 <a target="_blank" href={"https://twitter.com/intent/tweet?url="+window.location.href}>
                         <img src={twitterIcon}/>
                 </a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -265,12 +275,12 @@ class TextPane extends Component {
                     {link => (<a href={link} target="_blank">
                         <img src={facebookIcon}/></a>)}
                 </ShareLink>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a target="_blank" href={"https://twitter.com/intent/tweet?url="+window.location.href}>
+                <button class="copy-button" onClick={ self.copy.bind(self) }>
                         <img src={copyLink}/>
-                </a></h4> 
+                </button></h5> 
             </div>
             <br/>
-            <p><h4>Sources:</h4> </p>{sources}</div>
+            <p><h5>Sources:</h5> </p>{sources}</div>
 
             header = (<div class="article-header">
                         <span>
