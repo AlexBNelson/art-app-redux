@@ -60,7 +60,7 @@ class ImagePaneComponent extends Component {
             return(<div class="thank-you-container">
                 <ul class="thank-you">
                     <p>Thanks for Reading!</p>
-                    <p>Follow us on Instagram<a href="https://www.instagram.com/dyptych_art/?hl=en" target="_blank"><img class="insta-icon-thank" src={instag} href="https://www.instagram.com/dyptych_art/?hl=en"/></a></p>
+                    <p>If you enjoyed the article, follow us on Instagram<a href="https://www.instagram.com/dyptych_art/?hl=en" target="_blank"><img class="insta-icon-thank" src={instag} href="https://www.instagram.com/dyptych_art/?hl=en"/></a></p>
                     {relatedSection}<br/></ul></div>)
         }else{
         return (

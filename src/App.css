@@ -233,8 +233,8 @@
     position: relative;
     text-align: center;
     color: rgb(116, 102, 102);
-    margin-right:30px;
-    margin-left:30px;
+    margin-right:2vw;
+    margin-left:2vw;
     width: 300px;
     height: 390px;
     display:inline-flex;

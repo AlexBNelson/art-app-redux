@@ -41,7 +41,7 @@ class FeaturedArticlelComponent extends Component {
 
     render() {
 
-        var link = "Article/" + this.props.id
+        var link = "https://dyptych.co.uk/Article/" + this.props.id
 
         var thumbnail = this.state.thumbnail;
 

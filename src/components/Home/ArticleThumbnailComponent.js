@@ -41,7 +41,7 @@ class ArticleThumbnailComponent extends Component {
 
     render() {
 
-        var link = "http://localhost:3000/Article/" + this.props.id
+        var link = "https://dyptych.co.uk/Article/" + this.props.id
 
         var thumbnail = this.state.thumbnail;
 

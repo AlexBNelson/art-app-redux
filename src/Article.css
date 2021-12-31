@@ -554,8 +554,8 @@ article-intro-gap {
     height:40px;
     width:500px;
     overflow: hidden;
-    -webkit-mask-image: linear-gradient(to right, transparent 25%, rgb(250, 250, 250);; 75%);
-    mask-image: linear-gradient(to right, transparent 25%, rgb(250, 250, 250);; 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent 25%, rgb(250, 250, 250) 75%);
+    mask-image: linear-gradient(to right, transparent 25%, rgb(250, 250, 250) 75%);
     
 }
 
@@ -793,15 +793,17 @@ article-intro-gap {
 
 .thank-you{
     position:absolute;
-    top:20vh;
-    left:20vw;
+    top:30vh;
+    left:12vw;
     font-size: 20px;
     font-weight: bold;
     font-family: "Trebuchet MS";
 }
 
 .appendix-body{
+    font-weight:bold !important;
     margin-left:20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
 }
 
 .thank-you-container{
