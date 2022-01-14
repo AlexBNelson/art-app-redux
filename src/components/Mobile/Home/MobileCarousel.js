@@ -65,6 +65,7 @@ handleScroll() {
             <ArticleThumbnailContainer id="Kollwitz0c9e7e0c-b62d-4c3f-83ff-bf044f674121"/>
                 <ArticleThumbnailContainer id="Fayum17a7b69e-212e-421f-ac17-894b68ca9527"/>
                 <ArticleThumbnailContainer id="Sargent34da7c7e-54ba-4e56-83ec-e9635c531e50"/>
+                <ArticleThumbnailContainer id="Poster8cefd719-76ab-4461-ae08-05d4e3723dec"/>
                 <div class="footer-item"><a href="https://www.instagram.com/dyptych_art/?hl=en" target="_blank"><img class="mobile-insta" src={instag}></img></a></div>
                 <div class="footer-item"><a href="About" target="_blank">About</a></div>
                 <div class="footer-item">Copyright Dyptch 2021 ©</div>

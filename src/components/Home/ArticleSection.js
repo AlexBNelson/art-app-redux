@@ -78,6 +78,9 @@ class ArticleSection extends Component {
                 <ArticleThumbnailContainer id="Fayum17a7b69e-212e-421f-ac17-894b68ca9527"/>
                 <ArticleThumbnailContainer id="Sargent34da7c7e-54ba-4e56-83ec-e9635c531e50"/>
                 </div>
+                <div class="secondary-section">
+                <ArticleThumbnailContainer id="Poster8cefd719-76ab-4461-ae08-05d4e3723dec"/>
+                </div>
             {/* </section> */}
             </div>
             
