@@ -52,7 +52,7 @@ class FeaturedArticlelComponent extends Component {
         return (
             <div  class="featured-container" >
                 <a href={link}><img class="featured-image" src={thumbnail.imageUri} /></a>
-                <div class="featured-title">Featured: {thumbnail.title}<p class="featured-description">Late 19th Paris saw a growing middle class with cash to spend. At the same time, colour printing was becoming commercially viable, and soon the city was awash with colourful posters, advertising anything from cabarets to bicycles. </p></div>
+                <div class="featured-title">Featured: {thumbnail.title}<p class="featured-description">Late 19th Paris saw a growing middle class with cash to spend. Colour printing was also becoming commercially viable, and soon the city was awash with colourful posters, advertising anything from cabarets to bicycles. </p></div>
                 
             </div>
         )
