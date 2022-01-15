@@ -51,7 +51,7 @@ class ArticleSection extends Component {
           <div class="section-container">
             {/* <section responsive={responsive} class="slider-image-item" > */}
                 <ArticleThumbnailContainer id="Pieter609b400b-fdd6-4e5a-bc48-8d92c1bb0bdb"/>
-                <FeaturedArticleContainer id="Caillebotte49ce37ab-95e4-4873-bd00-d2fd88c6e36c"/>
+                <FeaturedArticleContainer id="Poster8cefd719-76ab-4461-ae08-05d4e3723dec"/>
                 <ArticleThumbnailContainer id="Goya6089bfaa-63f6-47f8-97dd-f361e45b7ac1"/>
                 <ArticleThumbnailContainer id="Muralismof2fecee1-3036-4a47-978e-f7b34c93b885"/>
                 {/* <ArticleThumbnailContainer id="Persian2859d1fc-ed35-4c11-abb5-444c8d491c1b"/>
@@ -79,7 +79,7 @@ class ArticleSection extends Component {
                 <ArticleThumbnailContainer id="Sargent34da7c7e-54ba-4e56-83ec-e9635c531e50"/>
                 </div>
                 <div class="secondary-section">
-                <ArticleThumbnailContainer id="Poster8cefd719-76ab-4461-ae08-05d4e3723dec"/>
+                <ArticleThumbnailContainer id="Caillebotte49ce37ab-95e4-4873-bd00-d2fd88c6e36c"/>
                 </div>
             {/* </section> */}
             </div>

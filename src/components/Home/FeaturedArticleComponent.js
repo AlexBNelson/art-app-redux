@@ -52,7 +52,7 @@ class FeaturedArticlelComponent extends Component {
         return (
             <div  class="featured-container" >
                 <a href={link}><img class="featured-image" src={thumbnail.imageUri} /></a>
-                <div class="featured-title">Featured: {thumbnail.title}<p class="featured-description">Gustave Caillebotte bankrolled the Impressionists, but often did not paint like them. He had his own ideas about how to paint modernity, and they centred around the newly rebuilt Paris of the 1870s. </p></div>
+                <div class="featured-title">Featured: {thumbnail.title}<p class="featured-description">Late 19th Paris saw a growing middle class with cash to spend. At the same time, colour printing was becoming commercially viable, and soon the city was awash with colourful posters, advertising anything from cabarets to bicycles. </p></div>
                 
             </div>
         )
